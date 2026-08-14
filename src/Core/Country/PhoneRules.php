@@ -121,7 +121,12 @@ final readonly class PhoneRules implements JsonSerializable
      * `exact` of false, which is the honest answer rather than a confident wrong
      * one. Add a row only with a source, not by inference from examples.
      *
-     * @return array<string, array{int, int}>
+     * Keyed by `int|string` because that is what PHP produces: a numeric string
+     * key in an array literal is normalised to an integer, so '254' is stored as
+     * 254 however it is written. The lookup casts the same way, so it still
+     * finds the row; only the declared type would have been a lie.
+     *
+     * @return array<int|string, array{int, int}>
      */
     private static function table(): array
     {
