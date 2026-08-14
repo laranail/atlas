@@ -28,7 +28,7 @@ If the set is large and spread across countries, `at()` gives you a cheap
 shortlist:
 
 ```php
-$candidates = Atlas::at($here);   // countries whose bounding box holds the point
+$candidates = Atlas::countriesAt($here);   // countries whose bounding box holds the point
 ```
 
 Then filter your places to those countries before measuring. Remember this is a

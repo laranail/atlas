@@ -41,8 +41,12 @@ resolves, so a config string cannot become a class name or a method name here.
 Register your own with a closure:
 
 ```php
-Atlas::extend('acme', fn (): PlaceRepository => new AcmeRepository);
+app(AtlasManager::class)->extend('acme', fn (): PlaceRepository => new AcmeRepository);
 ```
+
+Through the manager, not the facade. `Atlas` proxies `AtlasService` — the query
+API — and registering a data source is driver plumbing that happens once in a
+provider, so it does not get a facade.
 
 A closure and not a class name, deliberately: adding a data source is then a
 deliberate act in application code rather than a string an operator — or, in a
@@ -73,8 +77,9 @@ The TTL exists for a `remote` provider rather than for the shipped one.
 ],
 ```
 
-Defaults for `options()`. An unrecognised `label` falls back to `name` rather
-than reaching into the record with an arbitrary key.
+Defaults for the [form maps](tools/form-data.md) — `Atlas::form()->options()`
+and friends. An unrecognised `label` falls back to `name` rather than reaching
+into the record with an arbitrary key.
 
 ### `distance`
 

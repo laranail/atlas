@@ -9,6 +9,7 @@ use Simtabi\Laranail\Atlas\Core\Contracts\IpCountryResolver;
 use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 use Simtabi\Laranail\Atlas\Core\Country\CountryQuery;
 use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
+use Simtabi\Laranail\Atlas\Core\Country\FormData;
 use Simtabi\Laranail\Atlas\Core\Country\PhoneRules;
 use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
 use Simtabi\Laranail\Atlas\Core\Geo\Distance;
@@ -99,15 +100,24 @@ final readonly class AtlasService
     }
 
     /**
-     * A `code => label` map for a select box.
+     * The catalogue as a form needs it — `value => label` maps for a `<select>`.
      *
-     * @param 'iso2'|'iso3'|'numeric' $key
-     * @param 'name'|'officialName'|'nativeName' $label
-     * @return array<string, string>
+     * Everything a form asks for lives behind this one call:
+     * `form()->options()`, `form()->groupedOptions()`, `form()->continents()`,
+     * `form()->dialCodes()`, `form()->currencies()`, `form()->languages()`,
+     * `form()->regions()`, `form()->subregions()`.
+     *
+     * Separate from the methods above because the shapes differ and the names
+     * did not say so: `continents()` used to sit beside `regions()` returning a
+     * map where the other returned a list. Now the map lives here and the list
+     * stays there, and which one you are getting is legible from the call.
+     *
+     * Start from a query to narrow it — `Atlas::query()->inhabitedOnly()->form()`
+     * gives the same maps over a filtered catalogue.
      */
-    public function options(string $key = 'iso2', string $label = 'name'): array
+    public function form(): FormData
     {
-        return $this->query()->options($key, $label);
+        return FormData::over($this->repository);
     }
 
     /**
@@ -119,9 +129,15 @@ final readonly class AtlasService
     }
 
     /**
+     * Every country, keyed by continent code.
+     *
+     * Records, not labels — {@see form()}`->groupedOptions()` is the `<optgroup>`
+     * shape. Every continent appears, including ones with no countries left, and
+     * the caller drops the empties if it prefers.
+     *
      * @return array<string, list<CountryRecord>>
      */
-    public function groupedByContinent(): array
+    public function countriesGroupedByContinent(): array
     {
         return $this->query()->groupedByContinent();
     }
@@ -131,22 +147,6 @@ final readonly class AtlasService
         $country = $this->country($code);
 
         return ! $country instanceof CountryRecord ? null : Continent::tryFrom($country->continent);
-    }
-
-    /**
-     * The continents, as `code => label`.
-     *
-     * From the enum rather than from config. The old module read a
-     * `laranail.toolkit.atlas.continents` map, so an application that published
-     * the config and trimmed the list got a `countriesByContinent()` that
-     * silently dropped every country on a removed continent — a display
-     * preference quietly deleting data.
-     *
-     * @return array<string, string>
-     */
-    public function continents(): array
-    {
-        return Continent::options();
     }
 
     /**
@@ -193,7 +193,7 @@ final readonly class AtlasService
      *
      * @return list<CountryRecord>
      */
-    public function at(Coordinates $point): array
+    public function countriesAt(Coordinates $point): array
     {
         return $this->query()->containing($point)->sortedByName()->get();
     }
@@ -215,11 +215,13 @@ final readonly class AtlasService
      * Between two countries' centroids, or null if either is unknown or has no
      * coordinates.
      *
-     * A centroid is not a city and not a border. This answers "roughly how far
+     * Named for its arguments rather than as a bare `distanceBetween()`, which
+     * sat beside `distance()` taking coordinates and read as its overload. A
+     * centroid is not a city and not a border: this answers "roughly how far
      * apart are these two countries", which is a real question, and not "how far
      * is the journey", which it cannot answer.
      */
-    public function distanceBetween(Country|string $from, Country|string $to): ?Distance
+    public function distanceBetweenCountries(Country|string $from, Country|string $to): ?Distance
     {
         $a = $this->country($from)?->coordinates;
         $b = $this->country($to)?->coordinates;

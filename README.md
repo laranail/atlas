@@ -33,10 +33,14 @@ $kenya->flag();        // '🇰🇪'
 $kenya->currency();    // 'KES'
 
 Atlas::query()->inContinent('EU')->usingCurrency('EUR')->sortedByName()->get();
-Atlas::options();                                   // for a <select>
+Atlas::form()->options();                           // for a <select>
 Atlas::distance($london, $paris)->format();         // '343.6 km'
 Atlas::countryForIp('41.90.0.1');                   // offline, no API key
 ```
+
+Everything a form needs is behind `form()` and returns a `value => label` map —
+`options()`, `groupedOptions()`, `continents()`, `dialCodes()`. Everything on the
+facade itself returns records or plain lists.
 
 ## The mental model
 
@@ -63,6 +67,7 @@ Hosted at **[opensource.simtabi.com/documentation/laranail/atlas](https://openso
 
 ### Reference
 - [Querying](docs/tools/querying.md) — the immutable builder, and what the dataset does and does not carry
+- [Form data](docs/tools/form-data.md) — everything behind `form()`, and why the maps live apart from the records
 - [Geo](docs/tools/geo.md) — coordinates, bounding boxes, and the formula that does not always converge
 - [IP to country](docs/tools/ip-lookup.md) — offline lookup, and the three things a null means
 - [Enums](docs/tools/enums.md) — three generated, one an allow-list

@@ -72,7 +72,7 @@ final readonly class LocaleRegistry
      *
      * @return array<string, array{locale: string, language: string, region: ?string, country: ?string, flag: ?string}>
      */
-    public function described(): array
+    public function detailed(): array
     {
         $described = [];
 

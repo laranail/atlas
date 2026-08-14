@@ -44,10 +44,15 @@ $rules->exact;           // whether those bounds come from a real numbering plan
 
 | Member | Answers |
 |---|---|
-| `accepts(string $nationalNumber): bool` | Is this a plausible length? Non-digits are stripped first |
-| `pattern(): string` | A regex for a **full** number, calling code included |
-| `matches(string $number): bool` | Does a full number match |
+| `acceptsNationalNumber(string $number): bool` | Is this a plausible length for the part **after** the calling code? Non-digits are stripped first |
+| `acceptsInternationalNumber(string $number): bool` | Does a **full** number, calling code included, match |
+| `internationalPattern(): string` | The regex the second one uses |
 | `toArray()` / `jsonSerialize()` | Output |
+
+> Both accept methods were once called `accepts()` and `matches()`, a distinction
+> no call site could see. Passing a full `+254712345678` to the national one
+> counts the country digits towards the length and rejects a valid number, so the
+> names now say which half of the number they take.
 
 ## `exact` is the field that matters
 
@@ -72,11 +77,11 @@ examples.
 ## The pattern tolerates real input
 
 ```php
-$rules->matches('+254 712 345 678');    // true
-$rules->matches('254712345678');        // true
-$rules->matches('+254-712-345-678');    // true
-$rules->matches('+254 (712) 345 678');  // true
-$rules->matches('(254) 712 345 678');   // false  ← see below
+$rules->acceptsInternationalNumber('+254 712 345 678');    // true
+$rules->acceptsInternationalNumber('254712345678');        // true
+$rules->acceptsInternationalNumber('+254-712-345-678');    // true
+$rules->acceptsInternationalNumber('+254 (712) 345 678');  // true
+$rules->acceptsInternationalNumber('(254) 712 345 678');   // false  ← see below
 ```
 
 Spaces, dashes, brackets and dots are allowed **between digits**, and the `+` is
@@ -89,8 +94,8 @@ guessing a length: the number is right and the form says no.
 > `(254) 712 345 678`, with the country code itself bracketed, does not. Strip
 > to digits first if you accept input in that shape.
 
-`accepts()` takes the **national** number and strips non-digits before counting,
-so it and `matches()` agree about what counts as a digit.
+`acceptsNationalNumber()` strips non-digits before counting, so it and
+`acceptsInternationalNumber()` agree about what counts as a digit.
 
 ## What this is not
 

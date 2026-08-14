@@ -68,16 +68,27 @@ Atlas::query()->where(fn ($c) => count($c->currencies) > 1)->get();
 ```
 
 Terminals: `get()`, `first()`, `count()`, `isEmpty()`, `find()`,
-`findOrFail()`, `options()`, `groupedByContinent()`, `regions()`,
-`subregions()`, `currencies()`, `languages()`.
+`findOrFail()`, `groupedByContinent()`, `regions()`, `subregions()`,
+`currencies()`, `languages()`, `form()`.
 
 ## A select box
 
+Everything a form needs is behind `form()`, and everything behind `form()` is a
+`value => label` map. The methods on the facade itself return records or plain
+lists — so which shape you are getting is legible from the call rather than from
+a `dd()`.
+
 ```php
-Atlas::options();                          // ['AD' => 'Andorra', 'AE' => …]
-Atlas::options('iso3', 'officialName');    // keyed and labelled differently
-Atlas::groupedByContinent();               // optgroups
+Atlas::form()->options();                          // ['AD' => 'Andorra', 'AE' => …]
+Atlas::form()->options('iso3', 'officialName');    // keyed and labelled differently
+Atlas::form()->groupedOptions();                   // optgroups, labelled 'Africa', 'Europe', …
+Atlas::form()->continents();                       // ['AF' => 'Africa', …]
+Atlas::form()->dialCodes();                        // ['KE' => 'Kenya (+254)', …]
+
+Atlas::query()->inhabitedOnly()->form()->options(); // any filter, same maps
 ```
+
+The full surface is in [form data](tools/form-data.md).
 
 ## Distance
 
@@ -93,7 +104,7 @@ $d->kilometres();   // 343.556…
 $d->miles();        // 213.478…
 $d->format();       // '343.6 km'
 
-Atlas::distanceBetween('KE', 'TZ');   // centroid to centroid, or null
+Atlas::distanceBetweenCountries('KE', 'TZ');   // centroid to centroid, or null
 ```
 
 `Distance` carries its unit rather than returning a bare float whose meaning
@@ -113,6 +124,7 @@ Country and nothing else, and only after you have
 
 - [Configuration](configuration.md) — every key and its environment variable
 - [Querying](tools/querying.md) — the full builder
+- [Form data](tools/form-data.md) — everything behind `form()`
 - [Geo](tools/geo.md) — coordinates, bounding boxes, the two formulas
 - [Validation rules](tools/validation.md) — `CountryCode` and friends
 - [The REST API](tools/api.md) — opt-in, read-only

@@ -15,8 +15,9 @@ namespace Simtabi\Laranail\Atlas\Enums;
  * That rules out `Illuminate\Support\Manager`, which resolves `foo` by calling
  * `createFooDriver()`. The driver name arrives from a file an operator edits —
  * in a multi-tenant install, from a database row — and turning that into a
- * method call is a gadget waiting for a second bug. `Atlas::extend()` takes a
- * **closure**, so registering a source is a deliberate act in application code.
+ * method call is a gadget waiting for a second bug. `AtlasManager::extend()`
+ * takes a **closure**, so registering a source is a deliberate act in
+ * application code.
  */
 enum Provider: string
 {

@@ -87,12 +87,12 @@ it('resolves a region subtag to its country', function (): void {
     $sandbox = atlasSandbox();
     mkdir($sandbox . '/en_GB');
 
-    $described = atlasRegistry($sandbox)->described();
+    $detailed = atlasRegistry($sandbox)->detailed();
 
-    expect($described['en_GB']['language'])->toBe('en')
-        ->and($described['en_GB']['region'])->toBe('GB')
-        ->and($described['en_GB']['country'])->toBe('United Kingdom')
-        ->and($described['en_GB']['flag'])->toBe('🇬🇧');
+    expect($detailed['en_GB']['language'])->toBe('en')
+        ->and($detailed['en_GB']['region'])->toBe('GB')
+        ->and($detailed['en_GB']['country'])->toBe('United Kingdom')
+        ->and($detailed['en_GB']['flag'])->toBe('🇬🇧');
 });
 
 it('accepts either locale separator', function (string $locale): void {
@@ -101,7 +101,7 @@ it('accepts either locale separator', function (string $locale): void {
     $sandbox = atlasSandbox();
     mkdir($sandbox . '/' . $locale);
 
-    expect(atlasRegistry($sandbox)->described()[$locale]['country'])->toBe('Brazil');
+    expect(atlasRegistry($sandbox)->detailed()[$locale]['country'])->toBe('Brazil');
 })->with(['pt_BR', 'pt-BR']);
 
 it('leaves the country null for a locale with no region rather than guessing', function (): void {
@@ -110,18 +110,18 @@ it('leaves the country null for a locale with no region rather than guessing', f
     $sandbox = atlasSandbox();
     mkdir($sandbox . '/ar');
 
-    $described = atlasRegistry($sandbox)->described();
+    $detailed = atlasRegistry($sandbox)->detailed();
 
-    expect($described['ar']['region'])->toBeNull()
-        ->and($described['ar']['country'])->toBeNull()
-        ->and($described['ar']['flag'])->toBeNull();
+    expect($detailed['ar']['region'])->toBeNull()
+        ->and($detailed['ar']['country'])->toBeNull()
+        ->and($detailed['ar']['flag'])->toBeNull();
 });
 
 it('leaves the country null for a region subtag that is not a country', function (): void {
     $sandbox = atlasSandbox();
     mkdir($sandbox . '/xx_ZZ');
 
-    expect(atlasRegistry($sandbox)->described()['xx_ZZ']['country'])->toBeNull();
+    expect(atlasRegistry($sandbox)->detailed()['xx_ZZ']['country'])->toBeNull();
 });
 
 it('answers has() against what is installed', function (): void {

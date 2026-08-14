@@ -214,7 +214,7 @@ it('throws for a code the caller has already committed to', function (): void {
 // -----------------------------------------------------------------------
 
 it('builds select options sorted by name by default', function (): void {
-    $options = atlasQuery()->options();
+    $options = atlasQuery()->form()->options();
 
     expect($options)->toHaveCount(250)
         ->and(array_key_first($options))->toBeString()
@@ -222,22 +222,22 @@ it('builds select options sorted by name by default', function (): void {
 });
 
 it('builds options keyed by any ISO form', function (): void {
-    expect(atlasQuery()->options('iso3')['KEN'])->toBe('Kenya')
-        ->and(atlasQuery()->options('numeric')['404'])->toBe('Kenya');
+    expect(atlasQuery()->form()->options('iso3')['KEN'])->toBe('Kenya')
+        ->and(atlasQuery()->form()->options('numeric')['404'])->toBe('Kenya');
 });
 
 it('drops a country with no code for the chosen key rather than colliding on empty', function (): void {
     // Kosovo has no ISO numeric. Keying by numeric without this would collapse
     // it — and any future such country — into one empty-string key.
-    $numeric = atlasQuery()->options('numeric');
+    $numeric = atlasQuery()->form()->options('numeric');
 
     expect($numeric)->toHaveCount(249)
         ->and($numeric)->not->toHaveKey('')
-        ->and(atlasQuery()->options('iso2'))->toHaveKey('XK');
+        ->and(atlasQuery()->form()->options('iso2'))->toHaveKey('XK');
 });
 
 it('labels options by any name form', function (): void {
-    expect(atlasQuery()->options('iso2', 'officialName')['KE'])->toBe('Republic of Kenya');
+    expect(atlasQuery()->form()->options('iso2', 'officialName')['KE'])->toBe('Republic of Kenya');
 });
 
 it('groups by continent including the empty groups', function (): void {

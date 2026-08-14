@@ -82,6 +82,33 @@ Generated files are excluded from Pint and Rector. A reformatter would put the
 committed artefact and the generator permanently at odds, and the resulting diff
 would be reformatting noise on every regeneration.
 
+## Records and lists on the facade, maps behind `form()`
+
+A rule, not a preference about tidiness. `Atlas::options()` and
+`Atlas::continents()` used to return `value => label` maps while
+`Atlas::regions()` beside them returned a flat list — three methods on one class,
+phrased identically, with no way to tell which shape you had without running it.
+Return shape is part of a method's contract, and a name that hides it makes every
+call site a guess.
+
+So the surface splits on shape:
+
+- **On `AtlasService` / the facade:** records (`countries()`, `inContinent()`,
+  `countriesAt()`) and plain lists (`regions()`, `subregions()`, `currencies()`,
+  `languages()`).
+- **Behind `form()`:** `value => label` maps, and nothing else — `options()`,
+  `groupedOptions()`, `continents()`, `dialCodes()`, plus map versions of the four
+  lists above.
+
+The lists did not move; they **forked**. `Atlas::regions()` still returns
+`list<string>` and `Atlas::form()->regions()` returns `array<string, string>`, so
+neither caller is worse off and neither name is ambiguous. `continents()` is the
+one that left the facade outright, because a continent code with no name beside it
+is not a list anybody wants.
+
+The next accessor that returns a map belongs behind `form()`. If it returns
+records or a list, it belongs on the service. There is no third place.
+
 ## Why languages are ISO 639-3
 
 The dataset carries `eng` and `swa`, not `en` and `sw`, and the `Language` enum
@@ -93,9 +120,9 @@ validation message as well as here.
 
 ## Why `Distance` is an object
 
-`distanceBetween($a, $b, 'mi')` returns a float whose unit was decided by a
-string argument several lines earlier, and every consumer re-derives what that
-float means. `Distance` carries its own unit and converts, so the question
+The module this replaces had `distanceBetween($a, $b, 'mi')`, returning a float
+whose unit was decided by a string argument several lines earlier, and every
+consumer re-derives what that float means. `Distance` carries its own unit and converts, so the question
 "kilometres or miles?" is answered where it is asked rather than where the value
 was produced.
 

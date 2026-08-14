@@ -81,7 +81,7 @@ final class AtlasManager
      *
      * @return list<string>
      */
-    public function available(): array
+    public function availableProviders(): array
     {
         $builtIn = array_map(static fn (Provider $p): string => $p->value, Provider::cases());
 
@@ -99,7 +99,7 @@ final class AtlasManager
         $provider = Provider::tryFrom($name);
 
         if ($provider === null) {
-            throw UnsupportedProvider::unknown($name, $this->available());
+            throw UnsupportedProvider::unknown($name, $this->availableProviders());
         }
 
         return match ($provider) {

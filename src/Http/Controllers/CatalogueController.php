@@ -33,7 +33,10 @@ final readonly class CatalogueController
 
     public function continents(): JsonResponse
     {
-        return new JsonResponse(['data' => $this->atlas->continents()]);
+        // The one endpoint whose payload is a map rather than a list, because
+        // a continent code is unreadable without its name. It comes from the
+        // form surface for that reason — the response shape is unchanged.
+        return new JsonResponse(['data' => $this->atlas->form()->continents()]);
     }
 
     public function regions(): JsonResponse

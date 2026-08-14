@@ -43,7 +43,7 @@ describe('lookups', function (): void {
 
 describe('phone rules', function (): void {
     it('states an exact length where the numbering plan is well known', function (): void {
-        $kenya = Atlas::query()->find('KE')->phone();
+        $kenya = Atlas::query()->find('KE')->phoneRules();
 
         expect($kenya->minLength)->toBe(9)
             ->and($kenya->maxLength)->toBe(9)
@@ -61,10 +61,10 @@ describe('phone rules', function (): void {
     });
 
     it('accepts a national number of a plausible length', function (): void {
-        $kenya = Atlas::query()->find('KE')->phone();
+        $kenya = Atlas::query()->find('KE')->phoneRules();
 
-        expect($kenya->accepts('712345678'))->toBeTrue()
-            ->and($kenya->accepts('71234'))->toBeFalse();
+        expect($kenya->acceptsNationalNumber('712345678'))->toBeTrue()
+            ->and($kenya->acceptsNationalNumber('71234'))->toBeFalse();
     });
 
     it('matches a full number, however the user spaced it', function (): void {
@@ -72,10 +72,10 @@ describe('phone rules', function (): void {
         // the form rather than to fix the number.
         $kenya = Atlas::query()->find('KE');
 
-        expect($kenya->acceptsPhoneNumber('+254712345678'))->toBeTrue()
-            ->and($kenya->acceptsPhoneNumber('+254 712 345 678'))->toBeTrue()
-            ->and($kenya->acceptsPhoneNumber('254-712-345-678'))->toBeTrue()
-            ->and($kenya->acceptsPhoneNumber('+254 712 345'))->toBeFalse();
+        expect($kenya->acceptsInternationalNumber('+254712345678'))->toBeTrue()
+            ->and($kenya->acceptsInternationalNumber('+254 712 345 678'))->toBeTrue()
+            ->and($kenya->acceptsInternationalNumber('254-712-345-678'))->toBeTrue()
+            ->and($kenya->acceptsInternationalNumber('+254 712 345'))->toBeFalse();
     });
 
     it('reaches the rules by country code and by dial code', function (): void {
@@ -85,14 +85,14 @@ describe('phone rules', function (): void {
     });
 
     it('serialises for an API response', function (): void {
-        $json = json_decode(json_encode(Atlas::query()->find('KE')->phone()), true);
+        $json = json_decode(json_encode(Atlas::query()->find('KE')->phoneRules()), true);
 
         expect($json)->toHaveKeys(['callingCode', 'minLength', 'maxLength', 'exact', 'pattern']);
     });
 
     it('gives every country with a calling code some rules', function (): void {
         foreach (Atlas::countries() as $country) {
-            $rules = $country->phone();
+            $rules = $country->phoneRules();
 
             if ($country->callingCode() === null) {
                 expect($rules)->toBeNull();

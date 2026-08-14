@@ -5,6 +5,69 @@ All notable changes to `laranail/atlas` are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- **`Core\Country\FormData`**, reached as `Atlas::form()` or as a terminal on any query
+  (`Atlas::query()->inhabitedOnly()->form()`). Everything a form needs, in one place and in one
+  shape: `options()`, `groupedOptions()`, `continents()`, `dialCodes()`, plus map versions of
+  `currencies()`, `languages()`, `regions()` and `subregions()`.
+
+  `groupedOptions()` is new behaviour, not a rename — it returns `<optgroup>`-ready nested maps
+  labelled by continent **name** (`Africa`, not `AF`, because a person reads an optgroup label) and
+  drops continents a filter emptied, since a heading with nothing under it reads worse than no
+  heading. `dialCodes()` is keyed by ISO code rather than by dial code: `+1` is the whole North
+  American Numbering Plan, so keying by the code would keep one country of twenty-five.
+
+### Changed
+
+The rule behind all of it: **everything behind `form()` returns a `value => label` map; everything
+on the facade returns records or plain lists.** Before, `options()` and `continents()` returned maps
+while `regions()` beside them returned a list — three methods on one class, phrased identically,
+with no way to tell which shape you had without running it. Note that the lists did not move, they
+*forked*: `Atlas::regions()` still returns `list<string>` and `Atlas::form()->regions()` returns a
+map, so no caller is worse off. See `docs/architecture.md`.
+
+Breaking, and pre-1.0 is when this costs least:
+
+| Was | Now |
+|---|---|
+| `Atlas::options()` | `Atlas::form()->options()` |
+| `Atlas::continents()` | `Atlas::form()->continents()` |
+| `CountryQuery::options()` | `CountryQuery::form()->options()` |
+| `Atlas::groupedByContinent()` | `Atlas::countriesGroupedByContinent()` |
+| `Atlas::at()` | `Atlas::countriesAt()` |
+| `Atlas::distanceBetween()` | `Atlas::distanceBetweenCountries()` |
+| `CountryRecord::phone()` | `CountryRecord::phoneRules()` |
+| `CountryRecord::acceptsPhoneNumber()` | `CountryRecord::acceptsInternationalNumber()` |
+| `PhoneRules::accepts()` | `PhoneRules::acceptsNationalNumber()` |
+| `PhoneRules::matches()` | `PhoneRules::acceptsInternationalNumber()` |
+| `PhoneRules::pattern()` | `PhoneRules::internationalPattern()` |
+| `AtlasManager::available()` | `AtlasManager::availableProviders()` |
+| `LocaleRegistry::described()` | `LocaleRegistry::detailed()` |
+
+The phone pair earns its own note. `accepts()` took the national number and `matches()` took the
+full one, a distinction no call site could see — and passing a full `+254712345678` to the first
+counts the country digits towards the length and rejects a valid number. The names now say which
+half of the number they take.
+
+`describe()` is deliberately unchanged: it is the shared vocabulary of `doctor`, the `/describe`
+endpoint and the docs, and renaming the method alone would leave the HTTP surface saying something
+else.
+
+No HTTP response shape changed. `/continents` still returns a code → name map; it is sourced from
+`form()->continents()` now.
+
+### Fixed
+
+- `Atlas::extend()` never existed — the facade proxies `AtlasService`, and `extend()` is on
+  `AtlasManager`. It was documented in `docs/configuration.md`, `docs/tools/data-sources.md`, the
+  published config file and the "unknown provider" exception message, all of which now say
+  `app(AtlasManager::class)->extend(...)`.
+- The chrono note in the config file demonstrated `Country::KE->timezones()`. The enum carries no
+  methods by design and the case is `Country::Kenya`; the example is now the bridge call it meant.
+
 ## [0.1.0] - 2026-08-14
 
 ### Added

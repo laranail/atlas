@@ -44,13 +44,18 @@ array is held by OPcache as compiled opcodes, so a lookup costs an array read.
 
 ```php
 // A service provider's boot()
-use Simtabi\Laranail\Atlas\Facades\Atlas;
 use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
+use Simtabi\Laranail\Atlas\Services\AtlasManager;
 
-Atlas::extend('acme', fn (): PlaceRepository => new AcmeRepository($db));
+app(AtlasManager::class)->extend('acme', fn (): PlaceRepository => new AcmeRepository($db));
 ```
 
 Then `ATLAS_PROVIDER=acme`.
+
+Through the manager and not the `Atlas` facade, which proxies `AtlasService` —
+the query API — and nothing else. Registering a source is a one-line act in a
+provider; asking which countries use the euro happens everywhere, and only the
+second earns a facade.
 
 ### Why a closure and not a class name
 

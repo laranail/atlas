@@ -329,7 +329,7 @@ final readonly class CountryQuery
     /** The phone rules for a country code, or null when it is not a country. */
     public function phoneRulesFor(string $code): ?PhoneRules
     {
-        return $this->find($code)?->phone();
+        return $this->find($code)?->phoneRules();
     }
 
     /** The phone rules for a calling code, whichever country answers to it. */
@@ -339,38 +339,20 @@ final readonly class CountryQuery
     }
 
     /**
-     * A `code => label` map for a select box.
+     * This query's results as `value => label` maps, for a form.
      *
-     * @param 'iso2'|'iso3'|'numeric' $key
-     * @param 'name'|'officialName'|'nativeName' $label
-     * @return array<string, string>
+     * The presentation shapes live on {@see FormData} rather than here, because
+     * a builder terminal that returns a select box's data is a different kind of
+     * answer from one that returns records, and mixing them left `options()`
+     * sitting between `get()` and `count()` as the only method whose return
+     * value was a display decision.
+     *
+     * The query is name-sorted on the way in unless the caller chose an order,
+     * so a select box is never in dataset order by accident.
      */
-    public function options(string $key = 'iso2', string $label = 'name'): array
+    public function form(): FormData
     {
-        $options = [];
-
-        foreach ($this->sortedByNameIfUnsorted()->get() as $country) {
-            $optionKey = match ($key) {
-                'iso3' => $country->iso3,
-                'numeric' => $country->numeric,
-                default => $country->iso2,
-            };
-
-            // A country with no numeric code (XK) would otherwise collapse into
-            // a single empty-string key, silently dropping every other such
-            // country from the list.
-            if ($optionKey === '') {
-                continue;
-            }
-
-            $options[$optionKey] = match ($label) {
-                'officialName' => $country->officialName,
-                'nativeName' => $country->nativeName,
-                default => $country->name,
-            };
-        }
-
-        return $options;
+        return new FormData($this->sortedByNameIfUnsorted());
     }
 
     /**

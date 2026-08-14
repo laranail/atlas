@@ -116,7 +116,7 @@ everywhere.
 ## Finding a country by point
 
 ```php
-Atlas::at(new Coordinates(-1.2921, 36.8219));   // Nairobi → KE, MZ, RW, TZ, ZM
+Atlas::countriesAt(new Coordinates(-1.2921, 36.8219));   // Nairobi → KE, MZ, RW, TZ, ZM
 ```
 
 Five, because this is a **bounding-box** test. See

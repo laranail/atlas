@@ -27,9 +27,11 @@ return [
     |
     | The value must be a case of the Provider enum. A name that is not a case
     | never resolves — a config string cannot become a class name or a method
-    | name here. Register your own with `Atlas::extend('name', fn () => …)`,
-    | which takes a closure, so adding a source is a deliberate act in
-    | application code rather than a string an operator can edit.
+    | name here. Register your own with
+    | `app(AtlasManager::class)->extend('name', fn () => …)`, which takes a
+    | closure, so adding a source is a deliberate act in application code rather
+    | than a string an operator can edit. Not on the Atlas facade: that proxies
+    | the query API, and driver registration is not part of it.
     |
     */
 
@@ -166,8 +168,9 @@ return [
     |
     | `laranail/chrono` answers what timezones a country spans and what time it
     | is there. It is a suggest, not a dependency: the bridge is guarded by
-    | class_exists, so with chrono absent `Country::KE->timezones()` throws a
-    | message naming the package to install rather than a class-not-found.
+    | class_exists, so with chrono absent
+    | `app(ChronoBridge::class)->timezonesFor(Country::Kenya)` throws a message
+    | naming the package to install rather than a class-not-found.
     |
     | Set false to keep it off even when chrono is installed.
     |

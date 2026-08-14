@@ -84,10 +84,10 @@ and the Linux box it deploys to.
 | `findOrFail(string $code)` | `CountryRecord`, or throws |
 | `count()` | `int` |
 | `isEmpty()` | `bool` |
-| `options(string $key = 'iso2', string $label = 'name')` | `array<string, string>` |
 | `groupedByContinent()` | `array<string, list<CountryRecord>>` |
 | `regions()` / `subregions()` | `list<string>` |
 | `currencies()` / `languages()` | `list<string>` |
+| `form()` | `FormData` — the `value => label` maps a form needs |
 
 `find()` returns null and `findOrFail()` throws, and both exist on purpose:
 "is this a country code?" is a question you ask about user input, where a null
@@ -96,16 +96,24 @@ decided which country they mean.
 
 ## Select boxes
 
+Every shape a form needs is behind `form()` — on the facade, or on any query to
+narrow it first. See [form data](form-data.md) for the full surface.
+
 ```php
-Atlas::options();
+Atlas::form()->options();
 // ['AF' => 'Afghanistan', 'AX' => 'Åland Islands', …]  — sorted by label
 
-Atlas::options('iso3', 'officialName');
+Atlas::form()->options('iso3', 'officialName');
 // ['AFG' => 'Islamic Republic of Afghanistan', …]
 
-Atlas::groupedByContinent();
-// ['AF' => [CountryRecord, …], 'EU' => [...], …]  — optgroups
+Atlas::form()->groupedOptions();
+// ['Africa' => ['DZ' => 'Algeria', …], 'Europe' => […], …]  — optgroups
+
+Atlas::query()->inhabitedOnly()->form()->options();   // the same, minus Antarctica
 ```
+
+`Atlas::countriesGroupedByContinent()` is the records version of the same
+grouping, keyed by continent code, for when you need more than a label.
 
 Defaults come from `laranail.atlas.presentation`; see
 [configuration](../configuration.md#presentation).
@@ -148,12 +156,12 @@ currencies, this dataset does not have them.
 ```php
 use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
 
-Atlas::at(new Coordinates(-1.2921, 36.8219));   // Nairobi
+Atlas::countriesAt(new Coordinates(-1.2921, 36.8219));   // Nairobi
 // → KE, MZ, RW, TZ, ZM
 ```
 
 That result is not a bug and it is the reason to read this paragraph:
-**`at()` and `containing()` answer from bounding boxes, not polygons.** Nairobi
+**`countriesAt()` and `containing()` answer from bounding boxes, not polygons.** Nairobi
 sits inside the rectangle around Mozambique as well as the one around Kenya,
 because a rectangle around a country of any interesting shape contains a lot of
 other countries.

@@ -60,8 +60,16 @@ final readonly class PhoneRules implements JsonSerializable
         );
     }
 
-    /** Whether a national number is a plausible length for this country. */
-    public function accepts(string $nationalNumber): bool
+    /**
+     * Whether a national number is a plausible length for this country.
+     *
+     * The *national* number — what follows the calling code. Pass a full
+     * `+254712345678` here and its country digits count towards the length, so
+     * a valid number is rejected; {@see acceptsInternationalNumber()} is the one
+     * that takes those. The two were called `accepts()` and `matches()`, which
+     * is a distinction no call site could see.
+     */
+    public function acceptsNationalNumber(string $nationalNumber): bool
     {
         $digits = preg_replace('/\D/', '', $nationalNumber) ?? '';
         $length = strlen($digits);
@@ -77,7 +85,7 @@ final readonly class PhoneRules implements JsonSerializable
      * `+254 712 345 678` for its spaces teaches users to distrust the form
      * rather than to fix the number.
      */
-    public function pattern(): string
+    public function internationalPattern(): string
     {
         $code = preg_quote($this->callingCode, '/');
 
@@ -90,9 +98,9 @@ final readonly class PhoneRules implements JsonSerializable
     }
 
     /** Whether a full number, calling code included, matches this country. */
-    public function matches(string $number): bool
+    public function acceptsInternationalNumber(string $number): bool
     {
-        return preg_match($this->pattern(), trim($number)) === 1;
+        return preg_match($this->internationalPattern(), trim($number)) === 1;
     }
 
     /** @return array{callingCode: string, minLength: int, maxLength: int, exact: bool, pattern: string} */
@@ -103,7 +111,7 @@ final readonly class PhoneRules implements JsonSerializable
             'minLength' => $this->minLength,
             'maxLength' => $this->maxLength,
             'exact' => $this->exact,
-            'pattern' => $this->pattern(),
+            'pattern' => $this->internationalPattern(),
         ];
     }
 

@@ -22,7 +22,7 @@ final class UnsupportedProvider extends RuntimeException implements AtlasExcepti
     public static function unknown(string $name, array $known): self
     {
         return new self(sprintf(
-            'Unknown atlas provider [%s]. Available: %s. Register another with Atlas::extend(), which takes a closure.',
+            'Unknown atlas provider [%s]. Available: %s. Register another with AtlasManager::extend(), which takes a closure.',
             $name,
             implode(', ', $known),
         ));

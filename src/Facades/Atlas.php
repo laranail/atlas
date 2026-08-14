@@ -7,9 +7,13 @@ namespace Simtabi\Laranail\Atlas\Facades;
 use Illuminate\Support\Facades\Facade;
 use Simtabi\Laranail\Atlas\Core\Country\CountryQuery;
 use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
+use Simtabi\Laranail\Atlas\Core\Country\FormData;
 use Simtabi\Laranail\Atlas\Core\Country\PhoneRules;
 use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
+use Simtabi\Laranail\Atlas\Core\Geo\Distance;
+use Simtabi\Laranail\Atlas\Core\Network\IpAddress;
 use Simtabi\Laranail\Atlas\Core\Region\Continent;
+use Simtabi\Laranail\Atlas\Enums\Country;
 use Simtabi\Laranail\Atlas\Services\AtlasManager;
 use Simtabi\Laranail\Atlas\Services\AtlasService;
 
@@ -20,23 +24,25 @@ use Simtabi\Laranail\Atlas\Services\AtlasService;
  * not need a facade; asking which countries use the euro happens everywhere.
  *
  * @method static CountryQuery query()
- * @method static CountryRecord|null country(string $code)
- * @method static CountryRecord countryOrFail(string $code)
+ * @method static FormData form()
+ * @method static CountryRecord|null country(Country|string $code)
+ * @method static CountryRecord countryOrFail(Country|string $code)
  * @method static CountryRecord|null countryByName(string $name)
  * @method static CountryRecord|null countryByDialCode(string $dialCode)
- * @method static PhoneRules|null phoneRules(string $code)
+ * @method static PhoneRules|null phoneRules(Country|string $code)
  * @method static list<CountryRecord> countries()
- * @method static array<string, string> options(string $key = 'iso2', string $label = 'name')
  * @method static list<CountryRecord> inContinent(Continent|string $continent)
- * @method static array<string, list<CountryRecord>> groupedByContinent()
+ * @method static array<string, list<CountryRecord>> countriesGroupedByContinent()
  * @method static Continent|null continentFor(string $code)
- * @method static array<string, string> continents()
  * @method static list<string> regions()
  * @method static list<string> subregions()
  * @method static list<string> currencies()
  * @method static list<string> languages()
- * @method static list<CountryRecord> at(Coordinates $point)
- * @method static array{provider: string, version: ?string, available: bool, countries: int} describe()
+ * @method static list<CountryRecord> countriesAt(Coordinates $point)
+ * @method static Distance distance(Coordinates $from, Coordinates $to)
+ * @method static Distance|null distanceBetweenCountries(Country|string $from, Country|string $to)
+ * @method static CountryRecord|null countryForIp(IpAddress|string $address)
+ * @method static array{provider: string, version: ?string, available: bool, countries: int, distance: string, ip_ready: bool} describe()
  *
  * @see AtlasService
  */
