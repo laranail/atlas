@@ -39,7 +39,16 @@ it('answers a country lookup through the container', function (): void {
 });
 
 it('lists the sources that would resolve', function (): void {
-    expect(Atlas::available())->toContain('generated', 'rinvex', 'remote');
+    // Through the container, not the facade: AtlasManager is driver plumbing
+    // and the Atlas facade points at the query API instead.
+    expect(app(AtlasManager::class)->available())->toContain('generated', 'rinvex', 'remote');
+});
+
+it('answers country questions through the facade', function (): void {
+    expect(Atlas::country('KE')?->name)->toBe('Kenya')
+        ->and(Atlas::options())->toHaveKey('KE')
+        ->and(Atlas::continents())->toHaveCount(7)
+        ->and(Atlas::describe()['countries'])->toBe(250);
 });
 
 it('refuses a provider name that is not in the allow-list', function (): void {

@@ -10,6 +10,8 @@ use Override;
 use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
 use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 use Simtabi\Laranail\Atlas\Services\AtlasManager;
+use Simtabi\Laranail\Atlas\Services\AtlasService;
+use Simtabi\Laranail\Atlas\Services\LocaleRegistry;
 use Simtabi\Laranail\Atlas\Support\AtlasConfig;
 use Simtabi\Laranail\Package\Tools\Package;
 use Simtabi\Laranail\Package\Tools\Providers\PackageServiceProvider;
@@ -65,6 +67,30 @@ final class AtlasServiceProvider extends PackageServiceProvider
             GeneratedPlaceRepository::class,
             static fn (): GeneratedPlaceRepository => new GeneratedPlaceRepository(
                 dirname(__DIR__, 2) . '/resources/data',
+            ),
+        );
+
+        $this->app->singleton(
+            AtlasService::class,
+            static fn (Application $app): AtlasService => new AtlasService(
+                $app->make(PlaceRepository::class),
+            ),
+        );
+
+        $this->app->singleton(
+            LocaleRegistry::class,
+            static fn (Application $app): LocaleRegistry => new LocaleRegistry(
+                // lang_path() first: Laravel moved this directory to the project
+                // root in version 9, and the module this package replaces was
+                // still scanning resources/lang — so availableLocales() returned
+                // an empty list on every modern application. resources/lang is
+                // kept as a second look for projects that upgraded without
+                // moving it.
+                [
+                    $app->langPath(),
+                    $app->resourcePath('lang'),
+                ],
+                $app->make(PlaceRepository::class),
             ),
         );
     }
