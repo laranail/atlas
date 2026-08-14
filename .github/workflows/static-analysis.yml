@@ -60,7 +60,9 @@ jobs:
       - name: Rector (dry run)
         run: composer rector
 
-      # rinvex/countries is installed here (it is a dev dependency), so this runs the real
-      # comparison rather than skipping.
+      # Both generators. The dataset is checked against rinvex/countries, which
+      # is installed here as a dev dependency, so this runs the real comparison
+      # rather than skipping; the enums are checked against the committed
+      # dataset, so that half runs everywhere.
       - name: Generated data is still generated
         run: composer sync-check

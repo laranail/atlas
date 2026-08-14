@@ -46,13 +46,31 @@ and the association is data that `Country` owns.
 
 ## Generated files
 
-`resources/data/countries.php` is built by `tools/build-dataset.php` from `rinvex/countries`.
-**Never hand-edit it** — change the generator and re-run it.
+Two generators, chained. `tools/build-dataset.php` builds
+`resources/data/countries.php` from `rinvex/countries`; `tools/generate-enums.php` builds
+`src/Enums/{Country,Currency,Language}.php` from that dataset. **Never hand-edit any of them** —
+change the generator and re-run it.
 
 ```bash
-php tools/build-dataset.php            # write
-php tools/build-dataset.php --check    # CI gate: is the file still what the generator produces?
+php tools/build-dataset.php            # write the dataset
+php tools/build-dataset.php --check    # CI gate
+php tools/generate-enums.php           # write the enums
+php tools/generate-enums.php --check   # CI gate
+composer sync-check                    # both
 ```
+
+### Transliteration is deliberate, and `iconv` is banned here
+
+Case names are ASCII, so accented country names have to be folded — and
+`iconv('UTF-8', 'ASCII//TRANSLIT', …)` **must not** be used for it, because its output depends on
+the C library. Measured on macOS, `é` becomes `'e` and `ã` becomes `~a`, so
+`São Tomé and Príncipe` transliterates to `S~ao Tom'e and Pr'incipe` and the derived case name is
+`SAoTomEAndPrIncipe` — against `SaoTomeAndPrincipe` on Linux. `Å` and `ç` survive on both, which is
+what makes this the kind of difference nobody catches until a second machine regenerates.
+
+`Core\Support\Text::transliterate()` is an explicit table for exactly this reason, and
+`Text::fold()` (used for search) prefers ICU with the same table as its fallback. A `--check` gate
+only means anything if two machines produce the same bytes.
 
 `rinvex/countries` is a **dev-time input**, not a dependency. It ships ~17 MB across 252 long-list
 JSON files, and this package needs a few fields from each — so it is read once, at build time, and

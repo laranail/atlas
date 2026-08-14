@@ -6,6 +6,7 @@ use Rinvex\Country\CountryLoader;
 use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
 use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 use Simtabi\Laranail\Atlas\Core\Exception\UnsupportedProvider;
+use Simtabi\Laranail\Atlas\Enums\Country;
 use Simtabi\Laranail\Atlas\Enums\Provider;
 use Simtabi\Laranail\Atlas\Facades\Atlas;
 use Simtabi\Laranail\Atlas\Services\AtlasManager;
@@ -128,4 +129,12 @@ it('registers no routes while the api is disabled', function (): void {
 
     expect(config('laranail.atlas.api.enabled'))->toBeFalse()
         ->and($atlasRoutes)->toBeEmpty();
+});
+
+it('accepts the country enum anywhere a code is accepted', function (): void {
+    // Typed where the country is known at authoring time, loose where it came
+    // from a request — the same method takes both.
+    expect(Atlas::country(Country::Kenya)?->iso2)->toBe('KE')
+        ->and(Atlas::country('KE')?->iso2)->toBe('KE')
+        ->and(Atlas::countryOrFail(Country::Kenya)->name)->toBe('Kenya');
 });

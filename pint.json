@@ -18,6 +18,9 @@
         "resources/data"
     ],
     "notPath": [
-        "resources/data/countries.php"
+        "resources/data/countries.php",
+        "src/Enums/Country.php",
+        "src/Enums/Currency.php",
+        "src/Enums/Language.php"
     ]
 }

@@ -79,6 +79,20 @@ final class Text
     private static bool $transliteratorResolved = false;
 
     /**
+     * Stripped of diacritics, with case preserved.
+     *
+     * Separate from {@see fold()} because the enum generator needs `Åland` to
+     * become `Aland` and not `aland` — a case name has to keep its capitals.
+     * It uses the table unconditionally rather than ICU: the generator's output
+     * is committed and gated by `--check`, so it must be identical on every
+     * machine, and ICU's transliteration can differ between versions.
+     */
+    public static function transliterate(string $value): string
+    {
+        return strtr($value, self::TRANSLITERATIONS);
+    }
+
+    /**
      * Lower-cased and stripped of diacritics, for comparison.
      */
     public static function fold(string $value): string

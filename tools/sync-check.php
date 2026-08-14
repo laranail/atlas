@@ -21,6 +21,12 @@ $generators = [
         'script' => __DIR__ . '/build-dataset.php',
         'requires' => $root . '/vendor/rinvex/countries/resources/data',
     ],
+    // Generated from the committed dataset rather than from the source package,
+    // so this runs everywhere — there is nothing optional to be missing.
+    'enums' => [
+        'script' => __DIR__ . '/generate-enums.php',
+        'requires' => $root . '/resources/data',
+    ],
 ];
 
 $failed = [];

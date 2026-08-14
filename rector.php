@@ -21,6 +21,9 @@ return RectorConfig::configure()
     ->withSkip([
         __DIR__ . '/vendor',
         __DIR__ . '/resources/data',
+        __DIR__ . '/src/Enums/Country.php',
+        __DIR__ . '/src/Enums/Currency.php',
+        __DIR__ . '/src/Enums/Language.php',
         __DIR__ . '/tests/Fixtures',
     ])
     ->withPhpSets(php84: true)

@@ -43,6 +43,30 @@ package was load-bearing in every call site, not just in the loader.
   `extend()` takes a closure rather than a class name, so registering a source is a deliberate act
   in application code that a config edit cannot reach.
 
+- **`Core\Country\CountryQuery`** — an immutable fluent query. The module this replaces exposed
+  fourteen fixed methods, so any question it had not anticipated meant filtering its array output by
+  hand at the call site. Filters are closures applied once at the terminal, so chaining five walks
+  the records once and an unresolved query costs nothing.
+
+- **`Services\LocaleRegistry`** — which translation locales an application ships. Fixes a real bug
+  in the original: it scanned `resource_path('lang')`, which **Laravel abandoned in version 9**, so
+  it returned an empty list on every modern application — a language switcher with nothing in it.
+  It survived because the test creating that directory in `setUp()` then found what it had put
+  there. Paths are injected, so the behaviour tests use a sandbox and cannot arrange the world they
+  measure.
+
+- **`Enums\Country` (250), `Enums\Currency` (156), `Enums\Language` (156)** — generated from the
+  dataset by `tools/generate-enums.php`. The application enum this replaces carried 250 class
+  constants *and* three ~240-arm `match` tables — `getCallingPrefix()`, `getFlagEmoji()`,
+  `getName()`, about 800 lines of data pretending to be code. All three are dataset lookups here,
+  and the flag is derived arithmetically from the ISO code.
+
+- **`Core\Support\Text`** — case- and accent-folding that does not depend on the C library.
+  `iconv('UTF-8', 'ASCII//TRANSLIT', …)` folds `São Tomé` to `Sao Tome` on glibc and to
+  `S~ao Tom'e` on BSD, which breaks both search (`cote` finds nothing) and enum generation
+  (`SAoTomEAndPrIncipe`). ICU where available, an explicit table otherwise, and a test asserting
+  the two agree.
+
 - Config at `config('laranail.atlas.*')`, published to `config/laranail/atlas.php` — the laranail
   convention, which `PackageServiceProvider` applies by default.
 

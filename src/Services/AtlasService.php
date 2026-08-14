@@ -9,6 +9,7 @@ use Simtabi\Laranail\Atlas\Core\Country\CountryQuery;
 use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
 use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
 use Simtabi\Laranail\Atlas\Core\Region\Continent;
+use Simtabi\Laranail\Atlas\Enums\Country;
 
 /**
  * The package's entry point.
@@ -34,19 +35,23 @@ final readonly class AtlasService
     }
 
     /**
-     * One country by ISO alpha-2, alpha-3 or numeric code, or null.
+     * One country by enum case, or by ISO alpha-2, alpha-3 or numeric code.
+     *
+     * The enum is accepted everywhere a code is, so a call site can be as
+     * typed or as loose as its input allows — `Country::KE` where the country
+     * is known at authoring time, a raw string where it came from a request.
      */
-    public function country(string $code): ?CountryRecord
+    public function country(Country|string $code): ?CountryRecord
     {
-        return $this->repository->find($code);
+        return $this->repository->find($code instanceof Country ? $code->value : $code);
     }
 
     /**
      * One country, or throw.
      */
-    public function countryOrFail(string $code): CountryRecord
+    public function countryOrFail(Country|string $code): CountryRecord
     {
-        return $this->query()->findOrFail($code);
+        return $this->query()->findOrFail($code instanceof Country ? $code->value : $code);
     }
 
     /**
