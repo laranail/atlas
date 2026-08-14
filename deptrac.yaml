@@ -27,6 +27,12 @@ deptrac:
       collectors:
         - type: directory
           value: src/Core/Geo/.*
+        # Sits in the shared Contracts directory for discoverability but belongs
+        # to this module: it names Coordinates and Distance, so classifying it as
+        # Shared would make the shared layer depend on a module — the cycle the
+        # DAG exists to prevent. deptrac caught this rather than a review.
+        - type: directory
+          value: src/Core/Contracts/DistanceCalculator\.php
 
     # Currency and Language are siblings, not children. Each is an independent ISO register.
     - name: Currency
@@ -67,7 +73,7 @@ deptrac:
         - type: directory
           value: src/Core/(Support|Exception)/.*
         - type: directory
-          value: src/Core/Contracts/(AtlasException|DistanceCalculator)\.php
+          value: src/Core/Contracts/AtlasException\.php
 
     # The Laravel shell — everything outside src/Core.
     - name: Shell

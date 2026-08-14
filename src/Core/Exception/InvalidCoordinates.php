@@ -28,6 +28,15 @@ final class InvalidCoordinates extends InvalidArgumentException implements Atlas
         ));
     }
 
+    public static function negativeDistance(float $metres): self
+    {
+        return new self(sprintf(
+            'A distance cannot be %s metres. Distances are unsigned — direction is a property of the '
+            . 'two points, not of the length between them.',
+            self::format($metres),
+        ));
+    }
+
     public static function notFinite(float $latitude, float $longitude): self
     {
         return new self(sprintf(

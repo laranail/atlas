@@ -84,13 +84,27 @@ return [
     | Distance
     |--------------------------------------------------------------------------
     |
-    | `unit` is the default for `Atlas::distance()`: km, mi, m or nmi.
+    | `unit` is the default for display: km, mi, m or nmi. Long spellings work
+    | too — `kilometres` and `kilometers` are the same request as `km`, because
+    | the spelling of that word is not something a config file should have to
+    | get right. `Atlas::distance()` returns a Distance object that converts
+    | between all of them, so this only chooses what `format()` prints.
     |
     | `formula` is haversine or vincenty. Haversine treats the earth as a sphere
     | and is accurate to roughly 0.5% — fine for "how far is the nearest branch",
     | wrong for surveying. Vincenty is iterative over the WGS-84 ellipsoid,
-    | accurate to millimetres, and slower. Haversine is the default because the
-    | question this package is usually asked does not need the precision.
+    | accurate to about half a millimetre, and slower. Haversine is the default
+    | because the question this package is usually asked does not need the
+    | precision.
+    |
+    | Note that Vincenty's inverse formula does not converge for near-antipodal
+    | points — it oscillates and never settles. When that happens the answer
+    | falls back to the spherical one, which is defined everywhere, and
+    | `Vincenty::converged()` reports it rather than hiding it.
+    |
+    | An unrecognised formula falls back to haversine. A typo here is a config
+    | error, not a reason to break the first page that measures a distance;
+    | `Atlas::describe()['distance']` says which one is actually in use.
     |
     */
 

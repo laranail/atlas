@@ -8,7 +8,10 @@ use Illuminate\Contracts\Config\Repository as ConfigRepository;
 use Illuminate\Contracts\Foundation\Application;
 use Override;
 use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
+use Simtabi\Laranail\Atlas\Core\Contracts\DistanceCalculator;
 use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
+use Simtabi\Laranail\Atlas\Core\Geo\Haversine;
+use Simtabi\Laranail\Atlas\Core\Geo\Vincenty;
 use Simtabi\Laranail\Atlas\Services\AtlasManager;
 use Simtabi\Laranail\Atlas\Services\AtlasService;
 use Simtabi\Laranail\Atlas\Services\LocaleRegistry;
@@ -70,10 +73,26 @@ final class AtlasServiceProvider extends PackageServiceProvider
             ),
         );
 
+        // Resolved through a match on the enum, not by interpolating the config
+        // value into a class name. An unrecognised formula falls back to the
+        // spherical one and says so in `describe()`, rather than throwing at the
+        // first distance calculation of a request — a mistyped formula is a
+        // config error, not a reason to break a page.
+        $this->app->singleton(
+            DistanceCalculator::class,
+            static fn (Application $app): DistanceCalculator => match (
+                strtolower($app->make(AtlasConfig::class)->string('distance.formula', 'haversine'))
+            ) {
+                'vincenty' => new Vincenty,
+                default => new Haversine,
+            },
+        );
+
         $this->app->singleton(
             AtlasService::class,
             static fn (Application $app): AtlasService => new AtlasService(
                 $app->make(PlaceRepository::class),
+                $app->make(DistanceCalculator::class),
             ),
         );
 

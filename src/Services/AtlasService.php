@@ -4,10 +4,12 @@ declare(strict_types=1);
 
 namespace Simtabi\Laranail\Atlas\Services;
 
+use Simtabi\Laranail\Atlas\Core\Contracts\DistanceCalculator;
 use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 use Simtabi\Laranail\Atlas\Core\Country\CountryQuery;
 use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
 use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
+use Simtabi\Laranail\Atlas\Core\Geo\Distance;
 use Simtabi\Laranail\Atlas\Core\Region\Continent;
 use Simtabi\Laranail\Atlas\Enums\Country;
 
@@ -24,6 +26,7 @@ final readonly class AtlasService
 {
     public function __construct(
         private PlaceRepository $repository,
+        private DistanceCalculator $distances,
     ) {}
 
     /**
@@ -165,9 +168,42 @@ final readonly class AtlasService
     }
 
     /**
+     * How far apart two points are, by the configured formula.
+     *
+     * Returns a {@see Distance}, not a float. The helper this replaces returned
+     * a bare number whose unit was decided by a string argument several lines
+     * earlier, so `$d > 100` could not be read without scrolling and changing
+     * the unit at the call site silently rescaled every comparison below it.
+     */
+    public function distance(Coordinates $from, Coordinates $to): Distance
+    {
+        return $this->distances->between($from, $to);
+    }
+
+    /**
+     * Between two countries' centroids, or null if either is unknown or has no
+     * coordinates.
+     *
+     * A centroid is not a city and not a border. This answers "roughly how far
+     * apart are these two countries", which is a real question, and not "how far
+     * is the journey", which it cannot answer.
+     */
+    public function distanceBetween(Country|string $from, Country|string $to): ?Distance
+    {
+        $a = $this->country($from)?->coordinates;
+        $b = $this->country($to)?->coordinates;
+
+        if (! $a instanceof Coordinates || ! $b instanceof Coordinates) {
+            return null;
+        }
+
+        return $this->distance($a, $b);
+    }
+
+    /**
      * Which data source answered, and what version of it.
      *
-     * @return array{provider: string, version: ?string, available: bool, countries: int}
+     * @return array{provider: string, version: ?string, available: bool, countries: int, distance: string}
      */
     public function describe(): array
     {
@@ -176,6 +212,7 @@ final readonly class AtlasService
             'version' => $this->repository->version(),
             'available' => $this->repository->isAvailable(),
             'countries' => count($this->repository->all()),
+            'distance' => $this->distances->name(),
         ];
     }
 }

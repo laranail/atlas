@@ -4,12 +4,16 @@ declare(strict_types=1);
 
 use Rinvex\Country\CountryLoader;
 use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
+use Simtabi\Laranail\Atlas\Core\Contracts\DistanceCalculator;
 use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 use Simtabi\Laranail\Atlas\Core\Exception\UnsupportedProvider;
+use Simtabi\Laranail\Atlas\Core\Geo\Haversine;
+use Simtabi\Laranail\Atlas\Core\Geo\Vincenty;
 use Simtabi\Laranail\Atlas\Enums\Country;
 use Simtabi\Laranail\Atlas\Enums\Provider;
 use Simtabi\Laranail\Atlas\Facades\Atlas;
 use Simtabi\Laranail\Atlas\Services\AtlasManager;
+use Simtabi\Laranail\Atlas\Services\AtlasService;
 use Simtabi\Laranail\Atlas\Support\AtlasConfig;
 
 it('publishes config to the vendor-namespaced key', function (): void {
@@ -137,4 +141,39 @@ it('accepts the country enum anywhere a code is accepted', function (): void {
     expect(Atlas::country(Country::Kenya)?->iso2)->toBe('KE')
         ->and(Atlas::country('KE')?->iso2)->toBe('KE')
         ->and(Atlas::countryOrFail(Country::Kenya)->name)->toBe('Kenya');
+});
+
+it('resolves the distance formula from config', function (): void {
+    expect(app(DistanceCalculator::class))->toBeInstanceOf(Haversine::class)
+        ->and(Atlas::describe()['distance'])->toBe('haversine');
+});
+
+it('switches formula by config without touching a call site', function (): void {
+    config()->set('laranail.atlas.distance.formula', 'vincenty');
+    app()->forgetInstance(DistanceCalculator::class);
+    app()->forgetInstance(AtlasService::class);
+
+    expect(app(DistanceCalculator::class))->toBeInstanceOf(Vincenty::class);
+});
+
+it('falls back to the sphere for a formula that is not one', function (): void {
+    // A mistyped formula is a config error, not a reason to break the first
+    // page that measures a distance.
+    config()->set('laranail.atlas.distance.formula', 'flat-earth');
+    app()->forgetInstance(DistanceCalculator::class);
+
+    expect(app(DistanceCalculator::class))->toBeInstanceOf(Haversine::class);
+});
+
+it('measures between two country centroids', function (): void {
+    $distance = Atlas::distanceBetween(Country::UnitedKingdom, Country::France);
+
+    expect($distance?->kilometres())->toBeGreaterThan(100.0)->toBeLessThan(1200.0);
+});
+
+it('returns null rather than zero when a country has no coordinates', function (): void {
+    // Kosovo carries no geo block in the source. Zero would read as "these are
+    // the same place".
+    expect(Atlas::distanceBetween('XK', 'KE'))->toBeNull()
+        ->and(Atlas::distanceBetween('ZZ', 'KE'))->toBeNull();
 });

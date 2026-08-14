@@ -61,6 +61,21 @@ package was load-bearing in every call site, not just in the loader.
   `getName()`, about 800 lines of data pretending to be code. All three are dataset lookups here,
   and the flag is derived arithmetically from the ISO code.
 
+- **`Core\Geo\Distance`, `DistanceUnit`, `Haversine`, `Vincenty`** — moved from `laranail/toolkit`'s
+  `InteractsWithGeo::distanceBetween()`, which returned a bare `float` whose unit was chosen by a
+  string argument several lines earlier. `$d > 100` could not be read without scrolling, and
+  changing the unit at the call site silently rescaled every comparison below it. A `Distance`
+  carries its own unit and stores metres, so two built differently still compare correctly.
+
+  `Vincenty` is added for the cases the sphere is too coarse for — half a millimetre against ~0.5%.
+  Its inverse formula **does not converge for near-antipodal points**: it oscillates and never
+  settles, and implementations that ignore that either loop forever or return the last iteration,
+  which is not a distance. Here it falls back to the sphere and `converged()` reports it.
+
+  `Haversine` clamps the haversine argument before the square root, because accumulated error can
+  push it a hair above 1 and `sqrt(1 - 1.0000001)` is `NAN` — a distance that silently poisons every
+  comparison it reaches.
+
 - **`Core\Support\Text`** — case- and accent-folding that does not depend on the C library.
   `iconv('UTF-8', 'ASCII//TRANSLIT', …)` folds `São Tomé` to `Sao Tome` on glibc and to
   `S~ao Tom'e` on BSD, which breaks both search (`cote` finds nothing) and enum generation
