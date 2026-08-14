@@ -6,10 +6,12 @@ namespace Simtabi\Laranail\Atlas\Providers;
 
 use Illuminate\Contracts\Config\Repository as ConfigRepository;
 use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Support\Facades\Route;
 use Override;
 use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedIpCountryResolver;
 use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
 use Simtabi\Laranail\Atlas\Bridges\Chrono\ChronoBridge;
+use Simtabi\Laranail\Atlas\Console\DoctorCommand;
 use Simtabi\Laranail\Atlas\Core\Contracts\DistanceCalculator;
 use Simtabi\Laranail\Atlas\Core\Contracts\IpCountryResolver;
 use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
@@ -40,7 +42,8 @@ final class AtlasServiceProvider extends PackageServiceProvider
             ->name('laranail/atlas')
             ->setPublishTagId('atlas')
             ->hasConfigFile('atlas')
-            ->hasTranslations('laranail-atlas');
+            ->hasTranslations()
+            ->hasCommand(DoctorCommand::class);
     }
 
     #[Override]
@@ -131,5 +134,43 @@ final class AtlasServiceProvider extends PackageServiceProvider
                 $app->make(PlaceRepository::class),
             ),
         );
+    }
+
+    #[Override]
+    public function packageBooted(): void
+    {
+        $this->registerApiRoutes();
+    }
+
+    /**
+     * Register the API only when it is switched on.
+     *
+     * **Off means absent, not registered-then-blocked.** A disabled API that
+     * still appears in `route:list` is one loosened middleware group away from
+     * being live, and nobody reviewing that change would think to look here.
+     *
+     * The default in `config/atlas.php` is off, so a `composer require` adds no
+     * routes to an application that only wanted the query API.
+     */
+    private function registerApiRoutes(): void
+    {
+        $config = $this->app->make(AtlasConfig::class);
+
+        if (! $config->bool('api.enabled', false)) {
+            return;
+        }
+
+        $middleware = array_values(array_filter(
+            $config->array('api.middleware', ['api']),
+            is_string(...),
+        ));
+
+        Route::group([
+            'prefix' => trim($config->string('api.prefix', 'api/atlas'), '/')
+                . '/' . trim($config->string('api.version', 'v1'), '/'),
+            'middleware' => $middleware,
+        ], function (): void {
+            $this->loadRoutesFrom(dirname(__DIR__, 2) . '/routes/api.php');
+        });
     }
 }
