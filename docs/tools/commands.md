@@ -22,16 +22,27 @@ Answers the three questions that otherwise fail silently:
    "not allocated" unless something says so.
 
 ```
-Data source
-  Provider ...... Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository
-  Countries ..... 250
-  Dataset ....... 2026-08-14
-IP to country
-  WARN  No range table, so countryForIp() answers null for every address.
-        Build one with tools/build-ip-table.php if you need it.
-Distance
-  Formula ....... haversine
+ INFO  Data source.
+
+  Provider  Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository
+  Countries ............................................................ 250
+  Dataset .......................................... rinvex/countries v9.1.0
+
+ INFO  IP to country.
+
+ WARN  No range table, so countryForIp() answers null for every address.
+       Build one with tools/build-ip-table.php if you need it.
+
+ INFO  Distance.
+
+  Formula ........................................................ haversine
 ```
+
+> `Dataset` is the **source** the shipped catalogue was generated from, not a
+> build date — `resources/data/dataset-version.txt` records what the data came
+> out of. `doctor` warns when that stamp parses as a date older than a year; a
+> source string like the one above does not parse as one, so it never goes
+> stale on its own and staleness has to be judged by regenerating.
 
 | Exit | When |
 |---|---|

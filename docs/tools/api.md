@@ -143,7 +143,7 @@ it rejects becomes a 404 saying the endpoint does not exist, while
 
 ```json
 {"data": {
-  "provider": "…\\GeneratedPlaceRepository", "version": "2026-08-14",
+  "provider": "…\\GeneratedPlaceRepository", "version": "rinvex/countries v9.1.0",
   "available": true, "countries": 250,
   "distance": "haversine", "ip_ready": false
 }}
