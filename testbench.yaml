@@ -1,0 +1,16 @@
+# Lets `vendor/bin/testbench` boot this package the way a consuming application
+# would, so its commands can be driven by hand:
+#
+#   vendor/bin/testbench laranail::atlas.doctor
+#
+# Without it the skeleton auto-discovers every *installed* laranail package and
+# not the one under development, so `laranail::atlas.doctor` is the single
+# command missing from `list` — while `laranail::package-tools.doctor` and the
+# rest are all there, which makes it read as a naming bug rather than a missing
+# registration.
+#
+# The Pest suite does not need this and never caught it: tests/TestCase.php
+# registers the provider itself.
+
+providers:
+  - Simtabi\Laranail\Atlas\Providers\AtlasServiceProvider

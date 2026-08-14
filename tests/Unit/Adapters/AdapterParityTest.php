@@ -6,6 +6,7 @@ use Rinvex\Country\CountryLoader;
 use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
 use Simtabi\Laranail\Atlas\Adapters\Rinvex\RinvexPlaceRepository;
 use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
+use Simtabi\Laranail\Atlas\Core\Support\DatasetVersion;
 
 /**
  * The claim `PlaceRepository` rests on: which source is configured must not be
@@ -82,7 +83,8 @@ it('reports the live adapter as unversioned rather than inventing one', function
     // Inferring a version from a file mtime would be a number that looks
     // authoritative and is not. doctor renders null as unknown.
     expect(new RinvexPlaceRepository()->version())->toBeNull()
-        ->and(atlasGenerated()->version())->toStartWith('rinvex/countries ');
+        ->and(DatasetVersion::parse((string) atlasGenerated()->version())->source)
+        ->toStartWith('rinvex/countries ');
 });
 
 it('hydrates the same value object type from both', function (): void {

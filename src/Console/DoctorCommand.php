@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Simtabi\Laranail\Atlas\Console;
 
+use DateTimeImmutable;
+use Simtabi\Laranail\Atlas\Core\Support\DatasetVersion;
 use Simtabi\Laranail\Atlas\Services\AtlasService;
 use Simtabi\Laranail\Console\Tools\Commands\Command;
 use Simtabi\Laranail\Console\Tools\Commands\Concerns\SupportsNamespacedNames;
@@ -69,14 +71,30 @@ final class DoctorCommand extends Command
             $this->components->warn('The source does not report a version, so its age cannot be checked.');
             $warned = true;
         } else {
-            $this->components->twoColumnDetail('Dataset', $version);
+            $dataset = DatasetVersion::parse($version);
 
-            if ($this->isStale($version)) {
-                $this->components->warn(sprintf(
-                    'The dataset is dated %s. Regenerate it with tools/build-dataset.php.',
-                    $version,
-                ));
+            $this->components->twoColumnDetail('Dataset', $dataset->source);
+
+            if (! $dataset->isDated()) {
+                // The same answer as a null version, for the same reason: this
+                // is a stamp written before the format carried a date, or by a
+                // custom source. Unknown is not current.
+                $this->components->warn(
+                    'The dataset stamp carries no date, so its age cannot be checked. '
+                    . 'Regenerate it with tools/build-dataset.php to add one.',
+                );
                 $warned = true;
+            } else {
+                $this->components->twoColumnDetail('Source released', (string) $dataset->date);
+
+                if ($dataset->isOlderThan($this->staleBefore())) {
+                    $this->components->warn(sprintf(
+                        'The source data was released on %s, over a year ago. Update rinvex/countries and '
+                        . 'regenerate with tools/build-dataset.php.',
+                        $dataset->date,
+                    ));
+                    $warned = true;
+                }
             }
         }
 
@@ -106,16 +124,20 @@ final class DoctorCommand extends Command
     }
 
     /**
-     * Older than a year.
+     * Anything released before this is stale.
      *
      * A year rather than a month because the ISO registers move slowly — the
      * threshold exists to catch a dataset nobody has thought about since the
      * package was installed, not to nag about a fortnight.
+     *
+     * The comparison itself lives on {@see DatasetVersion} and takes this cutoff
+     * as an argument, so the rule is unit-testable without a fixed clock. The
+     * version it replaces called `strtotime()` on the whole stamp, which for
+     * `rinvex/countries v9.1.0` returns false — so this check silently answered
+     * "not stale" for every dataset the package has ever shipped.
      */
-    private function isStale(string $version): bool
+    private function staleBefore(): DateTimeImmutable
     {
-        $stamp = strtotime($version);
-
-        return $stamp !== false && $stamp < strtotime('-1 year');
+        return new DateTimeImmutable('-1 year');
     }
 }

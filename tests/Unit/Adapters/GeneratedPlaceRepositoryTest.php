@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
 use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
+use Simtabi\Laranail\Atlas\Core\Support\DatasetVersion;
 
 function atlasRepository(): GeneratedPlaceRepository
 {
@@ -20,7 +21,14 @@ it('loads the shipped dataset', function (): void {
 });
 
 it('stamps the source release so staleness is answerable', function (): void {
-    expect(atlasRepository()->version())->toStartWith('rinvex/countries ');
+    // Both halves, and the date first. The provenance alone is what `doctor`
+    // used to try to age with strtotime(), which returns false for it — so the
+    // staleness check silently passed on every dataset ever shipped. Asserting
+    // the shape here is what keeps the stamp answerable.
+    $version = DatasetVersion::parse((string) atlasRepository()->version());
+
+    expect($version->isDated())->toBeTrue()
+        ->and($version->source)->toStartWith('rinvex/countries ');
 });
 
 it('finds a country by any of the three ISO forms', function (string $code): void {

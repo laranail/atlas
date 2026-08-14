@@ -61,6 +61,32 @@ No HTTP response shape changed. `/continents` still returns a code → name map;
 
 ### Fixed
 
+- **`doctor`'s staleness check never ran.** It asked `strtotime()` to age the whole version stamp,
+  and the stamp was `rinvex/countries v9.1.0` — provenance, not a date. `strtotime()` returns
+  `false` for that, so the guard short-circuited and the answer was "not stale" for every dataset
+  the package has ever shipped. Not a wrong warning: no warning, ever, from one of the three
+  questions the command exists to answer. A health check that cannot fail reads as one that passed.
+
+  `dataset-version.txt` now carries both halves, date first — `2025-07-14 rinvex/countries v9.1.0`.
+  The date is the **source's** release date, read from composer's `installed.json`, not the build
+  date: rebuilding from an unchanged source produces byte-identical data, and a build date would
+  reset the catalogue's age without any of its content getting newer.
+
+  Parsing moved to `Core\Support\DatasetVersion`, which takes exactly one leading `YYYY-MM-DD` and
+  nothing looser — `strtotime()` would happily accept `yesterday` — and which reports a stamp it
+  cannot date as **undatable** rather than as current, the same answer a null version already got.
+  It takes the cutoff as an argument, so the rule is unit-testable without a fixed clock.
+
+  Two consequences worth knowing. The shipped catalogue is generated from `rinvex/countries v9.1.0`,
+  released 2025-07-14, so `doctor` warns on it today — truthfully, and for the first time. And under
+  `--strict` that warning is a failure, so a CI job pinned to an ageing source will now say so.
+
+- **`vendor/bin/testbench laranail::atlas.doctor` could not find the command.** There was no
+  `testbench.yaml`, so the skeleton auto-discovered every *installed* laranail package and not the
+  one under development — leaving `laranail::atlas.doctor` as the single command missing from a list
+  full of its siblings, which reads as a naming bug rather than a missing registration. The Pest
+  suite never caught it because `tests/TestCase.php` registers the provider itself.
+
 - `Atlas::extend()` never existed — the facade proxies `AtlasService`, and `extend()` is on
   `AtlasManager`. It was documented in `docs/configuration.md`, `docs/tools/data-sources.md`, the
   published config file and the "unknown provider" exception message, all of which now say

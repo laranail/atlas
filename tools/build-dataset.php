@@ -176,6 +176,7 @@ if ($countries === []) {
 // stamping the local one would name a version that had no part in the build.
 $vendorRoot = dirname($resources, 3);
 $sourceVersion = 'rinvex/countries';
+$sourceDate = null;
 $installed = $vendorRoot . '/composer/installed.json';
 
 if (is_file($installed)) {
@@ -184,6 +185,17 @@ if (is_file($installed)) {
     foreach ((is_array($data) ? ($data['packages'] ?? []) : []) as $package) {
         if (is_array($package) && ($package['name'] ?? '') === 'rinvex/countries') {
             $sourceVersion .= ' ' . (is_string($package['version'] ?? null) ? $package['version'] : 'unknown');
+
+            // The release date of that version, which composer already records.
+            // The *source* date and not the build date, deliberately: rebuilding
+            // from an unchanged source produces byte-identical data, and a stamp
+            // that reset on every regeneration would report a two-year-old
+            // catalogue as fresh the moment someone ran the generator.
+            $time = is_string($package['time'] ?? null) ? strtotime($package['time']) : false;
+
+            if ($time !== false) {
+                $sourceDate = date('Y-m-d', $time);
+            }
 
             break;
         }
@@ -195,6 +207,13 @@ if (! str_contains($sourceVersion, ' ')) {
     // not. `doctor` reports an unversioned dataset as unknown, not as current.
     $sourceVersion .= ' unknown';
 }
+
+// Date first, so the stamp can be aged by reading one leading token rather than
+// by throwing free text at strtotime() — which is what `doctor` used to do, and
+// which returned false for every stamp this generator has ever written, leaving
+// the staleness check permanently silent. A stamp with no date is still valid;
+// doctor reports it as undatable rather than as current.
+$stamp = $sourceDate === null ? $sourceVersion : $sourceDate . ' ' . $sourceVersion;
 
 $export = var_export($countries, true);
 $count = count($countries);
@@ -237,6 +256,6 @@ if ($check) {
 }
 
 file_put_contents($target, $code);
-file_put_contents($root . '/resources/data/dataset-version.txt', $sourceVersion . "\n");
+file_put_contents($root . '/resources/data/dataset-version.txt', $stamp . "\n");
 
-fwrite(STDOUT, "{$count} countries written from {$sourceVersion}.\n");
+fwrite(STDOUT, "{$count} countries written from {$stamp}.\n");

@@ -27,6 +27,10 @@ Answers the three questions that otherwise fail silently:
   Provider  Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository
   Countries ............................................................ 250
   Dataset .......................................... rinvex/countries v9.1.0
+  Source released ............................................... 2025-07-14
+
+ WARN  The source data was released on 2025-07-14, over a year ago. Update
+       rinvex/countries and regenerate with tools/build-dataset.php.
 
  INFO  IP to country.
 
@@ -38,11 +42,24 @@ Answers the three questions that otherwise fail silently:
   Formula ........................................................ haversine
 ```
 
-> `Dataset` is the **source** the shipped catalogue was generated from, not a
-> build date — `resources/data/dataset-version.txt` records what the data came
-> out of. `doctor` warns when that stamp parses as a date older than a year; a
-> source string like the one above does not parse as one, so it never goes
-> stale on its own and staleness has to be judged by regenerating.
+> `resources/data/dataset-version.txt` holds both halves, date first —
+> `2025-07-14 rinvex/countries v9.1.0`. `Dataset` is the **source** the
+> catalogue was generated from; `Source released` is when that source version
+> was published, which composer records in `installed.json`.
+>
+> The date is the source's release date and **not** the build date, deliberately:
+> rebuilding from an unchanged source produces byte-identical data, so a stamp
+> that reset on every regeneration would report a two-year-old catalogue as
+> fresh the moment someone ran the generator.
+>
+> A stamp with no leading `YYYY-MM-DD` — every dataset built before this format,
+> and any custom source with its own — is reported as **undatable**, which warns.
+> Unknown is not current.
+
+> **The warning above is real, not illustrative.** The shipped catalogue is
+> generated from `rinvex/countries v9.1.0`, released 2025-07-14, so a run today
+> warns. Regenerate against a newer release to clear it — see
+> [release](../release.md).
 
 | Exit | When |
 |---|---|

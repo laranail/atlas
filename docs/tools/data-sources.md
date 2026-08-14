@@ -72,7 +72,7 @@ database row. The `Provider` enum is the allow-list for the built-in three, and
 
 ```php
 Atlas::describe();
-// ['provider' => '…\GeneratedPlaceRepository', 'version' => '2026-08-14',
+// ['provider' => '…\GeneratedPlaceRepository', 'version' => '2025-07-14 rinvex/countries v9.1.0',
 //  'available' => true, 'countries' => 250,
 //  'distance' => 'haversine', 'ip_ready' => false]
 ```
@@ -87,6 +87,13 @@ every country look nonexistent rather than raising anything.
 reports that as *unknown* rather than *current*. A source that cannot be dated
 cannot be checked for staleness, and calling it fine would be a guess dressed as
 a result.
+
+A stamp that is present but carries no leading `YYYY-MM-DD` gets the same
+treatment — undatable, and warned about. `doctor` parses exactly that one
+leading token and nothing looser: the check it replaces threw the whole stamp at
+`strtotime()`, which returns false for a source string, so it reported every
+dataset the package has ever shipped as current. Your own source is free to stamp
+whatever it likes; prefixing a date is what buys it an age check.
 
 ## The shipped dataset
 
