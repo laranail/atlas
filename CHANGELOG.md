@@ -5,11 +5,11 @@ All notable changes to `laranail/atlas` are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.1.0] - 2026-08-14
 
 ### Added
 
-Initial scaffold. Extracted from `laranail/toolkit`'s `Modules\Atlas`, which was a façade over
+Initial release. Extracted from `laranail/toolkit`'s `Modules\Atlas`, which was a façade over
 `rinvex/countries` returning bare arrays shaped by whatever that package exposed — so the data
 package was load-bearing in every call site, not just in the loader.
 
@@ -114,3 +114,42 @@ package was load-bearing in every call site, not just in the loader.
 
 - `src/Core` is framework-free, enforced two ways: deptrac statically, and unit tests that never
   boot Laravel.
+
+- **`Rules\CountryCode`, `CurrencyCode`, `LanguageCode`, `Coordinate`** — derived from the dataset
+  rather than declared, so they stay true when it is regenerated and when the source is swapped. A
+  `size:2` check accepts `UK`, which is the code people reach for and is not one; the message names
+  `GB` rather than saying "invalid". `Coordinate` bounds latitude and deliberately does **not** bound
+  longitude, and rejects `NAN`/`INF` — both pass `numeric` and then propagate silently through every
+  distance calculation downstream.
+
+- **A read-only REST API**, off by default: ten `GET` endpoints over countries, the flat catalogues,
+  distance, IP lookup and `describe`. Routes are **not registered** unless
+  `laranail.atlas.api.enabled` — off means absent, not registered-then-blocked, because a disabled
+  endpoint sitting in `route:list` is one loosened middleware group from being live.
+
+  The config block for this shipped before the endpoints did: `api.enabled`, `prefix`, `version` and
+  `middleware` were all present while `Http/`, `Rules/` and `routes/` were empty directories, so
+  setting `ATLAS_API=true` produced no routes and no error.
+
+  Responses go through a `CountryResource` rather than `CountryRecord::toArray()`. The record is a
+  domain type and may gain fields; an endpoint returning whatever it held would publish each of
+  those the moment it was added.
+
+- **`Console\DoctorCommand`** (`laranail::atlas.doctor`) — reports which source answered, how old its
+  data is, and whether the IP table is installed. That last one because the table is built rather
+  than shipped, so `countryForIp()` returns null on a fresh install and that is indistinguishable
+  from "not allocated". No generic `atlas:doctor` alias; a test asserts the bare name is not claimed.
+
+- **English validation messages**, published to `lang/vendor/laranail-atlas/`. Each says what *would*
+  have been accepted, not only that the value was rejected.
+
+### Notes for consumers
+
+- **Languages are ISO 639-3** — `eng`, `swa`, `fra`, not `en`, `sw`, `fr`. That is what the dataset
+  carries and what `Enums\Language` is generated from. Austria's is `bar` (Bavarian), which has no
+  two-letter code at all.
+- **`currencies` is a list that holds at most one entry.** 249 of 250 countries have exactly one and
+  one has none. Historical and secondary currencies are not in this dataset.
+- **`callingCode()` returns a bare `254`**, with no leading `+`.
+- **`at()` and `containing()` are bounding-box tests, not polygon tests.** A point in Nairobi returns
+  KE, MZ, RW, TZ and ZM. Right for narrowing a candidate list, wrong for deciding jurisdiction.
