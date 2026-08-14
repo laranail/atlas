@@ -99,6 +99,46 @@ Generated files are excluded from Pint and Rector. A reformatter would put the
 committed artefact and the generator permanently at odds, and the resulting diff
 would be reformatting noise on every regeneration.
 
+## <a name="naming"></a>Every public name carries the vendor and the slug
+
+Laravel keeps view namespaces, translation namespaces, publish tags, middleware
+aliases and Artisan command names in **flat maps keyed by the name**. Two
+packages claiming the same key do not conflict loudly — the second silently
+replaces the first, and the damage surfaces somewhere else entirely as a missing
+translation, the wrong middleware, or a command that runs someone else's code.
+`atlas` is a plausible key for a sibling package, a third-party one, or the
+consuming application's own.
+
+So every name this package registers is scoped:
+
+| Surface | Name |
+|---|---|
+| Config key | `laranail.atlas.*`, from `config/laranail/atlas.php` |
+| Translation namespace | `laranail-atlas::validation.country_code` |
+| Publish tags | `laranail::atlas-config`, `laranail::atlas-translations` |
+| Artisan command | `laranail::atlas.doctor` |
+| Views, middleware, Blade prefixes | none registered |
+
+The separators differ because each registry parses its key differently, and that
+is forced rather than stylistic — see the org convention. Briefly: Symfony
+resolves an exact command name before splitting on `:`, which is what lets
+`laranail::atlas.doctor` dispatch; a middleware alias could not use `::`, because
+Laravel splits on `:` to take parameters the way `throttle:60,1` does.
+
+### The guard reads the registry, not the provider
+
+`tests/Feature/NamingConventionTest.php` asserts against the live maps —
+`Lang::getLoader()->namespaces()`, `ServiceProvider::publishableGroups()`,
+`app(Kernel::class)->all()`, the view finder's hints.
+
+Grepping the provider would prove how the registration was *written*, not what
+the framework ended up *holding*, and here it would prove nothing at all:
+`hasTranslations()` takes no argument and derives `laranail-atlas` from
+`->name('laranail/atlas')`, so the name under test appears nowhere in the
+provider. A grep for it would fail against correct code, and a grep for `atlas`
+would pass against a bare registration. Asking the booted application survives
+both, and survives package-tools changing its defaults.
+
 ## Records and lists on the facade, maps behind `form()`
 
 A rule, not a preference about tidiness. `Atlas::options()` and

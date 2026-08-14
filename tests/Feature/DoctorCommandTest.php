@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-use Illuminate\Contracts\Console\Kernel;
 use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 use Simtabi\Laranail\Atlas\Services\AtlasService;
 
@@ -43,16 +42,9 @@ function atlasDoctorStub(?string $version): void
     app()->forgetInstance(AtlasService::class);
 }
 
-it('registers under a vendor-scoped name and nothing generic', function (): void {
-    // Artisan's registry is a flat map. `atlas:doctor` is a name any package or
-    // application could also want, and the loser is replaced without a word —
-    // so this package claims only the namespaced one.
-    $names = array_keys(app(Kernel::class)->all());
-
-    expect($names)->toContain('laranail::atlas.doctor')
-        ->and($names)->not->toContain('atlas:doctor')
-        ->and($names)->not->toContain('doctor');
-});
+// The command's *name* is asserted in NamingConventionTest, beside every other
+// registry this package writes into — they fail for one reason and are read
+// together.
 
 it('passes on a healthy installation', function (): void {
     $this->artisan('laranail::atlas.doctor')

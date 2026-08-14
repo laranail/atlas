@@ -59,6 +59,22 @@ else.
 No HTTP response shape changed. `/continents` still returns a code → name map; it is sourced from
 `form()->continents()` now.
 
+- **`tests/Feature/NamingConventionTest`** — a guard on every name this package registers into a
+  framework-owned registry: the translation namespace, the publish tags, the Artisan command name,
+  the config key, and the absence of a view namespace.
+
+  It asserts against the **live maps** — `Lang::getLoader()->namespaces()`,
+  `ServiceProvider::publishableGroups()`, the console kernel, the view finder — rather than against
+  the provider's source. Here that distinction has teeth: `hasTranslations()` takes no argument and
+  derives `laranail-atlas` from `->name('laranail/atlas')`, so the name under test appears nowhere in
+  the provider at all. A grep for it would fail against correct code; a grep for `atlas` would pass
+  against a bare registration.
+
+  The names were already correct — this commit adds no rename. What it adds is the thing that
+  notices if one stops being correct, which these registries otherwise never will: they are flat
+  maps, so a second package claiming the same key silently replaces the first and the damage
+  surfaces far away as a missing translation or a command that runs someone else's code.
+
 ### Fixed
 
 - **`doctor`'s staleness check never ran.** It asked `strtotime()` to age the whole version stamp,
