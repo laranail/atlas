@@ -1,0 +1,66 @@
+name: Static analysis
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: static-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  static:
+    name: Pint · PHPStan · deptrac · Rector · sync-check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # v2
+        with:
+          php-version: '8.5'
+          extensions: dom, curl, libxml, mbstring, zip, fileinfo
+          coverage: none
+
+      - name: Cache Composer files
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.cache/composer/files
+          key: composer-static-${{ hashFiles('composer.json') }}
+          restore-keys: composer-static-
+
+      - name: Install dependencies
+        env:
+          COMPOSER_AUTH: '{"github-oauth":{"github.com":"${{ secrets.GITHUB_TOKEN }}"}}'
+        run: composer update --prefer-stable --no-interaction --no-progress
+
+      - name: Lint (parse errors)
+        run: composer parallel-lint
+
+      - name: Pint (code style)
+        run: composer pint
+
+      # Two configs: level 8 with larastan for the Laravel shell, level 10 with strict rules and no
+      # baseline for src/Core.
+      - name: PHPStan
+        run: composer phpstan
+
+      # Through tools/deptrac-guard.php, not deptrac directly: deptrac exits 0 when it cannot parse
+      # a file, so a syntax it does not understand yet would leave src/Core silently unguarded.
+      - name: Architecture boundary
+        run: composer deptrac
+
+      - name: Rector (dry run)
+        run: composer rector
+
+      # rinvex/countries is installed here (it is a dev dependency), so this runs the real
+      # comparison rather than skipping.
+      - name: Generated data is still generated
+        run: composer sync-check

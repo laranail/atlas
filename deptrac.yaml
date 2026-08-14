@@ -1,0 +1,121 @@
+# The boundary. A convention is not a boundary; this is. Gated in CI via tools/deptrac-guard.php,
+# which also fails on parse errors — deptrac exits 0 when it cannot read a file, so a silent parse
+# failure would leave everything below unenforced.
+#
+# Two rules, both absolute:
+#
+#   1. src/Core is framework-free. It may not reference Illuminate or any other Simtabi\Laranail\*
+#      package — including laranail/chrono, which is a `suggest`, not a dependency. That is what
+#      keeps the domain extractable and unit-testable without booting Laravel, and what makes the
+#      chrono bridge genuinely optional rather than optional-until-you-look.
+#   2. The modules form a DAG. Geo is the root and depends on nothing but Shared; Country builds on
+#      it; Network builds on Country. Currency and Language cannot reach Country, because a currency
+#      does not belong to a country — several countries share one, and the association is data the
+#      Country module owns.
+#
+# Requires deptrac ^4.7 for PHP 8.4/8.5 syntax.
+
+deptrac:
+  paths:
+    - ./src
+
+  layers:
+    # ---- Core modules, in dependency order --------------------------------------------------
+    # Coordinates, distance, bounding boxes. Pure maths over pure numbers — the one module that
+    # would still make sense if every country in the world were renamed tomorrow.
+    - name: Geo
+      collectors:
+        - type: directory
+          value: src/Core/Geo/.*
+
+    # Currency and Language are siblings, not children. Each is an independent ISO register.
+    - name: Currency
+      collectors:
+        - type: directory
+          value: src/Core/Currency/.*
+
+    - name: Language
+      collectors:
+        - type: directory
+          value: src/Core/Language/.*
+
+    - name: Region
+      collectors:
+        - type: directory
+          value: src/Core/Region/.*
+
+    # Country is where the registers meet: a country has coordinates, currencies, languages and a
+    # region. It depends on all four and none of them depends back.
+    - name: Country
+      collectors:
+        - type: directory
+          value: src/Core/Country/.*
+        - type: directory
+          value: src/Core/Contracts/PlaceRepository\.php
+
+    # IP ranges resolve to a country, so Network sits above it. Nothing sits above Network.
+    - name: Network
+      collectors:
+        - type: directory
+          value: src/Core/Network/.*
+        - type: directory
+          value: src/Core/Contracts/IpCountryResolver\.php
+
+    # Shared core scaffolding every module may use.
+    - name: Shared
+      collectors:
+        - type: directory
+          value: src/Core/(Support|Exception)/.*
+        - type: directory
+          value: src/Core/Contracts/(AtlasException|DistanceCalculator)\.php
+
+    # The Laravel shell — everything outside src/Core.
+    - name: Shell
+      collectors:
+        - type: directory
+          value: src/(Actions|Adapters|Bridges|Casts|Console|Enums|Facades|Http|Providers|Rules|Services|Support)/.*
+
+    # ---- Forbidden tokens, declared only so Core can be forbidden from touching them ---------
+    - name: Illuminate
+      collectors:
+        - type: classNameRegex
+          value: '#^Illuminate\\#'
+
+    - name: Laranail
+      collectors:
+        - type: classNameRegex
+          value: '#^Simtabi\\Laranail\\(?!Atlas)#'
+
+  ruleset:
+    Shared: ~
+    Geo:
+      - Shared
+    Currency:
+      - Shared
+    Language:
+      - Shared
+    Region:
+      - Shared
+    Country:
+      - Shared
+      - Geo
+      - Currency
+      - Language
+      - Region
+    Network:
+      - Shared
+      - Country
+
+    # The shell may reach anything; nothing in Core may reach the shell. Illuminate and Laranail
+    # are listed here and nowhere else, which is the whole point: their absence from every Core
+    # layer is what makes Core framework-free.
+    Shell:
+      - Shared
+      - Geo
+      - Currency
+      - Language
+      - Region
+      - Country
+      - Network
+      - Illuminate
+      - Laranail

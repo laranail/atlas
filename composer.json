@@ -1,0 +1,144 @@
+{
+    "name": "laranail/atlas",
+    "description": "Countries, currencies, languages and coordinates for Laravel — a generated ISO catalogue with native enums, a fluent query builder, distance and bounding-box maths, and offline IP-to-country lookup.",
+    "keywords": [
+        "laravel",
+        "laranail",
+        "country",
+        "countries",
+        "currency",
+        "iso-3166",
+        "iso-4217",
+        "geo",
+        "geocoding",
+        "continent",
+        "i18n"
+    ],
+    "homepage": "https://opensource.simtabi.com/products/laranail/atlas",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Simtabi LLC",
+            "email": "opensource@simtabi.com",
+            "homepage": "https://opensource.simtabi.com",
+            "role": "Organization"
+        },
+        {
+            "name": "Imani Manyara",
+            "email": "imani@simtabi.com",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/laranail/atlas/issues",
+        "source": "https://github.com/laranail/atlas",
+        "docs": "https://opensource.simtabi.com/documentation/laranail/atlas/"
+    },
+    "require": {
+        "php": "^8.4.1 || ^8.5",
+        "illuminate/cache": "^13.0",
+        "illuminate/console": "^13.0",
+        "illuminate/contracts": "^13.0",
+        "illuminate/http": "^13.0",
+        "illuminate/support": "^13.0",
+        "illuminate/translation": "^13.0",
+        "illuminate/validation": "^13.0",
+        "laranail/console": "^0.1",
+        "laranail/enumerator": "^0.1",
+        "laranail/package-tools": "^0.1"
+    },
+    "require-dev": {
+        "deptrac/deptrac": "^4.7",
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.18",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^11.0",
+        "pestphp/pest": "^4.0",
+        "pestphp/pest-plugin-arch": "^4.0",
+        "pestphp/pest-plugin-laravel": "^4.0",
+        "php-parallel-lint/php-parallel-lint": "^1.4",
+        "phpstan/phpstan": "^2.0",
+        "phpstan/phpstan-strict-rules": "^2.0",
+        "phpunit/phpunit": "^12.0",
+        "rector/rector": "^2.0",
+        "rinvex/countries": "^9.1",
+        "roave/security-advisories": "dev-latest"
+    },
+    "suggest": {
+        "laranail/chrono": "Resolves a country to its timezones and current local time via the optional Bridges\\Chrono seam.",
+        "rinvex/countries": "Swaps the shipped dataset for rinvex/countries via the Rinvex adapter. Not required — the Generated adapter is the default and needs no data package."
+    },
+    "autoload": {
+        "psr-4": {
+            "Simtabi\\Laranail\\Atlas\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Simtabi\\Laranail\\Atlas\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest --no-coverage --colors=always",
+        "test-coverage": "vendor/bin/pest --coverage --colors=always",
+        "test-dirty": "@test --dirty --compact",
+        "lint": [
+            "@parallel-lint",
+            "@pint",
+            "@phpstan",
+            "@deptrac",
+            "@rector",
+            "@sync-check"
+        ],
+        "parallel-lint": "vendor/bin/parallel-lint --exclude vendor src tests",
+        "pint": "vendor/bin/pint --test",
+        "pint-fix": "vendor/bin/pint",
+        "phpstan": [
+            "vendor/bin/phpstan analyse -c phpstan.neon --no-progress --memory-limit=512M",
+            "vendor/bin/phpstan analyse -c phpstan-core.neon --no-progress --memory-limit=512M"
+        ],
+        "deptrac": "php tools/deptrac-guard.php",
+        "rector": "vendor/bin/rector process --dry-run --no-progress-bar",
+        "rector-fix": "vendor/bin/rector process",
+        "sync-check": "@php tools/sync-check.php",
+        "audit": [
+            "@composer-audit"
+        ],
+        "composer-audit": "@composer audit --no-interaction"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Simtabi\\Laranail\\Atlas\\Providers\\AtlasServiceProvider"
+            ],
+            "aliases": {
+                "Atlas": "Simtabi\\Laranail\\Atlas\\Facades\\Atlas"
+            }
+        },
+        "branch-alias": {
+            "dev-main": "0.1.x-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/laranail/console"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/laranail/enumerator"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/laranail/package-tools"
+        }
+    ]
+}

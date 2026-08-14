@@ -1,0 +1,16 @@
+# The Laravel shell. src/Core has its own, stricter config — see phpstan-core.neon.
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    level: 8
+    paths:
+        - src
+        - tests/TestCase.php
+    excludePaths:
+        - src/Core
+        - vendor
+        # Generated. Analysing 250 literal arrays proves nothing the generator's
+        # own --check does not, and costs a minute of every run.
+        - resources/data
+    treatPhpDocTypesAsCertain: false

@@ -1,0 +1,11 @@
+# src/Core is framework-free domain code and is held to a higher standard than the shell:
+# level 10 plus strict rules, and no baseline. A baseline is just permission to be wrong.
+includes:
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
+
+parameters:
+    level: 10
+    paths:
+        - src/Core
+    treatPhpDocTypesAsCertain: true
+    reportUnmatchedIgnoredErrors: true
