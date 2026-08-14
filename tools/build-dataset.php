@@ -238,17 +238,32 @@ return {$export};
 PHP;
 
 $target = $root . '/resources/data/countries.php';
+$stampTarget = $root . '/resources/data/dataset-version.txt';
+$stampFile = $stamp . "\n";
 
 if ($check) {
-    $current = is_file($target) ? (string) file_get_contents($target) : '';
+    // Both artefacts, not just the big one. The stamp is what `doctor` ages the
+    // dataset by, so a hand-edited date silences a real staleness warning — and
+    // checking only countries.php meant CI would pass while it did. The stamp
+    // is also the file most likely to be edited by hand, because it is one
+    // short line and looks harmless.
+    $mismatched = [];
 
-    if ($current === $code) {
-        fwrite(STDOUT, "Dataset is in sync ({$count} countries).\n");
+    if ((is_file($target) ? (string) file_get_contents($target) : '') !== $code) {
+        $mismatched[] = 'resources/data/countries.php';
+    }
+
+    if ((is_file($stampTarget) ? (string) file_get_contents($stampTarget) : '') !== $stampFile) {
+        $mismatched[] = 'resources/data/dataset-version.txt';
+    }
+
+    if ($mismatched === []) {
+        fwrite(STDOUT, "Dataset is in sync ({$count} countries, {$stamp}).\n");
 
         exit(0);
     }
 
-    fwrite(STDERR, "resources/data/countries.php does not match what tools/build-dataset.php produces.\n\n"
+    fwrite(STDERR, implode(' and ', $mismatched) . " does not match what tools/build-dataset.php produces.\n\n"
         . "Either the file was edited by hand, or the source data moved. Run the generator and read the\n"
         . "diff before committing it.\n");
 
@@ -256,6 +271,6 @@ if ($check) {
 }
 
 file_put_contents($target, $code);
-file_put_contents($root . '/resources/data/dataset-version.txt', $stamp . "\n");
+file_put_contents($stampTarget, $stampFile);
 
 fwrite(STDOUT, "{$count} countries written from {$stamp}.\n");
