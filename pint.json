@@ -15,7 +15,10 @@
     },
     "exclude": [
         "vendor",
-        "resources/data"
+        "resources/data",
+        "src/Enums/Country.php",
+        "src/Enums/Currency.php",
+        "src/Enums/Language.php"
     ],
     "notPath": [
         "resources/data/countries.php",

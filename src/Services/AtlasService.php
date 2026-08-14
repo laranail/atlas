@@ -45,7 +45,7 @@ final readonly class AtlasService
      * One country by enum case, or by ISO alpha-2, alpha-3 or numeric code.
      *
      * The enum is accepted everywhere a code is, so a call site can be as
-     * typed or as loose as its input allows — `Country::KE` where the country
+     * typed or as loose as its input allows — `Country::Kenya` where the country
      * is known at authoring time, a raw string where it came from a request.
      */
     public function country(Country|string $code): ?CountryRecord

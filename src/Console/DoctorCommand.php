@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Simtabi\Laranail\Atlas\Console;
 
-use Override;
 use Simtabi\Laranail\Atlas\Services\AtlasService;
 use Simtabi\Laranail\Console\Tools\Commands\Command;
 use Simtabi\Laranail\Console\Tools\Commands\Concerns\SupportsNamespacedNames;
@@ -34,10 +33,12 @@ final class DoctorCommand extends Command
 {
     use SupportsNamespacedNames;
 
-    #[Override]
+    // No #[Override] on these two. The attribute targets methods only, and PHP
+    // does not complain when it is parsed, only when something reflects the
+    // class, so it passed locally and failed the moment CI's test run walked
+    // the command's attributes.
     protected $signature = 'laranail::atlas.doctor {--strict : Treat warnings as failures}';
 
-    #[Override]
     protected $description = 'Check the country catalogue, its age, and the IP table.';
 
     public function handle(AtlasService $atlas): int
