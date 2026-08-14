@@ -7,8 +7,11 @@ namespace Simtabi\Laranail\Atlas\Providers;
 use Illuminate\Contracts\Config\Repository as ConfigRepository;
 use Illuminate\Contracts\Foundation\Application;
 use Override;
+use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedIpCountryResolver;
 use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
+use Simtabi\Laranail\Atlas\Bridges\Chrono\ChronoBridge;
 use Simtabi\Laranail\Atlas\Core\Contracts\DistanceCalculator;
+use Simtabi\Laranail\Atlas\Core\Contracts\IpCountryResolver;
 use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 use Simtabi\Laranail\Atlas\Core\Geo\Haversine;
 use Simtabi\Laranail\Atlas\Core\Geo\Vincenty;
@@ -89,10 +92,26 @@ final class AtlasServiceProvider extends PackageServiceProvider
         );
 
         $this->app->singleton(
+            IpCountryResolver::class,
+            static fn (Application $app): IpCountryResolver => new GeneratedIpCountryResolver(
+                $app->make(AtlasConfig::class)->nullableString('ip.table')
+                    ?? dirname(__DIR__, 2) . '/resources/data',
+            ),
+        );
+
+        $this->app->singleton(
             AtlasService::class,
             static fn (Application $app): AtlasService => new AtlasService(
                 $app->make(PlaceRepository::class),
                 $app->make(DistanceCalculator::class),
+                $app->make(IpCountryResolver::class),
+            ),
+        );
+
+        $this->app->singleton(
+            ChronoBridge::class,
+            static fn (Application $app): ChronoBridge => new ChronoBridge(
+                $app->make(AtlasConfig::class)->bool('chrono.enabled', true),
             ),
         );
 

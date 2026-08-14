@@ -76,6 +76,33 @@ package was load-bearing in every call site, not just in the loader.
   push it a hair above 1 and `sqrt(1 - 1.0000001)` is `NAN` — a distance that silently poisons every
   comparison it reaches.
 
+- **`Core\Network`** — `IpAddress`, `IpRange`, `IpRangeTable`, and offline `Atlas::countryForIp()`.
+
+  IPv4 is 32-bit integers; **IPv6 is `inet_pton` binary compared with `strcmp`** — PHP has no
+  unsigned 128-bit integer, and `inet_pton` output is big-endian, so lexicographic order equals
+  numeric order. Verified rather than assumed: `strcmp` is unsigned (so `::1` sorts below `8000::`),
+  NUL-safe (so `2001:db8::` compares whole), and needs no GMP.
+
+  `isPrivate()` gets RFC 1918 right, which the org's existing validator does not: it declares the
+  middle block as `172.16.0.0`–`172.16.255.255`, but that block is a slash-twelve ending at
+  `172.31.255.255`, so fifteen of its sixteen sub-blocks read as public — and `172.17.0.0/16` is
+  Docker's default bridge network. Ranges here are prefix lengths expanded arithmetically, so the
+  arithmetic cannot disagree with the prefix. An IPv4-mapped IPv6 address is judged by the address
+  it carries, which is a documented way past an SSRF filter otherwise.
+
+  Parsing is `filter_var` only. Hand-rolled octet splitting accepts `01.02.03.04`, which some
+  resolvers read as octal — so a blocklist and a resolver disagree about where it points.
+
+  **The table is not shipped.** It is ~10 MB of registry delegation data that changes daily;
+  `tools/build-ip-table.php` builds it, and `laranail.atlas.ip.enabled` is off by default. That data
+  answers country and nothing else — no city, no ISP, no VPN flag.
+
+- **`Bridges\Chrono`** — optional country-to-timezone, `class_exists`-guarded. chrono is `^8.5` and
+  this package is `^8.4.1`, so requiring it would drag every consumer up for a feature most never
+  ask for. Absent, it throws a message naming the package to install rather than a class-not-found
+  three frames deeper. A test asserts chrono is named in exactly one directory, and a CI job
+  installs it so the present-path is actually exercised.
+
 - **`Core\Support\Text`** — case- and accent-folding that does not depend on the C library.
   `iconv('UTF-8', 'ASCII//TRANSLIT', …)` folds `São Tomé` to `Sao Tome` on glibc and to
   `S~ao Tom'e` on BSD, which breaks both search (`cote` finds nothing) and enum generation

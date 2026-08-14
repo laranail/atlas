@@ -108,3 +108,45 @@ jobs:
             }
             echo count($r->all()), " countries, no data package.\n";
           '
+
+  # The optional-dependency job, the other way round. laranail/chrono is a
+  # `suggest` — its PHP floor is ^8.5 and this package supports ^8.4.1, so it
+  # cannot be a dev dependency without breaking the 8.4 leg above. The suite
+  # therefore never exercises the bridge's present-path unless a job installs it.
+  #
+  # 8.5 only, for that floor.
+  with-chrono:
+    name: With laranail/chrono
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # v2
+        with:
+          php-version: '8.5'
+          extensions: dom, curl, libxml, mbstring, zip, fileinfo, intl, calendar
+          coverage: none
+
+      - name: Install with the optional bridge dependency
+        env:
+          COMPOSER_AUTH: '{"github-oauth":{"github.com":"${{ secrets.GITHUB_TOKEN }}"}}'
+        run: |
+          composer config repositories.chrono vcs https://github.com/laranail/chrono
+          composer require --dev laranail/chrono:^0.1 --no-interaction --no-progress
+
+      - name: Run the suite
+        run: composer test
+
+      - name: The bridge actually answers
+        run: |
+          php -r '
+            require "vendor/autoload.php";
+            if (! class_exists("Simtabi\\Laranail\\Chrono\\Facades\\Timezones")) {
+                fwrite(STDERR, "chrono did not install; the bridge tests would have skipped silently.\n");
+                exit(1);
+            }
+            echo "chrono present — the bridge present-path ran.\n";
+          '

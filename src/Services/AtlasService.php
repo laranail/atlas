@@ -5,11 +5,13 @@ declare(strict_types=1);
 namespace Simtabi\Laranail\Atlas\Services;
 
 use Simtabi\Laranail\Atlas\Core\Contracts\DistanceCalculator;
+use Simtabi\Laranail\Atlas\Core\Contracts\IpCountryResolver;
 use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 use Simtabi\Laranail\Atlas\Core\Country\CountryQuery;
 use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
 use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
 use Simtabi\Laranail\Atlas\Core\Geo\Distance;
+use Simtabi\Laranail\Atlas\Core\Network\IpAddress;
 use Simtabi\Laranail\Atlas\Core\Region\Continent;
 use Simtabi\Laranail\Atlas\Enums\Country;
 
@@ -27,6 +29,7 @@ final readonly class AtlasService
     public function __construct(
         private PlaceRepository $repository,
         private DistanceCalculator $distances,
+        private IpCountryResolver $ips,
     ) {}
 
     /**
@@ -201,9 +204,34 @@ final readonly class AtlasService
     }
 
     /**
+     * The country an IP address was allocated to, or null.
+     *
+     * Offline, over registry delegation data — no network call and no API key.
+     * Country and nothing else: city, ISP and VPN status are not in that data
+     * and cannot be derived from it. `laranail/ip-intel` is where those live.
+     *
+     * Null covers a reserved address, a registry gap, and an uninstalled
+     * dataset. `describe()['ip_ready']` separates the last from the first two,
+     * because one is a deployment problem and the others are just how the
+     * internet is.
+     */
+    public function countryForIp(IpAddress|string $address): ?CountryRecord
+    {
+        $ip = $address instanceof IpAddress ? $address : IpAddress::parse($address);
+
+        if (! $ip instanceof IpAddress) {
+            return null;
+        }
+
+        $code = $this->ips->countryFor($ip);
+
+        return $code === null ? null : $this->country($code);
+    }
+
+    /**
      * Which data source answered, and what version of it.
      *
-     * @return array{provider: string, version: ?string, available: bool, countries: int, distance: string}
+     * @return array{provider: string, version: ?string, available: bool, countries: int, distance: string, ip_ready: bool}
      */
     public function describe(): array
     {
@@ -213,6 +241,7 @@ final readonly class AtlasService
             'available' => $this->repository->isAvailable(),
             'countries' => count($this->repository->all()),
             'distance' => $this->distances->name(),
+            'ip_ready' => $this->ips->isReady(),
         ];
     }
 }

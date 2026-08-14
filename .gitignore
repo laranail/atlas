@@ -7,3 +7,11 @@ composer.lock
 .php-cs-fixer.cache
 .deptrac.cache
 .DS_Store
+
+# Built by tools/build-ip-table.php from ~10 MB of registry delegation data that
+# changes daily. A committed snapshot is stale the day after it is written and
+# nobody would think to regenerate it, so applications that want offline
+# IP-to-country build it on their own schedule.
+/resources/data/ip-ipv4.php
+/resources/data/ip-ipv6.php
+/resources/data/ip-version.txt
