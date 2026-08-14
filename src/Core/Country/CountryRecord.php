@@ -100,6 +100,25 @@ final readonly class CountryRecord implements JsonSerializable
     }
 
     /**
+     * How long a phone number here is, and the pattern that matches one.
+     *
+     * Null for the few territories with no calling code of their own, rather
+     * than rules that would match nothing.
+     */
+    public function phone(): ?PhoneRules
+    {
+        $code = $this->callingCode();
+
+        return $code === null ? null : PhoneRules::forCallingCode($code);
+    }
+
+    /** Whether a full phone number, calling code included, fits this country. */
+    public function acceptsPhoneNumber(string $number): bool
+    {
+        return $this->phone()?->matches($number) ?? false;
+    }
+
+    /**
      * @return array<string, mixed>
      */
     public function toArray(): array

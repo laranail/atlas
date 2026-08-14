@@ -277,6 +277,68 @@ final readonly class CountryQuery
     }
 
     /**
+     * One country by name, or null.
+     *
+     * Exact and case-insensitive, across the common, official and native names,
+     * so a stored "Cote d'Ivoire" and a typed "Republique de Cote d'Ivoire"
+     * arrive at the same record. Use {@see whereNameContains()} for a search
+     * box; this is for when the caller already has a name.
+     */
+    public function findByName(string $name): ?CountryRecord
+    {
+        $needle = mb_strtolower(trim($name));
+
+        foreach ($this->repository->all() as $country) {
+            foreach ([$country->name, $country->officialName, $country->nativeName] as $candidate) {
+                if (mb_strtolower($candidate) === $needle) {
+                    return $country;
+                }
+            }
+        }
+
+        return null;
+    }
+
+    /**
+     * One country by calling code, or null.
+     *
+     * The first match wins, and codes are legitimately shared: +1 is the whole
+     * North American Numbering Plan and +7 is Russia and Kazakhstan. Use
+     * {@see allByDialCode()} when that matters.
+     */
+    public function findByDialCode(string $dialCode): ?CountryRecord
+    {
+        return $this->allByDialCode($dialCode)[0] ?? null;
+    }
+
+    /**
+     * Every country sharing a calling code.
+     *
+     * @return list<CountryRecord>
+     */
+    public function allByDialCode(string $dialCode): array
+    {
+        $needle = ltrim(trim($dialCode), '+');
+
+        return array_values(array_filter(
+            $this->repository->all(),
+            static fn (CountryRecord $country): bool => in_array($needle, $country->callingCodes, true),
+        ));
+    }
+
+    /** The phone rules for a country code, or null when it is not a country. */
+    public function phoneRulesFor(string $code): ?PhoneRules
+    {
+        return $this->find($code)?->phone();
+    }
+
+    /** The phone rules for a calling code, whichever country answers to it. */
+    public function phoneRulesForDialCode(string $dialCode): PhoneRules
+    {
+        return PhoneRules::forCallingCode($dialCode);
+    }
+
+    /**
      * A `code => label` map for a select box.
      *
      * @param 'iso2'|'iso3'|'numeric' $key

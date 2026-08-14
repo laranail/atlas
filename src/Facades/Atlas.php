@@ -7,6 +7,7 @@ namespace Simtabi\Laranail\Atlas\Facades;
 use Illuminate\Support\Facades\Facade;
 use Simtabi\Laranail\Atlas\Core\Country\CountryQuery;
 use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
+use Simtabi\Laranail\Atlas\Core\Country\PhoneRules;
 use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
 use Simtabi\Laranail\Atlas\Core\Region\Continent;
 use Simtabi\Laranail\Atlas\Services\AtlasManager;
@@ -21,6 +22,9 @@ use Simtabi\Laranail\Atlas\Services\AtlasService;
  * @method static CountryQuery query()
  * @method static CountryRecord|null country(string $code)
  * @method static CountryRecord countryOrFail(string $code)
+ * @method static CountryRecord|null countryByName(string $name)
+ * @method static CountryRecord|null countryByDialCode(string $dialCode)
+ * @method static PhoneRules|null phoneRules(string $code)
  * @method static list<CountryRecord> countries()
  * @method static array<string, string> options(string $key = 'iso2', string $label = 'name')
  * @method static list<CountryRecord> inContinent(Continent|string $continent)

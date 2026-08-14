@@ -9,6 +9,7 @@ use Simtabi\Laranail\Atlas\Core\Contracts\IpCountryResolver;
 use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 use Simtabi\Laranail\Atlas\Core\Country\CountryQuery;
 use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
+use Simtabi\Laranail\Atlas\Core\Country\PhoneRules;
 use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
 use Simtabi\Laranail\Atlas\Core\Geo\Distance;
 use Simtabi\Laranail\Atlas\Core\Network\IpAddress;
@@ -58,6 +59,33 @@ final readonly class AtlasService
     public function countryOrFail(Country|string $code): CountryRecord
     {
         return $this->query()->findOrFail($code instanceof Country ? $code->value : $code);
+    }
+
+    /**
+     * One country by name, exact and case-insensitive across all three names.
+     */
+    public function countryByName(string $name): ?CountryRecord
+    {
+        return $this->query()->findByName($name);
+    }
+
+    /**
+     * One country by calling code.
+     *
+     * Codes are shared: +1 is the whole North American Numbering Plan. Use
+     * {@see CountryQuery::allByDialCode()} when the rest matter.
+     */
+    public function countryByDialCode(string $dialCode): ?CountryRecord
+    {
+        return $this->query()->findByDialCode($dialCode);
+    }
+
+    /**
+     * Phone number rules for a country code, or null when it is not a country.
+     */
+    public function phoneRules(Country|string $code): ?PhoneRules
+    {
+        return $this->query()->phoneRulesFor($code instanceof Country ? $code->value : $code);
     }
 
     /**
