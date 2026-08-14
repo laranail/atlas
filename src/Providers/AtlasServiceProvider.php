@@ -40,7 +40,7 @@ final class AtlasServiceProvider extends PackageServiceProvider
             ->name('laranail/atlas')
             ->setPublishTagId('atlas')
             ->hasConfigFile('atlas')
-            ->hasTranslations('atlas');
+            ->hasTranslations('laranail-atlas');
     }
 
     #[Override]
