@@ -5,7 +5,7 @@ All notable changes to `laranail/atlas` are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.1.0] - 2026-08-15
 
 ### Added
 
@@ -109,8 +109,6 @@ No HTTP response shape changed. `/continents` still returns a code → name map;
   `app(AtlasManager::class)->extend(...)`.
 - The chrono note in the config file demonstrated `Country::KE->timezones()`. The enum carries no
   methods by design and the case is `Country::Kenya`; the example is now the bridge call it meant.
-
-## [0.1.0] - 2026-08-14
 
 ### Added
 
