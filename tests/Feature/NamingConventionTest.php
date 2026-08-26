@@ -29,17 +29,17 @@ use Illuminate\Support\ServiceProvider;
 it('registers its translations under vendor and slug, never a bare one', function (): void {
     $loader = Lang::getLoader();
 
-    expect($loader->namespaces())->toHaveKey('laranail-atlas')
+    expect($loader->namespaces())->toHaveKey('laranail/atlas')
         ->and($loader->namespaces())->not->toHaveKey('atlas');
 });
 
 it('resolves a real string through that namespace', function (): void {
     // The namespace being registered is not the same claim as the files being
     // reachable through it. A wrong path registers fine and returns the key.
-    $message = __('laranail-atlas::validation.country_code');
+    $message = __('laranail/atlas::validation.country_code');
 
     expect($message)->toBeString()
-        ->and($message)->not->toBe('laranail-atlas::validation.country_code')
+        ->and($message)->not->toBe('laranail/atlas::validation.country_code')
         ->and($message)->toContain('ISO 3166-1');
 });
 

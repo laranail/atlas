@@ -30,7 +30,7 @@ final readonly class CountryCode implements ValidationRule
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
         if (! is_string($value) || ! $this->repository()->find($value) instanceof CountryRecord) {
-            $fail('laranail-atlas::validation.country_code')->translate(['attribute' => $attribute]);
+            $fail('laranail/atlas::validation.country_code')->translate(['attribute' => $attribute]);
         }
     }
 

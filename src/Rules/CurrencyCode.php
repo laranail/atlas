@@ -25,7 +25,7 @@ final readonly class CurrencyCode implements ValidationRule
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
         if (! is_string($value) || ! in_array(strtoupper(trim($value)), $this->codes(), true)) {
-            $fail('laranail-atlas::validation.currency_code')->translate(['attribute' => $attribute]);
+            $fail('laranail/atlas::validation.currency_code')->translate(['attribute' => $attribute]);
         }
     }
 

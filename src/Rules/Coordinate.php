@@ -27,7 +27,7 @@ final class Coordinate implements ValidationRule
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
         if (! is_string($value)) {
-            $fail('laranail-atlas::validation.coordinate')->translate(['attribute' => $attribute]);
+            $fail('laranail/atlas::validation.coordinate')->translate(['attribute' => $attribute]);
 
             return;
         }
@@ -35,7 +35,7 @@ final class Coordinate implements ValidationRule
         $parts = explode(',', trim($value));
 
         if (count($parts) !== 2) {
-            $fail('laranail-atlas::validation.coordinate')->translate(['attribute' => $attribute]);
+            $fail('laranail/atlas::validation.coordinate')->translate(['attribute' => $attribute]);
 
             return;
         }
@@ -43,7 +43,7 @@ final class Coordinate implements ValidationRule
         [$latitude, $longitude] = array_map(trim(...), $parts);
 
         if (! is_numeric($latitude) || ! is_numeric($longitude)) {
-            $fail('laranail-atlas::validation.coordinate')->translate(['attribute' => $attribute]);
+            $fail('laranail/atlas::validation.coordinate')->translate(['attribute' => $attribute]);
 
             return;
         }
@@ -52,13 +52,13 @@ final class Coordinate implements ValidationRule
         $lon = (float) $longitude;
 
         if (is_nan($lat) || is_nan($lon) || is_infinite($lat) || is_infinite($lon)) {
-            $fail('laranail-atlas::validation.coordinate')->translate(['attribute' => $attribute]);
+            $fail('laranail/atlas::validation.coordinate')->translate(['attribute' => $attribute]);
 
             return;
         }
 
         if ($lat < -90.0 || $lat > 90.0) {
-            $fail('laranail-atlas::validation.latitude')->translate(['attribute' => $attribute]);
+            $fail('laranail/atlas::validation.latitude')->translate(['attribute' => $attribute]);
         }
     }
 }

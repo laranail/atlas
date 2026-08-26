@@ -25,7 +25,7 @@ final readonly class LanguageCode implements ValidationRule
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
         if (! is_string($value) || ! in_array(strtolower(trim($value)), $this->codes(), true)) {
-            $fail('laranail-atlas::validation.language_code')->translate(['attribute' => $attribute]);
+            $fail('laranail/atlas::validation.language_code')->translate(['attribute' => $attribute]);
         }
     }
 
