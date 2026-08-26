@@ -72,11 +72,13 @@ final class AtlasServiceProvider extends PackageServiceProvider
 
         // The default source, registered here rather than inside the manager so
         // the manager holds no knowledge of any concrete adapter.
+        // Resolved out here: the closure is static, so it has no $this to call packagePath() on.
+        // Arrow functions capture by value, so the resolved path travels into it.
+        $dataPath = $this->packagePath('resources/data');
+
         $this->app->bind(
             GeneratedPlaceRepository::class,
-            static fn (): GeneratedPlaceRepository => new GeneratedPlaceRepository(
-                dirname(__DIR__, 2) . '/resources/data',
-            ),
+            static fn (): GeneratedPlaceRepository => new GeneratedPlaceRepository($dataPath),
         );
 
         // Resolved through a match on the enum, not by interpolating the config
@@ -97,8 +99,7 @@ final class AtlasServiceProvider extends PackageServiceProvider
         $this->app->singleton(
             IpCountryResolver::class,
             static fn (Application $app): IpCountryResolver => new GeneratedIpCountryResolver(
-                $app->make(AtlasConfig::class)->nullableString('ip.table')
-                    ?? dirname(__DIR__, 2) . '/resources/data',
+                $app->make(AtlasConfig::class)->nullableString('ip.table') ?? $dataPath,
             ),
         );
 
@@ -170,7 +171,7 @@ final class AtlasServiceProvider extends PackageServiceProvider
                 . '/' . trim($config->string('api.version', 'v1'), '/'),
             'middleware' => $middleware,
         ], function (): void {
-            $this->loadRoutesFrom(dirname(__DIR__, 2) . '/routes/api.php');
+            $this->loadRoutesFrom($this->packagePath('routes/api.php'));
         });
     }
 }
