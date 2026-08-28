@@ -12,8 +12,6 @@
 name: Tests
 
 on:
-  push:
-    branches: [main]
   pull_request:
   workflow_dispatch:
 
@@ -28,6 +26,7 @@ jobs:
   pest:
     name: PHP ${{ matrix.php }} · ${{ matrix.dependency-versions }}
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     strategy:
       fail-fast: false
@@ -75,6 +74,7 @@ jobs:
   without-rinvex:
     name: Without rinvex/countries
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - name: Checkout
@@ -118,6 +118,7 @@ jobs:
   with-chrono:
     name: With laranail/chrono
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - name: Checkout
