@@ -91,8 +91,8 @@
             "@sync-check"
         ],
         "parallel-lint": "vendor/bin/parallel-lint --exclude vendor src tests",
-        "pint": "vendor/bin/pint --test --config vendor/laranail/package-tools/pint.json",
-        "pint-fix": "vendor/bin/pint --parallel --config vendor/laranail/package-tools/pint.json",
+        "pint": "@php vendor/bin/laranail-pint --test",
+        "pint-fix": "@php vendor/bin/laranail-pint --parallel",
         "phpstan": [
             "vendor/bin/phpstan analyse -c phpstan.neon --no-progress --memory-limit=512M",
             "vendor/bin/phpstan analyse -c phpstan-core.neon --no-progress --memory-limit=512M"
