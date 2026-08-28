@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
-use Simtabi\Laranail\Atlas\Core\Country\CountryQuery;
 use Simtabi\Laranail\Atlas\Core\Country\FormData;
 use Simtabi\Laranail\Atlas\Core\Region\Continent;
+use Simtabi\Laranail\Atlas\Core\Country\CountryQuery;
+use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
 
 function atlasForm(): FormData
 {

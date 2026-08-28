@@ -4,18 +4,18 @@ declare(strict_types=1);
 
 namespace Simtabi\Laranail\Atlas\Services;
 
-use Simtabi\Laranail\Atlas\Core\Contracts\DistanceCalculator;
-use Simtabi\Laranail\Atlas\Core\Contracts\IpCountryResolver;
-use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
+use Simtabi\Laranail\Atlas\Enums\Country;
+use Simtabi\Laranail\Atlas\Core\Geo\Distance;
+use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
+use Simtabi\Laranail\Atlas\Core\Country\FormData;
+use Simtabi\Laranail\Atlas\Core\Region\Continent;
+use Simtabi\Laranail\Atlas\Core\Network\IpAddress;
+use Simtabi\Laranail\Atlas\Core\Country\PhoneRules;
 use Simtabi\Laranail\Atlas\Core\Country\CountryQuery;
 use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
-use Simtabi\Laranail\Atlas\Core\Country\FormData;
-use Simtabi\Laranail\Atlas\Core\Country\PhoneRules;
-use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
-use Simtabi\Laranail\Atlas\Core\Geo\Distance;
-use Simtabi\Laranail\Atlas\Core\Network\IpAddress;
-use Simtabi\Laranail\Atlas\Core\Region\Continent;
-use Simtabi\Laranail\Atlas\Enums\Country;
+use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
+use Simtabi\Laranail\Atlas\Core\Contracts\IpCountryResolver;
+use Simtabi\Laranail\Atlas\Core\Contracts\DistanceCalculator;
 
 /**
  * The package's entry point.
@@ -266,12 +266,12 @@ final readonly class AtlasService
     public function describe(): array
     {
         return [
-            'provider' => $this->repository::class,
-            'version' => $this->repository->version(),
+            'provider'  => $this->repository::class,
+            'version'   => $this->repository->version(),
             'available' => $this->repository->isAvailable(),
             'countries' => count($this->repository->all()),
-            'distance' => $this->distances->name(),
-            'ip_ready' => $this->ips->isReady(),
+            'distance'  => $this->distances->name(),
+            'ip_ready'  => $this->ips->isReady(),
         ];
     }
 }

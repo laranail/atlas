@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Simtabi\Laranail\Atlas\Adapters\Rinvex;
 
+use Throwable;
 use Rinvex\Country\CountryLoader;
-use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
-use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
 use Simtabi\Laranail\Atlas\Core\Geo\BoundingBox;
 use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
-use Throwable;
+use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
+use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 
 /**
  * Reads `rinvex/countries` live, for applications already carrying it.
@@ -215,6 +215,7 @@ final class RinvexPlaceRepository implements PlaceRepository
 
     /**
      * @param array<string, mixed> $source
+     *
      * @return array<string, mixed>
      */
     private function arr(array $source, string $key): array

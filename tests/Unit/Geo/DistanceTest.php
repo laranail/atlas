@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-use Simtabi\Laranail\Atlas\Core\Exception\InvalidCoordinates;
-use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
 use Simtabi\Laranail\Atlas\Core\Geo\Distance;
-use Simtabi\Laranail\Atlas\Core\Geo\DistanceUnit;
-use Simtabi\Laranail\Atlas\Core\Geo\Haversine;
 use Simtabi\Laranail\Atlas\Core\Geo\Vincenty;
+use Simtabi\Laranail\Atlas\Core\Geo\Haversine;
+use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
+use Simtabi\Laranail\Atlas\Core\Geo\DistanceUnit;
+use Simtabi\Laranail\Atlas\Core\Exception\InvalidCoordinates;
 
 // Reference points, and the published geodesic distances between them.
 function atlasLondon(): Coordinates

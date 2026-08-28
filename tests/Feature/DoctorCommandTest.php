@@ -1,8 +1,8 @@
 <?php
 
 declare(strict_types=1);
-use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 use Simtabi\Laranail\Atlas\Services\AtlasService;
+use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 
 /**
  * Swap the data source for one that reports a chosen version stamp.

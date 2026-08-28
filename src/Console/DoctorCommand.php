@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Simtabi\Laranail\Atlas\Console;
 
 use DateTimeImmutable;
-use Simtabi\Laranail\Atlas\Core\Support\DatasetVersion;
 use Simtabi\Laranail\Atlas\Services\AtlasService;
 use Simtabi\Laranail\Console\Tools\Commands\Command;
+use Simtabi\Laranail\Atlas\Core\Support\DatasetVersion;
 use Simtabi\Laranail\Console\Tools\Commands\Concerns\SupportsNamespacedNames;
 
 /**

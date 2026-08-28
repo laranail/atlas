@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Simtabi\Laranail\Atlas\Core\Country;
 
-use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 use Simtabi\Laranail\Atlas\Core\Region\Continent;
+use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 
 /**
  * The catalogue as a form sees it: `value => label` maps, ready for a `<select>`.
@@ -38,6 +38,7 @@ final readonly class FormData
      *
      * @param 'iso2'|'iso3'|'numeric' $key what the form submits
      * @param 'name'|'officialName'|'nativeName' $label what the reader sees
+     *
      * @return array<string, string>
      */
     public function options(string $key = 'iso2', string $label = 'name'): array
@@ -70,6 +71,7 @@ final readonly class FormData
      *
      * @param 'iso2'|'iso3'|'numeric' $key
      * @param 'name'|'officialName'|'nativeName' $label
+     *
      * @return array<string, array<string, string>>
      */
     public function groupedOptions(string $key = 'iso2', string $label = 'name'): array
@@ -195,9 +197,9 @@ final readonly class FormData
     private function keyFor(CountryRecord $country, string $key): string
     {
         return match ($key) {
-            'iso3' => $country->iso3,
+            'iso3'    => $country->iso3,
             'numeric' => $country->numeric,
-            default => $country->iso2,
+            default   => $country->iso2,
         };
     }
 
@@ -208,13 +210,14 @@ final readonly class FormData
     {
         return match ($label) {
             'officialName' => $country->officialName,
-            'nativeName' => $country->nativeName,
-            default => $country->name,
+            'nativeName'   => $country->nativeName,
+            default        => $country->name,
         };
     }
 
     /**
      * @param list<string> $values
+     *
      * @return array<string, string>
      */
     private function identityMap(array $values): array

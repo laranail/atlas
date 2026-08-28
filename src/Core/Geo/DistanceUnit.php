@@ -19,24 +19,6 @@ enum DistanceUnit: string
     case NauticalMiles = 'nmi';
 
     /**
-     * How many metres one of this unit is.
-     *
-     * Metres are the base because they are the SI unit and because every other
-     * factor here is defined in terms of them by international agreement — the
-     * mile and the nautical mile are both *exactly* these values, not
-     * approximations, so nothing is lost converting through metres.
-     */
-    public function inMetres(): float
-    {
-        return match ($this) {
-            self::Metres => 1.0,
-            self::Kilometres => 1000.0,
-            self::Miles => 1609.344,
-            self::NauticalMiles => 1852.0,
-        };
-    }
-
-    /**
      * Resolve a unit name, case-insensitively, or null.
      *
      * Accepts the long forms people write in config as well as the codes —
@@ -47,11 +29,29 @@ enum DistanceUnit: string
     public static function resolve(string $value): ?self
     {
         return match (strtolower(trim($value))) {
-            'm', 'metre', 'metres', 'meter', 'meters' => self::Metres,
+            'm', 'metre', 'metres', 'meter', 'meters'                  => self::Metres,
             'km', 'kilometre', 'kilometres', 'kilometer', 'kilometers' => self::Kilometres,
-            'mi', 'mile', 'miles' => self::Miles,
+            'mi', 'mile', 'miles'                                      => self::Miles,
             'nmi', 'nm', 'nautical', 'nautical mile', 'nautical miles' => self::NauticalMiles,
-            default => null,
+            default                                                    => null,
+        };
+    }
+
+    /**
+     * How many metres one of this unit is.
+     *
+     * Metres are the base because they are the SI unit and because every other
+     * factor here is defined in terms of them by international agreement — the
+     * mile and the nautical mile are both *exactly* these values, not
+     * approximations, so nothing is lost converting through metres.
+     */
+    public function inMetres(): float
+    {
+        return match ($this) {
+            self::Metres        => 1.0,
+            self::Kilometres    => 1000.0,
+            self::Miles         => 1609.344,
+            self::NauticalMiles => 1852.0,
         };
     }
 }

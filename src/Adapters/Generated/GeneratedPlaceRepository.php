@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Simtabi\Laranail\Atlas\Adapters\Generated;
 
-use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
-use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
 use Simtabi\Laranail\Atlas\Core\Geo\BoundingBox;
 use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
+use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
+use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 
 /**
  * The default data source: the dataset shipped with this package.
@@ -56,8 +56,8 @@ final class GeneratedPlaceRepository implements PlaceRepository
         // ISO forms have distinct, non-overlapping lengths, so one comparison
         // answers which register is being addressed.
         return match (strlen($code)) {
-            2 => $countries[$code] ?? null,
-            3 => $this->byThreeCharacterCode($code, $countries),
+            2       => $countries[$code] ?? null,
+            3       => $this->byThreeCharacterCode($code, $countries),
             default => null,
         };
     }
@@ -205,6 +205,7 @@ final class GeneratedPlaceRepository implements PlaceRepository
 
     /**
      * @param array<string, mixed> $row
+     *
      * @return list<string>
      */
     private function strList(array $row, string $key): array

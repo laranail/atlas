@@ -144,22 +144,22 @@ foreach ($files as $file) {
     $numeric = $rawNumeric === '' ? '' : str_pad($rawNumeric, 3, '0', STR_PAD_LEFT);
 
     $countries[$iso2] = [
-        'iso2' => $iso2,
-        'iso3' => strtoupper((string) ($raw['iso_3166_1_alpha3'] ?? '')),
-        'numeric' => $numeric,
-        'name' => (string) ($name['common'] ?? ''),
+        'iso2'          => $iso2,
+        'iso3'          => strtoupper((string) ($raw['iso_3166_1_alpha3'] ?? '')),
+        'numeric'       => $numeric,
+        'name'          => (string) ($name['common'] ?? ''),
         'official_name' => (string) ($name['official'] ?? ''),
-        'native_name' => $native !== '' ? $native : (string) ($name['common'] ?? ''),
-        'continent' => $continent,
-        'region' => is_string($geo['region'] ?? null) && $geo['region'] !== '' ? $geo['region'] : null,
-        'subregion' => is_string($geo['subregion'] ?? null) && $geo['subregion'] !== '' ? $geo['subregion'] : null,
-        'currencies' => array_values(array_map(strtoupper(...), array_filter($currencies, is_string(...)))),
-        'languages' => array_values(array_filter($languages, is_string(...))),
+        'native_name'   => $native !== '' ? $native : (string) ($name['common'] ?? ''),
+        'continent'     => $continent,
+        'region'        => is_string($geo['region'] ?? null) && $geo['region'] !== '' ? $geo['region'] : null,
+        'subregion'     => is_string($geo['subregion'] ?? null) && $geo['subregion'] !== '' ? $geo['subregion'] : null,
+        'currencies'    => array_values(array_map(strtoupper(...), array_filter($currencies, is_string(...)))),
+        'languages'     => array_values(array_filter($languages, is_string(...))),
         'calling_codes' => array_values(array_map(strval(...), array_filter($calling, static fn ($c): bool => is_string($c) || is_int($c)))),
-        'tld' => isset($tld[0]) && is_string($tld[0]) ? $tld[0] : null,
-        'latitude' => $latitude,
-        'longitude' => $longitude,
-        'bounds' => $bounds,
+        'tld'           => isset($tld[0]) && is_string($tld[0]) ? $tld[0] : null,
+        'latitude'      => $latitude,
+        'longitude'     => $longitude,
+        'bounds'        => $bounds,
     ];
 }
 

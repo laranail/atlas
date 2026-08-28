@@ -124,22 +124,22 @@ final readonly class CountryRecord implements JsonSerializable
     public function toArray(): array
     {
         return [
-            'iso2' => $this->iso2,
-            'iso3' => $this->iso3,
-            'numeric' => $this->numeric,
-            'name' => $this->name,
+            'iso2'          => $this->iso2,
+            'iso3'          => $this->iso3,
+            'numeric'       => $this->numeric,
+            'name'          => $this->name,
             'official_name' => $this->officialName,
-            'native_name' => $this->nativeName,
-            'flag' => $this->flag(),
-            'continent' => $this->continent,
-            'region' => $this->region,
-            'subregion' => $this->subregion,
-            'currencies' => $this->currencies,
-            'languages' => $this->languages,
+            'native_name'   => $this->nativeName,
+            'flag'          => $this->flag(),
+            'continent'     => $this->continent,
+            'region'        => $this->region,
+            'subregion'     => $this->subregion,
+            'currencies'    => $this->currencies,
+            'languages'     => $this->languages,
             'calling_codes' => $this->callingCodes,
-            'tld' => $this->tld,
-            'coordinates' => $this->coordinates?->toArray(),
-            'bounds' => $this->bounds?->toBbox(),
+            'tld'           => $this->tld,
+            'coordinates'   => $this->coordinates?->toArray(),
+            'bounds'        => $this->bounds?->toBbox(),
         ];
     }
 

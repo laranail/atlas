@@ -82,11 +82,11 @@ final readonly class LocaleRegistry
             $country = $region === null ? null : $this->repository->find($region);
 
             $described[$locale] = [
-                'locale' => $locale,
+                'locale'   => $locale,
                 'language' => $language,
-                'region' => $region,
-                'country' => $country?->name,
-                'flag' => $country?->flag(),
+                'region'   => $region,
+                'country'  => $country?->name,
+                'flag'     => $country?->flag(),
             ];
         }
 

@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
 use Simtabi\Laranail\Atlas\Services\LocaleRegistry;
+use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
 
 /**
  * Behaviour, against a sandbox rather than the application's own directories.

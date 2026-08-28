@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace Simtabi\Laranail\Atlas\Core\Country;
 
 use Collator;
-use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
-use Simtabi\Laranail\Atlas\Core\Exception\UnknownCountry;
+use Simtabi\Laranail\Atlas\Core\Support\Text;
 use Simtabi\Laranail\Atlas\Core\Geo\BoundingBox;
 use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
 use Simtabi\Laranail\Atlas\Core\Region\Continent;
-use Simtabi\Laranail\Atlas\Core\Support\Text;
+use Simtabi\Laranail\Atlas\Core\Exception\UnknownCountry;
+use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 
 /**
  * A fluent, immutable query over the country catalogue.
@@ -440,6 +440,27 @@ final readonly class CountryQuery
         return $list;
     }
 
+    /**
+     * Locale-aware where possible, byte-wise where not.
+     *
+     * ext-intl is not a hard requirement of this package, so the collator is
+     * used when present and `strcmp` is the documented fallback rather than a
+     * silent one — see the note on {@see sortedByName()}.
+     */
+    private static function compareNames(string $a, string $b): int
+    {
+        if (class_exists(Collator::class)) {
+            $collator = new Collator('root');
+            $result = $collator->compare($a, $b);
+
+            if ($result !== false) {
+                return $result;
+            }
+        }
+
+        return strcmp($a, $b);
+    }
+
     // -----------------------------------------------------------------------
     // Internals
     // -----------------------------------------------------------------------
@@ -468,6 +489,7 @@ final readonly class CountryQuery
 
     /**
      * @param callable(CountryRecord): ?string $accessor
+     *
      * @return list<string>
      */
     private function distinct(callable $accessor): array
@@ -486,26 +508,5 @@ final readonly class CountryQuery
         sort($list);
 
         return $list;
-    }
-
-    /**
-     * Locale-aware where possible, byte-wise where not.
-     *
-     * ext-intl is not a hard requirement of this package, so the collator is
-     * used when present and `strcmp` is the documented fallback rather than a
-     * silent one — see the note on {@see sortedByName()}.
-     */
-    private static function compareNames(string $a, string $b): int
-    {
-        if (class_exists(Collator::class)) {
-            $collator = new Collator('root');
-            $result = $collator->compare($a, $b);
-
-            if ($result !== false) {
-                return $result;
-            }
-        }
-
-        return strcmp($a, $b);
     }
 }

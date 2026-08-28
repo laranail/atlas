@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use Simtabi\Laranail\Atlas\Core\Network\AddressFamily;
-use Simtabi\Laranail\Atlas\Core\Network\IpAddress;
 use Simtabi\Laranail\Atlas\Core\Network\IpRange;
+use Simtabi\Laranail\Atlas\Core\Network\IpAddress;
 use Simtabi\Laranail\Atlas\Core\Network\IpRangeTable;
+use Simtabi\Laranail\Atlas\Core\Network\AddressFamily;
 
 function atlasRange(string $first, string $last, string $country): IpRange
 {

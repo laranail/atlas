@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
+use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
+use Simtabi\Laranail\Atlas\Core\Region\Continent;
 use Simtabi\Laranail\Atlas\Core\Country\CountryQuery;
 use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
 use Simtabi\Laranail\Atlas\Core\Exception\UnknownCountry;
-use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
-use Simtabi\Laranail\Atlas\Core\Region\Continent;
+use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
 
 function atlasQuery(): CountryQuery
 {
@@ -47,10 +47,10 @@ it('lets one partially-built query fan out into several', function (): void {
 it('filters by continent from the enum, a code or a name', function (Continent|string $continent): void {
     expect(atlasQuery()->inContinent($continent)->count())->toBe(58);
 })->with([
-    'enum' => Continent::Africa,
-    'code' => 'AF',
+    'enum'            => Continent::Africa,
+    'code'            => 'AF',
     'lower-case code' => 'af',
-    'name' => 'Africa',
+    'name'            => 'Africa',
     'mixed-case name' => 'aFrIcA',
 ]);
 

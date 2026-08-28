@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedIpCountryResolver;
 use Simtabi\Laranail\Atlas\Core\Network\IpAddress;
+use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedIpCountryResolver;
 
 /**
  * The resolver against a table written for the test, because the real one is

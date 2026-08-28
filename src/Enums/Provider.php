@@ -47,7 +47,7 @@ enum Provider: string
     public function requiresExternalData(): bool
     {
         return match ($this) {
-            self::Generated => false,
+            self::Generated            => false,
             self::Rinvex, self::Remote => true,
         };
     }

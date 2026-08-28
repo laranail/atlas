@@ -49,9 +49,9 @@ final class InvalidCoordinates extends InvalidArgumentException implements Atlas
     private static function format(float $value): string
     {
         return match (true) {
-            is_nan($value) => 'NAN',
+            is_nan($value)      => 'NAN',
             is_infinite($value) => $value > 0 ? 'INF' : '-INF',
-            default => (string) $value,
+            default             => (string) $value,
         };
     }
 }

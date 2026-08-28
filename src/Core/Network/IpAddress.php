@@ -75,6 +75,11 @@ final readonly class IpAddress implements Stringable
         public string $packed,
     ) {}
 
+    public function __toString(): string
+    {
+        return $this->address;
+    }
+
     /**
      * Parse an address, or null if it is not one.
      *
@@ -245,10 +250,5 @@ final readonly class IpAddress implements Stringable
         $mask = 0xFF << (8 - $remainingBits) & 0xFF;
 
         return (ord($this->packed[$wholeBytes]) & $mask) === (ord($packedNetwork[$wholeBytes]) & $mask);
-    }
-
-    public function __toString(): string
-    {
-        return $this->address;
     }
 }

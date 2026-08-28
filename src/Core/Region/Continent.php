@@ -62,6 +62,20 @@ enum Continent: string
     }
 
     /**
+     * @return array<string, string> code => label, for a select box
+     */
+    public static function options(): array
+    {
+        $options = [];
+
+        foreach (self::cases() as $case) {
+            $options[$case->value] = $case->label();
+        }
+
+        return $options;
+    }
+
+    /**
      * The English display name.
      *
      * Hard-coded rather than derived from the case name, because splitting
@@ -72,12 +86,12 @@ enum Continent: string
     public function label(): string
     {
         return match ($this) {
-            self::Africa => 'Africa',
-            self::Antarctica => 'Antarctica',
-            self::Asia => 'Asia',
-            self::Europe => 'Europe',
+            self::Africa       => 'Africa',
+            self::Antarctica   => 'Antarctica',
+            self::Asia         => 'Asia',
+            self::Europe       => 'Europe',
             self::NorthAmerica => 'North America',
-            self::Oceania => 'Oceania',
+            self::Oceania      => 'Oceania',
             self::SouthAmerica => 'South America',
         };
     }
@@ -91,19 +105,5 @@ enum Continent: string
     public function isInhabited(): bool
     {
         return $this !== self::Antarctica;
-    }
-
-    /**
-     * @return array<string, string> code => label, for a select box
-     */
-    public static function options(): array
-    {
-        $options = [];
-
-        foreach (self::cases() as $case) {
-            $options[$case->value] = $case->label();
-        }
-
-        return $options;
     }
 }

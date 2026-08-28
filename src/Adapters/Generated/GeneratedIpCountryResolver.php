@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Simtabi\Laranail\Atlas\Adapters\Generated;
 
-use Simtabi\Laranail\Atlas\Core\Contracts\IpCountryResolver;
-use Simtabi\Laranail\Atlas\Core\Network\AddressFamily;
-use Simtabi\Laranail\Atlas\Core\Network\IpAddress;
 use Simtabi\Laranail\Atlas\Core\Network\IpRange;
+use Simtabi\Laranail\Atlas\Core\Network\IpAddress;
 use Simtabi\Laranail\Atlas\Core\Network\IpRangeTable;
+use Simtabi\Laranail\Atlas\Core\Network\AddressFamily;
+use Simtabi\Laranail\Atlas\Core\Contracts\IpCountryResolver;
 
 /**
  * Offline IP-to-country, over the range table built by `tools/build-ip-table.php`.
@@ -91,6 +91,7 @@ final class GeneratedIpCountryResolver implements IpCountryResolver
 
     /**
      * @param list<array{0: string, 1: string, 2: string}> $rows
+     *
      * @return list<IpRange>
      */
     private function hydrate(array $rows): array

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
 use Simtabi\Laranail\Atlas\Enums\Country;
 use Simtabi\Laranail\Atlas\Enums\Currency;
 use Simtabi\Laranail\Atlas\Enums\Language;
+use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
 
 /**
  * The enums are generated from the dataset, so the only thing worth asserting
