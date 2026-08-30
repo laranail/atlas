@@ -101,9 +101,6 @@
         "rector": "vendor/bin/rector process --dry-run --no-progress-bar",
         "rector-fix": "vendor/bin/rector process",
         "sync-check": "@php tools/sync-check.php",
-        "audit": [
-            "@composer-audit"
-        ],
         "composer-audit": "@composer audit --no-interaction",
         "format": "@pint-fix"
     },
