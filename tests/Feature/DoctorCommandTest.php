@@ -1,8 +1,8 @@
 <?php
 
 declare(strict_types=1);
-use Simtabi\Laranail\Atlas\Services\AtlasService;
 use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
+use Simtabi\Laranail\Atlas\Services\AtlasService;
 
 /**
  * Swap the data source for one that reports a chosen version stamp.
@@ -106,7 +106,7 @@ it('says so when the source reports no version at all', function (): void {
 });
 
 it('shows the release date and no age warning for a current dataset', function (): void {
-    atlasDoctorStub(date('Y-m-d') . ' rinvex/countries v9.9.9');
+    atlasDoctorStub(date('Y-m-d').' rinvex/countries v9.9.9');
 
     $this->artisan('laranail::atlas.doctor')
         ->expectsOutputToContain('Source released')

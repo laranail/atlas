@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Simtabi\Laranail\Atlas\Core\Geo;
 
-use Stringable;
 use JsonSerializable;
 use Simtabi\Laranail\Atlas\Core\Exception\InvalidCoordinates;
+use Stringable;
 
 /**
  * A length, carrying its own unit.
@@ -89,9 +89,9 @@ final readonly class Distance implements JsonSerializable, Stringable
     public function toArray(): array
     {
         return [
-            'metres'     => $this->metres,
+            'metres' => $this->metres,
             'kilometres' => $this->kilometres(),
-            'miles'      => $this->miles(),
+            'miles' => $this->miles(),
         ];
     }
 

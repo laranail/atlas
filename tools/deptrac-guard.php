@@ -19,7 +19,7 @@ declare(strict_types=1);
  * the output mentions a syntax error · the JSON report cannot be read at all.
  */
 $root = dirname(__DIR__);
-$binary = $root . '/vendor/bin/deptrac';
+$binary = $root.'/vendor/bin/deptrac';
 
 if (! is_file($binary)) {
     fwrite(STDERR, "deptrac is not installed; run composer install.\n");
@@ -30,7 +30,7 @@ if (! is_file($binary)) {
 $command = sprintf(
     '%s analyse --config-file=%s --no-progress --formatter=json 2>&1',
     escapeshellarg($binary),
-    escapeshellarg($root . '/deptrac.yaml'),
+    escapeshellarg($root.'/deptrac.yaml'),
 );
 
 exec($command, $lines, $exitCode);

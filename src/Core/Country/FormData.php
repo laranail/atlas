@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Simtabi\Laranail\Atlas\Core\Country;
 
-use Simtabi\Laranail\Atlas\Core\Region\Continent;
 use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
+use Simtabi\Laranail\Atlas\Core\Region\Continent;
 
 /**
  * The catalogue as a form sees it: `value => label` maps, ready for a `<select>`.
@@ -36,9 +36,8 @@ final readonly class FormData
     /**
      * Countries as `code => label`.
      *
-     * @param 'iso2'|'iso3'|'numeric' $key what the form submits
-     * @param 'name'|'officialName'|'nativeName' $label what the reader sees
-     *
+     * @param  'iso2'|'iso3'|'numeric'  $key  what the form submits
+     * @param  'name'|'officialName'|'nativeName'  $label  what the reader sees
      * @return array<string, string>
      */
     public function options(string $key = 'iso2', string $label = 'name'): array
@@ -69,9 +68,8 @@ final readonly class FormData
      * the filters emptied are dropped here — an empty `<optgroup>` renders as a
      * heading with nothing under it, which is worse than its absence.
      *
-     * @param 'iso2'|'iso3'|'numeric' $key
-     * @param 'name'|'officialName'|'nativeName' $label
-     *
+     * @param  'iso2'|'iso3'|'numeric'  $key
+     * @param  'name'|'officialName'|'nativeName'  $label
      * @return array<string, array<string, string>>
      */
     public function groupedOptions(string $key = 'iso2', string $label = 'name'): array
@@ -192,32 +190,31 @@ final readonly class FormData
     }
 
     /**
-     * @param 'iso2'|'iso3'|'numeric' $key
+     * @param  'iso2'|'iso3'|'numeric'  $key
      */
     private function keyFor(CountryRecord $country, string $key): string
     {
         return match ($key) {
-            'iso3'    => $country->iso3,
+            'iso3' => $country->iso3,
             'numeric' => $country->numeric,
-            default   => $country->iso2,
+            default => $country->iso2,
         };
     }
 
     /**
-     * @param 'name'|'officialName'|'nativeName' $label
+     * @param  'name'|'officialName'|'nativeName'  $label
      */
     private function labelFor(CountryRecord $country, string $label): string
     {
         return match ($label) {
             'officialName' => $country->officialName,
-            'nativeName'   => $country->nativeName,
-            default        => $country->name,
+            'nativeName' => $country->nativeName,
+            default => $country->name,
         };
     }
 
     /**
-     * @param list<string> $values
-     *
+     * @param  list<string>  $values
      * @return array<string, string>
      */
     private function identityMap(array $values): array

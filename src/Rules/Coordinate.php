@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Simtabi\Laranail\Atlas\Rules;
 
 use Closure;
-use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
 use Illuminate\Contracts\Validation\ValidationRule;
+use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
 
 /**
  * A `lat,lon` pair that {@see Coordinates} will accept.

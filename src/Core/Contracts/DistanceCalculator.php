@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Simtabi\Laranail\Atlas\Core\Contracts;
 
-use Simtabi\Laranail\Atlas\Core\Geo\Distance;
 use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
+use Simtabi\Laranail\Atlas\Core\Geo\Distance;
 
 /**
  * How far apart two points are.

@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Simtabi\Laranail\Atlas\Adapters\Generated;
 
+use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
+use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
 use Simtabi\Laranail\Atlas\Core\Geo\BoundingBox;
 use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
-use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
-use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 
 /**
  * The default data source: the dataset shipped with this package.
@@ -56,20 +56,20 @@ final class GeneratedPlaceRepository implements PlaceRepository
         // ISO forms have distinct, non-overlapping lengths, so one comparison
         // answers which register is being addressed.
         return match (strlen($code)) {
-            2       => $countries[$code] ?? null,
-            3       => $this->byThreeCharacterCode($code, $countries),
+            2 => $countries[$code] ?? null,
+            3 => $this->byThreeCharacterCode($code, $countries),
             default => null,
         };
     }
 
     public function isAvailable(): bool
     {
-        return is_file($this->dataPath . '/countries.php');
+        return is_file($this->dataPath.'/countries.php');
     }
 
     public function version(): ?string
     {
-        $file = $this->dataPath . '/dataset-version.txt';
+        $file = $this->dataPath.'/dataset-version.txt';
 
         if (! is_file($file)) {
             return null;
@@ -88,7 +88,7 @@ final class GeneratedPlaceRepository implements PlaceRepository
      * digits and alpha-3 codes never are, which separates them without asking
      * the caller to declare which they meant.
      *
-     * @param array<string, CountryRecord> $countries
+     * @param  array<string, CountryRecord>  $countries
      */
     private function byThreeCharacterCode(string $code, array $countries): ?CountryRecord
     {
@@ -112,7 +112,7 @@ final class GeneratedPlaceRepository implements PlaceRepository
             return $this->countries;
         }
 
-        $file = $this->dataPath . '/countries.php';
+        $file = $this->dataPath.'/countries.php';
 
         // A missing dataset is not an exception here. isAvailable() is the
         // question that answers it, doctor is what asks, and returning nothing
@@ -153,7 +153,7 @@ final class GeneratedPlaceRepository implements PlaceRepository
     }
 
     /**
-     * @param array<string, mixed> $row
+     * @param  array<string, mixed>  $row
      */
     private function hydrate(array $row): CountryRecord
     {
@@ -184,7 +184,7 @@ final class GeneratedPlaceRepository implements PlaceRepository
     }
 
     /**
-     * @param array<string, mixed> $row
+     * @param  array<string, mixed>  $row
      */
     private function str(array $row, string $key): string
     {
@@ -194,7 +194,7 @@ final class GeneratedPlaceRepository implements PlaceRepository
     }
 
     /**
-     * @param array<string, mixed> $row
+     * @param  array<string, mixed>  $row
      */
     private function nullableStr(array $row, string $key): ?string
     {
@@ -204,8 +204,7 @@ final class GeneratedPlaceRepository implements PlaceRepository
     }
 
     /**
-     * @param array<string, mixed> $row
-     *
+     * @param  array<string, mixed>  $row
      * @return list<string>
      */
     private function strList(array $row, string $key): array
@@ -220,7 +219,7 @@ final class GeneratedPlaceRepository implements PlaceRepository
     }
 
     /**
-     * @param array<string, mixed> $row
+     * @param  array<string, mixed>  $row
      */
     private function bounds(array $row): ?BoundingBox
     {

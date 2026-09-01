@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
+use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
 use Simtabi\Laranail\Atlas\Enums\Country;
 use Simtabi\Laranail\Atlas\Enums\Currency;
 use Simtabi\Laranail\Atlas\Enums\Language;
-use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
 
 /**
  * The enums are generated from the dataset, so the only thing worth asserting
@@ -20,7 +20,7 @@ use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
  */
 function atlasData(): array
 {
-    return new GeneratedPlaceRepository(dirname(__DIR__, 3) . '/resources/data')->all();
+    return new GeneratedPlaceRepository(dirname(__DIR__, 3).'/resources/data')->all();
 }
 
 it('has one country case per country in the dataset', function (): void {
@@ -33,7 +33,7 @@ it('backs every country case with a code the dataset knows', function (): void {
 
     foreach (Country::cases() as $case) {
         if (! isset($data[$case->value])) {
-            $unknown[] = $case->name . ' = ' . $case->value;
+            $unknown[] = $case->name.' = '.$case->value;
         }
     }
 
@@ -101,7 +101,7 @@ it('is still what the generator produces', function (): void {
     // Catches a hand edit, which the assertions above cannot see: adding a
     // method or reformatting leaves every case intact and still puts the file
     // and its generator permanently at odds.
-    $generator = dirname(__DIR__, 3) . '/tools/generate-enums.php';
+    $generator = dirname(__DIR__, 3).'/tools/generate-enums.php';
 
     $output = [];
     $exitCode = 0;

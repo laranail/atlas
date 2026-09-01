@@ -20,8 +20,8 @@ final class ChronoBridgeUnavailable extends RuntimeException implements AtlasExc
     {
         return new self(
             'Country-to-timezone lookups need laranail/chrono, which is not installed. Run '
-            . '`composer require laranail/chrono`. It is a suggest rather than a dependency because '
-            . 'its PHP floor is ^8.5 and this package supports ^8.4.1.',
+            .'`composer require laranail/chrono`. It is a suggest rather than a dependency because '
+            .'its PHP floor is ^8.5 and this package supports ^8.4.1.',
         );
     }
 
@@ -29,7 +29,7 @@ final class ChronoBridgeUnavailable extends RuntimeException implements AtlasExc
     {
         return new self(
             'laranail/chrono is installed but the bridge is off. Set laranail.atlas.chrono.enabled '
-            . 'to true to use country-to-timezone lookups.',
+            .'to true to use country-to-timezone lookups.',
         );
     }
 }

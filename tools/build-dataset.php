@@ -35,13 +35,13 @@ $root = dirname(__DIR__);
 $check = in_array('--check', $argv, true);
 
 $candidates = [
-    $root . '/vendor/rinvex/countries/resources',
-    dirname($root) . '/toolkit/vendor/rinvex/countries/resources',
+    $root.'/vendor/rinvex/countries/resources',
+    dirname($root).'/toolkit/vendor/rinvex/countries/resources',
 ];
 
 $resources = null;
 foreach ($candidates as $candidate) {
-    if (is_dir($candidate . '/data')) {
+    if (is_dir($candidate.'/data')) {
         $resources = $candidate;
 
         break;
@@ -49,8 +49,8 @@ foreach ($candidates as $candidate) {
 }
 
 if ($resources === null) {
-    fwrite(STDERR, "Cannot find the rinvex/countries resources. Looked in:\n  " . implode("\n  ", $candidates) . "\n\n"
-        . "Run `composer require --dev rinvex/countries` in this package, or build from a sibling that has it.\n");
+    fwrite(STDERR, "Cannot find the rinvex/countries resources. Looked in:\n  ".implode("\n  ", $candidates)."\n\n"
+        ."Run `composer require --dev rinvex/countries` in this package, or build from a sibling that has it.\n");
 
     exit(1);
 }
@@ -77,7 +77,7 @@ $decimal = static function (mixed $value): ?float {
 
 /** @var array<string, array<string, mixed>> $countries */
 $countries = [];
-$files = glob($resources . '/data/*.json') ?: [];
+$files = glob($resources.'/data/*.json') ?: [];
 sort($files);
 
 foreach ($files as $file) {
@@ -144,22 +144,22 @@ foreach ($files as $file) {
     $numeric = $rawNumeric === '' ? '' : str_pad($rawNumeric, 3, '0', STR_PAD_LEFT);
 
     $countries[$iso2] = [
-        'iso2'          => $iso2,
-        'iso3'          => strtoupper((string) ($raw['iso_3166_1_alpha3'] ?? '')),
-        'numeric'       => $numeric,
-        'name'          => (string) ($name['common'] ?? ''),
+        'iso2' => $iso2,
+        'iso3' => strtoupper((string) ($raw['iso_3166_1_alpha3'] ?? '')),
+        'numeric' => $numeric,
+        'name' => (string) ($name['common'] ?? ''),
         'official_name' => (string) ($name['official'] ?? ''),
-        'native_name'   => $native !== '' ? $native : (string) ($name['common'] ?? ''),
-        'continent'     => $continent,
-        'region'        => is_string($geo['region'] ?? null) && $geo['region'] !== '' ? $geo['region'] : null,
-        'subregion'     => is_string($geo['subregion'] ?? null) && $geo['subregion'] !== '' ? $geo['subregion'] : null,
-        'currencies'    => array_values(array_map(strtoupper(...), array_filter($currencies, is_string(...)))),
-        'languages'     => array_values(array_filter($languages, is_string(...))),
+        'native_name' => $native !== '' ? $native : (string) ($name['common'] ?? ''),
+        'continent' => $continent,
+        'region' => is_string($geo['region'] ?? null) && $geo['region'] !== '' ? $geo['region'] : null,
+        'subregion' => is_string($geo['subregion'] ?? null) && $geo['subregion'] !== '' ? $geo['subregion'] : null,
+        'currencies' => array_values(array_map(strtoupper(...), array_filter($currencies, is_string(...)))),
+        'languages' => array_values(array_filter($languages, is_string(...))),
         'calling_codes' => array_values(array_map(strval(...), array_filter($calling, static fn ($c): bool => is_string($c) || is_int($c)))),
-        'tld'           => isset($tld[0]) && is_string($tld[0]) ? $tld[0] : null,
-        'latitude'      => $latitude,
-        'longitude'     => $longitude,
-        'bounds'        => $bounds,
+        'tld' => isset($tld[0]) && is_string($tld[0]) ? $tld[0] : null,
+        'latitude' => $latitude,
+        'longitude' => $longitude,
+        'bounds' => $bounds,
     ];
 }
 
@@ -177,14 +177,14 @@ if ($countries === []) {
 $vendorRoot = dirname($resources, 3);
 $sourceVersion = 'rinvex/countries';
 $sourceDate = null;
-$installed = $vendorRoot . '/composer/installed.json';
+$installed = $vendorRoot.'/composer/installed.json';
 
 if (is_file($installed)) {
     $data = json_decode((string) file_get_contents($installed), true);
 
     foreach ((is_array($data) ? ($data['packages'] ?? []) : []) as $package) {
         if (is_array($package) && ($package['name'] ?? '') === 'rinvex/countries') {
-            $sourceVersion .= ' ' . (is_string($package['version'] ?? null) ? $package['version'] : 'unknown');
+            $sourceVersion .= ' '.(is_string($package['version'] ?? null) ? $package['version'] : 'unknown');
 
             // The release date of that version, which composer already records.
             // The *source* date and not the build date, deliberately: rebuilding
@@ -213,7 +213,7 @@ if (! str_contains($sourceVersion, ' ')) {
 // which returned false for every stamp this generator has ever written, leaving
 // the staleness check permanently silent. A stamp with no date is still valid;
 // doctor reports it as undatable rather than as current.
-$stamp = $sourceDate === null ? $sourceVersion : $sourceDate . ' ' . $sourceVersion;
+$stamp = $sourceDate === null ? $sourceVersion : $sourceDate.' '.$sourceVersion;
 
 $export = var_export($countries, true);
 $count = count($countries);
@@ -237,9 +237,9 @@ return {$export};
 
 PHP;
 
-$target = $root . '/resources/data/countries.php';
-$stampTarget = $root . '/resources/data/dataset-version.txt';
-$stampFile = $stamp . "\n";
+$target = $root.'/resources/data/countries.php';
+$stampTarget = $root.'/resources/data/dataset-version.txt';
+$stampFile = $stamp."\n";
 
 if ($check) {
     // Both artefacts, not just the big one. The stamp is what `doctor` ages the
@@ -263,9 +263,9 @@ if ($check) {
         exit(0);
     }
 
-    fwrite(STDERR, implode(' and ', $mismatched) . " does not match what tools/build-dataset.php produces.\n\n"
-        . "Either the file was edited by hand, or the source data moved. Run the generator and read the\n"
-        . "diff before committing it.\n");
+    fwrite(STDERR, implode(' and ', $mismatched)." does not match what tools/build-dataset.php produces.\n\n"
+        ."Either the file was edited by hand, or the source data moved. Run the generator and read the\n"
+        ."diff before committing it.\n");
 
     exit(1);
 }

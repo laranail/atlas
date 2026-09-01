@@ -66,7 +66,7 @@ it('takes a bare date as both the date and the source', function (): void {
 it('rejects a date-shaped string that is not a day', function (string $candidate): void {
     // The failure a regex misses: PHP rolls 2025-13-45 forward into 2026 rather
     // than rejecting it, so the round-trip comparison is what catches it.
-    $version = DatasetVersion::parse($candidate . ' rinvex/countries v9.1.0');
+    $version = DatasetVersion::parse($candidate.' rinvex/countries v9.1.0');
 
     expect($version->isDated())->toBeFalse();
 })->with(['2025-13-01', '2025-02-30', '2025-00-10', '25-07-14', '2025-7-14']);

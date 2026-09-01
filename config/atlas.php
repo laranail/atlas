@@ -54,9 +54,9 @@ return [
 
     'cache' => [
         'enabled' => env('ATLAS_CACHE', true),
-        'store'   => env('ATLAS_CACHE_STORE'),
-        'ttl'     => (int) env('ATLAS_CACHE_TTL', 1440),
-        'prefix'  => 'laranail.atlas',
+        'store' => env('ATLAS_CACHE_STORE'),
+        'ttl' => (int) env('ATLAS_CACHE_TTL', 1440),
+        'prefix' => 'laranail.atlas',
     ],
 
     /*
@@ -76,8 +76,8 @@ return [
     */
 
     'presentation' => [
-        'label'  => env('ATLAS_LABEL', 'name'),
-        'key'    => env('ATLAS_KEY', 'iso2'),
+        'label' => env('ATLAS_LABEL', 'name'),
+        'key' => env('ATLAS_KEY', 'iso2'),
         'locale' => env('ATLAS_LOCALE'),
     ],
 
@@ -111,7 +111,7 @@ return [
     */
 
     'distance' => [
-        'unit'    => env('ATLAS_DISTANCE_UNIT', 'km'),
+        'unit' => env('ATLAS_DISTANCE_UNIT', 'km'),
         'formula' => env('ATLAS_DISTANCE_FORMULA', 'haversine'),
     ],
 
@@ -135,7 +135,7 @@ return [
 
     'ip' => [
         'enabled' => env('ATLAS_IP_LOOKUP', false),
-        'table'   => null,
+        'table' => null,
     ],
 
     /*
@@ -155,9 +155,9 @@ return [
     */
 
     'api' => [
-        'enabled'    => env('ATLAS_API', false),
-        'prefix'     => env('ATLAS_API_PREFIX', 'api/atlas'),
-        'version'    => 'v1',
+        'enabled' => env('ATLAS_API', false),
+        'prefix' => env('ATLAS_API_PREFIX', 'api/atlas'),
+        'version' => 'v1',
         'middleware' => ['api', 'throttle:60,1'],
     ],
 

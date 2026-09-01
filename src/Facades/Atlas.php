@@ -5,17 +5,17 @@ declare(strict_types=1);
 namespace Simtabi\Laranail\Atlas\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Simtabi\Laranail\Atlas\Enums\Country;
-use Simtabi\Laranail\Atlas\Core\Geo\Distance;
-use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
-use Simtabi\Laranail\Atlas\Core\Country\FormData;
-use Simtabi\Laranail\Atlas\Core\Region\Continent;
-use Simtabi\Laranail\Atlas\Services\AtlasManager;
-use Simtabi\Laranail\Atlas\Services\AtlasService;
-use Simtabi\Laranail\Atlas\Core\Network\IpAddress;
-use Simtabi\Laranail\Atlas\Core\Country\PhoneRules;
 use Simtabi\Laranail\Atlas\Core\Country\CountryQuery;
 use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
+use Simtabi\Laranail\Atlas\Core\Country\FormData;
+use Simtabi\Laranail\Atlas\Core\Country\PhoneRules;
+use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
+use Simtabi\Laranail\Atlas\Core\Geo\Distance;
+use Simtabi\Laranail\Atlas\Core\Network\IpAddress;
+use Simtabi\Laranail\Atlas\Core\Region\Continent;
+use Simtabi\Laranail\Atlas\Enums\Country;
+use Simtabi\Laranail\Atlas\Services\AtlasManager;
+use Simtabi\Laranail\Atlas\Services\AtlasService;
 
 /**
  * Points at {@see AtlasService} — the query API — and not at

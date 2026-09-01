@@ -42,9 +42,9 @@ $root = dirname(__DIR__);
 
 $sources = [
     'afrinic' => 'https://ftp.afrinic.net/pub/stats/afrinic/delegated-afrinic-extended-latest',
-    'apnic'   => 'https://ftp.apnic.net/stats/apnic/delegated-apnic-extended-latest',
-    'arin'    => 'https://ftp.arin.net/pub/stats/arin/delegated-arin-extended-latest',
-    'lacnic'  => 'https://ftp.lacnic.net/pub/stats/lacnic/delegated-lacnic-extended-latest',
+    'apnic' => 'https://ftp.apnic.net/stats/apnic/delegated-apnic-extended-latest',
+    'arin' => 'https://ftp.arin.net/pub/stats/arin/delegated-arin-extended-latest',
+    'lacnic' => 'https://ftp.lacnic.net/pub/stats/lacnic/delegated-lacnic-extended-latest',
     'ripencc' => 'https://ftp.ripe.net/pub/stats/ripencc/delegated-ripencc-extended-latest',
 ];
 
@@ -61,7 +61,7 @@ foreach ($argv as $argument) {
  */
 $readSource = static function (string $registry, string $url) use ($fromDirectory): array {
     if ($fromDirectory !== null) {
-        $file = rtrim($fromDirectory, '/') . '/delegated-' . $registry . '-extended-latest';
+        $file = rtrim($fromDirectory, '/').'/delegated-'.$registry.'-extended-latest';
 
         if (! is_file($file)) {
             fwrite(STDERR, "Missing local source: {$file}\n");
@@ -205,7 +205,7 @@ $write = static function (string $file, array $rows, string $family) use ($root)
     $count = count($rows);
     $export = var_export($rows, true);
 
-    file_put_contents($root . '/resources/data/' . $file, <<<PHP
+    file_put_contents($root.'/resources/data/'.$file, <<<PHP
     <?php
 
     declare(strict_types=1);
@@ -226,7 +226,7 @@ $write = static function (string $file, array $rows, string $family) use ($root)
 $write('ip-ipv4.php', $v4, 'ipv4');
 $write('ip-ipv6.php', $v6, 'ipv6');
 
-file_put_contents($root . '/resources/data/ip-version.txt', gmdate('Y-m-d') . "\n");
+file_put_contents($root.'/resources/data/ip-version.txt', gmdate('Y-m-d')."\n");
 
 if ($skipped > 0) {
     fwrite(STDOUT, "  {$skipped} malformed rows skipped\n");

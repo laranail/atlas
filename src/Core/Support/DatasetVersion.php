@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Simtabi\Laranail\Atlas\Core\Support;
 
-use Stringable;
 use DateTimeImmutable;
+use Stringable;
 
 /**
  * A dataset stamp, split into the date it can be aged by and the source it came from.
@@ -102,7 +102,7 @@ final readonly class DatasetVersion implements Stringable
             return null;
         }
 
-        $parsed = DateTimeImmutable::createFromFormat('!' . self::DATE_FORMAT, $this->date);
+        $parsed = DateTimeImmutable::createFromFormat('!'.self::DATE_FORMAT, $this->date);
 
         return $parsed === false ? null : $parsed;
     }
@@ -120,7 +120,7 @@ final readonly class DatasetVersion implements Stringable
             return false;
         }
 
-        $parsed = DateTimeImmutable::createFromFormat('!' . self::DATE_FORMAT, $candidate);
+        $parsed = DateTimeImmutable::createFromFormat('!'.self::DATE_FORMAT, $candidate);
 
         return $parsed !== false && $parsed->format(self::DATE_FORMAT) === $candidate;
     }

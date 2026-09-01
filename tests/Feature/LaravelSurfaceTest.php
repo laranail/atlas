@@ -3,18 +3,18 @@
 declare(strict_types=1);
 
 use Rinvex\Country\CountryLoader;
-use Simtabi\Laranail\Atlas\Enums\Country;
-use Simtabi\Laranail\Atlas\Facades\Atlas;
-use Simtabi\Laranail\Atlas\Enums\Provider;
-use Simtabi\Laranail\Atlas\Core\Geo\Vincenty;
+use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
+use Simtabi\Laranail\Atlas\Core\Contracts\DistanceCalculator;
+use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
+use Simtabi\Laranail\Atlas\Core\Exception\UnsupportedProvider;
 use Simtabi\Laranail\Atlas\Core\Geo\Haversine;
-use Simtabi\Laranail\Atlas\Support\AtlasConfig;
+use Simtabi\Laranail\Atlas\Core\Geo\Vincenty;
+use Simtabi\Laranail\Atlas\Enums\Country;
+use Simtabi\Laranail\Atlas\Enums\Provider;
+use Simtabi\Laranail\Atlas\Facades\Atlas;
 use Simtabi\Laranail\Atlas\Services\AtlasManager;
 use Simtabi\Laranail\Atlas\Services\AtlasService;
-use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
-use Simtabi\Laranail\Atlas\Core\Contracts\DistanceCalculator;
-use Simtabi\Laranail\Atlas\Core\Exception\UnsupportedProvider;
-use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
+use Simtabi\Laranail\Atlas\Support\AtlasConfig;
 
 it('publishes config to the vendor-namespaced key', function (): void {
     // The laranail convention, and the reason this package does nothing to get
