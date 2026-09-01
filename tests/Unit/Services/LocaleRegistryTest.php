@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Simtabi\Laranail\Atlas\Services\LocaleRegistry;
 use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
+use Simtabi\Laranail\Atlas\Services\LocaleRegistry;
 
 /**
  * Behaviour, against a sandbox rather than the application's own directories.
@@ -20,7 +20,7 @@ use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
  */
 function atlasSandbox(): string
 {
-    $dir = sys_get_temp_dir() . '/atlas-locales-' . bin2hex(random_bytes(6));
+    $dir = sys_get_temp_dir().'/atlas-locales-'.bin2hex(random_bytes(6));
     mkdir($dir, 0o777, true);
 
     return $dir;
@@ -30,20 +30,20 @@ function atlasRegistry(string ...$paths): LocaleRegistry
 {
     return new LocaleRegistry(
         array_values($paths),
-        new GeneratedPlaceRepository(dirname(__DIR__, 3) . '/resources/data'),
+        new GeneratedPlaceRepository(dirname(__DIR__, 3).'/resources/data'),
     );
 }
 
 afterEach(function (): void {
-    foreach (glob(sys_get_temp_dir() . '/atlas-locales-*') ?: [] as $dir) {
-        exec('rm -rf ' . escapeshellarg($dir));
+    foreach (glob(sys_get_temp_dir().'/atlas-locales-*') ?: [] as $dir) {
+        exec('rm -rf '.escapeshellarg($dir));
     }
 });
 
 it('lists the locale directories it finds', function (): void {
     $sandbox = atlasSandbox();
-    mkdir($sandbox . '/fr');
-    mkdir($sandbox . '/en_GB');
+    mkdir($sandbox.'/fr');
+    mkdir($sandbox.'/en_GB');
 
     expect(atlasRegistry($sandbox)->installed())->toBe(['en_GB', 'fr']);
 });
@@ -58,8 +58,8 @@ it('finds nothing in an empty directory', function (): void {
 
 it('ignores files, counting only directories', function (): void {
     $sandbox = atlasSandbox();
-    mkdir($sandbox . '/de');
-    file_put_contents($sandbox . '/en.json', '{}');
+    mkdir($sandbox.'/de');
+    file_put_contents($sandbox.'/en.json', '{}');
 
     expect(atlasRegistry($sandbox)->installed())->toBe(['de']);
 });
@@ -67,8 +67,8 @@ it('ignores files, counting only directories', function (): void {
 it('skips the vendor directory', function (): void {
     // That holds published package translations, not application locales.
     $sandbox = atlasSandbox();
-    mkdir($sandbox . '/vendor');
-    mkdir($sandbox . '/nl');
+    mkdir($sandbox.'/vendor');
+    mkdir($sandbox.'/nl');
 
     expect(atlasRegistry($sandbox)->installed())->toBe(['nl']);
 });
@@ -76,16 +76,16 @@ it('skips the vendor directory', function (): void {
 it('merges several paths without duplicating', function (): void {
     $first = atlasSandbox();
     $second = atlasSandbox();
-    mkdir($first . '/es');
-    mkdir($second . '/es');
-    mkdir($second . '/it');
+    mkdir($first.'/es');
+    mkdir($second.'/es');
+    mkdir($second.'/it');
 
     expect(atlasRegistry($first, $second)->installed())->toBe(['es', 'it']);
 });
 
 it('resolves a region subtag to its country', function (): void {
     $sandbox = atlasSandbox();
-    mkdir($sandbox . '/en_GB');
+    mkdir($sandbox.'/en_GB');
 
     $detailed = atlasRegistry($sandbox)->detailed();
 
@@ -99,7 +99,7 @@ it('accepts either locale separator', function (string $locale): void {
     // BCP 47 says en-GB; PHP and Laravel conventions say en_GB. Both turn up as
     // directory names in the wild.
     $sandbox = atlasSandbox();
-    mkdir($sandbox . '/' . $locale);
+    mkdir($sandbox.'/'.$locale);
 
     expect(atlasRegistry($sandbox)->detailed()[$locale]['country'])->toBe('Brazil');
 })->with(['pt_BR', 'pt-BR']);
@@ -108,7 +108,7 @@ it('leaves the country null for a locale with no region rather than guessing', f
     // Guessing means picking one nation's flag for a language many speak, which
     // is not a choice a package should make for an application.
     $sandbox = atlasSandbox();
-    mkdir($sandbox . '/ar');
+    mkdir($sandbox.'/ar');
 
     $detailed = atlasRegistry($sandbox)->detailed();
 
@@ -119,14 +119,14 @@ it('leaves the country null for a locale with no region rather than guessing', f
 
 it('leaves the country null for a region subtag that is not a country', function (): void {
     $sandbox = atlasSandbox();
-    mkdir($sandbox . '/xx_ZZ');
+    mkdir($sandbox.'/xx_ZZ');
 
     expect(atlasRegistry($sandbox)->detailed()['xx_ZZ']['country'])->toBeNull();
 });
 
 it('answers has() against what is installed', function (): void {
     $sandbox = atlasSandbox();
-    mkdir($sandbox . '/sw');
+    mkdir($sandbox.'/sw');
 
     expect(atlasRegistry($sandbox)->has('sw'))->toBeTrue()
         ->and(atlasRegistry($sandbox)->has('ja'))->toBeFalse();

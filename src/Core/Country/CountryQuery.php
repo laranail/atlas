@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace Simtabi\Laranail\Atlas\Core\Country;
 
 use Collator;
-use Simtabi\Laranail\Atlas\Core\Support\Text;
+use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
+use Simtabi\Laranail\Atlas\Core\Exception\UnknownCountry;
 use Simtabi\Laranail\Atlas\Core\Geo\BoundingBox;
 use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
 use Simtabi\Laranail\Atlas\Core\Region\Continent;
-use Simtabi\Laranail\Atlas\Core\Exception\UnknownCountry;
-use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
+use Simtabi\Laranail\Atlas\Core\Support\Text;
 
 /**
  * A fluent, immutable query over the country catalogue.
@@ -36,8 +36,8 @@ use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 final readonly class CountryQuery
 {
     /**
-     * @param list<callable(CountryRecord): bool> $filters
-     * @param (callable(CountryRecord, CountryRecord): int)|null $sort
+     * @param  list<callable(CountryRecord): bool>  $filters
+     * @param  (callable(CountryRecord, CountryRecord): int)|null  $sort
      */
     private function __construct(
         private PlaceRepository $repository,
@@ -174,7 +174,7 @@ final readonly class CountryQuery
      * Its existence is why the filter list above can stay short: a caller with
      * an unusual predicate writes it inline rather than waiting for a method.
      *
-     * @param callable(CountryRecord): bool $predicate
+     * @param  callable(CountryRecord): bool  $predicate
      */
     public function where(callable $predicate): self
     {
@@ -466,7 +466,7 @@ final readonly class CountryQuery
     // -----------------------------------------------------------------------
 
     /**
-     * @param callable(CountryRecord): bool $filter
+     * @param  callable(CountryRecord): bool  $filter
      */
     private function withFilter(callable $filter): self
     {
@@ -488,8 +488,7 @@ final readonly class CountryQuery
     }
 
     /**
-     * @param callable(CountryRecord): ?string $accessor
-     *
+     * @param  callable(CountryRecord): ?string  $accessor
      * @return list<string>
      */
     private function distinct(callable $accessor): array

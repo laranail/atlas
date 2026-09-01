@@ -3,10 +3,10 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\Route;
-use Simtabi\Laranail\Atlas\Http\Controllers\IpController;
+use Simtabi\Laranail\Atlas\Http\Controllers\CatalogueController;
 use Simtabi\Laranail\Atlas\Http\Controllers\CountryController;
 use Simtabi\Laranail\Atlas\Http\Controllers\DistanceController;
-use Simtabi\Laranail\Atlas\Http\Controllers\CatalogueController;
+use Simtabi\Laranail\Atlas\Http\Controllers\IpController;
 
 /*
 | Loaded ONLY when laranail.atlas.api.enabled is true. The prefix, version and

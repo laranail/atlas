@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
 use Simtabi\Laranail\Atlas\Core\Exception\InvalidCoordinates;
+use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
 
 // No TestCase, no container — src/Core is framework-free and this is the
 // cheapest proof of it. A stray Illuminate import here fails the run.

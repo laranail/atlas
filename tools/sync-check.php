@@ -18,14 +18,14 @@ $root = dirname(__DIR__);
 
 $generators = [
     'countries' => [
-        'script'   => __DIR__ . '/build-dataset.php',
-        'requires' => $root . '/vendor/rinvex/countries/resources/data',
+        'script' => __DIR__.'/build-dataset.php',
+        'requires' => $root.'/vendor/rinvex/countries/resources/data',
     ],
     // Generated from the committed dataset rather than from the source package,
     // so this runs everywhere — there is nothing optional to be missing.
     'enums' => [
-        'script'   => __DIR__ . '/generate-enums.php',
-        'requires' => $root . '/resources/data',
+        'script' => __DIR__.'/generate-enums.php',
+        'requires' => $root.'/resources/data',
     ],
 ];
 
@@ -60,7 +60,7 @@ foreach ($generators as $label => $generator) {
 foreach ($skipped as $label => $path) {
     fwrite(STDOUT, sprintf(
         "  %-12s skipped — the source data is not installed (%s).\n"
-        . "%sRun `composer require --dev rinvex/countries` to check it here too; CI does.\n",
+        ."%sRun `composer require --dev rinvex/countries` to check it here too; CI does.\n",
         $label,
         $path,
         str_repeat(' ', 16),
@@ -71,7 +71,7 @@ if ($failed !== []) {
     fwrite(STDERR, "\nGenerated data is stale.\n\n");
 
     foreach ($failed as $label => $output) {
-        fwrite(STDERR, "  {$label}:\n" . preg_replace('/^/m', '    ', $output) . "\n");
+        fwrite(STDERR, "  {$label}:\n".preg_replace('/^/m', '    ', $output)."\n");
     }
 
     fwrite(STDERR, "\nRun the generator and commit the result.\n");

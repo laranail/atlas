@@ -22,7 +22,7 @@ namespace Simtabi\Laranail\Atlas\Core\Network;
 final readonly class IpRangeTable
 {
     /**
-     * @param list<IpRange> $ranges sorted by `first`, non-overlapping
+     * @param  list<IpRange>  $ranges  sorted by `first`, non-overlapping
      */
     private function __construct(
         public AddressFamily $family,
@@ -30,7 +30,7 @@ final readonly class IpRangeTable
     ) {}
 
     /**
-     * @param iterable<IpRange> $ranges in any order
+     * @param  iterable<IpRange>  $ranges  in any order
      */
     public static function of(AddressFamily $family, iterable $ranges): self
     {

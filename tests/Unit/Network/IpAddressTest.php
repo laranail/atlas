@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Simtabi\Laranail\Atlas\Core\Network\IpAddress;
 use Simtabi\Laranail\Atlas\Core\Network\AddressFamily;
+use Simtabi\Laranail\Atlas\Core\Network\IpAddress;
 
 it('parses both families', function (string $ip, AddressFamily $family, int $bytes): void {
     $address = IpAddress::parse($ip);
@@ -19,15 +19,15 @@ it('parses both families', function (string $ip, AddressFamily $family, int $byt
 it('rejects an address that only looks like one', function (string $value): void {
     expect(IpAddress::parse($value))->toBeNull();
 })->with([
-    'leading zeros'   => '01.02.03.04',
-    'out of range'    => '256.1.1.1',
-    'too few octets'  => '1.2.3',
+    'leading zeros' => '01.02.03.04',
+    'out of range' => '256.1.1.1',
+    'too few octets' => '1.2.3',
     'too many octets' => '1.2.3.4.5',
-    'empty'           => '',
-    'whitespace'      => '   ',
-    'a word'          => 'not-an-ip',
-    'a hostname'      => 'example.com',
-    'a cidr'          => '10.0.0.0/8',
+    'empty' => '',
+    'whitespace' => '   ',
+    'a word' => 'not-an-ip',
+    'a hostname' => 'example.com',
+    'a cidr' => '10.0.0.0/8',
 ]);
 
 it('rejects leading zeros because a resolver may read them as octal', function (): void {
@@ -87,20 +87,20 @@ it('classifies the reserved ranges', function (string $ip): void {
     expect(IpAddress::parse($ip)?->isReserved())->toBeTrue()
         ->and(IpAddress::parse($ip)?->isPublic())->toBeFalse();
 })->with([
-    'loopback'          => '127.0.0.1',
-    'this network'      => '0.0.0.0',
-    'link-local'        => '169.254.1.1',
+    'loopback' => '127.0.0.1',
+    'this network' => '0.0.0.0',
+    'link-local' => '169.254.1.1',
     'carrier-grade NAT' => '100.64.0.1',
-    'TEST-NET-1'        => '192.0.2.1',
-    'benchmarking'      => '198.19.0.1',
-    'multicast'         => '224.0.0.1',
-    'broadcast'         => '255.255.255.255',
-    'v6 loopback'       => '::1',
-    'v6 unspecified'    => '::',
-    'v6 unique local'   => 'fd00::1',
-    'v6 link-local'     => 'fe80::1',
-    'v6 documentation'  => '2001:db8::1',
-    'v6 multicast'      => 'ff02::1',
+    'TEST-NET-1' => '192.0.2.1',
+    'benchmarking' => '198.19.0.1',
+    'multicast' => '224.0.0.1',
+    'broadcast' => '255.255.255.255',
+    'v6 loopback' => '::1',
+    'v6 unspecified' => '::',
+    'v6 unique local' => 'fd00::1',
+    'v6 link-local' => 'fe80::1',
+    'v6 documentation' => '2001:db8::1',
+    'v6 multicast' => 'ff02::1',
 ]);
 
 it('judges an IPv4-mapped address by the address it carries', function (): void {

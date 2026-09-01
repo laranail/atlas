@@ -93,7 +93,7 @@ describe('with the api enabled', function (): void {
     });
 
     it('names which side of a distance was wrong', function (string $query, string $field): void {
-        $this->getJson('api/atlas/v1/distance?' . $query)
+        $this->getJson('api/atlas/v1/distance?'.$query)
             ->assertStatus(422)
             ->assertJsonValidationErrorFor($field);
     })->with([

@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace Simtabi\Laranail\Atlas\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
-use Simtabi\Laranail\Atlas\Services\AtlasService;
-use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
-use Simtabi\Laranail\Atlas\Http\Resources\CountryResource;
-use Simtabi\Laranail\Atlas\Http\Requests\CountryIndexRequest;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
+use Simtabi\Laranail\Atlas\Http\Requests\CountryIndexRequest;
+use Simtabi\Laranail\Atlas\Http\Resources\CountryResource;
+use Simtabi\Laranail\Atlas\Services\AtlasService;
 
 /**
  * Read-only country lookup.

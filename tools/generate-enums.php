@@ -32,7 +32,7 @@ declare(strict_types=1);
  * The output is committed and `--check`ed, and that gate only means anything if
  * two machines produce the same bytes.
  */
-require_once dirname(__DIR__) . '/vendor/autoload.php';
+require_once dirname(__DIR__).'/vendor/autoload.php';
 
 use Simtabi\Laranail\Atlas\Core\Support\Text;
 
@@ -40,7 +40,7 @@ $root = dirname(__DIR__);
 $check = in_array('--check', $argv, true);
 
 /** @var array<string, array<string, mixed>> $countries */
-$countries = require $root . '/resources/data/countries.php';
+$countries = require $root.'/resources/data/countries.php';
 
 if ($countries === []) {
     fwrite(STDERR, "The dataset is empty; run tools/build-dataset.php first.\n");
@@ -60,11 +60,11 @@ $caseName = static function (string $name): string {
     $words = preg_replace('/[^A-Za-z0-9]+/', ' ', $ascii) ?? '';
     $studly = str_replace(' ', '', ucwords(strtolower(trim($words))));
 
-    return $studly === '' ? '' : (ctype_digit($studly[0]) ? 'C' . $studly : $studly);
+    return $studly === '' ? '' : (ctype_digit($studly[0]) ? 'C'.$studly : $studly);
 };
 
 /**
- * @param array<string, string> $cases case name => backed value
+ * @param  array<string, string>  $cases  case name => backed value
  */
 $render = static function (string $class, array $cases, string $summary, string $body = ''): string {
     $count = count($cases);
@@ -74,7 +74,7 @@ $render = static function (string $class, array $cases, string $summary, string 
         $lines .= sprintf("    case %s = %s;\n", $name, var_export($value, true));
     }
 
-    $trailing = $body === '' ? '' : "\n" . $body;
+    $trailing = $body === '' ? '' : "\n".$body;
 
     return <<<PHP
         <?php
@@ -128,20 +128,20 @@ foreach ($countries as $iso2 => $row) {
 }
 
 if ($collisions !== []) {
-    fwrite(STDERR, "Case-name collisions:\n  " . implode("\n  ", $collisions) . "\n");
+    fwrite(STDERR, "Case-name collisions:\n  ".implode("\n  ", $collisions)."\n");
 
     exit(1);
 }
 
 $targets['Country'] = [
-    'file' => $root . '/src/Enums/Country.php',
+    'file' => $root.'/src/Enums/Country.php',
     'code' => $render(
         'Country',
         $countryCases,
         "Every country in the catalogue, keyed by ISO 3166-1 alpha-2.\n *\n"
-        . " * A typed key, not a record. Names, calling codes, currencies and coordinates live in the\n"
-        . " * dataset and are reached with `Atlas::country(Country::KE->value)` — the enum this replaces\n"
-        . " * carried them as three ~240-arm match tables, which is data wearing code's clothes.",
+        ." * A typed key, not a record. Names, calling codes, currencies and coordinates live in the\n"
+        ." * dataset and are reached with `Atlas::country(Country::KE->value)` — the enum this replaces\n"
+        ." * carried them as three ~240-arm match tables, which is data wearing code's clothes.",
     ),
 ];
 
@@ -168,24 +168,24 @@ ksort($currencyCases);
 ksort($languageCases);
 
 $targets['Currency'] = [
-    'file' => $root . '/src/Enums/Currency.php',
+    'file' => $root.'/src/Enums/Currency.php',
     'code' => $render(
         'Currency',
         $currencyCases,
         "Every ISO 4217 code in use by a country in the catalogue.\n *\n"
-        . " * Derived from the countries rather than from a separate register, so it can never list a\n"
-        . ' * currency no country uses — and never miss one that a country does.',
+        ." * Derived from the countries rather than from a separate register, so it can never list a\n"
+        .' * currency no country uses — and never miss one that a country does.',
     ),
 ];
 
 $targets['Language'] = [
-    'file' => $root . '/src/Enums/Language.php',
+    'file' => $root.'/src/Enums/Language.php',
     'code' => $render(
         'Language',
         $languageCases,
         "Every ISO 639-3 code spoken in a country in the catalogue.\n *\n"
-        . " * Case names are upper-cased because a PHP case name is case-sensitive and `swa` beside\n"
-        . ' * `SWA` would read as two languages; the backing value keeps the canonical lower-case form.',
+        ." * Case names are upper-cased because a PHP case name is case-sensitive and `swa` beside\n"
+        .' * `SWA` would read as two languages; the backing value keeps the canonical lower-case form.',
     ),
 ];
 
@@ -210,9 +210,9 @@ foreach ($targets as $label => $target) {
 
 if ($check) {
     if ($stale !== []) {
-        fwrite(STDERR, 'Generated enums are stale: ' . implode(', ', $stale) . "\n\n"
-            . "Either they were edited by hand, or the dataset moved without them. Run\n"
-            . "`php tools/generate-enums.php` and read the diff before committing it.\n");
+        fwrite(STDERR, 'Generated enums are stale: '.implode(', ', $stale)."\n\n"
+            ."Either they were edited by hand, or the dataset moved without them. Run\n"
+            ."`php tools/generate-enums.php` and read the diff before committing it.\n");
 
         exit(1);
     }

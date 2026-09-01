@@ -29,11 +29,11 @@ enum DistanceUnit: string
     public static function resolve(string $value): ?self
     {
         return match (strtolower(trim($value))) {
-            'm', 'metre', 'metres', 'meter', 'meters'                  => self::Metres,
+            'm', 'metre', 'metres', 'meter', 'meters' => self::Metres,
             'km', 'kilometre', 'kilometres', 'kilometer', 'kilometers' => self::Kilometres,
-            'mi', 'mile', 'miles'                                      => self::Miles,
+            'mi', 'mile', 'miles' => self::Miles,
             'nmi', 'nm', 'nautical', 'nautical mile', 'nautical miles' => self::NauticalMiles,
-            default                                                    => null,
+            default => null,
         };
     }
 
@@ -48,9 +48,9 @@ enum DistanceUnit: string
     public function inMetres(): float
     {
         return match ($this) {
-            self::Metres        => 1.0,
-            self::Kilometres    => 1000.0,
-            self::Miles         => 1609.344,
+            self::Metres => 1.0,
+            self::Kilometres => 1000.0,
+            self::Miles => 1609.344,
             self::NauticalMiles => 1852.0,
         };
     }

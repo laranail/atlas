@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
+use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
+use Simtabi\Laranail\Atlas\Core\Country\CountryQuery;
 use Simtabi\Laranail\Atlas\Core\Country\FormData;
 use Simtabi\Laranail\Atlas\Core\Region\Continent;
-use Simtabi\Laranail\Atlas\Core\Country\CountryQuery;
-use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
 
 function atlasForm(): FormData
 {
-    return FormData::over(new GeneratedPlaceRepository(dirname(__DIR__, 3) . '/resources/data'));
+    return FormData::over(new GeneratedPlaceRepository(dirname(__DIR__, 3).'/resources/data'));
 }
 
 // -----------------------------------------------------------------------
@@ -37,7 +37,7 @@ it('sorts by name without being asked', function (): void {
 it('keeps an order the caller chose over the default one', function (): void {
     // sortedByCode() puts Andorra first; the name sort puts Afghanistan there.
     // The form must not quietly re-sort what the query already ordered.
-    $repository = new GeneratedPlaceRepository(dirname(__DIR__, 3) . '/resources/data');
+    $repository = new GeneratedPlaceRepository(dirname(__DIR__, 3).'/resources/data');
 
     $byCode = CountryQuery::over($repository)->sortedByCode()->form()->options();
 
