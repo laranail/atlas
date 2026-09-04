@@ -237,6 +237,42 @@ return {$export};
 
 PHP;
 
+/**
+ * Emit the shared house format, so Pint and this generator agree on the bytes.
+ *
+ * Without this the two checks are mutually exclusive: Pint rewrites the
+ * generated file, and `--check` then reports it as hand-edited. That is the
+ * hazard recorded for chrono - a formatter that rewrites generated files breaks
+ * the suite that byte-compares them - and the fix it prescribes is for the
+ * generator to emit the format, rather than for the file to be excluded from
+ * Pint.
+ *
+ * Applied to $code BEFORE the write and the comparison both, so the two can
+ * never disagree. When Pint is absent (a --no-dev install) the raw output is
+ * returned and the two paths still agree with each other.
+ */
+function format_with_pint(string $code, string $root): string
+{
+    $pint = $root . '/vendor/bin/laranail-pint';
+
+    if (! is_file($pint)) {
+        return $code;
+    }
+
+    // Inside the project, so Pint resolves it the same way it resolves the real
+    // file; a temp dir elsewhere is not guaranteed to be in scope.
+    $tmp = $root . '/resources/data/.dataset-format-probe.php';
+
+    file_put_contents($tmp, $code);
+    exec(escapeshellarg(PHP_BINARY) . ' ' . escapeshellarg($pint) . ' ' . escapeshellarg($tmp) . ' 2>&1');
+    $formatted = (string) file_get_contents($tmp);
+    unlink($tmp);
+
+    return $formatted === '' ? $code : $formatted;
+}
+
+$code = format_with_pint($code, $root);
+
 $target = $root . '/resources/data/countries.php';
 $stampTarget = $root . '/resources/data/dataset-version.txt';
 $stampFile = $stamp . "\n";
