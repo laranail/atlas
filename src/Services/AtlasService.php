@@ -146,7 +146,7 @@ final readonly class AtlasService
     {
         $country = $this->country($code);
 
-        return ! $country instanceof CountryRecord ? null : Continent::tryFrom($country->continent);
+        return $country instanceof CountryRecord ? Continent::tryFrom($country->continent) : null;
     }
 
     /**
