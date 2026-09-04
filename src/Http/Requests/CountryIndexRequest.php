@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Simtabi\Laranail\Atlas\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Simtabi\Laranail\Atlas\Core\Country\CountryQuery;
 use Simtabi\Laranail\Atlas\Rules\CurrencyCode;
 use Simtabi\Laranail\Atlas\Rules\LanguageCode;
+use Simtabi\Laranail\Atlas\Core\Country\CountryQuery;
 
 /**
  * The filters `GET /countries` accepts.
@@ -35,11 +35,11 @@ final class CountryIndexRequest extends FormRequest
     {
         return [
             'continent' => ['sometimes', 'string', 'max:32'],
-            'region' => ['sometimes', 'string', 'max:64'],
+            'region'    => ['sometimes', 'string', 'max:64'],
             'subregion' => ['sometimes', 'string', 'max:64'],
-            'currency' => ['sometimes', 'string', new CurrencyCode],
-            'language' => ['sometimes', 'string', new LanguageCode],
-            'search' => ['sometimes', 'string', 'max:64'],
+            'currency'  => ['sometimes', 'string', new CurrencyCode],
+            'language'  => ['sometimes', 'string', new LanguageCode],
+            'search'    => ['sometimes', 'string', 'max:64'],
             'inhabited' => ['sometimes', 'boolean'],
             // Bounded, and low. This endpoint is cacheable and read-only, but
             // an unbounded limit still lets one request serialise all 250

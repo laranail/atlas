@@ -5,14 +5,14 @@ declare(strict_types=1);
 namespace Simtabi\Laranail\Atlas\Services;
 
 use Closure;
-use Illuminate\Contracts\Container\Container;
 use Rinvex\Country\CountryLoader;
-use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
-use Simtabi\Laranail\Atlas\Adapters\Rinvex\RinvexPlaceRepository;
+use Simtabi\Laranail\Atlas\Enums\Provider;
+use Illuminate\Contracts\Container\Container;
+use Simtabi\Laranail\Atlas\Support\AtlasConfig;
 use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 use Simtabi\Laranail\Atlas\Core\Exception\UnsupportedProvider;
-use Simtabi\Laranail\Atlas\Enums\Provider;
-use Simtabi\Laranail\Atlas\Support\AtlasConfig;
+use Simtabi\Laranail\Atlas\Adapters\Rinvex\RinvexPlaceRepository;
+use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
 
 /**
  * Resolves the configured data source, and nothing else.
@@ -55,7 +55,7 @@ final class AtlasManager
      * A custom name shadows a built-in one of the same name, which is how a
      * consumer replaces the shipped dataset without forking the package.
      *
-     * @param  Closure(Container): PlaceRepository  $factory
+     * @param Closure(Container): PlaceRepository $factory
      */
     public function extend(string $name, Closure $factory): self
     {
@@ -104,8 +104,8 @@ final class AtlasManager
 
         return match ($provider) {
             Provider::Generated => $this->container->make(GeneratedPlaceRepository::class),
-            Provider::Rinvex => $this->buildRinvex(),
-            Provider::Remote => throw UnsupportedProvider::notImplemented($provider->value),
+            Provider::Rinvex    => $this->buildRinvex(),
+            Provider::Remote    => throw UnsupportedProvider::notImplemented($provider->value),
         };
     }
 

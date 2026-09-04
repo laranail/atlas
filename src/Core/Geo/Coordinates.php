@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Simtabi\Laranail\Atlas\Core\Geo;
 
+use Stringable;
 use JsonSerializable;
 use Simtabi\Laranail\Atlas\Core\Exception\InvalidCoordinates;
-use Stringable;
 
 /**
  * A point on the earth, validated at construction.
@@ -101,7 +101,7 @@ final readonly class Coordinates implements JsonSerializable, Stringable
     public function toArray(): array
     {
         return [
-            'latitude' => $this->latitude,
+            'latitude'  => $this->latitude,
             'longitude' => $this->normalisedLongitude(),
         ];
     }

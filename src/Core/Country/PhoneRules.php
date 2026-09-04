@@ -41,7 +41,7 @@ final readonly class PhoneRules implements JsonSerializable
     /**
      * The rules for a calling code.
      *
-     * @param  string  $callingCode  E.164 prefix, with or without the leading +
+     * @param string $callingCode E.164 prefix, with or without the leading +
      */
     public static function forCallingCode(string $callingCode): self
     {
@@ -108,10 +108,10 @@ final readonly class PhoneRules implements JsonSerializable
     {
         return [
             'callingCode' => $this->callingCode,
-            'minLength' => $this->minLength,
-            'maxLength' => $this->maxLength,
-            'exact' => $this->exact,
-            'pattern' => $this->internationalPattern(),
+            'minLength'   => $this->minLength,
+            'maxLength'   => $this->maxLength,
+            'exact'       => $this->exact,
+            'pattern'     => $this->internationalPattern(),
         ];
     }
 
@@ -139,49 +139,49 @@ final readonly class PhoneRules implements JsonSerializable
     private static function table(): array
     {
         return [
-            '1' => [10, 10],     // NANP: US, Canada and the Caribbean
-            '7' => [10, 10],     // Russia, Kazakhstan
-            '20' => [9, 10],     // Egypt
-            '27' => [9, 9],      // South Africa
-            '30' => [10, 10],    // Greece
-            '31' => [9, 9],      // Netherlands
-            '32' => [8, 9],      // Belgium
-            '33' => [9, 9],      // France
-            '34' => [9, 9],      // Spain
-            '36' => [8, 9],      // Hungary
-            '39' => [9, 10],     // Italy
-            '40' => [9, 9],      // Romania
-            '41' => [9, 9],      // Switzerland
-            '43' => [10, 13],    // Austria
-            '44' => [10, 10],    // United Kingdom
-            '45' => [8, 8],      // Denmark
-            '46' => [7, 9],      // Sweden
-            '47' => [8, 8],      // Norway
-            '48' => [9, 9],      // Poland
-            '49' => [10, 11],    // Germany
-            '51' => [9, 9],      // Peru
-            '52' => [10, 10],    // Mexico
-            '54' => [10, 10],    // Argentina
-            '55' => [10, 11],    // Brazil
-            '56' => [9, 9],      // Chile
-            '57' => [10, 10],    // Colombia
-            '58' => [10, 10],    // Venezuela
-            '60' => [9, 10],     // Malaysia
-            '61' => [9, 9],      // Australia
-            '62' => [9, 12],     // Indonesia
-            '63' => [10, 10],    // Philippines
-            '64' => [8, 10],     // New Zealand
-            '65' => [8, 8],      // Singapore
-            '66' => [9, 9],      // Thailand
-            '81' => [10, 10],    // Japan
-            '82' => [9, 10],     // South Korea
-            '84' => [9, 10],     // Vietnam
-            '86' => [11, 11],    // China
-            '90' => [10, 10],    // Turkey
-            '91' => [10, 10],    // India
-            '92' => [10, 10],    // Pakistan
-            '93' => [9, 9],      // Afghanistan
-            '94' => [9, 9],      // Sri Lanka
+            '1'   => [10, 10],     // NANP: US, Canada and the Caribbean
+            '7'   => [10, 10],     // Russia, Kazakhstan
+            '20'  => [9, 10],     // Egypt
+            '27'  => [9, 9],      // South Africa
+            '30'  => [10, 10],    // Greece
+            '31'  => [9, 9],      // Netherlands
+            '32'  => [8, 9],      // Belgium
+            '33'  => [9, 9],      // France
+            '34'  => [9, 9],      // Spain
+            '36'  => [8, 9],      // Hungary
+            '39'  => [9, 10],     // Italy
+            '40'  => [9, 9],      // Romania
+            '41'  => [9, 9],      // Switzerland
+            '43'  => [10, 13],    // Austria
+            '44'  => [10, 10],    // United Kingdom
+            '45'  => [8, 8],      // Denmark
+            '46'  => [7, 9],      // Sweden
+            '47'  => [8, 8],      // Norway
+            '48'  => [9, 9],      // Poland
+            '49'  => [10, 11],    // Germany
+            '51'  => [9, 9],      // Peru
+            '52'  => [10, 10],    // Mexico
+            '54'  => [10, 10],    // Argentina
+            '55'  => [10, 11],    // Brazil
+            '56'  => [9, 9],      // Chile
+            '57'  => [10, 10],    // Colombia
+            '58'  => [10, 10],    // Venezuela
+            '60'  => [9, 10],     // Malaysia
+            '61'  => [9, 9],      // Australia
+            '62'  => [9, 12],     // Indonesia
+            '63'  => [10, 10],    // Philippines
+            '64'  => [8, 10],     // New Zealand
+            '65'  => [8, 8],      // Singapore
+            '66'  => [9, 9],      // Thailand
+            '81'  => [10, 10],    // Japan
+            '82'  => [9, 10],     // South Korea
+            '84'  => [9, 10],     // Vietnam
+            '86'  => [11, 11],    // China
+            '90'  => [10, 10],    // Turkey
+            '91'  => [10, 10],    // India
+            '92'  => [10, 10],    // Pakistan
+            '93'  => [9, 9],      // Afghanistan
+            '94'  => [9, 9],      // Sri Lanka
             '212' => [9, 9],     // Morocco
             '213' => [9, 9],     // Algeria
             '216' => [8, 8],     // Tunisia

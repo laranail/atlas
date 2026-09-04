@@ -4,25 +4,25 @@ declare(strict_types=1);
 
 namespace Simtabi\Laranail\Atlas\Providers;
 
-use Illuminate\Contracts\Config\Repository as ConfigRepository;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Support\Facades\Route;
 use Override;
-use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedIpCountryResolver;
-use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
-use Simtabi\Laranail\Atlas\Bridges\Chrono\ChronoBridge;
-use Simtabi\Laranail\Atlas\Console\DoctorCommand;
-use Simtabi\Laranail\Atlas\Core\Contracts\DistanceCalculator;
-use Simtabi\Laranail\Atlas\Core\Contracts\IpCountryResolver;
-use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
-use Simtabi\Laranail\Atlas\Core\Geo\Haversine;
+use Illuminate\Support\Facades\Route;
+use Simtabi\Laranail\Package\Tools\Package;
 use Simtabi\Laranail\Atlas\Core\Geo\Vincenty;
+use Simtabi\Laranail\Atlas\Core\Geo\Haversine;
+use Simtabi\Laranail\Atlas\Support\AtlasConfig;
+use Illuminate\Contracts\Foundation\Application;
+use Simtabi\Laranail\Atlas\Console\DoctorCommand;
 use Simtabi\Laranail\Atlas\Services\AtlasManager;
 use Simtabi\Laranail\Atlas\Services\AtlasService;
 use Simtabi\Laranail\Atlas\Services\LocaleRegistry;
-use Simtabi\Laranail\Atlas\Support\AtlasConfig;
-use Simtabi\Laranail\Package\Tools\Package;
+use Simtabi\Laranail\Atlas\Bridges\Chrono\ChronoBridge;
+use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
+use Simtabi\Laranail\Atlas\Core\Contracts\IpCountryResolver;
+use Simtabi\Laranail\Atlas\Core\Contracts\DistanceCalculator;
+use Illuminate\Contracts\Config\Repository as ConfigRepository;
 use Simtabi\Laranail\Package\Tools\Providers\PackageServiceProvider;
+use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
+use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedIpCountryResolver;
 
 /**
  * Entry point for laranail/atlas.
@@ -92,7 +92,7 @@ final class AtlasServiceProvider extends PackageServiceProvider
                 strtolower($app->make(AtlasConfig::class)->string('distance.formula', 'haversine'))
             ) {
                 'vincenty' => new Vincenty,
-                default => new Haversine,
+                default    => new Haversine,
             },
         );
 
@@ -168,7 +168,7 @@ final class AtlasServiceProvider extends PackageServiceProvider
 
         Route::group([
             'prefix' => trim($config->string('api.prefix', 'api/atlas'), '/')
-                .'/'.trim($config->string('api.version', 'v1'), '/'),
+                . '/' . trim($config->string('api.version', 'v1'), '/'),
             'middleware' => $middleware,
         ], function (): void {
             $this->loadRoutesFrom($this->packagePath('routes/api.php'));

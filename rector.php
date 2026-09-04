@@ -17,14 +17,14 @@ use Rector\Set\ValueObject\SetList;
  * the generator emits byte for byte, so a Rector rewrite would put the two permanently at odds.
  */
 return RectorConfig::configure()
-    ->withPaths([__DIR__.'/src', __DIR__.'/tests'])
+    ->withPaths([__DIR__ . '/src', __DIR__ . '/tests'])
     ->withSkip([
-        __DIR__.'/vendor',
-        __DIR__.'/resources/data',
-        __DIR__.'/src/Enums/Country.php',
-        __DIR__.'/src/Enums/Currency.php',
-        __DIR__.'/src/Enums/Language.php',
-        __DIR__.'/tests/Fixtures',
+        __DIR__ . '/vendor',
+        __DIR__ . '/resources/data',
+        __DIR__ . '/src/Enums/Country.php',
+        __DIR__ . '/src/Enums/Currency.php',
+        __DIR__ . '/src/Enums/Language.php',
+        __DIR__ . '/tests/Fixtures',
     ])
     ->withPhpSets(php84: true)
     ->withSets([

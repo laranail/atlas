@@ -6,8 +6,8 @@ namespace Simtabi\Laranail\Atlas\Rules;
 
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;
-use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
+use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 
 /**
  * A country code this catalogue actually holds.

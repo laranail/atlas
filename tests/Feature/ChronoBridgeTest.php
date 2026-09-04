@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
+use Simtabi\Laranail\Atlas\Enums\Country;
 use Simtabi\Laranail\Atlas\Bridges\Chrono\ChronoBridge;
 use Simtabi\Laranail\Atlas\Bridges\Chrono\ChronoBridgeUnavailable;
-use Simtabi\Laranail\Atlas\Enums\Country;
 
 /**
  * `laranail/chrono` is a `suggest`, not a dependency: its PHP floor is `^8.5`
@@ -71,7 +71,7 @@ it('names chrono in exactly one file', function (): void {
     $offenders = [];
 
     $files = new RecursiveIteratorIterator(
-        new RecursiveDirectoryIterator(dirname(__DIR__, 2).'/src', FilesystemIterator::SKIP_DOTS),
+        new RecursiveDirectoryIterator(dirname(__DIR__, 2) . '/src', FilesystemIterator::SKIP_DOTS),
     );
 
     foreach ($files as $file) {
