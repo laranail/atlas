@@ -12,7416 +12,8666 @@ declare(strict_types=1);
  * max_lon, max_lat] in GeoJSON bbox order. Both are null / empty where the
  * source does not carry them.
  */
-return [
-    'AD' => [
-        'iso2'          => 'AD',
-        'iso3'          => 'AND',
-        'numeric'       => '020',
-        'name'          => 'Andorra',
-        'official_name' => 'Principality of Andorra',
-        'native_name'   => 'Andorra',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Southern Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'cat',
-        ],
-        'calling_codes' => [
-            0 => '376',
-        ],
-        'tld'       => '.ad',
-        'latitude'  => 42.5506591796875,
-        'longitude' => 1.5762332677841187,
-        'bounds'    => [
-            0 => 1.416667,
-            1 => 42.433333,
-            2 => 1.783333,
-            3 => 42.65,
-        ],
-    ],
-    'AE' => [
-        'iso2'          => 'AE',
-        'iso3'          => 'ARE',
-        'numeric'       => '784',
-        'name'          => 'United Arab Emirates',
-        'official_name' => 'United Arab Emirates',
-        'native_name'   => 'دولة الإمارات العربية المتحدة',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Western Asia',
-        'currencies'    => [
-            0 => 'AED',
-        ],
-        'languages' => [
-            0 => 'ara',
-        ],
-        'calling_codes' => [
-            0 => '971',
-        ],
-        'tld'       => '.ae',
-        'latitude'  => 23.684776306152344,
-        'longitude' => 54.536643981933594,
-        'bounds'    => [
-            0 => 45.0,
-            1 => 22.166667,
-            2 => 58.0,
-            3 => 26.133333,
-        ],
-    ],
-    'AF' => [
-        'iso2'          => 'AF',
-        'iso3'          => 'AFG',
-        'numeric'       => '004',
-        'name'          => 'Afghanistan',
-        'official_name' => 'Islamic Republic of Afghanistan',
-        'native_name'   => 'افغانستان',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Southern Asia',
-        'currencies'    => [
-            0 => 'AFN',
-        ],
-        'languages' => [
-            0 => 'prs',
-            1 => 'pus',
-            2 => 'tuk',
-        ],
-        'calling_codes' => [
-            0 => '93',
-        ],
-        'tld'       => '.af',
-        'latitude'  => 33.833248138427734,
-        'longitude' => 66.02528381347656,
-        'bounds'    => [
-            0 => 60.566667,
-            1 => 29.383333,
-            2 => 74.8868713067,
-            3 => 38.483611,
-        ],
-    ],
-    'AG' => [
-        'iso2'          => 'AG',
-        'iso3'          => 'ATG',
-        'numeric'       => '028',
-        'name'          => 'Antigua and Barbuda',
-        'official_name' => 'Antigua and Barbuda',
-        'native_name'   => 'Antigua and Barbuda',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'XCD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '1268',
-        ],
-        'tld'       => '.ag',
-        'latitude'  => 17.09273910522461,
-        'longitude' => -61.81040954589844,
-        'bounds'    => [
-            0 => -62.333333,
-            1 => 16.916667,
-            2 => -61.666667,
-            3 => 17.733333,
-        ],
-    ],
-    'AI' => [
-        'iso2'          => 'AI',
-        'iso3'          => 'AIA',
-        'numeric'       => '660',
-        'name'          => 'Anguilla',
-        'official_name' => 'Anguilla',
-        'native_name'   => 'Anguilla',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'XCD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '1264',
-        ],
-        'tld'       => '.ai',
-        'latitude'  => 18.22646713256836,
-        'longitude' => -63.0473518371582,
-        'bounds'    => [
-            0 => -63.433333,
-            1 => 18.15,
-            2 => -62.916667,
-            3 => 18.6,
-        ],
-    ],
-    'AL' => [
-        'iso2'          => 'AL',
-        'iso3'          => 'ALB',
-        'numeric'       => '008',
-        'name'          => 'Albania',
-        'official_name' => 'Republic of Albania',
-        'native_name'   => 'Shqipëria',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Southern Europe',
-        'currencies'    => [
-            0 => 'ALL',
-        ],
-        'languages' => [
-            0 => 'sqi',
-        ],
-        'calling_codes' => [
-            0 => '355',
-        ],
-        'tld'       => '.al',
-        'latitude'  => 41.11113357543945,
-        'longitude' => 20.02745246887207,
-        'bounds'    => [
-            0 => 19.266667,
-            1 => 39.65,
-            2 => 21.05,
-            3 => 42.659167,
-        ],
-    ],
-    'AM' => [
-        'iso2'          => 'AM',
-        'iso3'          => 'ARM',
-        'numeric'       => '051',
-        'name'          => 'Armenia',
-        'official_name' => 'Republic of Armenia',
-        'native_name'   => 'Հայաստան',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Western Asia',
-        'currencies'    => [
-            0 => 'AMD',
-        ],
-        'languages' => [
-            0 => 'hye',
-            1 => 'rus',
-        ],
-        'calling_codes' => [
-            0 => '374',
-        ],
-        'tld'       => '.am',
-        'latitude'  => 40.29266357421875,
-        'longitude' => 44.93947219848633,
-        'bounds'    => [
-            0 => 43.4425,
-            1 => 38.894167,
-            2 => 46.560556,
-            3 => 41.3,
-        ],
-    ],
-    'AO' => [
-        'iso2'          => 'AO',
-        'iso3'          => 'AGO',
-        'numeric'       => '024',
-        'name'          => 'Angola',
-        'official_name' => 'Republic of Angola',
-        'native_name'   => 'Angola',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Middle Africa',
-        'currencies'    => [
-            0 => 'AOA',
-        ],
-        'languages' => [
-            0 => 'por',
-        ],
-        'calling_codes' => [
-            0 => '244',
-        ],
-        'tld'       => '.ao',
-        'latitude'  => -12.333555221557617,
-        'longitude' => 17.539464950561523,
-        'bounds'    => [
-            0 => 10.0,
-            1 => -32.0,
-            2 => 23.983333,
-            3 => -4.4,
-        ],
-    ],
-    'AQ' => [
-        'iso2'          => 'AQ',
-        'iso3'          => 'ATA',
-        'numeric'       => '010',
-        'name'          => 'Antarctica',
-        'official_name' => 'Antarctica',
-        'native_name'   => 'Antarctica',
-        'continent'     => 'AN',
-        'region'        => null,
-        'subregion'     => null,
-        'currencies'    => [
-        ],
-        'languages' => [
-        ],
-        'calling_codes' => [
-        ],
-        'tld'       => '.aq',
-        'latitude'  => -82.862752,
-        'longitude' => -135.0,
-        'bounds'    => [
-            0 => -180.0,
-            1 => -90.0,
-            2 => 180.0,
-            3 => -60.0,
-        ],
-    ],
-    'AR' => [
-        'iso2'          => 'AR',
-        'iso3'          => 'ARG',
-        'numeric'       => '032',
-        'name'          => 'Argentina',
-        'official_name' => 'Argentine Republic',
-        'native_name'   => 'Argentina',
-        'continent'     => 'SA',
-        'region'        => 'Americas',
-        'subregion'     => 'South America',
-        'currencies'    => [
-            0 => 'ARS',
-        ],
-        'languages' => [
-            0 => 'grn',
-            1 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '54',
-        ],
-        'tld'       => '.ar',
-        'latitude'  => -37.071964263916016,
-        'longitude' => -64.85450744628906,
-        'bounds'    => [
-            0 => -73.533333,
-            1 => -58.116667,
-            2 => -53.65,
-            3 => -21.783333,
-        ],
-    ],
-    'AS' => [
-        'iso2'          => 'AS',
-        'iso3'          => 'ASM',
-        'numeric'       => '016',
-        'name'          => 'American Samoa',
-        'official_name' => 'American Samoa',
-        'native_name'   => 'American Samoa',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Polynesia',
-        'currencies'    => [
-            0 => 'USD',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'smo',
-        ],
-        'calling_codes' => [
-            0 => '1684',
-        ],
-        'tld'       => '.as',
-        'latitude'  => -14.31956672668457,
-        'longitude' => -170.7403564453125,
-        'bounds'    => [
-            0 => -171.091873,
-            1 => -14.38247,
-            2 => -169.416077,
-            3 => -11.04969,
-        ],
-    ],
-    'AT' => [
-        'iso2'          => 'AT',
-        'iso3'          => 'AUT',
-        'numeric'       => '040',
-        'name'          => 'Austria',
-        'official_name' => 'Republic of Austria',
-        'native_name'   => 'Österreich',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Western Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'bar',
-        ],
-        'calling_codes' => [
-            0 => '43',
-        ],
-        'tld'       => '.at',
-        'latitude'  => 47.58843994140625,
-        'longitude' => 14.14021110534668,
-        'bounds'    => [
-            0 => 1.2,
-            1 => 46.377222,
-            2 => 19.0,
-            3 => 49.016667,
-        ],
-    ],
-    'AU' => [
-        'iso2'          => 'AU',
-        'iso3'          => 'AUS',
-        'numeric'       => '036',
-        'name'          => 'Australia',
-        'official_name' => 'Commonwealth of Australia',
-        'native_name'   => 'Australia',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Australia and New Zealand',
-        'currencies'    => [
-            0 => 'AUD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '61',
-        ],
-        'tld'       => '.au',
-        'latitude'  => -25.585241317749023,
-        'longitude' => 134.50411987304688,
-        'bounds'    => [
-            0 => 147.1,
-            1 => -29.472222,
-            2 => 159.119444,
-            3 => -15.5,
-        ],
-    ],
-    'AW' => [
-        'iso2'          => 'AW',
-        'iso3'          => 'ABW',
-        'numeric'       => '533',
-        'name'          => 'Aruba',
-        'official_name' => 'Aruba',
-        'native_name'   => 'Aruba',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'AWG',
-        ],
-        'languages' => [
-            0 => 'nld',
-            1 => 'pap',
-        ],
-        'calling_codes' => [
-            0 => '297',
-        ],
-        'tld'       => '.aw',
-        'latitude'  => 12.506523132324219,
-        'longitude' => -69.96931457519531,
-        'bounds'    => [
-            0 => -70.066667,
-            1 => 12.416667,
-            2 => -69.85,
-            3 => 12.616667,
-        ],
-    ],
-    'AX' => [
-        'iso2'          => 'AX',
-        'iso3'          => 'ALA',
-        'numeric'       => '248',
-        'name'          => 'Åland Islands',
-        'official_name' => 'Åland Islands',
-        'native_name'   => 'Åland',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Northern Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'swe',
-        ],
-        'calling_codes' => [
-            0 => '358',
-        ],
-        'tld'       => '.ax',
-        'latitude'  => 60.2023811340332,
-        'longitude' => 19.96520233154297,
-        'bounds'    => [
-            0 => 19.2633194,
-            1 => 59.7272227,
-            2 => 21.4858534,
-            3 => 60.7411127,
-        ],
-    ],
-    'AZ' => [
-        'iso2'          => 'AZ',
-        'iso3'          => 'AZE',
-        'numeric'       => '031',
-        'name'          => 'Azerbaijan',
-        'official_name' => 'Republic of Azerbaijan',
-        'native_name'   => 'Azərbaycan',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Western Asia',
-        'currencies'    => [
-            0 => 'AZN',
-        ],
-        'languages' => [
-            0 => 'aze',
-            1 => 'rus',
-        ],
-        'calling_codes' => [
-            0 => '994',
-        ],
-        'tld'       => '.az',
-        'latitude'  => 40.33100509643555,
-        'longitude' => 47.80820083618164,
-        'bounds'    => [
-            0 => 44.876389,
-            1 => 38.416667,
-            2 => 50.858333,
-            3 => 41.910556,
-        ],
-    ],
-    'BA' => [
-        'iso2'          => 'BA',
-        'iso3'          => 'BIH',
-        'numeric'       => '070',
-        'name'          => 'Bosnia and Herzegovina',
-        'official_name' => 'Bosnia and Herzegovina',
-        'native_name'   => 'Bosna i Hercegovina',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Southern Europe',
-        'currencies'    => [
-            0 => 'BAM',
-        ],
-        'languages' => [
-            0 => 'bos',
-            1 => 'hrv',
-            2 => 'srp',
-        ],
-        'calling_codes' => [
-            0 => '387',
-        ],
-        'tld'       => '.ba',
-        'latitude'  => 44.16533279418945,
-        'longitude' => 17.790241241455078,
-        'bounds'    => [
-            0 => 15.747222,
-            1 => 42.558056,
-            2 => 19.618333,
-            3 => 45.268333,
-        ],
-    ],
-    'BB' => [
-        'iso2'          => 'BB',
-        'iso3'          => 'BRB',
-        'numeric'       => '052',
-        'name'          => 'Barbados',
-        'official_name' => 'Barbados',
-        'native_name'   => 'Barbados',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'BBD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '1246',
-        ],
-        'tld'       => '.bb',
-        'latitude'  => 13.178098678588867,
-        'longitude' => -59.5485954284668,
-        'bounds'    => [
-            0 => -59.65,
-            1 => 13.033333,
-            2 => -59.416667,
-            3 => 13.333333,
-        ],
-    ],
-    'BD' => [
-        'iso2'          => 'BD',
-        'iso3'          => 'BGD',
-        'numeric'       => '050',
-        'name'          => 'Bangladesh',
-        'official_name' => 'People\'s Republic of Bangladesh',
-        'native_name'   => 'বাংলাদেশ',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Southern Asia',
-        'currencies'    => [
-            0 => 'BDT',
-        ],
-        'languages' => [
-            0 => 'ben',
-        ],
-        'calling_codes' => [
-            0 => '880',
-        ],
-        'tld'       => '.bd',
-        'latitude'  => 23.730104446411133,
-        'longitude' => 90.30652618408203,
-        'bounds'    => [
-            0 => 84.0,
-            1 => 20.6,
-            2 => 92.683333,
-            3 => 26.5,
-        ],
-    ],
-    'BE' => [
-        'iso2'          => 'BE',
-        'iso3'          => 'BEL',
-        'numeric'       => '056',
-        'name'          => 'Belgium',
-        'official_name' => 'Kingdom of Belgium',
-        'native_name'   => 'Belgien',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Western Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'deu',
-            1 => 'fra',
-            2 => 'nld',
-        ],
-        'calling_codes' => [
-            0 => '32',
-        ],
-        'tld'       => '.be',
-        'latitude'  => 50.648963928222656,
-        'longitude' => 4.641502380371094,
-        'bounds'    => [
-            0 => 2.566667,
-            1 => 49.516667,
-            2 => 6.4,
-            3 => 51.683333,
-        ],
-    ],
-    'BF' => [
-        'iso2'          => 'BF',
-        'iso3'          => 'BFA',
-        'numeric'       => '854',
-        'name'          => 'Burkina Faso',
-        'official_name' => 'Burkina Faso',
-        'native_name'   => 'Burkina Faso',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Western Africa',
-        'currencies'    => [
-            0 => 'XOF',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '226',
-        ],
-        'tld'       => '.bf',
-        'latitude'  => 12.284985542297363,
-        'longitude' => -1.745560646057129,
-        'bounds'    => [
-            0 => -5.466667,
-            1 => 9.45,
-            2 => 2.2655,
-            3 => 14.983333,
-        ],
-    ],
-    'BG' => [
-        'iso2'          => 'BG',
-        'iso3'          => 'BGR',
-        'numeric'       => '100',
-        'name'          => 'Bulgaria',
-        'official_name' => 'Republic of Bulgaria',
-        'native_name'   => 'България',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Eastern Europe',
-        'currencies'    => [
-            0 => 'BGN',
-        ],
-        'languages' => [
-            0 => 'bul',
-        ],
-        'calling_codes' => [
-            0 => '359',
-        ],
-        'tld'       => '.bg',
-        'latitude'  => 42.7661018371582,
-        'longitude' => 25.283733367919922,
-        'bounds'    => [
-            0 => 22.371389,
-            1 => 41.0,
-            2 => 28.6,
-            3 => 44.193611,
-        ],
-    ],
-    'BH' => [
-        'iso2'          => 'BH',
-        'iso3'          => 'BHR',
-        'numeric'       => '048',
-        'name'          => 'Bahrain',
-        'official_name' => 'Kingdom of Bahrain',
-        'native_name'   => '‏البحرين',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Western Asia',
-        'currencies'    => [
-            0 => 'BHD',
-        ],
-        'languages' => [
-            0 => 'ara',
-        ],
-        'calling_codes' => [
-            0 => '973',
-        ],
-        'tld'       => '.bh',
-        'latitude'  => 26.094240188598633,
-        'longitude' => 50.54299545288086,
-        'bounds'    => [
-            0 => 45.0,
-            1 => 25.0,
-            2 => 50.823333,
-            3 => 26.416667,
-        ],
-    ],
-    'BI' => [
-        'iso2'          => 'BI',
-        'iso3'          => 'BDI',
-        'numeric'       => '108',
-        'name'          => 'Burundi',
-        'official_name' => 'Republic of Burundi',
-        'native_name'   => 'Burundi',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Eastern Africa',
-        'currencies'    => [
-            0 => 'BIF',
-        ],
-        'languages' => [
-            0 => 'fra',
-            1 => 'run',
-        ],
-        'calling_codes' => [
-            0 => '257',
-        ],
-        'tld'       => '.bi',
-        'latitude'  => -3.365208148956299,
-        'longitude' => 29.88650894165039,
-        'bounds'    => [
-            0 => 29.023889,
-            1 => -4.443333,
-            2 => 30.831389,
-            3 => -2.3425,
-        ],
-    ],
-    'BJ' => [
-        'iso2'          => 'BJ',
-        'iso3'          => 'BEN',
-        'numeric'       => '204',
-        'name'          => 'Benin',
-        'official_name' => 'Republic of Benin',
-        'native_name'   => 'Bénin',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Western Africa',
-        'currencies'    => [
-            0 => 'XOF',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '229',
-        ],
-        'tld'       => '.bj',
-        'latitude'  => 9.624112129211426,
-        'longitude' => 2.3377387523651123,
-        'bounds'    => [
-            0 => -4.0,
-            1 => 6.233333,
-            2 => 3.816667,
-            3 => 12.3614,
-        ],
-    ],
-    'BL' => [
-        'iso2'          => 'BL',
-        'iso3'          => 'BLM',
-        'numeric'       => '652',
-        'name'          => 'Saint Barthélemy',
-        'official_name' => 'Collectivity of Saint Barthélemy',
-        'native_name'   => 'Saint-Barthélemy',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '590',
-        ],
-        'tld'       => '.bl',
-        'latitude'  => 17.89626121520996,
-        'longitude' => -62.83061218261719,
-        'bounds'    => [
-            0 => -62.9118453,
-            1 => 17.8708287,
-            2 => -62.7892148,
-            3 => 17.960853,
-        ],
-    ],
-    'BM' => [
-        'iso2'          => 'BM',
-        'iso3'          => 'BMU',
-        'numeric'       => '060',
-        'name'          => 'Bermuda',
-        'official_name' => 'Bermuda',
-        'native_name'   => 'Bermuda',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Northern America',
-        'currencies'    => [
-            0 => 'BMD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '1441',
-        ],
-        'tld'       => '.bm',
-        'latitude'  => 32.302669525146484,
-        'longitude' => -64.7516860961914,
-        'bounds'    => [
-            0 => -64.882778,
-            1 => 32.246944,
-            2 => -64.633333,
-            3 => 32.390556,
-        ],
-    ],
-    'BN' => [
-        'iso2'          => 'BN',
-        'iso3'          => 'BRN',
-        'numeric'       => '096',
-        'name'          => 'Brunei',
-        'official_name' => 'Nation of Brunei, Abode of Peace',
-        'native_name'   => 'Negara Brunei Darussalam',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'South-Eastern Asia',
-        'currencies'    => [
-            0 => 'BND',
-        ],
-        'languages' => [
-            0 => 'msa',
-        ],
-        'calling_codes' => [
-            0 => '673',
-        ],
-        'tld'       => '.bn',
-        'latitude'  => 4.5703840255737305,
-        'longitude' => 114.74818420410156,
-        'bounds'    => [
-            0 => 110.0,
-            1 => -2.0,
-            2 => 120.0,
-            3 => 5.05,
-        ],
-    ],
-    'BO' => [
-        'iso2'          => 'BO',
-        'iso3'          => 'BOL',
-        'numeric'       => '068',
-        'name'          => 'Bolivia',
-        'official_name' => 'Plurinational State of Bolivia',
-        'native_name'   => 'Wuliwya',
-        'continent'     => 'SA',
-        'region'        => 'Americas',
-        'subregion'     => 'South America',
-        'currencies'    => [
-            0 => 'BOB',
-        ],
-        'languages' => [
-            0 => 'aym',
-            1 => 'grn',
-            2 => 'que',
-            3 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '591',
-        ],
-        'tld'       => '.bo',
-        'latitude'  => -16.713054656982422,
-        'longitude' => -64.6666488647461,
-        'bounds'    => [
-            0 => -69.6,
-            1 => -22.883333,
-            2 => -57.566667,
-            3 => -9.666667,
-        ],
-    ],
-    'BQ' => [
-        'iso2'          => 'BQ',
-        'iso3'          => 'BES',
-        'numeric'       => '535',
-        'name'          => 'Caribbean Netherlands',
-        'official_name' => 'Bonaire, Sint Eustatius and Saba',
-        'native_name'   => 'Besondere Gemeinde (Niederlande)',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'USD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '599',
-        ],
-        'tld'       => null,
-        'latitude'  => 12.178361,
-        'longitude' => -68.238534,
-        'bounds'    => [
-            0 => -68.421,
-            1 => 12.0245,
-            2 => -62.9458,
-            3 => 17.6503,
-        ],
-    ],
-    'BR' => [
-        'iso2'          => 'BR',
-        'iso3'          => 'BRA',
-        'numeric'       => '076',
-        'name'          => 'Brazil',
-        'official_name' => 'Federative Republic of Brazil',
-        'native_name'   => 'Brasil',
-        'continent'     => 'SA',
-        'region'        => 'Americas',
-        'subregion'     => 'South America',
-        'currencies'    => [
-            0 => 'BRL',
-        ],
-        'languages' => [
-            0 => 'por',
-        ],
-        'calling_codes' => [
-            0 => '55',
-        ],
-        'tld'       => '.br',
-        'latitude'  => -10.81045150756836,
-        'longitude' => -52.97311782836914,
-        'bounds'    => [
-            0 => -73.75,
-            1 => -33.733333,
-            2 => -28.85,
-            3 => 5.266667,
-        ],
-    ],
-    'BS' => [
-        'iso2'          => 'BS',
-        'iso3'          => 'BHS',
-        'numeric'       => '044',
-        'name'          => 'Bahamas',
-        'official_name' => 'Commonwealth of the Bahamas',
-        'native_name'   => 'Bahamas',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'BSD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '1242',
-        ],
-        'tld'       => '.bs',
-        'latitude'  => 25.035648345947266,
-        'longitude' => -77.39512634277344,
-        'bounds'    => [
-            0 => -80.483333,
-            1 => 20.0,
-            2 => -70.0,
-            3 => 29.375,
-        ],
-    ],
-    'BT' => [
-        'iso2'          => 'BT',
-        'iso3'          => 'BTN',
-        'numeric'       => '064',
-        'name'          => 'Bhutan',
-        'official_name' => 'Kingdom of Bhutan',
-        'native_name'   => 'འབྲུག་ཡུལ་',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Southern Asia',
-        'currencies'    => [
-            0 => 'BTN',
-        ],
-        'languages' => [
-            0 => 'dzo',
-        ],
-        'calling_codes' => [
-            0 => '975',
-        ],
-        'tld'       => '.bt',
-        'latitude'  => 27.416879653930664,
-        'longitude' => 90.43476104736328,
-        'bounds'    => [
-            0 => 80.0,
-            1 => 26.716667,
-            2 => 92.033333,
-            3 => 30.0,
-        ],
-    ],
-    'BV' => [
-        'iso2'          => 'BV',
-        'iso3'          => 'BVT',
-        'numeric'       => '074',
-        'name'          => 'Bouvet Island',
-        'official_name' => 'Bouvet Island',
-        'native_name'   => 'Bouvetøya',
-        'continent'     => 'AN',
-        'region'        => null,
-        'subregion'     => null,
-        'currencies'    => [
-            0 => 'NOK',
-        ],
-        'languages' => [
-            0 => 'nor',
-        ],
-        'calling_codes' => [
-        ],
-        'tld'       => '.bv',
-        'latitude'  => -54.4342041015625,
-        'longitude' => 3.4102511405944824,
-        'bounds'    => [
-            0 => 3.285278,
-            1 => -54.452778,
-            2 => 3.433889,
-            3 => -54.386111,
-        ],
-    ],
-    'BW' => [
-        'iso2'          => 'BW',
-        'iso3'          => 'BWA',
-        'numeric'       => '072',
-        'name'          => 'Botswana',
-        'official_name' => 'Republic of Botswana',
-        'native_name'   => 'Botswana',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Southern Africa',
-        'currencies'    => [
-            0 => 'BWP',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'tsn',
-        ],
-        'calling_codes' => [
-            0 => '267',
-        ],
-        'tld'       => '.bw',
-        'latitude'  => -22.186752319335938,
-        'longitude' => 23.81494140625,
-        'bounds'    => [
-            0 => 20.0,
-            1 => -26.833333,
-            2 => 29.016667,
-            3 => -17.833333,
-        ],
-    ],
-    'BY' => [
-        'iso2'          => 'BY',
-        'iso3'          => 'BLR',
-        'numeric'       => '112',
-        'name'          => 'Belarus',
-        'official_name' => 'Republic of Belarus',
-        'native_name'   => 'Белару́сь',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Eastern Europe',
-        'currencies'    => [
-            0 => 'BYN',
-        ],
-        'languages' => [
-            0 => 'bel',
-            1 => 'rus',
-        ],
-        'calling_codes' => [
-            0 => '375',
-        ],
-        'tld'       => '.by',
-        'latitude'  => 53.54347229003906,
-        'longitude' => 28.054094314575195,
-        'bounds'    => [
-            0 => 22.55,
-            1 => 50.716667,
-            2 => 32.708056,
-            3 => 56.066667,
-        ],
-    ],
-    'BZ' => [
-        'iso2'          => 'BZ',
-        'iso3'          => 'BLZ',
-        'numeric'       => '084',
-        'name'          => 'Belize',
-        'official_name' => 'Belize',
-        'native_name'   => 'Belize',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Central America',
-        'currencies'    => [
-            0 => 'BZD',
-        ],
-        'languages' => [
-            0 => 'bjz',
-            1 => 'eng',
-            2 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '501',
-        ],
-        'tld'       => '.bz',
-        'latitude'  => 17.225292205810547,
-        'longitude' => -88.66973876953125,
-        'bounds'    => [
-            0 => -89.216944,
-            1 => 15.9,
-            2 => -87.483333,
-            3 => 18.483333,
-        ],
-    ],
-    'CA' => [
-        'iso2'          => 'CA',
-        'iso3'          => 'CAN',
-        'numeric'       => '124',
-        'name'          => 'Canada',
-        'official_name' => 'Canada',
-        'native_name'   => 'Canada',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Northern America',
-        'currencies'    => [
-            0 => 'CAD',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '1',
-        ],
-        'tld'       => '.ca',
-        'latitude'  => 62.832908630371094,
-        'longitude' => -95.91332244873047,
-        'bounds'    => [
-            0 => -141.666667,
-            1 => 40.0,
-            2 => -52.666667,
-            3 => 83.116667,
-        ],
-    ],
-    'CC' => [
-        'iso2'          => 'CC',
-        'iso3'          => 'CCK',
-        'numeric'       => '166',
-        'name'          => 'Cocos (Keeling) Islands',
-        'official_name' => 'Territory of the Cocos (Keeling) Islands',
-        'native_name'   => 'Cocos (Keeling) Islands',
-        'continent'     => 'AS',
-        'region'        => 'Oceania',
-        'subregion'     => 'Australia and New Zealand',
-        'currencies'    => [
-            0 => 'AUD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '61',
-        ],
-        'tld'       => '.cc',
-        'latitude'  => -12.200602531433105,
-        'longitude' => 96.85894012451172,
-        'bounds'    => [
-            0 => 96.816667,
-            1 => -12.204167,
-            2 => 96.918056,
-            3 => -11.833333,
-        ],
-    ],
-    'CD' => [
-        'iso2'          => 'CD',
-        'iso3'          => 'COD',
-        'numeric'       => '180',
-        'name'          => 'DR Congo',
-        'official_name' => 'Democratic Republic of the Congo',
-        'native_name'   => 'RD Congo',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Middle Africa',
-        'currencies'    => [
-            0 => 'CDF',
-        ],
-        'languages' => [
-            0 => 'fra',
-            1 => 'kon',
-            2 => 'lin',
-            3 => 'lua',
-            4 => 'swa',
-        ],
-        'calling_codes' => [
-            0 => '243',
-        ],
-        'tld'       => '.cd',
-        'latitude'  => -2.879866123199463,
-        'longitude' => 23.6563777923584,
-        'bounds'    => [
-            0 => 12.266667,
-            1 => -13.466667,
-            2 => 31.233333,
-            3 => 5.133333,
-        ],
-    ],
-    'CF' => [
-        'iso2'          => 'CF',
-        'iso3'          => 'CAF',
-        'numeric'       => '140',
-        'name'          => 'Central African Republic',
-        'official_name' => 'Central African Republic',
-        'native_name'   => 'République centrafricaine',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Middle Africa',
-        'currencies'    => [
-            0 => 'XAF',
-        ],
-        'languages' => [
-            0 => 'fra',
-            1 => 'sag',
-        ],
-        'calling_codes' => [
-            0 => '236',
-        ],
-        'tld'       => '.cf',
-        'latitude'  => 6.574123382568359,
-        'longitude' => 20.486923217773438,
-        'bounds'    => [
-            0 => 14.533333,
-            1 => 2.433333,
-            2 => 27.216667,
-            3 => 10.7,
-        ],
-    ],
-    'CG' => [
-        'iso2'          => 'CG',
-        'iso3'          => 'COG',
-        'numeric'       => '178',
-        'name'          => 'Republic of the Congo',
-        'official_name' => 'Republic of the Congo',
-        'native_name'   => 'République du Congo',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Middle Africa',
-        'currencies'    => [
-            0 => 'XAF',
-        ],
-        'languages' => [
-            0 => 'fra',
-            1 => 'kon',
-            2 => 'lin',
-        ],
-        'calling_codes' => [
-            0 => '242',
-        ],
-        'tld'       => '.cg',
-        'latitude'  => -2.879866123199463,
-        'longitude' => 23.6563777923584,
-        'bounds'    => [
-            0 => 11.166667,
-            1 => -4.995556,
-            2 => 20.0,
-            3 => 3.866667,
-        ],
-    ],
-    'CH' => [
-        'iso2'          => 'CH',
-        'iso3'          => 'CHE',
-        'numeric'       => '756',
-        'name'          => 'Switzerland',
-        'official_name' => 'Swiss Confederation',
-        'native_name'   => 'Suisse',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Western Europe',
-        'currencies'    => [
-            0 => 'CHF',
-        ],
-        'languages' => [
-            0 => 'fra',
-            1 => 'gsw',
-            2 => 'ita',
-            3 => 'roh',
-        ],
-        'calling_codes' => [
-            0 => '41',
-        ],
-        'tld'       => '.ch',
-        'latitude'  => 46.80379867553711,
-        'longitude' => 8.222854614257812,
-        'bounds'    => [
-            0 => 6.0,
-            1 => 45.366667,
-            2 => 10.5,
-            3 => 47.8085,
-        ],
-    ],
-    'CI' => [
-        'iso2'          => 'CI',
-        'iso3'          => 'CIV',
-        'numeric'       => '384',
-        'name'          => 'Ivory Coast',
-        'official_name' => 'Republic of Côte d\'Ivoire',
-        'native_name'   => 'Côte d\'Ivoire',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Western Africa',
-        'currencies'    => [
-            0 => 'XOF',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '225',
-        ],
-        'tld'       => '.ci',
-        'latitude'  => 7.598755359649658,
-        'longitude' => -5.552574634552002,
-        'bounds'    => [
-            0 => -8.538889,
-            1 => 4.35,
-            2 => -2.566667,
-            3 => 10.652222,
-        ],
-    ],
-    'CK' => [
-        'iso2'          => 'CK',
-        'iso3'          => 'COK',
-        'numeric'       => '184',
-        'name'          => 'Cook Islands',
-        'official_name' => 'Cook Islands',
-        'native_name'   => 'Cook Islands',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Polynesia',
-        'currencies'    => [
-            0 => 'NZD',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'rar',
-        ],
-        'calling_codes' => [
-            0 => '682',
-        ],
-        'tld'       => '.ck',
-        'latitude'  => -21.22330665588379,
-        'longitude' => -159.7405548095703,
-        'bounds'    => [
-            0 => -171.783333,
-            1 => -21.953056,
-            2 => -157.3375,
-            3 => -8.918611,
-        ],
-    ],
-    'CL' => [
-        'iso2'          => 'CL',
-        'iso3'          => 'CHL',
-        'numeric'       => '152',
-        'name'          => 'Chile',
-        'official_name' => 'Republic of Chile',
-        'native_name'   => 'Chile',
-        'continent'     => 'SA',
-        'region'        => 'Americas',
-        'subregion'     => 'South America',
-        'currencies'    => [
-            0 => 'CLP',
-        ],
-        'languages' => [
-            0 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '56',
-        ],
-        'tld'       => '.cl',
-        'latitude'  => -35.78622817993164,
-        'longitude' => -71.67467498779297,
-        'bounds'    => [
-            0 => -109.466667,
-            1 => -56.533333,
-            2 => -66.433333,
-            3 => -17.53,
-        ],
-    ],
-    'CM' => [
-        'iso2'          => 'CM',
-        'iso3'          => 'CMR',
-        'numeric'       => '120',
-        'name'          => 'Cameroon',
-        'official_name' => 'Republic of Cameroon',
-        'native_name'   => 'Cameroon',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Middle Africa',
-        'currencies'    => [
-            0 => 'XAF',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '237',
-        ],
-        'tld'       => '.cm',
-        'latitude'  => 5.685476779937744,
-        'longitude' => 12.722877502441406,
-        'bounds'    => [
-            0 => 8.483333,
-            1 => 2.016667,
-            2 => 16.0,
-            3 => 16.0,
-        ],
-    ],
-    'CN' => [
-        'iso2'          => 'CN',
-        'iso3'          => 'CHN',
-        'numeric'       => '156',
-        'name'          => 'China',
-        'official_name' => 'People\'s Republic of China',
-        'native_name'   => '中国',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Eastern Asia',
-        'currencies'    => [
-            0 => 'CNY',
-        ],
-        'languages' => [
-            0 => 'cmn',
-        ],
-        'calling_codes' => [
-            0 => '86',
-        ],
-        'tld'       => '.cn',
-        'latitude'  => 36.55308532714844,
-        'longitude' => 103.97543334960938,
-        'bounds'    => [
-            0 => 106.7,
-            1 => 6.183333,
-            2 => 117.816667,
-            3 => 20.7,
-        ],
-    ],
-    'CO' => [
-        'iso2'          => 'CO',
-        'iso3'          => 'COL',
-        'numeric'       => '170',
-        'name'          => 'Colombia',
-        'official_name' => 'Republic of Colombia',
-        'native_name'   => 'Colombia',
-        'continent'     => 'SA',
-        'region'        => 'Americas',
-        'subregion'     => 'South America',
-        'currencies'    => [
-            0 => 'COP',
-        ],
-        'languages' => [
-            0 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '57',
-        ],
-        'tld'       => '.co',
-        'latitude'  => 3.9976072311401367,
-        'longitude' => -73.27796936035156,
-        'bounds'    => [
-            0 => -81.85,
-            1 => -4.214722,
-            2 => -66.854722,
-            3 => 13.383333,
-        ],
-    ],
-    'CR' => [
-        'iso2'          => 'CR',
-        'iso3'          => 'CRI',
-        'numeric'       => '188',
-        'name'          => 'Costa Rica',
-        'official_name' => 'Republic of Costa Rica',
-        'native_name'   => 'Costa Rica',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Central America',
-        'currencies'    => [
-            0 => 'CRC',
-        ],
-        'languages' => [
-            0 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '506',
-        ],
-        'tld'       => '.cr',
-        'latitude'  => 9.884991645812988,
-        'longitude' => -84.22723388671875,
-        'bounds'    => [
-            0 => -87.1,
-            1 => 5.5,
-            2 => -82.05,
-            3 => 11.216667,
-        ],
-    ],
-    'CU' => [
-        'iso2'          => 'CU',
-        'iso3'          => 'CUB',
-        'numeric'       => '192',
-        'name'          => 'Cuba',
-        'official_name' => 'Republic of Cuba',
-        'native_name'   => 'Cuba',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'CUP',
-        ],
-        'languages' => [
-            0 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '53',
-        ],
-        'tld'       => '.cu',
-        'latitude'  => 22.066335678100586,
-        'longitude' => -79.4531478881836,
-        'bounds'    => [
-            0 => -84.950833,
-            1 => 19.828056,
-            2 => -74.135,
-            3 => 23.265833,
-        ],
-    ],
-    'CV' => [
-        'iso2'          => 'CV',
-        'iso3'          => 'CPV',
-        'numeric'       => '132',
-        'name'          => 'Cape Verde',
-        'official_name' => 'Republic of Cabo Verde',
-        'native_name'   => 'Cabo Verde',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Western Africa',
-        'currencies'    => [
-            0 => 'CVE',
-        ],
-        'languages' => [
-            0 => 'por',
-        ],
-        'calling_codes' => [
-            0 => '238',
-        ],
-        'tld'       => '.cv',
-        'latitude'  => 15.183002471923828,
-        'longitude' => -23.70345115661621,
-        'bounds'    => [
-            0 => -25.366667,
-            1 => 14.8,
-            2 => -22.666667,
-            3 => 17.2,
-        ],
-    ],
-    'CW' => [
-        'iso2'          => 'CW',
-        'iso3'          => 'CUW',
-        'numeric'       => '531',
-        'name'          => 'Curaçao',
-        'official_name' => 'Country of Curaçao',
-        'native_name'   => 'Curaçao',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'ANG',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'nld',
-            2 => 'pap',
-        ],
-        'calling_codes' => [
-            0 => '599',
-        ],
-        'tld'       => '.cw',
-        'latitude'  => 12.163220405578613,
-        'longitude' => -68.94505310058594,
-        'bounds'    => [
-            0 => -69.157204,
-            1 => 11.97319,
-            2 => -68.639328,
-            3 => 12.38567,
-        ],
-    ],
-    'CX' => [
-        'iso2'          => 'CX',
-        'iso3'          => 'CXR',
-        'numeric'       => '162',
-        'name'          => 'Christmas Island',
-        'official_name' => 'Territory of Christmas Island',
-        'native_name'   => 'Christmas Island',
-        'continent'     => 'AS',
-        'region'        => 'Oceania',
-        'subregion'     => 'Australia and New Zealand',
-        'currencies'    => [
-            0 => 'AUD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '61',
-        ],
-        'tld'       => '.cx',
-        'latitude'  => -10.490290641784668,
-        'longitude' => 105.63275146484375,
-        'bounds'    => [
-            0 => 105.566667,
-            1 => -10.566667,
-            2 => 105.75,
-            3 => -10.4,
-        ],
-    ],
-    'CY' => [
-        'iso2'          => 'CY',
-        'iso3'          => 'CYP',
-        'numeric'       => '196',
-        'name'          => 'Cyprus',
-        'official_name' => 'Republic of Cyprus',
-        'native_name'   => 'Κύπρος',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Eastern Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'ell',
-            1 => 'tur',
-        ],
-        'calling_codes' => [
-            0 => '357',
-        ],
-        'tld'       => '.cy',
-        'latitude'  => 35.11473846435547,
-        'longitude' => 33.486717224121094,
-        'bounds'    => [
-            0 => 32.270833,
-            1 => 34.566667,
-            2 => 34.6,
-            3 => 35.7,
-        ],
-    ],
-    'CZ' => [
-        'iso2'          => 'CZ',
-        'iso3'          => 'CZE',
-        'numeric'       => '203',
-        'name'          => 'Czech Republic',
-        'official_name' => 'Czech Republic',
-        'native_name'   => 'Česká republika',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Eastern Europe',
-        'currencies'    => [
-            0 => 'CZK',
-        ],
-        'languages' => [
-            0 => 'ces',
-            1 => 'slk',
-        ],
-        'calling_codes' => [
-            0 => '420',
-        ],
-        'tld'       => '.cz',
-        'latitude'  => 49.739105224609375,
-        'longitude' => 15.331501007080078,
-        'bounds'    => [
-            0 => 12.116667,
-            1 => 40.65,
-            2 => 25.5,
-            3 => 59.65,
-        ],
-    ],
-    'DE' => [
-        'iso2'          => 'DE',
-        'iso3'          => 'DEU',
-        'numeric'       => '276',
-        'name'          => 'Germany',
-        'official_name' => 'Federal Republic of Germany',
-        'native_name'   => 'Deutschland',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Western Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'deu',
-        ],
-        'calling_codes' => [
-            0 => '49',
-        ],
-        'tld'       => '.de',
-        'latitude'  => 51.20246505737305,
-        'longitude' => 10.382203102111816,
-        'bounds'    => [
-            0 => 5.9,
-            1 => 47.266667,
-            2 => 15.033333,
-            3 => 55.05,
-        ],
-    ],
-    'DJ' => [
-        'iso2'          => 'DJ',
-        'iso3'          => 'DJI',
-        'numeric'       => '262',
-        'name'          => 'Djibouti',
-        'official_name' => 'Republic of Djibouti',
-        'native_name'   => 'جيبوتي‎',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Eastern Africa',
-        'currencies'    => [
-            0 => 'DJF',
-        ],
-        'languages' => [
-            0 => 'ara',
-            1 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '253',
-        ],
-        'tld'       => '.dj',
-        'latitude'  => 11.742591857910156,
-        'longitude' => 42.63182830810547,
-        'bounds'    => [
-            0 => 41.0,
-            1 => 10.9825,
-            2 => 43.451944,
-            3 => 13.0,
-        ],
-    ],
-    'DK' => [
-        'iso2'          => 'DK',
-        'iso3'          => 'DNK',
-        'numeric'       => '208',
-        'name'          => 'Denmark',
-        'official_name' => 'Kingdom of Denmark',
-        'native_name'   => 'Danmark',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Northern Europe',
-        'currencies'    => [
-            0 => 'DKK',
-        ],
-        'languages' => [
-            0 => 'dan',
-        ],
-        'calling_codes' => [
-            0 => '45',
-        ],
-        'tld'       => '.dk',
-        'latitude'  => 56.10176086425781,
-        'longitude' => 9.555907249450684,
-        'bounds'    => [
-            0 => 4.516667,
-            1 => 53.583333,
-            2 => 18.0,
-            3 => 64.0,
-        ],
-    ],
-    'DM' => [
-        'iso2'          => 'DM',
-        'iso3'          => 'DMA',
-        'numeric'       => '212',
-        'name'          => 'Dominica',
-        'official_name' => 'Commonwealth of Dominica',
-        'native_name'   => 'Dominica',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'XCD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '1767',
-        ],
-        'tld'       => '.dm',
-        'latitude'  => 15.3991060256958,
-        'longitude' => -61.33945846557617,
-        'bounds'    => [
-            0 => -61.483333,
-            1 => 15.2,
-            2 => -61.25,
-            3 => 15.633333,
-        ],
-    ],
-    'DO' => [
-        'iso2'          => 'DO',
-        'iso3'          => 'DOM',
-        'numeric'       => '214',
-        'name'          => 'Dominican Republic',
-        'official_name' => 'Dominican Republic',
-        'native_name'   => 'República Dominicana',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'DOP',
-        ],
-        'languages' => [
-            0 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '1809',
-            1 => '1829',
-            2 => '1849',
-        ],
-        'tld'       => '.do',
-        'latitude'  => 19.019824981689453,
-        'longitude' => -70.79285430908203,
-        'bounds'    => [
-            0 => -71.966667,
-            1 => 17.473056,
-            2 => -68.316667,
-            3 => 19.933333,
-        ],
-    ],
-    'DZ' => [
-        'iso2'          => 'DZ',
-        'iso3'          => 'DZA',
-        'numeric'       => '012',
-        'name'          => 'Algeria',
-        'official_name' => 'People\'s Democratic Republic of Algeria',
-        'native_name'   => 'الجزائر',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Northern Africa',
-        'currencies'    => [
-            0 => 'DZD',
-        ],
-        'languages' => [
-            0 => 'ara',
-        ],
-        'calling_codes' => [
-            0 => '213',
-        ],
-        'tld'       => '.dz',
-        'latitude'  => 28.213645935058594,
-        'longitude' => 2.6547281742095947,
-        'bounds'    => [
-            0 => -8.666667,
-            1 => 19.0,
-            2 => 13.0,
-            3 => 37.116667,
-        ],
-    ],
-    'EC' => [
-        'iso2'          => 'EC',
-        'iso3'          => 'ECU',
-        'numeric'       => '218',
-        'name'          => 'Ecuador',
-        'official_name' => 'Republic of Ecuador',
-        'native_name'   => 'Ecuador',
-        'continent'     => 'SA',
-        'region'        => 'Americas',
-        'subregion'     => 'South America',
-        'currencies'    => [
-            0 => 'USD',
-        ],
-        'languages' => [
-            0 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '593',
-        ],
-        'tld'       => '.ec',
-        'latitude'  => -1.421528935432434,
-        'longitude' => -78.87104034423828,
-        'bounds'    => [
-            0 => -92.0,
-            1 => -4.95,
-            2 => -75.216667,
-            3 => 1.65,
-        ],
-    ],
-    'EE' => [
-        'iso2'          => 'EE',
-        'iso3'          => 'EST',
-        'numeric'       => '233',
-        'name'          => 'Estonia',
-        'official_name' => 'Republic of Estonia',
-        'native_name'   => 'Eesti',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Northern Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'est',
-        ],
-        'calling_codes' => [
-            0 => '372',
-        ],
-        'tld'       => '.ee',
-        'latitude'  => 58.69374465942383,
-        'longitude' => 25.24162483215332,
-        'bounds'    => [
-            0 => 21.795833,
-            1 => 57.521389,
-            2 => 28.883333,
-            3 => 59.983333,
-        ],
-    ],
-    'EG' => [
-        'iso2'          => 'EG',
-        'iso3'          => 'EGY',
-        'numeric'       => '818',
-        'name'          => 'Egypt',
-        'official_name' => 'Arab Republic of Egypt',
-        'native_name'   => 'مصر',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Northern Africa',
-        'currencies'    => [
-            0 => 'EGP',
-        ],
-        'languages' => [
-            0 => 'ara',
-        ],
-        'calling_codes' => [
-            0 => '20',
-        ],
-        'tld'       => '.eg',
-        'latitude'  => 26.756103515625,
-        'longitude' => 29.86229705810547,
-        'bounds'    => [
-            0 => 24.7,
-            1 => 20.383333,
-            2 => 36.333333,
-            3 => 31.916667,
-        ],
-    ],
-    'EH' => [
-        'iso2'          => 'EH',
-        'iso3'          => 'ESH',
-        'numeric'       => '732',
-        'name'          => 'Western Sahara',
-        'official_name' => 'Sahrawi Arab Democratic Republic',
-        'native_name'   => 'Western Sahara',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Northern Africa',
-        'currencies'    => [
-            0 => 'MAD',
-        ],
-        'languages' => [
-            0 => 'ber',
-            1 => 'mey',
-            2 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '212',
-        ],
-        'tld'       => '.eh',
-        'latitude'  => 25.0,
-        'longitude' => -13.0,
-        'bounds'    => [
-            0 => -17.110556,
-            1 => 20.8,
-            2 => -8.666667,
-            3 => 27.666667,
-        ],
-    ],
-    'ER' => [
-        'iso2'          => 'ER',
-        'iso3'          => 'ERI',
-        'numeric'       => '232',
-        'name'          => 'Eritrea',
-        'official_name' => 'State of Eritrea',
-        'native_name'   => 'إرتريا‎',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Eastern Africa',
-        'currencies'    => [
-            0 => 'ERN',
-        ],
-        'languages' => [
-            0 => 'ara',
-            1 => 'eng',
-            2 => 'tir',
-        ],
-        'calling_codes' => [
-            0 => '291',
-        ],
-        'tld'       => '.er',
-        'latitude'  => 15.397199630737305,
-        'longitude' => 39.087188720703125,
-        'bounds'    => [
-            0 => 36.483333,
-            1 => 12.383333,
-            2 => 43.114722,
-            3 => 18.033333,
-        ],
-    ],
-    'ES' => [
-        'iso2'          => 'ES',
-        'iso3'          => 'ESP',
-        'numeric'       => '724',
-        'name'          => 'Spain',
-        'official_name' => 'Kingdom of Spain',
-        'native_name'   => 'Espanya',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Southern Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'cat',
-            1 => 'eus',
-            2 => 'glg',
-            3 => 'oci',
-            4 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '34',
-        ],
-        'tld'       => '.es',
-        'latitude'  => 40.396026611328125,
-        'longitude' => -3.550692558288574,
-        'bounds'    => [
-            0 => -18.166667,
-            1 => 27.633333,
-            2 => 4.333333,
-            3 => 43.916667,
-        ],
-    ],
-    'ET' => [
-        'iso2'          => 'ET',
-        'iso3'          => 'ETH',
-        'numeric'       => '231',
-        'name'          => 'Ethiopia',
-        'official_name' => 'Federal Democratic Republic of Ethiopia',
-        'native_name'   => 'ኢትዮጵያ',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Eastern Africa',
-        'currencies'    => [
-            0 => 'ETB',
-        ],
-        'languages' => [
-            0 => 'amh',
-        ],
-        'calling_codes' => [
-            0 => '251',
-        ],
-        'tld'       => '.et',
-        'latitude'  => 8.626703262329102,
-        'longitude' => 39.63755416870117,
-        'bounds'    => [
-            0 => 33.033333,
-            1 => 3.433333,
-            2 => 47.45,
-            3 => 14.698889,
-        ],
-    ],
-    'FI' => [
-        'iso2'          => 'FI',
-        'iso3'          => 'FIN',
-        'numeric'       => '246',
-        'name'          => 'Finland',
-        'official_name' => 'Republic of Finland',
-        'native_name'   => 'Suomi',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Northern Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'fin',
-            1 => 'swe',
-        ],
-        'calling_codes' => [
-            0 => '358',
-        ],
-        'tld'       => '.fi',
-        'latitude'  => 64.28858184814453,
-        'longitude' => 25.989402770996094,
-        'bounds'    => [
-            0 => 18.0,
-            1 => 58.83,
-            2 => 32.0,
-            3 => 70.083333,
-        ],
-    ],
-    'FJ' => [
-        'iso2'          => 'FJ',
-        'iso3'          => 'FJI',
-        'numeric'       => '242',
-        'name'          => 'Fiji',
-        'official_name' => 'Republic of Fiji',
-        'native_name'   => 'Fiji',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Melanesia',
-        'currencies'    => [
-            0 => 'FJD',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'fij',
-            2 => 'hif',
-        ],
-        'calling_codes' => [
-            0 => '679',
-        ],
-        'tld'       => '.fj',
-        'latitude'  => -17.658161163330078,
-        'longitude' => 178.1472625732422,
-        'bounds'    => [
-            0 => 180.0,
-            1 => -21.016667,
-            2 => -179.983333,
-            3 => -12.466667,
-        ],
-    ],
-    'FK' => [
-        'iso2'          => 'FK',
-        'iso3'          => 'FLK',
-        'numeric'       => '238',
-        'name'          => 'Falkland Islands',
-        'official_name' => 'Falkland Islands',
-        'native_name'   => 'Falkland Islands',
-        'continent'     => 'SA',
-        'region'        => 'Americas',
-        'subregion'     => 'South America',
-        'currencies'    => [
-            0 => 'FKP',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '500',
-        ],
-        'tld'       => '.fk',
-        'latitude'  => -51.77312469482422,
-        'longitude' => -59.727909088134766,
-        'bounds'    => [
-            0 => -61.433333,
-            1 => -52.966667,
-            2 => -57.666667,
-            3 => -50.966667,
-        ],
-    ],
-    'FM' => [
-        'iso2'          => 'FM',
-        'iso3'          => 'FSM',
-        'numeric'       => '583',
-        'name'          => 'Micronesia',
-        'official_name' => 'Federated States of Micronesia',
-        'native_name'   => 'Micronesia',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Micronesia',
-        'currencies'    => [
-            0 => 'USD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '691',
-        ],
-        'tld'       => '.fm',
-        'latitude'  => 6.869349002838135,
-        'longitude' => 158.187255859375,
-        'bounds'    => [
-            0 => 137.425,
-            1 => 1.026389,
-            2 => 163.034444,
-            3 => 10.093611,
-        ],
-    ],
-    'FO' => [
-        'iso2'          => 'FO',
-        'iso3'          => 'FRO',
-        'numeric'       => '234',
-        'name'          => 'Faroe Islands',
-        'official_name' => 'Faroe Islands',
-        'native_name'   => 'Færøerne',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Northern Europe',
-        'currencies'    => [
-            0 => 'DKK',
-        ],
-        'languages' => [
-            0 => 'dan',
-            1 => 'fao',
-        ],
-        'calling_codes' => [
-            0 => '298',
-        ],
-        'tld'       => '.fo',
-        'latitude'  => 62.009559631347656,
-        'longitude' => -6.818255424499512,
-        'bounds'    => [
-            0 => -7.8,
-            1 => 61.333333,
-            2 => -6.25,
-            3 => 62.4,
-        ],
-    ],
-    'FR' => [
-        'iso2'          => 'FR',
-        'iso3'          => 'FRA',
-        'numeric'       => '250',
-        'name'          => 'France',
-        'official_name' => 'French Republic',
-        'native_name'   => 'France',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Western Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '33',
-        ],
-        'tld'       => '.fr',
-        'latitude'  => 46.63727951049805,
-        'longitude' => 2.3382623195648193,
-        'bounds'    => [
-            0 => -5.14,
-            1 => 41.34,
-            2 => 9.56,
-            3 => 51.09,
-        ],
-    ],
-    'GA' => [
-        'iso2'          => 'GA',
-        'iso3'          => 'GAB',
-        'numeric'       => '266',
-        'name'          => 'Gabon',
-        'official_name' => 'Gabonese Republic',
-        'native_name'   => 'Gabon',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Middle Africa',
-        'currencies'    => [
-            0 => 'XAF',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '241',
-        ],
-        'tld'       => '.ga',
-        'latitude'  => -0.6345400810241699,
-        'longitude' => 11.738608360290527,
-        'bounds'    => [
-            0 => 8.7,
-            1 => -3.9,
-            2 => 14.483333,
-            3 => 2.283333,
-        ],
-    ],
-    'GB' => [
-        'iso2'          => 'GB',
-        'iso3'          => 'GBR',
-        'numeric'       => '826',
-        'name'          => 'United Kingdom',
-        'official_name' => 'United Kingdom of Great Britain and Northern Ireland',
-        'native_name'   => 'United Kingdom',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Northern Europe',
-        'currencies'    => [
-            0 => 'GBP',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '44',
-        ],
-        'tld'       => '.uk',
-        'latitude'  => 54.56088638305664,
-        'longitude' => -2.2125117778778076,
-        'bounds'    => [
-            0 => -13.65,
-            1 => 49.866667,
-            2 => 2.866667,
-            3 => 61.5,
-        ],
-    ],
-    'GD' => [
-        'iso2'          => 'GD',
-        'iso3'          => 'GRD',
-        'numeric'       => '308',
-        'name'          => 'Grenada',
-        'official_name' => 'Grenada',
-        'native_name'   => 'Grenada',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'XCD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '1473',
-        ],
-        'tld'       => '.gd',
-        'latitude'  => 12.178866386413574,
-        'longitude' => -61.64693069458008,
-        'bounds'    => [
-            0 => -61.8,
-            1 => 11.983333,
-            2 => -61.25,
-            3 => 12.666667,
-        ],
-    ],
-    'GE' => [
-        'iso2'          => 'GE',
-        'iso3'          => 'GEO',
-        'numeric'       => '268',
-        'name'          => 'Georgia',
-        'official_name' => 'Georgia',
-        'native_name'   => 'საქართველო',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Western Asia',
-        'currencies'    => [
-            0 => 'GEL',
-        ],
-        'languages' => [
-            0 => 'kat',
-        ],
-        'calling_codes' => [
-            0 => '995',
-        ],
-        'tld'       => '.ge',
-        'latitude'  => 42.3207845,
-        'longitude' => 43.3713615,
-        'bounds'    => [
-            0 => 40.013056,
-            1 => 41.15,
-            2 => 46.635556,
-            3 => 43.570556,
-        ],
-    ],
-    'GF' => [
-        'iso2'          => 'GF',
-        'iso3'          => 'GUF',
-        'numeric'       => '254',
-        'name'          => 'French Guiana',
-        'official_name' => 'Guiana',
-        'native_name'   => 'Guyane française',
-        'continent'     => 'SA',
-        'region'        => 'Americas',
-        'subregion'     => 'South America',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '594',
-        ],
-        'tld'       => '.gf',
-        'latitude'  => 4.069991111755371,
-        'longitude' => -53.16830825805664,
-        'bounds'    => [
-            0 => -60.0,
-            1 => 2.166667,
-            2 => -51.65,
-            3 => 5.75,
-        ],
-    ],
-    'GG' => [
-        'iso2'          => 'GG',
-        'iso3'          => 'GGY',
-        'numeric'       => '831',
-        'name'          => 'Guernsey',
-        'official_name' => 'Bailiwick of Guernsey',
-        'native_name'   => 'Guernsey',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Northern Europe',
-        'currencies'    => [
-            0 => 'GBP',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'fra',
-            2 => 'nfr',
-        ],
-        'calling_codes' => [
-            0 => '44',
-        ],
-        'tld'       => '.gg',
-        'latitude'  => 49.72008514404297,
-        'longitude' => -2.1999685764312744,
-        'bounds'    => [
-            0 => -2.7,
-            1 => 49.401111,
-            2 => -2.158056,
-            3 => 49.733333,
-        ],
-    ],
-    'GH' => [
-        'iso2'          => 'GH',
-        'iso3'          => 'GHA',
-        'numeric'       => '288',
-        'name'          => 'Ghana',
-        'official_name' => 'Republic of Ghana',
-        'native_name'   => 'Ghana',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Western Africa',
-        'currencies'    => [
-            0 => 'GHS',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '233',
-        ],
-        'tld'       => '.gh',
-        'latitude'  => 7.921330451965332,
-        'longitude' => -1.2043862342834473,
-        'bounds'    => [
-            0 => -4.0,
-            1 => 4.733333,
-            2 => 1.192778,
-            3 => 11.15,
-        ],
-    ],
-    'GI' => [
-        'iso2'          => 'GI',
-        'iso3'          => 'GIB',
-        'numeric'       => '292',
-        'name'          => 'Gibraltar',
-        'official_name' => 'Gibraltar',
-        'native_name'   => 'Gibraltar',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Southern Europe',
-        'currencies'    => [
-            0 => 'GIP',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '350',
-        ],
-        'tld'       => '.gi',
-        'latitude'  => 36.135841369628906,
-        'longitude' => -5.349248886108398,
-        'bounds'    => [
-            0 => -5.35,
-            1 => 36.1,
-            2 => -5.333333,
-            3 => 36.15,
-        ],
-    ],
-    'GL' => [
-        'iso2'          => 'GL',
-        'iso3'          => 'GRL',
-        'numeric'       => '304',
-        'name'          => 'Greenland',
-        'official_name' => 'Greenland',
-        'native_name'   => 'Kalaallit Nunaat',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Northern America',
-        'currencies'    => [
-            0 => 'DKK',
-        ],
-        'languages' => [
-            0 => 'kal',
-        ],
-        'calling_codes' => [
-            0 => '299',
-        ],
-        'tld'       => '.gl',
-        'latitude'  => 74.34954833984375,
-        'longitude' => -41.08988952636719,
-        'bounds'    => [
-            0 => -73.05,
-            1 => 51.7,
-            2 => -12.133333,
-            3 => 83.666667,
-        ],
-    ],
-    'GM' => [
-        'iso2'          => 'GM',
-        'iso3'          => 'GMB',
-        'numeric'       => '270',
-        'name'          => 'Gambia',
-        'official_name' => 'Republic of the Gambia',
-        'native_name'   => 'Gambia',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Western Africa',
-        'currencies'    => [
-            0 => 'GMD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '220',
-        ],
-        'tld'       => '.gm',
-        'latitude'  => 13.440265655517578,
-        'longitude' => -15.490884780883789,
-        'bounds'    => [
-            0 => -16.816944,
-            1 => 7.0,
-            2 => -4.0,
-            3 => 13.816667,
-        ],
-    ],
-    'GN' => [
-        'iso2'          => 'GN',
-        'iso3'          => 'GIN',
-        'numeric'       => '324',
-        'name'          => 'Guinea',
-        'official_name' => 'Republic of Guinea',
-        'native_name'   => 'Guinée',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Western Africa',
-        'currencies'    => [
-            0 => 'GNF',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '224',
-        ],
-        'tld'       => '.gn',
-        'latitude'  => 10.429302215576172,
-        'longitude' => -10.98954963684082,
-        'bounds'    => [
-            0 => -15.366667,
-            1 => 7.0,
-            2 => -4.0,
-            3 => 12.633333,
-        ],
-    ],
-    'GP' => [
-        'iso2'          => 'GP',
-        'iso3'          => 'GLP',
-        'numeric'       => '312',
-        'name'          => 'Guadeloupe',
-        'official_name' => 'Guadeloupe',
-        'native_name'   => 'Guadeloupe',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '590',
-        ],
-        'tld'       => '.gp',
-        'latitude'  => 16.256731033325195,
-        'longitude' => -61.56741714477539,
-        'bounds'    => [
-            0 => -63.15,
-            1 => 15.0,
-            2 => -61.0,
-            3 => 18.116667,
-        ],
-    ],
-    'GQ' => [
-        'iso2'          => 'GQ',
-        'iso3'          => 'GNQ',
-        'numeric'       => '226',
-        'name'          => 'Equatorial Guinea',
-        'official_name' => 'Republic of Equatorial Guinea',
-        'native_name'   => 'Guinée équatoriale',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Middle Africa',
-        'currencies'    => [
-            0 => 'XAF',
-        ],
-        'languages' => [
-            0 => 'fra',
-            1 => 'por',
-            2 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '240',
-        ],
-        'tld'       => '.gq',
-        'latitude'  => 1.5331259965896606,
-        'longitude' => 10.372581481933594,
-        'bounds'    => [
-            0 => 5.05,
-            1 => -1.483333,
-            2 => 11.4,
-            3 => 3.783333,
-        ],
-    ],
-    'GR' => [
-        'iso2'          => 'GR',
-        'iso3'          => 'GRC',
-        'numeric'       => '300',
-        'name'          => 'Greece',
-        'official_name' => 'Hellenic Republic',
-        'native_name'   => 'Ελλάδα',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Southern Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'ell',
-        ],
-        'calling_codes' => [
-            0 => '30',
-        ],
-        'tld'       => '.gr',
-        'latitude'  => 39.68437194824219,
-        'longitude' => 21.897409439086914,
-        'bounds'    => [
-            0 => 19.381667,
-            1 => 34.8,
-            2 => 29.648056,
-            3 => 44.0,
-        ],
-    ],
-    'GS' => [
-        'iso2'          => 'GS',
-        'iso3'          => 'SGS',
-        'numeric'       => '239',
-        'name'          => 'South Georgia',
-        'official_name' => 'South Georgia and the South Sandwich Islands',
-        'native_name'   => 'South Georgia',
-        'continent'     => 'AN',
-        'region'        => 'Americas',
-        'subregion'     => 'South America',
-        'currencies'    => [
-            0 => 'GBP',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '500',
-        ],
-        'tld'       => '.gs',
-        'latitude'  => -54.459922790527344,
-        'longitude' => -36.354618072509766,
-        'bounds'    => [
-            0 => -38.305,
-            1 => -59.466667,
-            2 => -26.333333,
-            3 => -53.970278,
-        ],
-    ],
-    'GT' => [
-        'iso2'          => 'GT',
-        'iso3'          => 'GTM',
-        'numeric'       => '320',
-        'name'          => 'Guatemala',
-        'official_name' => 'Republic of Guatemala',
-        'native_name'   => 'Guatemala',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Central America',
-        'currencies'    => [
-            0 => 'GTQ',
-        ],
-        'languages' => [
-            0 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '502',
-        ],
-        'tld'       => '.gt',
-        'latitude'  => 15.670565605163574,
-        'longitude' => -90.3486557006836,
-        'bounds'    => [
-            0 => -92.583333,
-            1 => 13.751111,
-            2 => -87.05,
-            3 => 17.816667,
-        ],
-    ],
-    'GU' => [
-        'iso2'          => 'GU',
-        'iso3'          => 'GUM',
-        'numeric'       => '316',
-        'name'          => 'Guam',
-        'official_name' => 'Guam',
-        'native_name'   => 'Guåhån',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Micronesia',
-        'currencies'    => [
-            0 => 'USD',
-        ],
-        'languages' => [
-            0 => 'cha',
-            1 => 'eng',
-            2 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '1671',
-        ],
-        'tld'       => '.gu',
-        'latitude'  => 13.42112922668457,
-        'longitude' => 144.73971557617188,
-        'bounds'    => [
-            0 => 144.619263,
-            1 => 13.24059,
-            2 => 144.953995,
-            3 => 13.65232,
-        ],
-    ],
-    'GW' => [
-        'iso2'          => 'GW',
-        'iso3'          => 'GNB',
-        'numeric'       => '624',
-        'name'          => 'Guinea-Bissau',
-        'official_name' => 'Republic of Guinea-Bissau',
-        'native_name'   => 'Guiné-Bissau',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Western Africa',
-        'currencies'    => [
-            0 => 'XOF',
-        ],
-        'languages' => [
-            0 => 'por',
-        ],
-        'calling_codes' => [
-            0 => '245',
-        ],
-        'tld'       => '.gw',
-        'latitude'  => 12.115862846374512,
-        'longitude' => -14.748136520385742,
-        'bounds'    => [
-            0 => -16.651944,
-            1 => 5.0,
-            2 => -4.0,
-            3 => 12.683333,
-        ],
-    ],
-    'GY' => [
-        'iso2'          => 'GY',
-        'iso3'          => 'GUY',
-        'numeric'       => '328',
-        'name'          => 'Guyana',
-        'official_name' => 'Co-operative Republic of Guyana',
-        'native_name'   => 'Guyana',
-        'continent'     => 'SA',
-        'region'        => 'Americas',
-        'subregion'     => 'South America',
-        'currencies'    => [
-            0 => 'GYD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '592',
-        ],
-        'tld'       => '.gy',
-        'latitude'  => 4.917311191558838,
-        'longitude' => -58.94346237182617,
-        'bounds'    => [
-            0 => -61.233333,
-            1 => 1.316667,
-            2 => -56.0,
-            3 => 8.433333,
-        ],
-    ],
-    'HK' => [
-        'iso2'          => 'HK',
-        'iso3'          => 'HKG',
-        'numeric'       => '344',
-        'name'          => 'Hong Kong',
-        'official_name' => 'Hong Kong Special Administrative Region of the People\'s Republic of China',
-        'native_name'   => 'Hong Kong',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Eastern Asia',
-        'currencies'    => [
-            0 => 'HKD',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'zho',
-        ],
-        'calling_codes' => [
-            0 => '852',
-        ],
-        'tld'       => '.hk',
-        'latitude'  => 22.336156845092773,
-        'longitude' => 114.18696594238281,
-        'bounds'    => [
-            0 => 113.833333,
-            1 => 22.15,
-            2 => 114.433333,
-            3 => 22.566667,
-        ],
-    ],
-    'HM' => [
-        'iso2'          => 'HM',
-        'iso3'          => 'HMD',
-        'numeric'       => '334',
-        'name'          => 'Heard Island and McDonald Islands',
-        'official_name' => 'Heard Island and McDonald Islands',
-        'native_name'   => 'Heard Island and McDonald Islands',
-        'continent'     => 'AN',
-        'region'        => null,
-        'subregion'     => null,
-        'currencies'    => [
-            0 => 'AUD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-        ],
-        'tld'       => '.hm',
-        'latitude'  => -53.080108642578125,
-        'longitude' => 73.56218719482422,
-        'bounds'    => [
-            0 => 72.566667,
-            1 => -53.2,
-            2 => 73.85,
-            3 => -52.9,
-        ],
-    ],
-    'HN' => [
-        'iso2'          => 'HN',
-        'iso3'          => 'HND',
-        'numeric'       => '340',
-        'name'          => 'Honduras',
-        'official_name' => 'Republic of Honduras',
-        'native_name'   => 'Honduras',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Central America',
-        'currencies'    => [
-            0 => 'HNL',
-        ],
-        'languages' => [
-            0 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '504',
-        ],
-        'tld'       => '.hn',
-        'latitude'  => 14.975032806396484,
-        'longitude' => -86.2647705078125,
-        'bounds'    => [
-            0 => -89.333333,
-            1 => 13.016667,
-            2 => -82.5,
-            3 => 17.45,
-        ],
-    ],
-    'HR' => [
-        'iso2'          => 'HR',
-        'iso3'          => 'HRV',
-        'numeric'       => '191',
-        'name'          => 'Croatia',
-        'official_name' => 'Republic of Croatia',
-        'native_name'   => 'Hrvatska',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Southern Europe',
-        'currencies'    => [
-            0 => 'HRK',
-        ],
-        'languages' => [
-            0 => 'hrv',
-        ],
-        'calling_codes' => [
-            0 => '385',
-        ],
-        'tld'       => '.hr',
-        'latitude'  => 45.444305419921875,
-        'longitude' => 15.734503746032715,
-        'bounds'    => [
-            0 => 13.493333,
-            1 => 42.380278,
-            2 => 19.383056,
-            3 => 46.526944,
-        ],
-    ],
-    'HT' => [
-        'iso2'          => 'HT',
-        'iso3'          => 'HTI',
-        'numeric'       => '332',
-        'name'          => 'Haiti',
-        'official_name' => 'Republic of Haiti',
-        'native_name'   => 'Haïti',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'HTG',
-        ],
-        'languages' => [
-            0 => 'fra',
-            1 => 'hat',
-        ],
-        'calling_codes' => [
-            0 => '509',
-        ],
-        'tld'       => '.ht',
-        'latitude'  => 19.0732421875,
-        'longitude' => -72.24127960205078,
-        'bounds'    => [
-            0 => -74.483333,
-            1 => 18.016667,
-            2 => -71.633333,
-            3 => 20.083333,
-        ],
-    ],
-    'HU' => [
-        'iso2'          => 'HU',
-        'iso3'          => 'HUN',
-        'numeric'       => '348',
-        'name'          => 'Hungary',
-        'official_name' => 'Hungary',
-        'native_name'   => 'Magyarország',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Eastern Europe',
-        'currencies'    => [
-            0 => 'HUF',
-        ],
-        'languages' => [
-            0 => 'hun',
-        ],
-        'calling_codes' => [
-            0 => '36',
-        ],
-        'tld'       => '.hu',
-        'latitude'  => 47.165733337402344,
-        'longitude' => 19.416574478149414,
-        'bounds'    => [
-            0 => 16.183333,
-            1 => 45.75,
-            2 => 22.866667,
-            3 => 48.983333,
-        ],
-    ],
-    'ID' => [
-        'iso2'          => 'ID',
-        'iso3'          => 'IDN',
-        'numeric'       => '360',
-        'name'          => 'Indonesia',
-        'official_name' => 'Republic of Indonesia',
-        'native_name'   => 'Indonesia',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'South-Eastern Asia',
-        'currencies'    => [
-            0 => 'IDR',
-        ],
-        'languages' => [
-            0 => 'ind',
-        ],
-        'calling_codes' => [
-            0 => '62',
-        ],
-        'tld'       => '.id',
-        'latitude'  => -1.248089075088501,
-        'longitude' => 115.41899871826172,
-        'bounds'    => [
-            0 => 94.970278,
-            1 => -11.0,
-            2 => 141.016667,
-            3 => 10.616667,
-        ],
-    ],
-    'IE' => [
-        'iso2'          => 'IE',
-        'iso3'          => 'IRL',
-        'numeric'       => '372',
-        'name'          => 'Ireland',
-        'official_name' => 'Republic of Ireland',
-        'native_name'   => 'Ireland',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Northern Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'gle',
-        ],
-        'calling_codes' => [
-            0 => '353',
-        ],
-        'tld'       => '.ie',
-        'latitude'  => 53.1827278137207,
-        'longitude' => -8.196102142333984,
-        'bounds'    => [
-            0 => -10.680833,
-            1 => 51.425556,
-            2 => -6.0025,
-            3 => 55.433333,
-        ],
-    ],
-    'IL' => [
-        'iso2'          => 'IL',
-        'iso3'          => 'ISR',
-        'numeric'       => '376',
-        'name'          => 'Israel',
-        'official_name' => 'State of Israel',
-        'native_name'   => 'إسرائيل',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Western Asia',
-        'currencies'    => [
-            0 => 'ILS',
-        ],
-        'languages' => [
-            0 => 'ara',
-            1 => 'heb',
-        ],
-        'calling_codes' => [
-            0 => '972',
-        ],
-        'tld'       => '.il',
-        'latitude'  => 31.814193725585938,
-        'longitude' => 34.75337219238281,
-        'bounds'    => [
-            0 => 34.283333,
-            1 => 29.516667,
-            2 => 35.666667,
-            3 => 33.286111,
-        ],
-    ],
-    'IM' => [
-        'iso2'          => 'IM',
-        'iso3'          => 'IMN',
-        'numeric'       => '833',
-        'name'          => 'Isle of Man',
-        'official_name' => 'Isle of Man',
-        'native_name'   => 'Isle of Man',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Northern Europe',
-        'currencies'    => [
-            0 => 'GBP',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'glv',
-        ],
-        'calling_codes' => [
-            0 => '44',
-        ],
-        'tld'       => '.im',
-        'latitude'  => 54.22451400756836,
-        'longitude' => -4.562133312225342,
-        'bounds'    => [
-            0 => -4.833333,
-            1 => 54.033333,
-            2 => -4.316667,
-            3 => 54.4,
-        ],
-    ],
-    'IN' => [
-        'iso2'          => 'IN',
-        'iso3'          => 'IND',
-        'numeric'       => '356',
-        'name'          => 'India',
-        'official_name' => 'Republic of India',
-        'native_name'   => 'India',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Southern Asia',
-        'currencies'    => [
-            0 => 'INR',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'hin',
-            2 => 'tam',
-        ],
-        'calling_codes' => [
-            0 => '91',
-        ],
-        'tld'       => '.in',
-        'latitude'  => 23.4060115814209,
-        'longitude' => 79.45809173583984,
-        'bounds'    => [
-            0 => 67.016667,
-            1 => 6.755556,
-            2 => 97.35,
-            3 => 35.9558333333,
-        ],
-    ],
-    'IO' => [
-        'iso2'          => 'IO',
-        'iso3'          => 'IOT',
-        'numeric'       => '086',
-        'name'          => 'British Indian Ocean Territory',
-        'official_name' => 'British Indian Ocean Territory',
-        'native_name'   => 'British Indian Ocean Territory',
-        'continent'     => 'AS',
-        'region'        => 'Africa',
-        'subregion'     => 'Eastern Africa',
-        'currencies'    => [
-            0 => 'USD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '246',
-        ],
-        'tld'       => '.io',
-        'latitude'  => -6.196269989013672,
-        'longitude' => 71.34793090820312,
-        'bounds'    => [
-            0 => 71.265278,
-            1 => -7.35,
-            2 => 72.483333,
-            3 => -5.233333,
-        ],
-    ],
-    'IQ' => [
-        'iso2'          => 'IQ',
-        'iso3'          => 'IRQ',
-        'numeric'       => '368',
-        'name'          => 'Iraq',
-        'official_name' => 'Republic of Iraq',
-        'native_name'   => 'العراق',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Western Asia',
-        'currencies'    => [
-            0 => 'IQD',
-        ],
-        'languages' => [
-            0 => 'ara',
-            1 => 'arc',
-            2 => 'ckb',
-        ],
-        'calling_codes' => [
-            0 => '964',
-        ],
-        'tld'       => '.iq',
-        'latitude'  => 33.044586181640625,
-        'longitude' => 43.77495574951172,
-        'bounds'    => [
-            0 => 38.800871,
-            1 => 28.866667,
-            2 => 48.833333,
-            3 => 37.352778,
-        ],
-    ],
-    'IR' => [
-        'iso2'          => 'IR',
-        'iso3'          => 'IRN',
-        'numeric'       => '364',
-        'name'          => 'Iran',
-        'official_name' => 'Islamic Republic of Iran',
-        'native_name'   => 'ایران',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Southern Asia',
-        'currencies'    => [
-            0 => 'IRR',
-        ],
-        'languages' => [
-            0 => 'fas',
-        ],
-        'calling_codes' => [
-            0 => '98',
-        ],
-        'tld'       => '.ir',
-        'latitude'  => 32.50077819824219,
-        'longitude' => 54.2942008972168,
-        'bounds'    => [
-            0 => 27.4455,
-            1 => 25.05,
-            2 => 62.0,
-            3 => 39.7754,
-        ],
-    ],
-    'IS' => [
-        'iso2'          => 'IS',
-        'iso3'          => 'ISL',
-        'numeric'       => '352',
-        'name'          => 'Iceland',
-        'official_name' => 'Iceland',
-        'native_name'   => 'Ísland',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Northern Europe',
-        'currencies'    => [
-            0 => 'ISK',
-        ],
-        'languages' => [
-            0 => 'isl',
-        ],
-        'calling_codes' => [
-            0 => '354',
-        ],
-        'tld'       => '.is',
-        'latitude'  => 64.9285659790039,
-        'longitude' => -18.961700439453125,
-        'bounds'    => [
-            0 => -24.533333,
-            1 => 63.3,
-            2 => -13.2,
-            3 => 66.566667,
-        ],
-    ],
-    'IT' => [
-        'iso2'          => 'IT',
-        'iso3'          => 'ITA',
-        'numeric'       => '380',
-        'name'          => 'Italy',
-        'official_name' => 'Italian Republic',
-        'native_name'   => 'Italien',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Southern Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'bar',
-            1 => 'ita',
-            2 => 'srd',
-        ],
-        'calling_codes' => [
-            0 => '39',
-        ],
-        'tld'       => '.it',
-        'latitude'  => 42.7669792175293,
-        'longitude' => 12.493823051452637,
-        'bounds'    => [
-            0 => 1.35,
-            1 => 35.483333,
-            2 => 20.433333,
-            3 => 48.533333,
-        ],
-    ],
-    'JE' => [
-        'iso2'          => 'JE',
-        'iso3'          => 'JEY',
-        'numeric'       => '832',
-        'name'          => 'Jersey',
-        'official_name' => 'Bailiwick of Jersey',
-        'native_name'   => 'Jersey',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Northern Europe',
-        'currencies'    => [
-            0 => 'GBP',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'fra',
-            2 => 'nrf',
-        ],
-        'calling_codes' => [
-            0 => '44',
-        ],
-        'tld'       => '.je',
-        'latitude'  => 49.2285041809082,
-        'longitude' => -2.1228928565979004,
-        'bounds'    => [
-            0 => -2.253889,
-            1 => 49.112778,
-            2 => -1.927778,
-            3 => 49.305833,
-        ],
-    ],
-    'JM' => [
-        'iso2'          => 'JM',
-        'iso3'          => 'JAM',
-        'numeric'       => '388',
-        'name'          => 'Jamaica',
-        'official_name' => 'Jamaica',
-        'native_name'   => 'Jamaica',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'JMD',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'jam',
-        ],
-        'calling_codes' => [
-            0 => '1876',
-        ],
-        'tld'       => '.jm',
-        'latitude'  => 18.143444061279297,
-        'longitude' => -77.34654998779297,
-        'bounds'    => [
-            0 => -78.366667,
-            1 => 17.0,
-            2 => -70.0,
-            3 => 18.533333,
-        ],
-    ],
-    'JO' => [
-        'iso2'          => 'JO',
-        'iso3'          => 'JOR',
-        'numeric'       => '400',
-        'name'          => 'Jordan',
-        'official_name' => 'Hashemite Kingdom of Jordan',
-        'native_name'   => 'الأردن',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Western Asia',
-        'currencies'    => [
-            0 => 'JOD',
-        ],
-        'languages' => [
-            0 => 'ara',
-        ],
-        'calling_codes' => [
-            0 => '962',
-        ],
-        'tld'       => '.jo',
-        'latitude'  => 31.2757625579834,
-        'longitude' => 36.82838821411133,
-        'bounds'    => [
-            0 => 34.9875,
-            1 => 29.0,
-            2 => 38.883333,
-            3 => 33.002222,
-        ],
-    ],
-    'JP' => [
-        'iso2'          => 'JP',
-        'iso3'          => 'JPN',
-        'numeric'       => '392',
-        'name'          => 'Japan',
-        'official_name' => 'Japan',
-        'native_name'   => '日本',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Eastern Asia',
-        'currencies'    => [
-            0 => 'JPY',
-        ],
-        'languages' => [
-            0 => 'jpn',
-        ],
-        'calling_codes' => [
-            0 => '81',
-        ],
-        'tld'       => '.jp',
-        'latitude'  => 36.281646728515625,
-        'longitude' => 139.0772705078125,
-        'bounds'    => [
-            0 => 122.933333,
-            1 => 20.416667,
-            2 => 154.0,
-            3 => 45.520833,
-        ],
-    ],
-    'KE' => [
-        'iso2'          => 'KE',
-        'iso3'          => 'KEN',
-        'numeric'       => '404',
-        'name'          => 'Kenya',
-        'official_name' => 'Republic of Kenya',
-        'native_name'   => 'Kenya',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Eastern Africa',
-        'currencies'    => [
-            0 => 'KES',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'swa',
-        ],
-        'calling_codes' => [
-            0 => '254',
-        ],
-        'tld'       => '.ke',
-        'latitude'  => 0.5765031576156616,
-        'longitude' => 37.83988952636719,
-        'bounds'    => [
-            0 => 27.433333,
-            1 => -4.716667,
-            2 => 41.8583834826,
-            3 => 4.883333,
-        ],
-    ],
-    'KG' => [
-        'iso2'          => 'KG',
-        'iso3'          => 'KGZ',
-        'numeric'       => '417',
-        'name'          => 'Kyrgyzstan',
-        'official_name' => 'Kyrgyz Republic',
-        'native_name'   => 'Кыргызстан',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Central Asia',
-        'currencies'    => [
-            0 => 'KGS',
-        ],
-        'languages' => [
-            0 => 'kir',
-            1 => 'rus',
-        ],
-        'calling_codes' => [
-            0 => '996',
-        ],
-        'tld'       => '.kg',
-        'latitude'  => 41.46435546875,
-        'longitude' => 74.55522155761719,
-        'bounds'    => [
-            0 => 69.333333,
-            1 => 39.25,
-            2 => 80.115833,
-            3 => 43.016667,
-        ],
-    ],
-    'KH' => [
-        'iso2'          => 'KH',
-        'iso3'          => 'KHM',
-        'numeric'       => '116',
-        'name'          => 'Cambodia',
-        'official_name' => 'Kingdom of Cambodia',
-        'native_name'   => 'Kâmpŭchéa',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'South-Eastern Asia',
-        'currencies'    => [
-            0 => 'KHR',
-        ],
-        'languages' => [
-            0 => 'khm',
-        ],
-        'calling_codes' => [
-            0 => '855',
-        ],
-        'tld'       => '.kh',
-        'latitude'  => 12.570423126220703,
-        'longitude' => 104.81391143798828,
-        'bounds'    => [
-            0 => 102.358333,
-            1 => 9.916667,
-            2 => 107.566667,
-            3 => 17.483333,
-        ],
-    ],
-    'KI' => [
-        'iso2'          => 'KI',
-        'iso3'          => 'KIR',
-        'numeric'       => '296',
-        'name'          => 'Kiribati',
-        'official_name' => 'Independent and Sovereign Republic of Kiribati',
-        'native_name'   => 'Kiribati',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Micronesia',
-        'currencies'    => [
-            0 => 'AUD',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'gil',
-        ],
-        'calling_codes' => [
-            0 => '686',
-        ],
-        'tld'       => '.ki',
-        'latitude'  => 1.842833161354065,
-        'longitude' => -157.6758270263672,
-        'bounds'    => [
-            0 => 179.716667,
-            1 => -10.3,
-            2 => -174.533333,
-            3 => 4.716667,
-        ],
-    ],
-    'KM' => [
-        'iso2'          => 'KM',
-        'iso3'          => 'COM',
-        'numeric'       => '174',
-        'name'          => 'Comoros',
-        'official_name' => 'Union of the Comoros',
-        'native_name'   => 'القمر‎',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Eastern Africa',
-        'currencies'    => [
-            0 => 'KMF',
-        ],
-        'languages' => [
-            0 => 'ara',
-            1 => 'fra',
-            2 => 'zdj',
-        ],
-        'calling_codes' => [
-            0 => '269',
-        ],
-        'tld'       => '.km',
-        'latitude'  => -11.86610221862793,
-        'longitude' => 43.432640075683594,
-        'bounds'    => [
-            0 => 43.226111,
-            1 => -13.0,
-            2 => 45.316667,
-            3 => -11.35,
-        ],
-    ],
-    'KN' => [
-        'iso2'          => 'KN',
-        'iso3'          => 'KNA',
-        'numeric'       => '659',
-        'name'          => 'Saint Kitts and Nevis',
-        'official_name' => 'Federation of Saint Christopher and Nevisa',
-        'native_name'   => 'Saint Kitts and Nevis',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'XCD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '1869',
-        ],
-        'tld'       => '.kn',
-        'latitude'  => 17.24447250366211,
-        'longitude' => -62.643184661865234,
-        'bounds'    => [
-            0 => -62.85,
-            1 => 17.1,
-            2 => -62.516667,
-            3 => 17.416667,
-        ],
-    ],
-    'KP' => [
-        'iso2'          => 'KP',
-        'iso3'          => 'PRK',
-        'numeric'       => '408',
-        'name'          => 'North Korea',
-        'official_name' => 'Democratic People\'s Republic of Korea',
-        'native_name'   => '북한',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Eastern Asia',
-        'currencies'    => [
-            0 => 'KPW',
-        ],
-        'languages' => [
-            0 => 'kor',
-        ],
-        'calling_codes' => [
-            0 => '850',
-        ],
-        'tld'       => '.kp',
-        'latitude'  => 40.077640533447266,
-        'longitude' => 127.13385009765625,
-        'bounds'    => [
-            0 => 124.1875,
-            1 => 37.6775,
-            2 => 130.672222,
-            3 => 43.003889,
-        ],
-    ],
-    'KR' => [
-        'iso2'          => 'KR',
-        'iso3'          => 'KOR',
-        'numeric'       => '410',
-        'name'          => 'South Korea',
-        'official_name' => 'Republic of Korea',
-        'native_name'   => '대한민국',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Eastern Asia',
-        'currencies'    => [
-            0 => 'KRW',
-        ],
-        'languages' => [
-            0 => 'kor',
-        ],
-        'calling_codes' => [
-            0 => '82',
-        ],
-        'tld'       => '.kr',
-        'latitude'  => 40.077640533447266,
-        'longitude' => 127.13385009765625,
-        'bounds'    => [
-            0 => 124.612222,
-            1 => 33.1175,
-            2 => 131.866667,
-            3 => 38.586667,
-        ],
-    ],
-    'KW' => [
-        'iso2'          => 'KW',
-        'iso3'          => 'KWT',
-        'numeric'       => '414',
-        'name'          => 'Kuwait',
-        'official_name' => 'State of Kuwait',
-        'native_name'   => 'الكويت',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Western Asia',
-        'currencies'    => [
-            0 => 'KWD',
-        ],
-        'languages' => [
-            0 => 'ara',
-        ],
-        'calling_codes' => [
-            0 => '965',
-        ],
-        'tld'       => '.kw',
-        'latitude'  => 29.321941375732422,
-        'longitude' => 47.60246658325195,
-        'bounds'    => [
-            0 => 45.0,
-            1 => 25.0,
-            2 => 49.410556,
-            3 => 30.069444,
-        ],
-    ],
-    'KY' => [
-        'iso2'          => 'KY',
-        'iso3'          => 'CYM',
-        'numeric'       => '136',
-        'name'          => 'Cayman Islands',
-        'official_name' => 'Cayman Islands',
-        'native_name'   => 'Cayman Islands',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'KYD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '1345',
-        ],
-        'tld'       => '.ky',
-        'latitude'  => 19.308862686157227,
-        'longitude' => -81.25680541992188,
-        'bounds'    => [
-            0 => -81.416667,
-            1 => 19.25,
-            2 => -79.716667,
-            3 => 19.75,
-        ],
-    ],
-    'KZ' => [
-        'iso2'          => 'KZ',
-        'iso3'          => 'KAZ',
-        'numeric'       => '398',
-        'name'          => 'Kazakhstan',
-        'official_name' => 'Republic of Kazakhstan',
-        'native_name'   => 'Қазақстан',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Central Asia',
-        'currencies'    => [
-            0 => 'KZT',
-        ],
-        'languages' => [
-            0 => 'kaz',
-            1 => 'rus',
-        ],
-        'calling_codes' => [
-            0 => '76',
-            1 => '77',
-        ],
-        'tld'       => '.kz',
-        'latitude'  => 48.14600372314453,
-        'longitude' => 67.17916870117188,
-        'bounds'    => [
-            0 => 46.589722,
-            1 => 40.416667,
-            2 => 90.0,
-            3 => 55.330556,
-        ],
-    ],
-    'LA' => [
-        'iso2'          => 'LA',
-        'iso3'          => 'LAO',
-        'numeric'       => '418',
-        'name'          => 'Laos',
-        'official_name' => 'Lao People\'s Democratic Republic',
-        'native_name'   => 'ສປປລາວ',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'South-Eastern Asia',
-        'currencies'    => [
-            0 => 'LAK',
-        ],
-        'languages' => [
-            0 => 'lao',
-        ],
-        'calling_codes' => [
-            0 => '856',
-        ],
-        'tld'       => '.la',
-        'latitude'  => 18.65074920654297,
-        'longitude' => 104.15293884277344,
-        'bounds'    => [
-            0 => 100.095833,
-            1 => 13.933333,
-            2 => 107.633333,
-            3 => 22.5,
-        ],
-    ],
-    'LB' => [
-        'iso2'          => 'LB',
-        'iso3'          => 'LBN',
-        'numeric'       => '422',
-        'name'          => 'Lebanon',
-        'official_name' => 'Lebanese Republic',
-        'native_name'   => 'لبنان',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Western Asia',
-        'currencies'    => [
-            0 => 'LBP',
-        ],
-        'languages' => [
-            0 => 'ara',
-            1 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '961',
-        ],
-        'tld'       => '.lb',
-        'latitude'  => 33.925411224365234,
-        'longitude' => 35.89972686767578,
-        'bounds'    => [
-            0 => 35.103611,
-            1 => 33.078333,
-            2 => 36.592778,
-            3 => 34.69,
-        ],
-    ],
-    'LC' => [
-        'iso2'          => 'LC',
-        'iso3'          => 'LCA',
-        'numeric'       => '662',
-        'name'          => 'Saint Lucia',
-        'official_name' => 'Saint Lucia',
-        'native_name'   => 'Saint Lucia',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'XCD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '1758',
-        ],
-        'tld'       => '.lc',
-        'latitude'  => 13.86330509185791,
-        'longitude' => -60.9665641784668,
-        'bounds'    => [
-            0 => -61.066667,
-            1 => 13.7,
-            2 => -60.866667,
-            3 => 14.1,
-        ],
-    ],
-    'LI' => [
-        'iso2'          => 'LI',
-        'iso3'          => 'LIE',
-        'numeric'       => '438',
-        'name'          => 'Liechtenstein',
-        'official_name' => 'Principality of Liechtenstein',
-        'native_name'   => 'Liechtenstein',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Western Europe',
-        'currencies'    => [
-            0 => 'CHF',
-        ],
-        'languages' => [
-            0 => 'deu',
-        ],
-        'calling_codes' => [
-            0 => '423',
-        ],
-        'tld'       => '.li',
-        'latitude'  => 47.14126968383789,
-        'longitude' => 9.552783012390137,
-        'bounds'    => [
-            0 => 9.5,
-            1 => 47.05,
-            2 => 9.75,
-            3 => 47.233333,
-        ],
-    ],
-    'LK' => [
-        'iso2'          => 'LK',
-        'iso3'          => 'LKA',
-        'numeric'       => '144',
-        'name'          => 'Sri Lanka',
-        'official_name' => 'Democratic Socialist Republic of Sri Lanka',
-        'native_name'   => 'ශ්‍රී ලංකාව',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Southern Asia',
-        'currencies'    => [
-            0 => 'LKR',
-        ],
-        'languages' => [
-            0 => 'sin',
-            1 => 'tam',
-        ],
-        'calling_codes' => [
-            0 => '94',
-        ],
-        'tld'       => '.lk',
-        'latitude'  => 7.789133548736572,
-        'longitude' => 80.68072509765625,
-        'bounds'    => [
-            0 => 79.516667,
-            1 => 5.916667,
-            2 => 81.866667,
-            3 => 9.833333,
-        ],
-    ],
-    'LR' => [
-        'iso2'          => 'LR',
-        'iso3'          => 'LBR',
-        'numeric'       => '430',
-        'name'          => 'Liberia',
-        'official_name' => 'Republic of Liberia',
-        'native_name'   => 'Liberia',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Western Africa',
-        'currencies'    => [
-            0 => 'LRD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '231',
-        ],
-        'tld'       => '.lr',
-        'latitude'  => 6.411512851715088,
-        'longitude' => -9.323492050170898,
-        'bounds'    => [
-            0 => -11.472222,
-            1 => 4.328333,
-            2 => -4.0,
-            3 => 9.5,
-        ],
-    ],
-    'LS' => [
-        'iso2'          => 'LS',
-        'iso3'          => 'LSO',
-        'numeric'       => '426',
-        'name'          => 'Lesotho',
-        'official_name' => 'Kingdom of Lesotho',
-        'native_name'   => 'Lesotho',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Southern Africa',
-        'currencies'    => [
-            0 => 'LSL',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'sot',
-        ],
-        'calling_codes' => [
-            0 => '266',
-        ],
-        'tld'       => '.ls',
-        'latitude'  => -29.58175277709961,
-        'longitude' => 28.246612548828125,
-        'bounds'    => [
-            0 => 24.0,
-            1 => -30.666667,
-            2 => 29.316667,
-            3 => -28.616667,
-        ],
-    ],
-    'LT' => [
-        'iso2'          => 'LT',
-        'iso3'          => 'LTU',
-        'numeric'       => '440',
-        'name'          => 'Lithuania',
-        'official_name' => 'Republic of Lithuania',
-        'native_name'   => 'Lietuva',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Northern Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'lit',
-        ],
-        'calling_codes' => [
-            0 => '370',
-        ],
-        'tld'       => '.lt',
-        'latitude'  => 55.33871841430664,
-        'longitude' => 23.87092399597168,
-        'bounds'    => [
-            0 => 21.0,
-            1 => 53.0,
-            2 => 27.0,
-            3 => 56.441667,
-        ],
-    ],
-    'LU' => [
-        'iso2'          => 'LU',
-        'iso3'          => 'LUX',
-        'numeric'       => '442',
-        'name'          => 'Luxembourg',
-        'official_name' => 'Grand Duchy of Luxembourg',
-        'native_name'   => 'Luxemburg',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Western Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'deu',
-            1 => 'fra',
-            2 => 'ltz',
-        ],
-        'calling_codes' => [
-            0 => '352',
-        ],
-        'tld'       => '.lu',
-        'latitude'  => 49.77788162231445,
-        'longitude' => 6.094746112823486,
-        'bounds'    => [
-            0 => 5.742778,
-            1 => 49.460833,
-            2 => 6.505833,
-            3 => 50.181667,
-        ],
-    ],
-    'LV' => [
-        'iso2'          => 'LV',
-        'iso3'          => 'LVA',
-        'numeric'       => '428',
-        'name'          => 'Latvia',
-        'official_name' => 'Republic of Latvia',
-        'native_name'   => 'Latvija',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Northern Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'lav',
-        ],
-        'calling_codes' => [
-            0 => '371',
-        ],
-        'tld'       => '.lv',
-        'latitude'  => 56.86873245239258,
-        'longitude' => 24.84024429321289,
-        'bounds'    => [
-            0 => 20.966667,
-            1 => 55.7,
-            2 => 28.2,
-            3 => 58.066667,
-        ],
-    ],
-    'LY' => [
-        'iso2'          => 'LY',
-        'iso3'          => 'LBY',
-        'numeric'       => '434',
-        'name'          => 'Libya',
-        'official_name' => 'State of Libya',
-        'native_name'   => '‏ليبيا',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Northern Africa',
-        'currencies'    => [
-            0 => 'LYD',
-        ],
-        'languages' => [
-            0 => 'ara',
-        ],
-        'calling_codes' => [
-            0 => '218',
-        ],
-        'tld'       => '.ly',
-        'latitude'  => 27.23609733581543,
-        'longitude' => 18.043556213378906,
-        'bounds'    => [
-            0 => 5.0,
-            1 => 20.8,
-            2 => 25.5,
-            3 => 33.15,
-        ],
-    ],
-    'MA' => [
-        'iso2'          => 'MA',
-        'iso3'          => 'MAR',
-        'numeric'       => '504',
-        'name'          => 'Morocco',
-        'official_name' => 'Kingdom of Morocco',
-        'native_name'   => 'المغرب',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Northern Africa',
-        'currencies'    => [
-            0 => 'MAD',
-        ],
-        'languages' => [
-            0 => 'ara',
-            1 => 'ber',
-        ],
-        'calling_codes' => [
-            0 => '212',
-        ],
-        'tld'       => '.ma',
-        'latitude'  => 29.14059066772461,
-        'longitude' => -8.953388214111328,
-        'bounds'    => [
-            0 => -13.1,
-            1 => 5.51,
-            2 => 2.0,
-            3 => 36.21,
-        ],
-    ],
-    'MC' => [
-        'iso2'          => 'MC',
-        'iso3'          => 'MCO',
-        'numeric'       => '492',
-        'name'          => 'Monaco',
-        'official_name' => 'Principality of Monaco',
-        'native_name'   => 'Monaco',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Western Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '377',
-        ],
-        'tld'       => '.mc',
-        'latitude'  => 43.738929748535156,
-        'longitude' => 7.425483226776123,
-        'bounds'    => [
-            0 => 7.4,
-            1 => 43.716667,
-            2 => 7.439444,
-            3 => 43.745833,
-        ],
-    ],
-    'MD' => [
-        'iso2'          => 'MD',
-        'iso3'          => 'MDA',
-        'numeric'       => '498',
-        'name'          => 'Moldova',
-        'official_name' => 'Republic of Moldova',
-        'native_name'   => 'Moldova',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Eastern Europe',
-        'currencies'    => [
-            0 => 'MDL',
-        ],
-        'languages' => [
-            0 => 'ron',
-        ],
-        'calling_codes' => [
-            0 => '373',
-        ],
-        'tld'       => '.md',
-        'latitude'  => 47.203704833984375,
-        'longitude' => 28.46834373474121,
-        'bounds'    => [
-            0 => 26.672222,
-            1 => 45.481667,
-            2 => 30.096111,
-            3 => 48.467222,
-        ],
-    ],
-    'ME' => [
-        'iso2'          => 'ME',
-        'iso3'          => 'MNE',
-        'numeric'       => '499',
-        'name'          => 'Montenegro',
-        'official_name' => 'Montenegro',
-        'native_name'   => 'Црна Гора',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Southern Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'srp',
-        ],
-        'calling_codes' => [
-            0 => '382',
-        ],
-        'tld'       => '.me',
-        'latitude'  => 42.752803802490234,
-        'longitude' => 19.237918853759766,
-        'bounds'    => [
-            0 => 18.438056,
-            1 => 41.864167,
-            2 => 20.3425,
-            3 => 43.547778,
-        ],
-    ],
-    'MF' => [
-        'iso2'          => 'MF',
-        'iso3'          => 'MAF',
-        'numeric'       => '663',
-        'name'          => 'Saint Martin',
-        'official_name' => 'Saint Martin',
-        'native_name'   => 'Saint-Martin',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '590',
-        ],
-        'tld'       => '.fr',
-        'latitude'  => 18.042224884033203,
-        'longitude' => -63.06623458862305,
-        'bounds'    => [
-            0 => -63.153326,
-            1 => 18.0465757,
-            2 => -62.9703926,
-            3 => 18.1251338,
-        ],
-    ],
-    'MG' => [
-        'iso2'          => 'MG',
-        'iso3'          => 'MDG',
-        'numeric'       => '450',
-        'name'          => 'Madagascar',
-        'official_name' => 'Republic of Madagascar',
-        'native_name'   => 'Madagascar',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Eastern Africa',
-        'currencies'    => [
-            0 => 'MGA',
-        ],
-        'languages' => [
-            0 => 'fra',
-            1 => 'mlg',
-        ],
-        'calling_codes' => [
-            0 => '261',
-        ],
-        'tld'       => '.mg',
-        'latitude'  => -19.27239418029785,
-        'longitude' => 46.69843292236328,
-        'bounds'    => [
-            0 => 43.183333,
-            1 => -25.6,
-            2 => 50.483333,
-            3 => -11.95,
-        ],
-    ],
-    'MH' => [
-        'iso2'          => 'MH',
-        'iso3'          => 'MHL',
-        'numeric'       => '584',
-        'name'          => 'Marshall Islands',
-        'official_name' => 'Republic of the Marshall Islands',
-        'native_name'   => 'Marshall Islands',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Micronesia',
-        'currencies'    => [
-            0 => 'USD',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'mah',
-        ],
-        'calling_codes' => [
-            0 => '692',
-        ],
-        'tld'       => '.mh',
-        'latitude'  => 7.286207675933838,
-        'longitude' => 168.75140380859375,
-        'bounds'    => [
-            0 => 160.8,
-            1 => 4.566667,
-            2 => 172.8,
-            3 => 19.316667,
-        ],
-    ],
-    'MK' => [
-        'iso2'          => 'MK',
-        'iso3'          => 'MKD',
-        'numeric'       => '807',
-        'name'          => 'Macedonia',
-        'official_name' => 'Republic of Macedonia',
-        'native_name'   => 'Македонија',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Southern Europe',
-        'currencies'    => [
-            0 => 'MKD',
-        ],
-        'languages' => [
-            0 => 'mkd',
-        ],
-        'calling_codes' => [
-            0 => '389',
-        ],
-        'tld'       => '.mk',
-        'latitude'  => 41.60045623779297,
-        'longitude' => 21.700895309448242,
-        'bounds'    => [
-            0 => 20.459167,
-            1 => 40.866667,
-            2 => 23.033333,
-            3 => 42.373056,
-        ],
-    ],
-    'ML' => [
-        'iso2'          => 'ML',
-        'iso3'          => 'MLI',
-        'numeric'       => '466',
-        'name'          => 'Mali',
-        'official_name' => 'Republic of Mali',
-        'native_name'   => 'Mali',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Western Africa',
-        'currencies'    => [
-            0 => 'XOF',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '223',
-        ],
-        'tld'       => '.ml',
-        'latitude'  => 17.35776710510254,
-        'longitude' => -3.5273818969726562,
-        'bounds'    => [
-            0 => -12.55,
-            1 => 10.15,
-            2 => 13.0,
-            3 => 26.0,
-        ],
-    ],
-    'MM' => [
-        'iso2'          => 'MM',
-        'iso3'          => 'MMR',
-        'numeric'       => '104',
-        'name'          => 'Myanmar',
-        'official_name' => 'Republic of the Union of Myanmar',
-        'native_name'   => 'မြန်မာ',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'South-Eastern Asia',
-        'currencies'    => [
-            0 => 'MMK',
-        ],
-        'languages' => [
-            0 => 'mya',
-        ],
-        'calling_codes' => [
-            0 => '95',
-        ],
-        'tld'       => '.mm',
-        'latitude'  => 20.330142974853516,
-        'longitude' => 96.52182006835938,
-        'bounds'    => [
-            0 => 92.190833,
-            1 => 6.0,
-            2 => 102.0,
-            3 => 28.35,
-        ],
-    ],
-    'MN' => [
-        'iso2'          => 'MN',
-        'iso3'          => 'MNG',
-        'numeric'       => '496',
-        'name'          => 'Mongolia',
-        'official_name' => 'Mongolia',
-        'native_name'   => 'Монгол улс',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Eastern Asia',
-        'currencies'    => [
-            0 => 'MNT',
-        ],
-        'languages' => [
-            0 => 'mon',
-        ],
-        'calling_codes' => [
-            0 => '976',
-        ],
-        'tld'       => '.mn',
-        'latitude'  => 46.83647918701172,
-        'longitude' => 103.06689453125,
-        'bounds'    => [
-            0 => 87.783333,
-            1 => 41.55,
-            2 => 119.916667,
-            3 => 52.1,
-        ],
-    ],
-    'MO' => [
-        'iso2'          => 'MO',
-        'iso3'          => 'MAC',
-        'numeric'       => '446',
-        'name'          => 'Macau',
-        'official_name' => 'Macao Special Administrative Region of the People\'s Republic of China',
-        'native_name'   => 'Macau',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Eastern Asia',
-        'currencies'    => [
-            0 => 'MOP',
-        ],
-        'languages' => [
-            0 => 'por',
-            1 => 'zho',
-        ],
-        'calling_codes' => [
-            0 => '853',
-        ],
-        'tld'       => '.mo',
-        'latitude'  => 22.140748977661133,
-        'longitude' => 113.56034088134766,
-        'bounds'    => [
-            0 => 113.531389,
-            1 => 22.1125,
-            2 => 113.592222,
-            3 => 22.216389,
-        ],
-    ],
-    'MP' => [
-        'iso2'          => 'MP',
-        'iso3'          => 'MNP',
-        'numeric'       => '580',
-        'name'          => 'Northern Mariana Islands',
-        'official_name' => 'Commonwealth of the Northern Mariana Islands',
-        'native_name'   => 'Northern Mariana Islands',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Micronesia',
-        'currencies'    => [
-            0 => 'USD',
-        ],
-        'languages' => [
-            0 => 'cal',
-            1 => 'cha',
-            2 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '1670',
-        ],
-        'tld'       => '.mp',
-        'latitude'  => 15.262779235839844,
-        'longitude' => 145.8045654296875,
-        'bounds'    => [
-            0 => 144.886365,
-            1 => 4.1103823,
-            2 => 146.0646485,
-            3 => 20.5534826,
-        ],
-    ],
-    'MQ' => [
-        'iso2'          => 'MQ',
-        'iso3'          => 'MTQ',
-        'numeric'       => '474',
-        'name'          => 'Martinique',
-        'official_name' => 'Martinique',
-        'native_name'   => 'Martinique',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '596',
-        ],
-        'tld'       => '.mq',
-        'latitude'  => 14.642807960510254,
-        'longitude' => -60.97755432128906,
-        'bounds'    => [
-            0 => -61.966667,
-            1 => 14.383333,
-            2 => -60.816667,
-            3 => 14.866667,
-        ],
-    ],
-    'MR' => [
-        'iso2'          => 'MR',
-        'iso3'          => 'MRT',
-        'numeric'       => '478',
-        'name'          => 'Mauritania',
-        'official_name' => 'Islamic Republic of Mauritania',
-        'native_name'   => 'موريتانيا',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Western Africa',
-        'currencies'    => [
-            0 => 'MRO',
-        ],
-        'languages' => [
-            0 => 'ara',
-        ],
-        'calling_codes' => [
-            0 => '222',
-        ],
-        'tld'       => '.mr',
-        'latitude'  => 20.258995056152344,
-        'longitude' => -10.364437103271484,
-        'bounds'    => [
-            0 => -17.079444,
-            1 => 14.7382733887,
-            2 => 13.0,
-            3 => 26.9,
-        ],
-    ],
-    'MS' => [
-        'iso2'          => 'MS',
-        'iso3'          => 'MSR',
-        'numeric'       => '500',
-        'name'          => 'Montserrat',
-        'official_name' => 'Montserrat',
-        'native_name'   => 'Montserrat',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'XCD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '1664',
-        ],
-        'tld'       => '.ms',
-        'latitude'  => 16.735998153686523,
-        'longitude' => -62.188819885253906,
-        'bounds'    => [
-            0 => -62.233333,
-            1 => 16.666667,
-            2 => -62.15,
-            3 => 16.816667,
-        ],
-    ],
-    'MT' => [
-        'iso2'          => 'MT',
-        'iso3'          => 'MLT',
-        'numeric'       => '470',
-        'name'          => 'Malta',
-        'official_name' => 'Republic of Malta',
-        'native_name'   => 'Malta',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Southern Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'mlt',
-        ],
-        'calling_codes' => [
-            0 => '356',
-        ],
-        'tld'       => '.mt',
-        'latitude'  => 35.93336486816406,
-        'longitude' => 14.381033897399902,
-        'bounds'    => [
-            0 => 14.185556,
-            1 => 35.783889,
-            2 => 14.575,
-            3 => 36.081944,
-        ],
-    ],
-    'MU' => [
-        'iso2'          => 'MU',
-        'iso3'          => 'MUS',
-        'numeric'       => '480',
-        'name'          => 'Mauritius',
-        'official_name' => 'Republic of Mauritius',
-        'native_name'   => 'Mauritius',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Eastern Africa',
-        'currencies'    => [
-            0 => 'MUR',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'fra',
-            2 => 'mfe',
-        ],
-        'calling_codes' => [
-            0 => '230',
-        ],
-        'tld'       => '.mu',
-        'latitude'  => -20.220409393310547,
-        'longitude' => 57.589378356933594,
-        'bounds'    => [
-            0 => 56.6,
-            1 => -20.516667,
-            2 => 72.466667,
-            3 => -5.25,
-        ],
-    ],
-    'MV' => [
-        'iso2'          => 'MV',
-        'iso3'          => 'MDV',
-        'numeric'       => '462',
-        'name'          => 'Maldives',
-        'official_name' => 'Republic of the Maldives',
-        'native_name'   => 'ދިވެހިރާއްޖޭގެ',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Southern Asia',
-        'currencies'    => [
-            0 => 'MVR',
-        ],
-        'languages' => [
-            0 => 'div',
-        ],
-        'calling_codes' => [
-            0 => '960',
-        ],
-        'tld'       => '.mv',
-        'latitude'  => 4.185884952545166,
-        'longitude' => 73.53071594238281,
-        'bounds'    => [
-            0 => 72.583333,
-            1 => -0.7,
-            2 => 73.7,
-            3 => 7.1,
-        ],
-    ],
-    'MW' => [
-        'iso2'          => 'MW',
-        'iso3'          => 'MWI',
-        'numeric'       => '454',
-        'name'          => 'Malawi',
-        'official_name' => 'Republic of Malawi',
-        'native_name'   => 'Malawi',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Eastern Africa',
-        'currencies'    => [
-            0 => 'MWK',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'nya',
-        ],
-        'calling_codes' => [
-            0 => '265',
-        ],
-        'tld'       => '.mw',
-        'latitude'  => -13.523577690124512,
-        'longitude' => 33.83546447753906,
-        'bounds'    => [
-            0 => 32.716667,
-            1 => -17.15,
-            2 => 37.0,
-            3 => -5.0,
-        ],
-    ],
-    'MX' => [
-        'iso2'          => 'MX',
-        'iso3'          => 'MEX',
-        'numeric'       => '484',
-        'name'          => 'Mexico',
-        'official_name' => 'United Mexican States',
-        'native_name'   => 'México',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'North America',
-        'currencies'    => [
-            0 => 'MXN',
-        ],
-        'languages' => [
-            0 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '52',
-        ],
-        'tld'       => '.mx',
-        'latitude'  => 23.909093856811523,
-        'longitude' => -102.6333999633789,
-        'bounds'    => [
-            0 => -119.921667,
-            1 => 14.55,
-            2 => -86.716667,
-            3 => 32.983333,
-        ],
-    ],
-    'MY' => [
-        'iso2'          => 'MY',
-        'iso3'          => 'MYS',
-        'numeric'       => '458',
-        'name'          => 'Malaysia',
-        'official_name' => 'Malaysia',
-        'native_name'   => 'Malaysia',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'South-Eastern Asia',
-        'currencies'    => [
-            0 => 'MYR',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'msa',
-        ],
-        'calling_codes' => [
-            0 => '60',
-        ],
-        'tld'       => '.my',
-        'latitude'  => 2.5490005016326904,
-        'longitude' => 102.96261596679688,
-        'bounds'    => [
-            0 => 99.641277,
-            1 => 0.85,
-            2 => 120.0,
-            3 => 7.383333,
-        ],
-    ],
-    'MZ' => [
-        'iso2'          => 'MZ',
-        'iso3'          => 'MOZ',
-        'numeric'       => '508',
-        'name'          => 'Mozambique',
-        'official_name' => 'Republic of Mozambique',
-        'native_name'   => 'Moçambique',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Eastern Africa',
-        'currencies'    => [
-            0 => 'MZN',
-        ],
-        'languages' => [
-            0 => 'por',
-        ],
-        'calling_codes' => [
-            0 => '258',
-        ],
-        'tld'       => '.mz',
-        'latitude'  => -17.555864334106445,
-        'longitude' => 35.955692291259766,
-        'bounds'    => [
-            0 => 30.231389,
-            1 => -26.857222,
-            2 => 40.845278,
-            3 => 15.033333,
-        ],
-    ],
-    'NA' => [
-        'iso2'          => 'NA',
-        'iso3'          => 'NAM',
-        'numeric'       => '516',
-        'name'          => 'Namibia',
-        'official_name' => 'Republic of Namibia',
-        'native_name'   => 'Namibië',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Southern Africa',
-        'currencies'    => [
-            0 => 'NAD',
-        ],
-        'languages' => [
-            0 => 'afr',
-            1 => 'deu',
-            2 => 'eng',
-            3 => 'her',
-            4 => 'hgm',
-            5 => 'kwn',
-            6 => 'loz',
-            7 => 'ndo',
-            8 => 'tsn',
-        ],
-        'calling_codes' => [
-            0 => '264',
-        ],
-        'tld'       => '.na',
-        'latitude'  => -22.150699615478516,
-        'longitude' => 17.177526473999023,
-        'bounds'    => [
-            0 => 12.016667,
-            1 => -28.933333,
-            2 => 25.25,
-            3 => -16.983333,
-        ],
-    ],
-    'NC' => [
-        'iso2'          => 'NC',
-        'iso3'          => 'NCL',
-        'numeric'       => '540',
-        'name'          => 'New Caledonia',
-        'official_name' => 'New Caledonia',
-        'native_name'   => 'Nouvelle-Calédonie',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Melanesia',
-        'currencies'    => [
-            0 => 'XPF',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '687',
-        ],
-        'tld'       => '.nc',
-        'latitude'  => -21.31782341003418,
-        'longitude' => 165.298583984375,
-        'bounds'    => [
-            0 => 158.246667,
-            1 => -22.783333,
-            2 => 172.05,
-            3 => -18.016667,
-        ],
-    ],
-    'NE' => [
-        'iso2'          => 'NE',
-        'iso3'          => 'NER',
-        'numeric'       => '562',
-        'name'          => 'Niger',
-        'official_name' => 'Republic of Niger',
-        'native_name'   => 'Niger',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Western Africa',
-        'currencies'    => [
-            0 => 'XOF',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '227',
-        ],
-        'tld'       => '.ne',
-        'latitude'  => 17.424074172973633,
-        'longitude' => 9.400633811950684,
-        'bounds'    => [
-            0 => 0.233333,
-            1 => 11.716667,
-            2 => 16.0,
-            3 => 26.0,
-        ],
-    ],
-    'NF' => [
-        'iso2'          => 'NF',
-        'iso3'          => 'NFK',
-        'numeric'       => '574',
-        'name'          => 'Norfolk Island',
-        'official_name' => 'Territory of Norfolk Island',
-        'native_name'   => 'Norfolk Island',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Australia and New Zealand',
-        'currencies'    => [
-            0 => 'AUD',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'pih',
-        ],
-        'calling_codes' => [
-            0 => '672',
-        ],
-        'tld'       => '.nf',
-        'latitude'  => -29.036962509155273,
-        'longitude' => 167.95523071289062,
-        'bounds'    => [
-            0 => 167.916219,
-            1 => -29.136588,
-            2 => 167.996927,
-            3 => -28.995388,
-        ],
-    ],
-    'NG' => [
-        'iso2'          => 'NG',
-        'iso3'          => 'NGA',
-        'numeric'       => '566',
-        'name'          => 'Nigeria',
-        'official_name' => 'Federal Republic of Nigeria',
-        'native_name'   => 'Nigeria',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Western Africa',
-        'currencies'    => [
-            0 => 'NGN',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '234',
-        ],
-        'tld'       => '.ng',
-        'latitude'  => 9.559505462646484,
-        'longitude' => 8.077880859375,
-        'bounds'    => [
-            0 => 2.716667,
-            1 => 4.266667,
-            2 => 14.65,
-            3 => 13.866667,
-        ],
-    ],
-    'NI' => [
-        'iso2'          => 'NI',
-        'iso3'          => 'NIC',
-        'numeric'       => '558',
-        'name'          => 'Nicaragua',
-        'official_name' => 'Republic of Nicaragua',
-        'native_name'   => 'Nicaragua',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Central America',
-        'currencies'    => [
-            0 => 'NIO',
-        ],
-        'languages' => [
-            0 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '505',
-        ],
-        'tld'       => '.ni',
-        'latitude'  => 12.903773307800293,
-        'longitude' => -84.92182159423828,
-        'bounds'    => [
-            0 => -87.684167,
-            1 => 10.716667,
-            2 => -82.566667,
-            3 => 15.0,
-        ],
-    ],
-    'NL' => [
-        'iso2'          => 'NL',
-        'iso3'          => 'NLD',
-        'numeric'       => '528',
-        'name'          => 'Netherlands',
-        'official_name' => 'Netherlands',
-        'native_name'   => 'Nederland',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Western Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'nld',
-        ],
-        'calling_codes' => [
-            0 => '31',
-        ],
-        'tld'       => '.nl',
-        'latitude'  => 52.34225845336914,
-        'longitude' => 5.5281572341918945,
-        'bounds'    => [
-            0 => 3.133333,
-            1 => 50.75,
-            2 => 7.2,
-            3 => 53.583333,
-        ],
-    ],
-    'NO' => [
-        'iso2'          => 'NO',
-        'iso3'          => 'NOR',
-        'numeric'       => '578',
-        'name'          => 'Norway',
-        'official_name' => 'Kingdom of Norway',
-        'native_name'   => 'Noreg',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Northern Europe',
-        'currencies'    => [
-            0 => 'NOK',
-        ],
-        'languages' => [
-            0 => 'nno',
-            1 => 'nob',
-            2 => 'smi',
-        ],
-        'calling_codes' => [
-            0 => '47',
-        ],
-        'tld'       => '.no',
-        'latitude'  => 66.76667022705078,
-        'longitude' => 14.899925231933594,
-        'bounds'    => [
-            0 => 3.033333,
-            1 => 56.15,
-            2 => 31.166667,
-            3 => 71.181944,
-        ],
-    ],
-    'NP' => [
-        'iso2'          => 'NP',
-        'iso3'          => 'NPL',
-        'numeric'       => '524',
-        'name'          => 'Nepal',
-        'official_name' => 'Federal Democratic Republic of Nepal',
-        'native_name'   => 'नपल',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Southern Asia',
-        'currencies'    => [
-            0 => 'NPR',
-        ],
-        'languages' => [
-            0 => 'nep',
-        ],
-        'calling_codes' => [
-            0 => '977',
-        ],
-        'tld'       => '.np',
-        'latitude'  => 28.259138107299805,
-        'longitude' => 83.94416046142578,
-        'bounds'    => [
-            0 => 80.0,
-            1 => 26.45,
-            2 => 88.183333,
-            3 => 30.45,
-        ],
-    ],
-    'NR' => [
-        'iso2'          => 'NR',
-        'iso3'          => 'NRU',
-        'numeric'       => '520',
-        'name'          => 'Nauru',
-        'official_name' => 'Republic of Nauru',
-        'native_name'   => 'Nauru',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Micronesia',
-        'currencies'    => [
-            0 => 'AUD',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'nau',
-        ],
-        'calling_codes' => [
-            0 => '674',
-        ],
-        'tld'       => '.nr',
-        'latitude'  => -0.5316064953804016,
-        'longitude' => 166.9364013671875,
-        'bounds'    => [
-            0 => 166.916667,
-            1 => -0.55,
-            2 => 166.95,
-            3 => -0.5,
-        ],
-    ],
-    'NU' => [
-        'iso2'          => 'NU',
-        'iso3'          => 'NIU',
-        'numeric'       => '570',
-        'name'          => 'Niue',
-        'official_name' => 'Niue',
-        'native_name'   => 'Niue',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Polynesia',
-        'currencies'    => [
-            0 => 'NZD',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'niu',
-        ],
-        'calling_codes' => [
-            0 => '683',
-        ],
-        'tld'       => '.nu',
-        'latitude'  => -19.03806495666504,
-        'longitude' => -169.8302459716797,
-        'bounds'    => [
-            0 => -169.916667,
-            1 => -19.1,
-            2 => -169.783333,
-            3 => -18.933333,
-        ],
-    ],
-    'NZ' => [
-        'iso2'          => 'NZ',
-        'iso3'          => 'NZL',
-        'numeric'       => '554',
-        'name'          => 'New Zealand',
-        'official_name' => 'New Zealand',
-        'native_name'   => 'New Zealand',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Australia and New Zealand',
-        'currencies'    => [
-            0 => 'NZD',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'mri',
-            2 => 'nzs',
-        ],
-        'calling_codes' => [
-            0 => '64',
-        ],
-        'tld'       => '.nz',
-        'latitude'  => -44.05629348754883,
-        'longitude' => 170.35415649414062,
-        'bounds'    => [
-            0 => 179.066667,
-            1 => -52.616667,
-            2 => -178.9,
-            3 => -29.216667,
-        ],
-    ],
-    'OM' => [
-        'iso2'          => 'OM',
-        'iso3'          => 'OMN',
-        'numeric'       => '512',
-        'name'          => 'Oman',
-        'official_name' => 'Sultanate of Oman',
-        'native_name'   => 'عمان',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Western Asia',
-        'currencies'    => [
-            0 => 'OMR',
-        ],
-        'languages' => [
-            0 => 'ara',
-        ],
-        'calling_codes' => [
-            0 => '968',
-        ],
-        'tld'       => '.om',
-        'latitude'  => 20.566621780395508,
-        'longitude' => 56.157962799072266,
-        'bounds'    => [
-            0 => 45.0,
-            1 => 16.633333,
-            2 => 59.838056,
-            3 => 26.505,
-        ],
-    ],
-    'PA' => [
-        'iso2'          => 'PA',
-        'iso3'          => 'PAN',
-        'numeric'       => '591',
-        'name'          => 'Panama',
-        'official_name' => 'Republic of Panama',
-        'native_name'   => 'Panamá',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Central America',
-        'currencies'    => [
-            0 => 'PAB',
-        ],
-        'languages' => [
-            0 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '507',
-        ],
-        'tld'       => '.pa',
-        'latitude'  => 8.646247863769531,
-        'longitude' => -80.50607299804688,
-        'bounds'    => [
-            0 => -82.95,
-            1 => 7.213333,
-            2 => -77.283333,
-            3 => 9.65,
-        ],
-    ],
-    'PE' => [
-        'iso2'          => 'PE',
-        'iso3'          => 'PER',
-        'numeric'       => '604',
-        'name'          => 'Peru',
-        'official_name' => 'Republic of Peru',
-        'native_name'   => 'Piruw',
-        'continent'     => 'SA',
-        'region'        => 'Americas',
-        'subregion'     => 'South America',
-        'currencies'    => [
-            0 => 'PEN',
-        ],
-        'languages' => [
-            0 => 'aym',
-            1 => 'que',
-            2 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '51',
-        ],
-        'tld'       => '.pe',
-        'latitude'  => -9.212532997131348,
-        'longitude' => -74.422119140625,
-        'bounds'    => [
-            0 => -81.358333,
-            1 => -18.333333,
-            2 => -68.833333,
-            3 => 4.626667,
-        ],
-    ],
-    'PF' => [
-        'iso2'          => 'PF',
-        'iso3'          => 'PYF',
-        'numeric'       => '258',
-        'name'          => 'French Polynesia',
-        'official_name' => 'French Polynesia',
-        'native_name'   => 'Polynésie française',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Polynesia',
-        'currencies'    => [
-            0 => 'XPF',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '689',
-        ],
-        'tld'       => '.pf',
-        'latitude'  => -17.648122787475586,
-        'longitude' => -149.4647216796875,
-        'bounds'    => [
-            0 => 180.0,
-            1 => -27.916667,
-            2 => -179.8,
-            3 => 16.633333,
-        ],
-    ],
-    'PG' => [
-        'iso2'          => 'PG',
-        'iso3'          => 'PNG',
-        'numeric'       => '598',
-        'name'          => 'Papua New Guinea',
-        'official_name' => 'Independent State of Papua New Guinea',
-        'native_name'   => 'Papua New Guinea',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Melanesia',
-        'currencies'    => [
-            0 => 'PGK',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'hmo',
-            2 => 'tpi',
-        ],
-        'calling_codes' => [
-            0 => '675',
-        ],
-        'tld'       => '.pg',
-        'latitude'  => -6.889159679412842,
-        'longitude' => 146.21444702148438,
-        'bounds'    => [
-            0 => 120.0,
-            1 => -11.65,
-            2 => 159.483333,
-            3 => -0.733333,
-        ],
-    ],
-    'PH' => [
-        'iso2'          => 'PH',
-        'iso3'          => 'PHL',
-        'numeric'       => '608',
-        'name'          => 'Philippines',
-        'official_name' => 'Republic of the Philippines',
-        'native_name'   => 'Philippines',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'South-Eastern Asia',
-        'currencies'    => [
-            0 => 'PHP',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'fil',
-        ],
-        'calling_codes' => [
-            0 => '63',
-        ],
-        'tld'       => '.ph',
-        'latitude'  => 11.112666130065918,
-        'longitude' => 122.50947570800781,
-        'bounds'    => [
-            0 => 116.65,
-            1 => 4.588889,
-            2 => 126.604444,
-            3 => 21.113056,
-        ],
-    ],
-    'PK' => [
-        'iso2'          => 'PK',
-        'iso3'          => 'PAK',
-        'numeric'       => '586',
-        'name'          => 'Pakistan',
-        'official_name' => 'Islamic Republic of Pakistan',
-        'native_name'   => 'Pakistan',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Southern Asia',
-        'currencies'    => [
-            0 => 'PKR',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'urd',
-        ],
-        'calling_codes' => [
-            0 => '92',
-        ],
-        'tld'       => '.pk',
-        'latitude'  => 29.923219680786133,
-        'longitude' => 69.35774230957031,
-        'bounds'    => [
-            0 => 60.866667,
-            1 => 23.966667,
-            2 => 77.800014,
-            3 => 37.083710704,
-        ],
-    ],
-    'PL' => [
-        'iso2'          => 'PL',
-        'iso3'          => 'POL',
-        'numeric'       => '616',
-        'name'          => 'Poland',
-        'official_name' => 'Republic of Poland',
-        'native_name'   => 'Polska',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Eastern Europe',
-        'currencies'    => [
-            0 => 'PLN',
-        ],
-        'languages' => [
-            0 => 'pol',
-        ],
-        'calling_codes' => [
-            0 => '48',
-        ],
-        'tld'       => '.pl',
-        'latitude'  => 52.147850036621094,
-        'longitude' => 19.37775993347168,
-        'bounds'    => [
-            0 => 14.0,
-            1 => 45.5,
-            2 => 26.5,
-            3 => 54.833333,
-        ],
-    ],
-    'PM' => [
-        'iso2'          => 'PM',
-        'iso3'          => 'SPM',
-        'numeric'       => '666',
-        'name'          => 'Saint Pierre and Miquelon',
-        'official_name' => 'Saint Pierre and Miquelon',
-        'native_name'   => 'Saint-Pierre-et-Miquelon',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Northern America',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '508',
-        ],
-        'tld'       => '.pm',
-        'latitude'  => 46.90594482421875,
-        'longitude' => -56.336585998535156,
-        'bounds'    => [
-            0 => -56.405278,
-            1 => 46.748333,
-            2 => -56.120556,
-            3 => 47.139722,
-        ],
-    ],
-    'PN' => [
-        'iso2'          => 'PN',
-        'iso3'          => 'PCN',
-        'numeric'       => '612',
-        'name'          => 'Pitcairn Islands',
-        'official_name' => 'Pitcairn Group of Islands',
-        'native_name'   => 'Pitcairn Islands',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Polynesia',
-        'currencies'    => [
-            0 => 'NZD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '64',
-        ],
-        'tld'       => '.pn',
-        'latitude'  => -24.372114181518555,
-        'longitude' => -128.31124877929688,
-        'bounds'    => [
-            0 => -130.733333,
-            1 => -25.066667,
-            2 => -124.783333,
-            3 => -23.916667,
-        ],
-    ],
-    'PR' => [
-        'iso2'          => 'PR',
-        'iso3'          => 'PRI',
-        'numeric'       => '630',
-        'name'          => 'Puerto Rico',
-        'official_name' => 'Commonwealth of Puerto Rico',
-        'native_name'   => 'Puerto Rico',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'USD',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '1787',
-            1 => '1939',
-        ],
-        'tld'       => '.pr',
-        'latitude'  => 18.2491397857666,
-        'longitude' => -66.62803649902344,
-        'bounds'    => [
-            0 => -67.9427,
-            1 => 17.883,
-            2 => -65.22,
-            3 => 18.5202,
-        ],
-    ],
-    'PS' => [
-        'iso2'          => 'PS',
-        'iso3'          => 'PSE',
-        'numeric'       => '275',
-        'name'          => 'Palestine',
-        'official_name' => 'State of Palestine',
-        'native_name'   => 'فلسطين',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Western Asia',
-        'currencies'    => [
-            0 => 'ILS',
-        ],
-        'languages' => [
-            0 => 'ara',
-        ],
-        'calling_codes' => [
-            0 => '970',
-        ],
-        'tld'       => '.ps',
-        'latitude'  => 31.946392059326172,
-        'longitude' => 35.259735107421875,
-        'bounds'    => [
-            0 => 34.2187639,
-            1 => 31.219691,
-            2 => 35.574052,
-            3 => 32.5521,
-        ],
-    ],
-    'PT' => [
-        'iso2'          => 'PT',
-        'iso3'          => 'PRT',
-        'numeric'       => '620',
-        'name'          => 'Portugal',
-        'official_name' => 'Portuguese Republic',
-        'native_name'   => 'Portugal',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Southern Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'por',
-        ],
-        'calling_codes' => [
-            0 => '351',
-        ],
-        'tld'       => '.pt',
-        'latitude'  => 39.64200973510742,
-        'longitude' => -8.009422302246094,
-        'bounds'    => [
-            0 => -31.266667,
-            1 => 30.033333,
-            2 => -5.0,
-            3 => 42.15,
-        ],
-    ],
-    'PW' => [
-        'iso2'          => 'PW',
-        'iso3'          => 'PLW',
-        'numeric'       => '585',
-        'name'          => 'Palau',
-        'official_name' => 'Republic of Palau',
-        'native_name'   => 'Palau',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Micronesia',
-        'currencies'    => [
-            0 => 'USD',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'pau',
-        ],
-        'calling_codes' => [
-            0 => '680',
-        ],
-        'tld'       => '.pw',
-        'latitude'  => 7.441900730133057,
-        'longitude' => 134.54205322265625,
-        'bounds'    => [
-            0 => 131.175,
-            1 => 2.898333,
-            2 => 134.716389,
-            3 => 8.166667,
-        ],
-    ],
-    'PY' => [
-        'iso2'          => 'PY',
-        'iso3'          => 'PRY',
-        'numeric'       => '600',
-        'name'          => 'Paraguay',
-        'official_name' => 'Republic of Paraguay',
-        'native_name'   => 'Paraguái',
-        'continent'     => 'SA',
-        'region'        => 'Americas',
-        'subregion'     => 'South America',
-        'currencies'    => [
-            0 => 'PYG',
-        ],
-        'languages' => [
-            0 => 'grn',
-            1 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '595',
-        ],
-        'tld'       => '.py',
-        'latitude'  => -23.24028968811035,
-        'longitude' => -58.395172119140625,
-        'bounds'    => [
-            0 => -62.633333,
-            1 => -27.533333,
-            2 => -54.35,
-            3 => -19.333333,
-        ],
-    ],
-    'QA' => [
-        'iso2'          => 'QA',
-        'iso3'          => 'QAT',
-        'numeric'       => '634',
-        'name'          => 'Qatar',
-        'official_name' => 'State of Qatar',
-        'native_name'   => 'قطر',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Western Asia',
-        'currencies'    => [
-            0 => 'QAR',
-        ],
-        'languages' => [
-            0 => 'ara',
-        ],
-        'calling_codes' => [
-            0 => '974',
-        ],
-        'tld'       => '.qa',
-        'latitude'  => 25.413625717163086,
-        'longitude' => 51.2602653503418,
-        'bounds'    => [
-            0 => 50.680556,
-            1 => 24.284722,
-            2 => 52.75,
-            3 => 26.441111,
-        ],
-    ],
-    'RE' => [
-        'iso2'          => 'RE',
-        'iso3'          => 'REU',
-        'numeric'       => '638',
-        'name'          => 'Réunion',
-        'official_name' => 'Réunion Island',
-        'native_name'   => 'La Réunion',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Eastern Africa',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '262',
-        ],
-        'tld'       => '.re',
-        'latitude'  => -21.146299362182617,
-        'longitude' => 55.631248474121094,
-        'bounds'    => [
-            0 => 55.216667,
-            1 => -21.366667,
-            2 => 57.0,
-            3 => -20.0,
-        ],
-    ],
-    'RO' => [
-        'iso2'          => 'RO',
-        'iso3'          => 'ROU',
-        'numeric'       => '642',
-        'name'          => 'Romania',
-        'official_name' => 'Romania',
-        'native_name'   => 'România',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Eastern Europe',
-        'currencies'    => [
-            0 => 'RON',
-        ],
-        'languages' => [
-            0 => 'ron',
-        ],
-        'calling_codes' => [
-            0 => '40',
-        ],
-        'tld'       => '.ro',
-        'latitude'  => 45.83774185180664,
-        'longitude' => 25.005935668945312,
-        'bounds'    => [
-            0 => 19.0,
-            1 => 43.666667,
-            2 => 29.65,
-            3 => 48.25,
-        ],
-    ],
-    'RS' => [
-        'iso2'          => 'RS',
-        'iso3'          => 'SRB',
-        'numeric'       => '688',
-        'name'          => 'Serbia',
-        'official_name' => 'Republic of Serbia',
-        'native_name'   => 'Србија',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Southern Europe',
-        'currencies'    => [
-            0 => 'RSD',
-        ],
-        'languages' => [
-            0 => 'srp',
-        ],
-        'calling_codes' => [
-            0 => '381',
-        ],
-        'tld'       => '.rs',
-        'latitude'  => 44.23297119140625,
-        'longitude' => 20.797958374023438,
-        'bounds'    => [
-            0 => 18.928889,
-            1 => 41.866667,
-            2 => 22.966667,
-            3 => 46.155556,
-        ],
-    ],
-    'RU' => [
-        'iso2'          => 'RU',
-        'iso3'          => 'RUS',
-        'numeric'       => '643',
-        'name'          => 'Russia',
-        'official_name' => 'Russian Federation',
-        'native_name'   => 'Россия',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Eastern Europe',
-        'currencies'    => [
-            0 => 'RUB',
-        ],
-        'languages' => [
-            0 => 'rus',
-        ],
-        'calling_codes' => [
-            0 => '7',
-        ],
-        'tld'       => '.ru',
-        'latitude'  => 63.125186920166016,
-        'longitude' => 103.75398254394531,
-        'bounds'    => [
-            0 => 19.655556,
-            1 => 38.7,
-            2 => 147.172222,
-            3 => 86.216667,
-        ],
-    ],
-    'RW' => [
-        'iso2'          => 'RW',
-        'iso3'          => 'RWA',
-        'numeric'       => '646',
-        'name'          => 'Rwanda',
-        'official_name' => 'Republic of Rwanda',
-        'native_name'   => 'Rwanda',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Eastern Africa',
-        'currencies'    => [
-            0 => 'RWF',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'fra',
-            2 => 'kin',
-        ],
-        'calling_codes' => [
-            0 => '250',
-        ],
-        'tld'       => '.rw',
-        'latitude'  => -1.9999498128890991,
-        'longitude' => 29.926057815551758,
-        'bounds'    => [
-            0 => 28.866667,
-            1 => -2.8,
-            2 => 37.0,
-            3 => 5.0,
-        ],
-    ],
-    'SA' => [
-        'iso2'          => 'SA',
-        'iso3'          => 'SAU',
-        'numeric'       => '682',
-        'name'          => 'Saudi Arabia',
-        'official_name' => 'Kingdom of Saudi Arabia',
-        'native_name'   => 'العربية السعودية',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Western Asia',
-        'currencies'    => [
-            0 => 'SAR',
-        ],
-        'languages' => [
-            0 => 'ara',
-        ],
-        'calling_codes' => [
-            0 => '966',
-        ],
-        'tld'       => '.sa',
-        'latitude'  => 23.994726181030273,
-        'longitude' => 44.4013557434082,
-        'bounds'    => [
-            0 => 34.566667,
-            1 => 5.0,
-            2 => 55.166667,
-            3 => 32.2,
-        ],
-    ],
-    'SB' => [
-        'iso2'          => 'SB',
-        'iso3'          => 'SLB',
-        'numeric'       => '090',
-        'name'          => 'Solomon Islands',
-        'official_name' => 'Solomon Islands',
-        'native_name'   => 'Solomon Islands',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Melanesia',
-        'currencies'    => [
-            0 => 'SBD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '677',
-        ],
-        'tld'       => '.sb',
-        'latitude'  => -9.548112869262695,
-        'longitude' => 160.01930236816406,
-        'bounds'    => [
-            0 => 155.516667,
-            1 => -12.883333,
-            2 => 170.2,
-            3 => -5.166667,
-        ],
-    ],
-    'SC' => [
-        'iso2'          => 'SC',
-        'iso3'          => 'SYC',
-        'numeric'       => '690',
-        'name'          => 'Seychelles',
-        'official_name' => 'Republic of Seychelles',
-        'native_name'   => 'Sesel',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Eastern Africa',
-        'currencies'    => [
-            0 => 'SCR',
-        ],
-        'languages' => [
-            0 => 'crs',
-            1 => 'eng',
-            2 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '248',
-        ],
-        'tld'       => '.sc',
-        'latitude'  => -4.669795036315918,
-        'longitude' => 55.47166061401367,
-        'bounds'    => [
-            0 => 46.216667,
-            1 => -10.216667,
-            2 => 56.266667,
-            3 => -3.716667,
-        ],
-    ],
-    'SD' => [
-        'iso2'          => 'SD',
-        'iso3'          => 'SDN',
-        'numeric'       => '729',
-        'name'          => 'Sudan',
-        'official_name' => 'Republic of the Sudan',
-        'native_name'   => 'السودان',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Northern Africa',
-        'currencies'    => [
-            0 => 'SDG',
-        ],
-        'languages' => [
-            0 => 'ara',
-            1 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '249',
-        ],
-        'tld'       => '.sd',
-        'latitude'  => 16.085784912109375,
-        'longitude' => 30.087390899658203,
-        'bounds'    => [
-            0 => 21.883333,
-            1 => 3.516667,
-            2 => 38.833333,
-            3 => 27.166667,
-        ],
-    ],
-    'SE' => [
-        'iso2'          => 'SE',
-        'iso3'          => 'SWE',
-        'numeric'       => '752',
-        'name'          => 'Sweden',
-        'official_name' => 'Kingdom of Sweden',
-        'native_name'   => 'Sverige',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Northern Europe',
-        'currencies'    => [
-            0 => 'SEK',
-        ],
-        'languages' => [
-            0 => 'swe',
-        ],
-        'calling_codes' => [
-            0 => '46',
-        ],
-        'tld'       => '.se',
-        'latitude'  => 62.67497253417969,
-        'longitude' => 16.798059463500977,
-        'bounds'    => [
-            0 => 10.958333,
-            1 => 46.758333,
-            2 => 25.0,
-            3 => 69.033333,
-        ],
-    ],
-    'SG' => [
-        'iso2'          => 'SG',
-        'iso3'          => 'SGP',
-        'numeric'       => '702',
-        'name'          => 'Singapore',
-        'official_name' => 'Republic of Singapore',
-        'native_name'   => '新加坡',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'South-Eastern Asia',
-        'currencies'    => [
-            0 => 'SGD',
-        ],
-        'languages' => [
-            0 => 'cmn',
-            1 => 'eng',
-            2 => 'msa',
-            3 => 'tam',
-        ],
-        'calling_codes' => [
-            0 => '65',
-        ],
-        'tld'       => '.sg',
-        'latitude'  => 1.3219958543777466,
-        'longitude' => 103.8205337524414,
-        'bounds'    => [
-            0 => 102.0,
-            1 => 1.159444,
-            2 => 104.4075,
-            3 => 4.0,
-        ],
-    ],
-    'SH' => [
-        'iso2'          => 'SH',
-        'iso3'          => 'SHN',
-        'numeric'       => '654',
-        'name'          => 'Saint Helena',
-        'official_name' => 'Saint Helena, Ascension and Tristan da Cunha',
-        'native_name'   => 'Saint Helena',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Western Africa',
-        'currencies'    => [
-            0 => 'SHP',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '290',
-        ],
-        'tld'       => null,
-        'latitude'  => -15.957334518432617,
-        'longitude' => -5.716914176940918,
-        'bounds'    => [
-            0 => -14.416667,
-            1 => -40.4,
-            2 => -5.633333,
-            3 => -7.9,
-        ],
-    ],
-    'SI' => [
-        'iso2'          => 'SI',
-        'iso3'          => 'SVN',
-        'numeric'       => '705',
-        'name'          => 'Slovenia',
-        'official_name' => 'Republic of Slovenia',
-        'native_name'   => 'Slovenija',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Southern Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'slv',
-        ],
-        'calling_codes' => [
-            0 => '386',
-        ],
-        'tld'       => '.si',
-        'latitude'  => 46.1202392578125,
-        'longitude' => 14.820664405822754,
-        'bounds'    => [
-            0 => 13.426667,
-            1 => 45.083333,
-            2 => 17.466667,
-            3 => 46.866667,
-        ],
-    ],
-    'SJ' => [
-        'iso2'          => 'SJ',
-        'iso3'          => 'SJM',
-        'numeric'       => '744',
-        'name'          => 'Svalbard and Jan Mayen',
-        'official_name' => 'Svalbard og Jan Mayen',
-        'native_name'   => 'Svalbard og Jan Mayen',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Northern Europe',
-        'currencies'    => [
-            0 => 'NOK',
-        ],
-        'languages' => [
-            0 => 'nor',
-        ],
-        'calling_codes' => [
-            0 => '4779',
-        ],
-        'tld'       => '.sj',
-        'latitude'  => 71.04893493652344,
-        'longitude' => -8.195747375488281,
-        'bounds'    => [
-            0 => 10.5,
-            1 => 74.35,
-            2 => 32.583333,
-            3 => 80.816667,
-        ],
-    ],
-    'SK' => [
-        'iso2'          => 'SK',
-        'iso3'          => 'SVK',
-        'numeric'       => '703',
-        'name'          => 'Slovakia',
-        'official_name' => 'Slovak Republic',
-        'native_name'   => 'Slovensko',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Eastern Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'slk',
-        ],
-        'calling_codes' => [
-            0 => '421',
-        ],
-        'tld'       => '.sk',
-        'latitude'  => 48.70748519897461,
-        'longitude' => 19.48488998413086,
-        'bounds'    => [
-            0 => 17.0,
-            1 => 45.5,
-            2 => 26.5,
-            3 => 49.6,
-        ],
-    ],
-    'SL' => [
-        'iso2'          => 'SL',
-        'iso3'          => 'SLE',
-        'numeric'       => '694',
-        'name'          => 'Sierra Leone',
-        'official_name' => 'Republic of Sierra Leone',
-        'native_name'   => 'Sierra Leone',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Western Africa',
-        'currencies'    => [
-            0 => 'SLL',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '232',
-        ],
-        'tld'       => '.sl',
-        'latitude'  => 8.521441459655762,
-        'longitude' => -11.843890190124512,
-        'bounds'    => [
-            0 => -13.316667,
-            1 => 5.0,
-            2 => -4.0,
-            3 => 10.0,
-        ],
-    ],
-    'SM' => [
-        'iso2'          => 'SM',
-        'iso3'          => 'SMR',
-        'numeric'       => '674',
-        'name'          => 'San Marino',
-        'official_name' => 'Most Serene Republic of San Marino',
-        'native_name'   => 'San Marino',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Southern Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'ita',
-        ],
-        'calling_codes' => [
-            0 => '378',
-        ],
-        'tld'       => '.sm',
-        'latitude'  => 43.938133239746094,
-        'longitude' => 12.463393211364746,
-        'bounds'    => [
-            0 => 12.416667,
-            1 => 43.908333,
-            2 => 12.5,
-            3 => 43.966667,
-        ],
-    ],
-    'SN' => [
-        'iso2'          => 'SN',
-        'iso3'          => 'SEN',
-        'numeric'       => '686',
-        'name'          => 'Senegal',
-        'official_name' => 'Republic of Senegal',
-        'native_name'   => 'Sénégal',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Western Africa',
-        'currencies'    => [
-            0 => 'XOF',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '221',
-        ],
-        'tld'       => '.sn',
-        'latitude'  => 14.36251163482666,
-        'longitude' => -14.531643867492676,
-        'bounds'    => [
-            0 => -17.682778,
-            1 => 12.336667,
-            2 => -11.3780213874,
-            3 => 16.666667,
-        ],
-    ],
-    'SO' => [
-        'iso2'          => 'SO',
-        'iso3'          => 'SOM',
-        'numeric'       => '706',
-        'name'          => 'Somalia',
-        'official_name' => 'Federal Republic of Somalia',
-        'native_name'   => 'الصومال‎‎',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Eastern Africa',
-        'currencies'    => [
-            0 => 'SOS',
-        ],
-        'languages' => [
-            0 => 'ara',
-            1 => 'som',
-        ],
-        'calling_codes' => [
-            0 => '252',
-        ],
-        'tld'       => '.so',
-        'latitude'  => 5.948267459869385,
-        'longitude' => 47.47360610961914,
-        'bounds'    => [
-            0 => 41.0,
-            1 => -1.6594296959,
-            2 => 51.4,
-            3 => 11.983333,
-        ],
-    ],
-    'SR' => [
-        'iso2'          => 'SR',
-        'iso3'          => 'SUR',
-        'numeric'       => '740',
-        'name'          => 'Suriname',
-        'official_name' => 'Republic of Suriname',
-        'native_name'   => 'Suriname',
-        'continent'     => 'SA',
-        'region'        => 'Americas',
-        'subregion'     => 'South America',
-        'currencies'    => [
-            0 => 'SRD',
-        ],
-        'languages' => [
-            0 => 'nld',
-        ],
-        'calling_codes' => [
-            0 => '597',
-        ],
-        'tld'       => '.sr',
-        'latitude'  => 4.216928958892822,
-        'longitude' => -55.889217376708984,
-        'bounds'    => [
-            0 => -60.0,
-            1 => 2.1,
-            2 => -53.983333,
-            3 => 6.0,
-        ],
-    ],
-    'SS' => [
-        'iso2'          => 'SS',
-        'iso3'          => 'SSD',
-        'numeric'       => '728',
-        'name'          => 'South Sudan',
-        'official_name' => 'Republic of South Sudan',
-        'native_name'   => 'South Sudan',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Middle Africa',
-        'currencies'    => [
-            0 => 'SSP',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '211',
-        ],
-        'tld'       => '.ss',
-        'latitude'  => 7.303858280181885,
-        'longitude' => 30.280752182006836,
-        'bounds'    => [
-            0 => 23.440849,
-            1 => 3.48898,
-            2 => 35.948997,
-            3 => 12.236389,
-        ],
-    ],
-    'ST' => [
-        'iso2'          => 'ST',
-        'iso3'          => 'STP',
-        'numeric'       => '678',
-        'name'          => 'São Tomé and Príncipe',
-        'official_name' => 'Democratic Republic of São Tomé and Príncipe',
-        'native_name'   => 'São Tomé e Príncipe',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Middle Africa',
-        'currencies'    => [
-            0 => 'STD',
-        ],
-        'languages' => [
-            0 => 'por',
-        ],
-        'calling_codes' => [
-            0 => '239',
-        ],
-        'tld'       => '.st',
-        'latitude'  => 0.275555282831192,
-        'longitude' => 6.631628036499023,
-        'bounds'    => [
-            0 => 6.466667,
-            1 => -0.016667,
-            2 => 7.483333,
-            3 => 1.733333,
-        ],
-    ],
-    'SV' => [
-        'iso2'          => 'SV',
-        'iso3'          => 'SLV',
-        'numeric'       => '222',
-        'name'          => 'El Salvador',
-        'official_name' => 'Republic of El Salvador',
-        'native_name'   => 'El Salvador',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Central America',
-        'currencies'    => [
-            0 => 'SVC',
-        ],
-        'languages' => [
-            0 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '503',
-        ],
-        'tld'       => '.sv',
-        'latitude'  => 13.671636581420898,
-        'longitude' => -88.86363220214844,
-        'bounds'    => [
-            0 => -90.116389,
-            1 => 13.158611,
-            2 => -87.657222,
-            3 => 14.433333,
-        ],
-    ],
-    'SX' => [
-        'iso2'          => 'SX',
-        'iso3'          => 'SXM',
-        'numeric'       => '534',
-        'name'          => 'Sint Maarten',
-        'official_name' => 'Sint Maarten',
-        'native_name'   => 'Sint Maarten',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'ANG',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'fra',
-            2 => 'nld',
-        ],
-        'calling_codes' => [
-            0 => '1721',
-        ],
-        'tld'       => '.sx',
-        'latitude'  => 18.042224884033203,
-        'longitude' => -63.06623458862305,
-        'bounds'    => [
-            0 => -63.1379781,
-            1 => 18.005267,
-            2 => -62.9982448,
-            3 => 18.0641707,
-        ],
-    ],
-    'SY' => [
-        'iso2'          => 'SY',
-        'iso3'          => 'SYR',
-        'numeric'       => '760',
-        'name'          => 'Syria',
-        'official_name' => 'Syrian Arab Republic',
-        'native_name'   => 'سوريا',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Western Asia',
-        'currencies'    => [
-            0 => 'SYP',
-        ],
-        'languages' => [
-            0 => 'ara',
-        ],
-        'calling_codes' => [
-            0 => '963',
-        ],
-        'tld'       => '.sy',
-        'latitude'  => 35.03312683105469,
-        'longitude' => 38.473472595214844,
-        'bounds'    => [
-            0 => 35.6,
-            1 => 32.0,
-            2 => 42.337778,
-            3 => 37.280278,
-        ],
-    ],
-    'SZ' => [
-        'iso2'          => 'SZ',
-        'iso3'          => 'SWZ',
-        'numeric'       => '748',
-        'name'          => 'Swaziland',
-        'official_name' => 'Kingdom of Swaziland',
-        'native_name'   => 'Swaziland',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Southern Africa',
-        'currencies'    => [
-            0 => 'SZL',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'ssw',
-        ],
-        'calling_codes' => [
-            0 => '268',
-        ],
-        'tld'       => '.sz',
-        'latitude'  => -26.565134048461914,
-        'longitude' => 31.49811363220215,
-        'bounds'    => [
-            0 => 30.783333,
-            1 => -27.316667,
-            2 => 32.133333,
-            3 => -25.783333,
-        ],
-    ],
-    'TC' => [
-        'iso2'          => 'TC',
-        'iso3'          => 'TCA',
-        'numeric'       => '796',
-        'name'          => 'Turks and Caicos Islands',
-        'official_name' => 'Turks and Caicos Islands',
-        'native_name'   => 'Turks and Caicos Islands',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'USD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '1649',
-        ],
-        'tld'       => '.tc',
-        'latitude'  => 21.758726119995117,
-        'longitude' => -71.71514892578125,
-        'bounds'    => [
-            0 => -72.466667,
-            1 => 21.116667,
-            2 => -71.083333,
-            3 => 21.95,
-        ],
-    ],
-    'TD' => [
-        'iso2'          => 'TD',
-        'iso3'          => 'TCD',
-        'numeric'       => '148',
-        'name'          => 'Chad',
-        'official_name' => 'Republic of Chad',
-        'native_name'   => 'تشاد‎',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Middle Africa',
-        'currencies'    => [
-            0 => 'XAF',
-        ],
-        'languages' => [
-            0 => 'ara',
-            1 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '235',
-        ],
-        'tld'       => '.td',
-        'latitude'  => 15.367652893066406,
-        'longitude' => 18.66758155822754,
-        'bounds'    => [
-            0 => 2.0,
-            1 => 7.5,
-            2 => 24.0,
-            3 => 26.0,
-        ],
-    ],
-    'TF' => [
-        'iso2'          => 'TF',
-        'iso3'          => 'ATF',
-        'numeric'       => '260',
-        'name'          => 'French Southern and Antarctic Lands',
-        'official_name' => 'Territory of the French Southern and Antarctic Lands',
-        'native_name'   => 'Terres australes et antarctiques françaises',
-        'continent'     => 'AN',
-        'region'        => null,
-        'subregion'     => null,
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-        ],
-        'tld'       => '.tf',
-        'latitude'  => -49.563865661621094,
-        'longitude' => 69.54277801513672,
-        'bounds'    => [
-            0 => 50.233333,
-            1 => -50.016667,
-            2 => 77.6,
-            3 => -37.783333,
-        ],
-    ],
-    'TG' => [
-        'iso2'          => 'TG',
-        'iso3'          => 'TGO',
-        'numeric'       => '768',
-        'name'          => 'Togo',
-        'official_name' => 'Togolese Republic',
-        'native_name'   => 'Togo',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Western Africa',
-        'currencies'    => [
-            0 => 'XOF',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '228',
-        ],
-        'tld'       => '.tg',
-        'latitude'  => 8.513226509094238,
-        'longitude' => 0.9800975322723389,
-        'bounds'    => [
-            0 => -4.0,
-            1 => 6.131944,
-            2 => 1.816667,
-            3 => 11.103889,
-        ],
-    ],
-    'TH' => [
-        'iso2'          => 'TH',
-        'iso3'          => 'THA',
-        'numeric'       => '764',
-        'name'          => 'Thailand',
-        'official_name' => 'Kingdom of Thailand',
-        'native_name'   => 'ประเทศไทย',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'South-Eastern Asia',
-        'currencies'    => [
-            0 => 'THB',
-        ],
-        'languages' => [
-            0 => 'tha',
-        ],
-        'calling_codes' => [
-            0 => '66',
-        ],
-        'tld'       => '.th',
-        'latitude'  => 14.48458194732666,
-        'longitude' => 100.85191345214844,
-        'bounds'    => [
-            0 => 97.366667,
-            1 => 5.616667,
-            2 => 105.766667,
-            3 => 20.442778,
-        ],
-    ],
-    'TJ' => [
-        'iso2'          => 'TJ',
-        'iso3'          => 'TJK',
-        'numeric'       => '762',
-        'name'          => 'Tajikistan',
-        'official_name' => 'Republic of Tajikistan',
-        'native_name'   => 'Таджикистан',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Central Asia',
-        'currencies'    => [
-            0 => 'TJS',
-        ],
-        'languages' => [
-            0 => 'rus',
-            1 => 'tgk',
-        ],
-        'calling_codes' => [
-            0 => '992',
-        ],
-        'tld'       => '.tj',
-        'latitude'  => 38.879764556884766,
-        'longitude' => 70.89906311035156,
-        'bounds'    => [
-            0 => 67.416667,
-            1 => 36.716667,
-            2 => 75.0,
-            3 => 40.9,
-        ],
-    ],
-    'TK' => [
-        'iso2'          => 'TK',
-        'iso3'          => 'TKL',
-        'numeric'       => '772',
-        'name'          => 'Tokelau',
-        'official_name' => 'Tokelau',
-        'native_name'   => 'Tokelau',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Polynesia',
-        'currencies'    => [
-            0 => 'NZD',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'smo',
-            2 => 'tkl',
-        ],
-        'calling_codes' => [
-            0 => '690',
-        ],
-        'tld'       => '.tk',
-        'latitude'  => -8.979207992553711,
-        'longitude' => -172.2017059326172,
-        'bounds'    => [
-            0 => -172.516667,
-            1 => -9.433333,
-            2 => -171.183333,
-            3 => -8.533333,
-        ],
-    ],
-    'TL' => [
-        'iso2'          => 'TL',
-        'iso3'          => 'TLS',
-        'numeric'       => '626',
-        'name'          => 'Timor-Leste',
-        'official_name' => 'Democratic Republic of Timor-Leste',
-        'native_name'   => 'Timor-Leste',
-        'continent'     => 'OC',
-        'region'        => 'Asia',
-        'subregion'     => 'South-Eastern Asia',
-        'currencies'    => [
-            0 => 'USD',
-        ],
-        'languages' => [
-            0 => 'por',
-            1 => 'tet',
-        ],
-        'calling_codes' => [
-            0 => '670',
-        ],
-        'tld'       => '.tl',
-        'latitude'  => -8.804786682128906,
-        'longitude' => 126.07902526855469,
-        'bounds'    => [
-            0 => 124.085556,
-            1 => -9.469722,
-            2 => 127.336667,
-            3 => -7.597222,
-        ],
-    ],
-    'TM' => [
-        'iso2'          => 'TM',
-        'iso3'          => 'TKM',
-        'numeric'       => '795',
-        'name'          => 'Turkmenistan',
-        'official_name' => 'Turkmenistan',
-        'native_name'   => 'Туркмения',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Central Asia',
-        'currencies'    => [
-            0 => 'TMT',
-        ],
-        'languages' => [
-            0 => 'rus',
-            1 => 'tuk',
-        ],
-        'calling_codes' => [
-            0 => '993',
-        ],
-        'tld'       => '.tm',
-        'latitude'  => 39.2012825012207,
-        'longitude' => 59.082252502441406,
-        'bounds'    => [
-            0 => 52.5,
-            1 => 35.216667,
-            2 => 66.65,
-            3 => 42.566667,
-        ],
-    ],
-    'TN' => [
-        'iso2'          => 'TN',
-        'iso3'          => 'TUN',
-        'numeric'       => '788',
-        'name'          => 'Tunisia',
-        'official_name' => 'Tunisian Republic',
-        'native_name'   => 'تونس',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Northern Africa',
-        'currencies'    => [
-            0 => 'TND',
-        ],
-        'languages' => [
-            0 => 'ara',
-        ],
-        'calling_codes' => [
-            0 => '216',
-        ],
-        'tld'       => '.tn',
-        'latitude'  => 34.33528518676758,
-        'longitude' => 9.245259284973145,
-        'bounds'    => [
-            0 => 7.0,
-            1 => 26.0,
-            2 => 13.0,
-            3 => 37.566667,
-        ],
-    ],
-    'TO' => [
-        'iso2'          => 'TO',
-        'iso3'          => 'TON',
-        'numeric'       => '776',
-        'name'          => 'Tonga',
-        'official_name' => 'Kingdom of Tonga',
-        'native_name'   => 'Tonga',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Polynesia',
-        'currencies'    => [
-            0 => 'TOP',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'ton',
-        ],
-        'calling_codes' => [
-            0 => '676',
-        ],
-        'tld'       => '.to',
-        'latitude'  => -21.147611618041992,
-        'longitude' => -175.25067138671875,
-        'bounds'    => [
-            0 => -176.2,
-            1 => -22.333333,
-            2 => -150.0,
-            3 => -15.566667,
-        ],
-    ],
-    'TR' => [
-        'iso2'          => 'TR',
-        'iso3'          => 'TUR',
-        'numeric'       => '792',
-        'name'          => 'Turkey',
-        'official_name' => 'Republic of Turkey',
-        'native_name'   => 'Türkiye',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Western Asia',
-        'currencies'    => [
-            0 => 'TRY',
-        ],
-        'languages' => [
-            0 => 'tur',
-        ],
-        'calling_codes' => [
-            0 => '90',
-        ],
-        'tld'       => '.tr',
-        'latitude'  => 39.05101013183594,
-        'longitude' => 34.93033981323242,
-        'bounds'    => [
-            0 => 25.0,
-            1 => 35.819444,
-            2 => 44.8,
-            3 => 42.1,
-        ],
-    ],
-    'TT' => [
-        'iso2'          => 'TT',
-        'iso3'          => 'TTO',
-        'numeric'       => '780',
-        'name'          => 'Trinidad and Tobago',
-        'official_name' => 'Republic of Trinidad and Tobago',
-        'native_name'   => 'Trinidad and Tobago',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'TTD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '1868',
-        ],
-        'tld'       => '.tt',
-        'latitude'  => 10.68574047088623,
-        'longitude' => -61.1640625,
-        'bounds'    => [
-            0 => -74.0,
-            1 => 10.033333,
-            2 => -60.5,
-            3 => 20.0,
-        ],
-    ],
-    'TV' => [
-        'iso2'          => 'TV',
-        'iso3'          => 'TUV',
-        'numeric'       => '798',
-        'name'          => 'Tuvalu',
-        'official_name' => 'Tuvalu',
-        'native_name'   => 'Tuvalu',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Polynesia',
-        'currencies'    => [
-            0 => 'AUD',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'tvl',
-        ],
-        'calling_codes' => [
-            0 => '688',
-        ],
-        'tld'       => '.tv',
-        'latitude'  => -7.471305847167969,
-        'longitude' => 178.6740264892578,
-        'bounds'    => [
-            0 => 176.116667,
-            1 => -10.75,
-            2 => 179.883333,
-            3 => -5.65,
-        ],
-    ],
-    'TW' => [
-        'iso2'          => 'TW',
-        'iso3'          => 'TWN',
-        'numeric'       => '158',
-        'name'          => 'Taiwan',
-        'official_name' => 'Republic of China (Taiwan)',
-        'native_name'   => '臺灣',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Eastern Asia',
-        'currencies'    => [
-            0 => 'TWD',
-        ],
-        'languages' => [
-            0 => 'cmn',
-        ],
-        'calling_codes' => [
-            0 => '886',
-        ],
-        'tld'       => '.tw',
-        'latitude'  => 23.685789108276367,
-        'longitude' => 120.89749145507812,
-        'bounds'    => [
-            0 => 118.1152555661,
-            1 => 21.733333,
-            2 => 122.107778,
-            3 => 26.389444,
-        ],
-    ],
-    'TZ' => [
-        'iso2'          => 'TZ',
-        'iso3'          => 'TZA',
-        'numeric'       => '834',
-        'name'          => 'Tanzania',
-        'official_name' => 'United Republic of Tanzania',
-        'native_name'   => 'Tanzania',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Eastern Africa',
-        'currencies'    => [
-            0 => 'TZS',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'swa',
-        ],
-        'calling_codes' => [
-            0 => '255',
-        ],
-        'tld'       => '.tz',
-        'latitude'  => -6.306897163391113,
-        'longitude' => 34.85392761230469,
-        'bounds'    => [
-            0 => 29.583333,
-            1 => -11.7,
-            2 => 40.433333,
-            3 => 0.833333,
-        ],
-    ],
-    'UA' => [
-        'iso2'          => 'UA',
-        'iso3'          => 'UKR',
-        'numeric'       => '804',
-        'name'          => 'Ukraine',
-        'official_name' => 'Ukraine',
-        'native_name'   => 'Україна',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Eastern Europe',
-        'currencies'    => [
-            0 => 'UAH',
-        ],
-        'languages' => [
-            0 => 'ukr',
-        ],
-        'calling_codes' => [
-            0 => '380',
-        ],
-        'tld'       => '.ua',
-        'latitude'  => 48.92656326293945,
-        'longitude' => 31.47578239440918,
-        'bounds'    => [
-            0 => 20.933333,
-            1 => 37.8,
-            2 => 68.85,
-            3 => 63.4,
-        ],
-    ],
-    'UG' => [
-        'iso2'          => 'UG',
-        'iso3'          => 'UGA',
-        'numeric'       => '800',
-        'name'          => 'Uganda',
-        'official_name' => 'Republic of Uganda',
-        'native_name'   => 'Uganda',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Eastern Africa',
-        'currencies'    => [
-            0 => 'UGX',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'swa',
-        ],
-        'calling_codes' => [
-            0 => '256',
-        ],
-        'tld'       => '.ug',
-        'latitude'  => 1.2773280143737793,
-        'longitude' => 32.389984130859375,
-        'bounds'    => [
-            0 => 29.583333,
-            1 => -1.433333,
-            2 => 34.95,
-            3 => 4.166667,
-        ],
-    ],
-    'UM' => [
-        'iso2'          => 'UM',
-        'iso3'          => 'UMI',
-        'numeric'       => '581',
-        'name'          => 'United States Minor Outlying Islands',
-        'official_name' => 'United States Minor Outlying Islands',
-        'native_name'   => 'United States Minor Outlying Islands',
-        'continent'     => 'OC',
-        'region'        => 'Americas',
-        'subregion'     => 'Northern America',
-        'currencies'    => [
-            0 => 'USD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-        ],
-        'tld'       => '.us',
-        'latitude'  => 19.282319,
-        'longitude' => 166.647047,
-        'bounds'    => [
-            0 => 166.5989221,
-            1 => -0.3824678,
-            2 => -159.9849071,
-            3 => 28.3977184,
-        ],
-    ],
-    'US' => [
-        'iso2'          => 'US',
-        'iso3'          => 'USA',
-        'numeric'       => '840',
-        'name'          => 'United States',
-        'official_name' => 'United States of America',
-        'native_name'   => 'United States',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Northern America',
-        'currencies'    => [
-            0 => 'USD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '1',
-        ],
-        'tld'       => '.us',
-        'latitude'  => 39.44325637817383,
-        'longitude' => -98.95733642578125,
-        'bounds'    => [
-            0 => -179.231086,
-            1 => 17.831509,
-            2 => -66.885417,
-            3 => 71.441059,
-        ],
-    ],
-    'UY' => [
-        'iso2'          => 'UY',
-        'iso3'          => 'URY',
-        'numeric'       => '858',
-        'name'          => 'Uruguay',
-        'official_name' => 'Oriental Republic of Uruguay',
-        'native_name'   => 'Uruguay',
-        'continent'     => 'SA',
-        'region'        => 'Americas',
-        'subregion'     => 'South America',
-        'currencies'    => [
-            0 => 'UYU',
-        ],
-        'languages' => [
-            0 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '598',
-        ],
-        'tld'       => '.uy',
-        'latitude'  => -32.96965408325195,
-        'longitude' => -56.055908203125,
-        'bounds'    => [
-            0 => -58.5,
-            1 => -35.033333,
-            2 => -53.266667,
-            3 => -30.183333,
-        ],
-    ],
-    'UZ' => [
-        'iso2'          => 'UZ',
-        'iso3'          => 'UZB',
-        'numeric'       => '860',
-        'name'          => 'Uzbekistan',
-        'official_name' => 'Republic of Uzbekistan',
-        'native_name'   => 'Узбекистан',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Central Asia',
-        'currencies'    => [
-            0 => 'UZS',
-        ],
-        'languages' => [
-            0 => 'rus',
-            1 => 'uzb',
-        ],
-        'calling_codes' => [
-            0 => '998',
-        ],
-        'tld'       => '.uz',
-        'latitude'  => 41.77239227294922,
-        'longitude' => 63.14588928222656,
-        'bounds'    => [
-            0 => 56.083333,
-            1 => 35.266667,
-            2 => 80.383333,
-            3 => 48.583333,
-        ],
-    ],
-    'VA' => [
-        'iso2'          => 'VA',
-        'iso3'          => 'VAT',
-        'numeric'       => '336',
-        'name'          => 'Vatican City',
-        'official_name' => 'Vatican City State',
-        'native_name'   => 'Vaticano',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Southern Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'ita',
-            1 => 'lat',
-        ],
-        'calling_codes' => [
-            0 => '3906698',
-            1 => '379',
-        ],
-        'tld'       => '.va',
-        'latitude'  => 41.90308380126953,
-        'longitude' => 12.452852249145508,
-        'bounds'    => [
-            0 => 12.45,
-            1 => 41.9,
-            2 => 12.45,
-            3 => 41.9,
-        ],
-    ],
-    'VC' => [
-        'iso2'          => 'VC',
-        'iso3'          => 'VCT',
-        'numeric'       => '670',
-        'name'          => 'Saint Vincent and the Grenadines',
-        'official_name' => 'Saint Vincent and the Grenadines',
-        'native_name'   => 'Saint Vincent and the Grenadines',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'XCD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '1784',
-        ],
-        'tld'       => '.vc',
-        'latitude'  => 13.217251777648926,
-        'longitude' => -61.19344711303711,
-        'bounds'    => [
-            0 => -61.433333,
-            1 => 12.533333,
-            2 => -61.116667,
-            3 => 13.366667,
-        ],
-    ],
-    'VE' => [
-        'iso2'          => 'VE',
-        'iso3'          => 'VEN',
-        'numeric'       => '862',
-        'name'          => 'Venezuela',
-        'official_name' => 'Bolivarian Republic of Venezuela',
-        'native_name'   => 'Venezuela',
-        'continent'     => 'SA',
-        'region'        => 'Americas',
-        'subregion'     => 'South America',
-        'currencies'    => [
-            0 => 'VES',
-        ],
-        'languages' => [
-            0 => 'spa',
-        ],
-        'calling_codes' => [
-            0 => '58',
-        ],
-        'tld'       => '.ve',
-        'latitude'  => 7.665388584136963,
-        'longitude' => -66.14541625976562,
-        'bounds'    => [
-            0 => -73.16,
-            1 => 0.766667,
-            2 => -59.966667,
-            3 => 15.7,
-        ],
-    ],
-    'VG' => [
-        'iso2'          => 'VG',
-        'iso3'          => 'VGB',
-        'numeric'       => '092',
-        'name'          => 'British Virgin Islands',
-        'official_name' => 'Virgin Islands',
-        'native_name'   => 'British Virgin Islands',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'USD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '1284',
-        ],
-        'tld'       => '.vg',
-        'latitude'  => 18.443071365356445,
-        'longitude' => -64.57130432128906,
-        'bounds'    => [
-            0 => -64.85,
-            1 => 18.3,
-            2 => -64.266667,
-            3 => 18.766667,
-        ],
-    ],
-    'VI' => [
-        'iso2'          => 'VI',
-        'iso3'          => 'VIR',
-        'numeric'       => '850',
-        'name'          => 'United States Virgin Islands',
-        'official_name' => 'Virgin Islands of the United States',
-        'native_name'   => 'United States Virgin Islands',
-        'continent'     => 'NA',
-        'region'        => 'Americas',
-        'subregion'     => 'Caribbean',
-        'currencies'    => [
-            0 => 'USD',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '1340',
-        ],
-        'tld'       => '.vi',
-        'latitude'  => 17.75262451171875,
-        'longitude' => -64.73542022705078,
-        'bounds'    => [
-            0 => -65.086281,
-            1 => 17.681721,
-            2 => -64.56517,
-            3 => 18.458139,
-        ],
-    ],
-    'VN' => [
-        'iso2'          => 'VN',
-        'iso3'          => 'VNM',
-        'numeric'       => '704',
-        'name'          => 'Vietnam',
-        'official_name' => 'Socialist Republic of Vietnam',
-        'native_name'   => 'Việt Nam',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'South-Eastern Asia',
-        'currencies'    => [
-            0 => 'VND',
-        ],
-        'languages' => [
-            0 => 'vie',
-        ],
-        'calling_codes' => [
-            0 => '84',
-        ],
-        'tld'       => '.vn',
-        'latitude'  => 16.9404296875,
-        'longitude' => 106.8164291381836,
-        'bounds'    => [
-            0 => 102.216667,
-            1 => 8.383333,
-            2 => 109.466667,
-            3 => 23.666667,
-        ],
-    ],
-    'VU' => [
-        'iso2'          => 'VU',
-        'iso3'          => 'VUT',
-        'numeric'       => '548',
-        'name'          => 'Vanuatu',
-        'official_name' => 'Republic of Vanuatu',
-        'native_name'   => 'Vanuatu',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Melanesia',
-        'currencies'    => [
-            0 => 'VUV',
-        ],
-        'languages' => [
-            0 => 'bis',
-            1 => 'eng',
-            2 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '678',
-        ],
-        'tld'       => '.vu',
-        'latitude'  => -16.376684188842773,
-        'longitude' => 167.5625,
-        'bounds'    => [
-            0 => 166.016667,
-            1 => -20.25,
-            2 => 170.216667,
-            3 => -13.066667,
-        ],
-    ],
-    'WF' => [
-        'iso2'          => 'WF',
-        'iso3'          => 'WLF',
-        'numeric'       => '876',
-        'name'          => 'Wallis and Futuna',
-        'official_name' => 'Territory of the Wallis and Futuna Islands',
-        'native_name'   => 'Wallis et Futuna',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Polynesia',
-        'currencies'    => [
-            0 => 'XPF',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '681',
-        ],
-        'tld'       => '.wf',
-        'latitude'  => -13.299612045288086,
-        'longitude' => -176.1701202392578,
-        'bounds'    => [
-            0 => -178.183333,
-            1 => -14.35,
-            2 => -176.083333,
-            3 => -13.183333,
-        ],
-    ],
-    'WS' => [
-        'iso2'          => 'WS',
-        'iso3'          => 'WSM',
-        'numeric'       => '882',
-        'name'          => 'Samoa',
-        'official_name' => 'Independent State of Samoa',
-        'native_name'   => 'Samoa',
-        'continent'     => 'OC',
-        'region'        => 'Oceania',
-        'subregion'     => 'Polynesia',
-        'currencies'    => [
-            0 => 'WST',
-        ],
-        'languages' => [
-            0 => 'eng',
-            1 => 'smo',
-        ],
-        'calling_codes' => [
-            0 => '685',
-        ],
-        'tld'       => '.ws',
-        'latitude'  => -13.668972969055176,
-        'longitude' => -172.322021484375,
-        'bounds'    => [
-            0 => -172.816667,
-            1 => -14.05,
-            2 => -171.0,
-            3 => -13.433333,
-        ],
-    ],
-    'XK' => [
-        'iso2'          => 'XK',
-        'iso3'          => 'UNK',
-        'numeric'       => '',
-        'name'          => 'Kosovo',
-        'official_name' => 'Republic of Kosovo',
-        'native_name'   => 'Kosova',
-        'continent'     => 'EU',
-        'region'        => 'Europe',
-        'subregion'     => 'Eastern Europe',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'sqi',
-            1 => 'srp',
-        ],
-        'calling_codes' => [
-            0 => '383',
-        ],
-        'tld'       => null,
-        'latitude'  => null,
-        'longitude' => null,
-        'bounds'    => [
-        ],
-    ],
-    'YE' => [
-        'iso2'          => 'YE',
-        'iso3'          => 'YEM',
-        'numeric'       => '887',
-        'name'          => 'Yemen',
-        'official_name' => 'Republic of Yemen',
-        'native_name'   => 'اليَمَن',
-        'continent'     => 'AS',
-        'region'        => 'Asia',
-        'subregion'     => 'Western Asia',
-        'currencies'    => [
-            0 => 'YER',
-        ],
-        'languages' => [
-            0 => 'ara',
-        ],
-        'calling_codes' => [
-            0 => '967',
-        ],
-        'tld'       => '.ye',
-        'latitude'  => 15.888387680053711,
-        'longitude' => 47.48988723754883,
-        'bounds'    => [
-            0 => 41.833333,
-            1 => 12.1,
-            2 => 54.533333,
-            3 => 27.695278,
-        ],
-    ],
-    'YT' => [
-        'iso2'          => 'YT',
-        'iso3'          => 'MYT',
-        'numeric'       => '175',
-        'name'          => 'Mayotte',
-        'official_name' => 'Department of Mayotte',
-        'native_name'   => 'Mayotte',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Eastern Africa',
-        'currencies'    => [
-            0 => 'EUR',
-        ],
-        'languages' => [
-            0 => 'fra',
-        ],
-        'calling_codes' => [
-            0 => '262',
-        ],
-        'tld'       => '.yt',
-        'latitude'  => -12.79636001586914,
-        'longitude' => 45.14227294921875,
-        'bounds'    => [
-            0 => 45.024444,
-            1 => -12.993889,
-            2 => 45.288611,
-            3 => -12.641389,
-        ],
-    ],
-    'ZA' => [
-        'iso2'          => 'ZA',
-        'iso3'          => 'ZAF',
-        'numeric'       => '710',
-        'name'          => 'South Africa',
-        'official_name' => 'Republic of South Africa',
-        'native_name'   => 'South Africa',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Southern Africa',
-        'currencies'    => [
-            0 => 'ZAR',
-        ],
-        'languages' => [
-            0  => 'afr',
-            1  => 'eng',
-            2  => 'nbl',
-            3  => 'nso',
-            4  => 'sot',
-            5  => 'ssw',
-            6  => 'tsn',
-            7  => 'tso',
-            8  => 'ven',
-            9  => 'xho',
-            10 => 'zul',
-        ],
-        'calling_codes' => [
-            0 => '27',
-        ],
-        'tld'       => '.za',
-        'latitude'  => -29.046184539794922,
-        'longitude' => 25.06287956237793,
-        'bounds'    => [
-            0 => 16.466667,
-            1 => -34.833333,
-            2 => 32.883333,
-            3 => -22.133333,
-        ],
-    ],
-    'ZM' => [
-        'iso2'          => 'ZM',
-        'iso3'          => 'ZMB',
-        'numeric'       => '894',
-        'name'          => 'Zambia',
-        'official_name' => 'Republic of Zambia',
-        'native_name'   => 'Zambia',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Eastern Africa',
-        'currencies'    => [
-            0 => 'ZMW',
-        ],
-        'languages' => [
-            0 => 'eng',
-        ],
-        'calling_codes' => [
-            0 => '260',
-        ],
-        'tld'       => '.zm',
-        'latitude'  => -13.458845138549805,
-        'longitude' => 27.788097381591797,
-        'bounds'    => [
-            0 => 22.0,
-            1 => -18.05,
-            2 => 39.283333,
-            3 => 5.0,
-        ],
-    ],
-    'ZW' => [
-        'iso2'          => 'ZW',
-        'iso3'          => 'ZWE',
-        'numeric'       => '716',
-        'name'          => 'Zimbabwe',
-        'official_name' => 'Republic of Zimbabwe',
-        'native_name'   => 'Zimbabwe',
-        'continent'     => 'AF',
-        'region'        => 'Africa',
-        'subregion'     => 'Eastern Africa',
-        'currencies'    => [
-            0 => 'ZWL',
-        ],
-        'languages' => [
-            0  => 'bwg',
-            1  => 'eng',
-            2  => 'kck',
-            3  => 'khi',
-            4  => 'ndc',
-            5  => 'nde',
-            6  => 'nya',
-            7  => 'sna',
-            8  => 'sot',
-            9  => 'toi',
-            10 => 'tsn',
-            11 => 'tso',
-            12 => 'ven',
-            13 => 'xho',
-            14 => 'zib',
-        ],
-        'calling_codes' => [
-            0 => '263',
-        ],
-        'tld'       => '.zw',
-        'latitude'  => -19.000280380249023,
-        'longitude' => 29.86876106262207,
-        'bounds'    => [
-            0 => 25.333333,
-            1 => -22.316667,
-            2 => 33.05,
-            3 => -15.6,
-        ],
-    ],
-];
+return array (
+  'AD' => 
+  array (
+    'iso2' => 'AD',
+    'iso3' => 'AND',
+    'numeric' => '020',
+    'name' => 'Andorra',
+    'official_name' => 'Principality of Andorra',
+    'native_name' => 'Andorra',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Southern Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'cat',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '376',
+    ),
+    'tld' => '.ad',
+    'latitude' => 42.5506591796875,
+    'longitude' => 1.5762332677841187,
+    'bounds' => 
+    array (
+      0 => 1.416667,
+      1 => 42.433333,
+      2 => 1.783333,
+      3 => 42.65,
+    ),
+  ),
+  'AE' => 
+  array (
+    'iso2' => 'AE',
+    'iso3' => 'ARE',
+    'numeric' => '784',
+    'name' => 'United Arab Emirates',
+    'official_name' => 'United Arab Emirates',
+    'native_name' => 'دولة الإمارات العربية المتحدة',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Western Asia',
+    'currencies' => 
+    array (
+      0 => 'AED',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '971',
+    ),
+    'tld' => '.ae',
+    'latitude' => 23.684776306152344,
+    'longitude' => 54.536643981933594,
+    'bounds' => 
+    array (
+      0 => 45.0,
+      1 => 22.166667,
+      2 => 58.0,
+      3 => 26.133333,
+    ),
+  ),
+  'AF' => 
+  array (
+    'iso2' => 'AF',
+    'iso3' => 'AFG',
+    'numeric' => '004',
+    'name' => 'Afghanistan',
+    'official_name' => 'Islamic Republic of Afghanistan',
+    'native_name' => 'افغانستان',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Southern Asia',
+    'currencies' => 
+    array (
+      0 => 'AFN',
+    ),
+    'languages' => 
+    array (
+      0 => 'prs',
+      1 => 'pus',
+      2 => 'tuk',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '93',
+    ),
+    'tld' => '.af',
+    'latitude' => 33.833248138427734,
+    'longitude' => 66.02528381347656,
+    'bounds' => 
+    array (
+      0 => 60.566667,
+      1 => 29.383333,
+      2 => 74.8868713067,
+      3 => 38.483611,
+    ),
+  ),
+  'AG' => 
+  array (
+    'iso2' => 'AG',
+    'iso3' => 'ATG',
+    'numeric' => '028',
+    'name' => 'Antigua and Barbuda',
+    'official_name' => 'Antigua and Barbuda',
+    'native_name' => 'Antigua and Barbuda',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'XCD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1268',
+    ),
+    'tld' => '.ag',
+    'latitude' => 17.09273910522461,
+    'longitude' => -61.81040954589844,
+    'bounds' => 
+    array (
+      0 => -62.333333,
+      1 => 16.916667,
+      2 => -61.666667,
+      3 => 17.733333,
+    ),
+  ),
+  'AI' => 
+  array (
+    'iso2' => 'AI',
+    'iso3' => 'AIA',
+    'numeric' => '660',
+    'name' => 'Anguilla',
+    'official_name' => 'Anguilla',
+    'native_name' => 'Anguilla',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'XCD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1264',
+    ),
+    'tld' => '.ai',
+    'latitude' => 18.22646713256836,
+    'longitude' => -63.0473518371582,
+    'bounds' => 
+    array (
+      0 => -63.433333,
+      1 => 18.15,
+      2 => -62.916667,
+      3 => 18.6,
+    ),
+  ),
+  'AL' => 
+  array (
+    'iso2' => 'AL',
+    'iso3' => 'ALB',
+    'numeric' => '008',
+    'name' => 'Albania',
+    'official_name' => 'Republic of Albania',
+    'native_name' => 'Shqipëria',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Southern Europe',
+    'currencies' => 
+    array (
+      0 => 'ALL',
+    ),
+    'languages' => 
+    array (
+      0 => 'sqi',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '355',
+    ),
+    'tld' => '.al',
+    'latitude' => 41.11113357543945,
+    'longitude' => 20.02745246887207,
+    'bounds' => 
+    array (
+      0 => 19.266667,
+      1 => 39.65,
+      2 => 21.05,
+      3 => 42.659167,
+    ),
+  ),
+  'AM' => 
+  array (
+    'iso2' => 'AM',
+    'iso3' => 'ARM',
+    'numeric' => '051',
+    'name' => 'Armenia',
+    'official_name' => 'Republic of Armenia',
+    'native_name' => 'Հայաստան',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Western Asia',
+    'currencies' => 
+    array (
+      0 => 'AMD',
+    ),
+    'languages' => 
+    array (
+      0 => 'hye',
+      1 => 'rus',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '374',
+    ),
+    'tld' => '.am',
+    'latitude' => 40.29266357421875,
+    'longitude' => 44.93947219848633,
+    'bounds' => 
+    array (
+      0 => 43.4425,
+      1 => 38.894167,
+      2 => 46.560556,
+      3 => 41.3,
+    ),
+  ),
+  'AO' => 
+  array (
+    'iso2' => 'AO',
+    'iso3' => 'AGO',
+    'numeric' => '024',
+    'name' => 'Angola',
+    'official_name' => 'Republic of Angola',
+    'native_name' => 'Angola',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Middle Africa',
+    'currencies' => 
+    array (
+      0 => 'AOA',
+    ),
+    'languages' => 
+    array (
+      0 => 'por',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '244',
+    ),
+    'tld' => '.ao',
+    'latitude' => -12.333555221557617,
+    'longitude' => 17.539464950561523,
+    'bounds' => 
+    array (
+      0 => 10.0,
+      1 => -32.0,
+      2 => 23.983333,
+      3 => -4.4,
+    ),
+  ),
+  'AQ' => 
+  array (
+    'iso2' => 'AQ',
+    'iso3' => 'ATA',
+    'numeric' => '010',
+    'name' => 'Antarctica',
+    'official_name' => 'Antarctica',
+    'native_name' => 'Antarctica',
+    'continent' => 'AN',
+    'region' => NULL,
+    'subregion' => NULL,
+    'currencies' => 
+    array (
+    ),
+    'languages' => 
+    array (
+    ),
+    'calling_codes' => 
+    array (
+    ),
+    'tld' => '.aq',
+    'latitude' => -82.862752,
+    'longitude' => -135.0,
+    'bounds' => 
+    array (
+      0 => -180.0,
+      1 => -90.0,
+      2 => 180.0,
+      3 => -60.0,
+    ),
+  ),
+  'AR' => 
+  array (
+    'iso2' => 'AR',
+    'iso3' => 'ARG',
+    'numeric' => '032',
+    'name' => 'Argentina',
+    'official_name' => 'Argentine Republic',
+    'native_name' => 'Argentina',
+    'continent' => 'SA',
+    'region' => 'Americas',
+    'subregion' => 'South America',
+    'currencies' => 
+    array (
+      0 => 'ARS',
+    ),
+    'languages' => 
+    array (
+      0 => 'grn',
+      1 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '54',
+    ),
+    'tld' => '.ar',
+    'latitude' => -37.071964263916016,
+    'longitude' => -64.85450744628906,
+    'bounds' => 
+    array (
+      0 => -73.533333,
+      1 => -58.116667,
+      2 => -53.65,
+      3 => -21.783333,
+    ),
+  ),
+  'AS' => 
+  array (
+    'iso2' => 'AS',
+    'iso3' => 'ASM',
+    'numeric' => '016',
+    'name' => 'American Samoa',
+    'official_name' => 'American Samoa',
+    'native_name' => 'American Samoa',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Polynesia',
+    'currencies' => 
+    array (
+      0 => 'USD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'smo',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1684',
+    ),
+    'tld' => '.as',
+    'latitude' => -14.31956672668457,
+    'longitude' => -170.7403564453125,
+    'bounds' => 
+    array (
+      0 => -171.091873,
+      1 => -14.38247,
+      2 => -169.416077,
+      3 => -11.04969,
+    ),
+  ),
+  'AT' => 
+  array (
+    'iso2' => 'AT',
+    'iso3' => 'AUT',
+    'numeric' => '040',
+    'name' => 'Austria',
+    'official_name' => 'Republic of Austria',
+    'native_name' => 'Österreich',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Western Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'bar',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '43',
+    ),
+    'tld' => '.at',
+    'latitude' => 47.58843994140625,
+    'longitude' => 14.14021110534668,
+    'bounds' => 
+    array (
+      0 => 1.2,
+      1 => 46.377222,
+      2 => 19.0,
+      3 => 49.016667,
+    ),
+  ),
+  'AU' => 
+  array (
+    'iso2' => 'AU',
+    'iso3' => 'AUS',
+    'numeric' => '036',
+    'name' => 'Australia',
+    'official_name' => 'Commonwealth of Australia',
+    'native_name' => 'Australia',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Australia and New Zealand',
+    'currencies' => 
+    array (
+      0 => 'AUD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '61',
+    ),
+    'tld' => '.au',
+    'latitude' => -25.585241317749023,
+    'longitude' => 134.50411987304688,
+    'bounds' => 
+    array (
+      0 => 147.1,
+      1 => -29.472222,
+      2 => 159.119444,
+      3 => -15.5,
+    ),
+  ),
+  'AW' => 
+  array (
+    'iso2' => 'AW',
+    'iso3' => 'ABW',
+    'numeric' => '533',
+    'name' => 'Aruba',
+    'official_name' => 'Aruba',
+    'native_name' => 'Aruba',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'AWG',
+    ),
+    'languages' => 
+    array (
+      0 => 'nld',
+      1 => 'pap',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '297',
+    ),
+    'tld' => '.aw',
+    'latitude' => 12.506523132324219,
+    'longitude' => -69.96931457519531,
+    'bounds' => 
+    array (
+      0 => -70.066667,
+      1 => 12.416667,
+      2 => -69.85,
+      3 => 12.616667,
+    ),
+  ),
+  'AX' => 
+  array (
+    'iso2' => 'AX',
+    'iso3' => 'ALA',
+    'numeric' => '248',
+    'name' => 'Åland Islands',
+    'official_name' => 'Åland Islands',
+    'native_name' => 'Åland',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Northern Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'swe',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '358',
+    ),
+    'tld' => '.ax',
+    'latitude' => 60.2023811340332,
+    'longitude' => 19.96520233154297,
+    'bounds' => 
+    array (
+      0 => 19.2633194,
+      1 => 59.7272227,
+      2 => 21.4858534,
+      3 => 60.7411127,
+    ),
+  ),
+  'AZ' => 
+  array (
+    'iso2' => 'AZ',
+    'iso3' => 'AZE',
+    'numeric' => '031',
+    'name' => 'Azerbaijan',
+    'official_name' => 'Republic of Azerbaijan',
+    'native_name' => 'Azərbaycan',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Western Asia',
+    'currencies' => 
+    array (
+      0 => 'AZN',
+    ),
+    'languages' => 
+    array (
+      0 => 'aze',
+      1 => 'rus',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '994',
+    ),
+    'tld' => '.az',
+    'latitude' => 40.33100509643555,
+    'longitude' => 47.80820083618164,
+    'bounds' => 
+    array (
+      0 => 44.876389,
+      1 => 38.416667,
+      2 => 50.858333,
+      3 => 41.910556,
+    ),
+  ),
+  'BA' => 
+  array (
+    'iso2' => 'BA',
+    'iso3' => 'BIH',
+    'numeric' => '070',
+    'name' => 'Bosnia and Herzegovina',
+    'official_name' => 'Bosnia and Herzegovina',
+    'native_name' => 'Bosna i Hercegovina',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Southern Europe',
+    'currencies' => 
+    array (
+      0 => 'BAM',
+    ),
+    'languages' => 
+    array (
+      0 => 'bos',
+      1 => 'hrv',
+      2 => 'srp',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '387',
+    ),
+    'tld' => '.ba',
+    'latitude' => 44.16533279418945,
+    'longitude' => 17.790241241455078,
+    'bounds' => 
+    array (
+      0 => 15.747222,
+      1 => 42.558056,
+      2 => 19.618333,
+      3 => 45.268333,
+    ),
+  ),
+  'BB' => 
+  array (
+    'iso2' => 'BB',
+    'iso3' => 'BRB',
+    'numeric' => '052',
+    'name' => 'Barbados',
+    'official_name' => 'Barbados',
+    'native_name' => 'Barbados',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'BBD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1246',
+    ),
+    'tld' => '.bb',
+    'latitude' => 13.178098678588867,
+    'longitude' => -59.5485954284668,
+    'bounds' => 
+    array (
+      0 => -59.65,
+      1 => 13.033333,
+      2 => -59.416667,
+      3 => 13.333333,
+    ),
+  ),
+  'BD' => 
+  array (
+    'iso2' => 'BD',
+    'iso3' => 'BGD',
+    'numeric' => '050',
+    'name' => 'Bangladesh',
+    'official_name' => 'People\'s Republic of Bangladesh',
+    'native_name' => 'বাংলাদেশ',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Southern Asia',
+    'currencies' => 
+    array (
+      0 => 'BDT',
+    ),
+    'languages' => 
+    array (
+      0 => 'ben',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '880',
+    ),
+    'tld' => '.bd',
+    'latitude' => 23.730104446411133,
+    'longitude' => 90.30652618408203,
+    'bounds' => 
+    array (
+      0 => 84.0,
+      1 => 20.6,
+      2 => 92.683333,
+      3 => 26.5,
+    ),
+  ),
+  'BE' => 
+  array (
+    'iso2' => 'BE',
+    'iso3' => 'BEL',
+    'numeric' => '056',
+    'name' => 'Belgium',
+    'official_name' => 'Kingdom of Belgium',
+    'native_name' => 'Belgien',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Western Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'deu',
+      1 => 'fra',
+      2 => 'nld',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '32',
+    ),
+    'tld' => '.be',
+    'latitude' => 50.648963928222656,
+    'longitude' => 4.641502380371094,
+    'bounds' => 
+    array (
+      0 => 2.566667,
+      1 => 49.516667,
+      2 => 6.4,
+      3 => 51.683333,
+    ),
+  ),
+  'BF' => 
+  array (
+    'iso2' => 'BF',
+    'iso3' => 'BFA',
+    'numeric' => '854',
+    'name' => 'Burkina Faso',
+    'official_name' => 'Burkina Faso',
+    'native_name' => 'Burkina Faso',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Western Africa',
+    'currencies' => 
+    array (
+      0 => 'XOF',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '226',
+    ),
+    'tld' => '.bf',
+    'latitude' => 12.284985542297363,
+    'longitude' => -1.745560646057129,
+    'bounds' => 
+    array (
+      0 => -5.466667,
+      1 => 9.45,
+      2 => 2.2655,
+      3 => 14.983333,
+    ),
+  ),
+  'BG' => 
+  array (
+    'iso2' => 'BG',
+    'iso3' => 'BGR',
+    'numeric' => '100',
+    'name' => 'Bulgaria',
+    'official_name' => 'Republic of Bulgaria',
+    'native_name' => 'България',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Eastern Europe',
+    'currencies' => 
+    array (
+      0 => 'BGN',
+    ),
+    'languages' => 
+    array (
+      0 => 'bul',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '359',
+    ),
+    'tld' => '.bg',
+    'latitude' => 42.7661018371582,
+    'longitude' => 25.283733367919922,
+    'bounds' => 
+    array (
+      0 => 22.371389,
+      1 => 41.0,
+      2 => 28.6,
+      3 => 44.193611,
+    ),
+  ),
+  'BH' => 
+  array (
+    'iso2' => 'BH',
+    'iso3' => 'BHR',
+    'numeric' => '048',
+    'name' => 'Bahrain',
+    'official_name' => 'Kingdom of Bahrain',
+    'native_name' => '‏البحرين',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Western Asia',
+    'currencies' => 
+    array (
+      0 => 'BHD',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '973',
+    ),
+    'tld' => '.bh',
+    'latitude' => 26.094240188598633,
+    'longitude' => 50.54299545288086,
+    'bounds' => 
+    array (
+      0 => 45.0,
+      1 => 25.0,
+      2 => 50.823333,
+      3 => 26.416667,
+    ),
+  ),
+  'BI' => 
+  array (
+    'iso2' => 'BI',
+    'iso3' => 'BDI',
+    'numeric' => '108',
+    'name' => 'Burundi',
+    'official_name' => 'Republic of Burundi',
+    'native_name' => 'Burundi',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Eastern Africa',
+    'currencies' => 
+    array (
+      0 => 'BIF',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+      1 => 'run',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '257',
+    ),
+    'tld' => '.bi',
+    'latitude' => -3.365208148956299,
+    'longitude' => 29.88650894165039,
+    'bounds' => 
+    array (
+      0 => 29.023889,
+      1 => -4.443333,
+      2 => 30.831389,
+      3 => -2.3425,
+    ),
+  ),
+  'BJ' => 
+  array (
+    'iso2' => 'BJ',
+    'iso3' => 'BEN',
+    'numeric' => '204',
+    'name' => 'Benin',
+    'official_name' => 'Republic of Benin',
+    'native_name' => 'Bénin',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Western Africa',
+    'currencies' => 
+    array (
+      0 => 'XOF',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '229',
+    ),
+    'tld' => '.bj',
+    'latitude' => 9.624112129211426,
+    'longitude' => 2.3377387523651123,
+    'bounds' => 
+    array (
+      0 => -4.0,
+      1 => 6.233333,
+      2 => 3.816667,
+      3 => 12.3614,
+    ),
+  ),
+  'BL' => 
+  array (
+    'iso2' => 'BL',
+    'iso3' => 'BLM',
+    'numeric' => '652',
+    'name' => 'Saint Barthélemy',
+    'official_name' => 'Collectivity of Saint Barthélemy',
+    'native_name' => 'Saint-Barthélemy',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '590',
+    ),
+    'tld' => '.bl',
+    'latitude' => 17.89626121520996,
+    'longitude' => -62.83061218261719,
+    'bounds' => 
+    array (
+      0 => -62.9118453,
+      1 => 17.8708287,
+      2 => -62.7892148,
+      3 => 17.960853,
+    ),
+  ),
+  'BM' => 
+  array (
+    'iso2' => 'BM',
+    'iso3' => 'BMU',
+    'numeric' => '060',
+    'name' => 'Bermuda',
+    'official_name' => 'Bermuda',
+    'native_name' => 'Bermuda',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Northern America',
+    'currencies' => 
+    array (
+      0 => 'BMD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1441',
+    ),
+    'tld' => '.bm',
+    'latitude' => 32.302669525146484,
+    'longitude' => -64.7516860961914,
+    'bounds' => 
+    array (
+      0 => -64.882778,
+      1 => 32.246944,
+      2 => -64.633333,
+      3 => 32.390556,
+    ),
+  ),
+  'BN' => 
+  array (
+    'iso2' => 'BN',
+    'iso3' => 'BRN',
+    'numeric' => '096',
+    'name' => 'Brunei',
+    'official_name' => 'Nation of Brunei, Abode of Peace',
+    'native_name' => 'Negara Brunei Darussalam',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'South-Eastern Asia',
+    'currencies' => 
+    array (
+      0 => 'BND',
+    ),
+    'languages' => 
+    array (
+      0 => 'msa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '673',
+    ),
+    'tld' => '.bn',
+    'latitude' => 4.5703840255737305,
+    'longitude' => 114.74818420410156,
+    'bounds' => 
+    array (
+      0 => 110.0,
+      1 => -2.0,
+      2 => 120.0,
+      3 => 5.05,
+    ),
+  ),
+  'BO' => 
+  array (
+    'iso2' => 'BO',
+    'iso3' => 'BOL',
+    'numeric' => '068',
+    'name' => 'Bolivia',
+    'official_name' => 'Plurinational State of Bolivia',
+    'native_name' => 'Wuliwya',
+    'continent' => 'SA',
+    'region' => 'Americas',
+    'subregion' => 'South America',
+    'currencies' => 
+    array (
+      0 => 'BOB',
+    ),
+    'languages' => 
+    array (
+      0 => 'aym',
+      1 => 'grn',
+      2 => 'que',
+      3 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '591',
+    ),
+    'tld' => '.bo',
+    'latitude' => -16.713054656982422,
+    'longitude' => -64.6666488647461,
+    'bounds' => 
+    array (
+      0 => -69.6,
+      1 => -22.883333,
+      2 => -57.566667,
+      3 => -9.666667,
+    ),
+  ),
+  'BQ' => 
+  array (
+    'iso2' => 'BQ',
+    'iso3' => 'BES',
+    'numeric' => '535',
+    'name' => 'Caribbean Netherlands',
+    'official_name' => 'Bonaire, Sint Eustatius and Saba',
+    'native_name' => 'Besondere Gemeinde (Niederlande)',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'USD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '599',
+    ),
+    'tld' => NULL,
+    'latitude' => 12.178361,
+    'longitude' => -68.238534,
+    'bounds' => 
+    array (
+      0 => -68.421,
+      1 => 12.0245,
+      2 => -62.9458,
+      3 => 17.6503,
+    ),
+  ),
+  'BR' => 
+  array (
+    'iso2' => 'BR',
+    'iso3' => 'BRA',
+    'numeric' => '076',
+    'name' => 'Brazil',
+    'official_name' => 'Federative Republic of Brazil',
+    'native_name' => 'Brasil',
+    'continent' => 'SA',
+    'region' => 'Americas',
+    'subregion' => 'South America',
+    'currencies' => 
+    array (
+      0 => 'BRL',
+    ),
+    'languages' => 
+    array (
+      0 => 'por',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '55',
+    ),
+    'tld' => '.br',
+    'latitude' => -10.81045150756836,
+    'longitude' => -52.97311782836914,
+    'bounds' => 
+    array (
+      0 => -73.75,
+      1 => -33.733333,
+      2 => -28.85,
+      3 => 5.266667,
+    ),
+  ),
+  'BS' => 
+  array (
+    'iso2' => 'BS',
+    'iso3' => 'BHS',
+    'numeric' => '044',
+    'name' => 'Bahamas',
+    'official_name' => 'Commonwealth of the Bahamas',
+    'native_name' => 'Bahamas',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'BSD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1242',
+    ),
+    'tld' => '.bs',
+    'latitude' => 25.035648345947266,
+    'longitude' => -77.39512634277344,
+    'bounds' => 
+    array (
+      0 => -80.483333,
+      1 => 20.0,
+      2 => -70.0,
+      3 => 29.375,
+    ),
+  ),
+  'BT' => 
+  array (
+    'iso2' => 'BT',
+    'iso3' => 'BTN',
+    'numeric' => '064',
+    'name' => 'Bhutan',
+    'official_name' => 'Kingdom of Bhutan',
+    'native_name' => 'འབྲུག་ཡུལ་',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Southern Asia',
+    'currencies' => 
+    array (
+      0 => 'BTN',
+    ),
+    'languages' => 
+    array (
+      0 => 'dzo',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '975',
+    ),
+    'tld' => '.bt',
+    'latitude' => 27.416879653930664,
+    'longitude' => 90.43476104736328,
+    'bounds' => 
+    array (
+      0 => 80.0,
+      1 => 26.716667,
+      2 => 92.033333,
+      3 => 30.0,
+    ),
+  ),
+  'BV' => 
+  array (
+    'iso2' => 'BV',
+    'iso3' => 'BVT',
+    'numeric' => '074',
+    'name' => 'Bouvet Island',
+    'official_name' => 'Bouvet Island',
+    'native_name' => 'Bouvetøya',
+    'continent' => 'AN',
+    'region' => NULL,
+    'subregion' => NULL,
+    'currencies' => 
+    array (
+      0 => 'NOK',
+    ),
+    'languages' => 
+    array (
+      0 => 'nor',
+    ),
+    'calling_codes' => 
+    array (
+    ),
+    'tld' => '.bv',
+    'latitude' => -54.4342041015625,
+    'longitude' => 3.4102511405944824,
+    'bounds' => 
+    array (
+      0 => 3.285278,
+      1 => -54.452778,
+      2 => 3.433889,
+      3 => -54.386111,
+    ),
+  ),
+  'BW' => 
+  array (
+    'iso2' => 'BW',
+    'iso3' => 'BWA',
+    'numeric' => '072',
+    'name' => 'Botswana',
+    'official_name' => 'Republic of Botswana',
+    'native_name' => 'Botswana',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Southern Africa',
+    'currencies' => 
+    array (
+      0 => 'BWP',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'tsn',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '267',
+    ),
+    'tld' => '.bw',
+    'latitude' => -22.186752319335938,
+    'longitude' => 23.81494140625,
+    'bounds' => 
+    array (
+      0 => 20.0,
+      1 => -26.833333,
+      2 => 29.016667,
+      3 => -17.833333,
+    ),
+  ),
+  'BY' => 
+  array (
+    'iso2' => 'BY',
+    'iso3' => 'BLR',
+    'numeric' => '112',
+    'name' => 'Belarus',
+    'official_name' => 'Republic of Belarus',
+    'native_name' => 'Белару́сь',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Eastern Europe',
+    'currencies' => 
+    array (
+      0 => 'BYN',
+    ),
+    'languages' => 
+    array (
+      0 => 'bel',
+      1 => 'rus',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '375',
+    ),
+    'tld' => '.by',
+    'latitude' => 53.54347229003906,
+    'longitude' => 28.054094314575195,
+    'bounds' => 
+    array (
+      0 => 22.55,
+      1 => 50.716667,
+      2 => 32.708056,
+      3 => 56.066667,
+    ),
+  ),
+  'BZ' => 
+  array (
+    'iso2' => 'BZ',
+    'iso3' => 'BLZ',
+    'numeric' => '084',
+    'name' => 'Belize',
+    'official_name' => 'Belize',
+    'native_name' => 'Belize',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Central America',
+    'currencies' => 
+    array (
+      0 => 'BZD',
+    ),
+    'languages' => 
+    array (
+      0 => 'bjz',
+      1 => 'eng',
+      2 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '501',
+    ),
+    'tld' => '.bz',
+    'latitude' => 17.225292205810547,
+    'longitude' => -88.66973876953125,
+    'bounds' => 
+    array (
+      0 => -89.216944,
+      1 => 15.9,
+      2 => -87.483333,
+      3 => 18.483333,
+    ),
+  ),
+  'CA' => 
+  array (
+    'iso2' => 'CA',
+    'iso3' => 'CAN',
+    'numeric' => '124',
+    'name' => 'Canada',
+    'official_name' => 'Canada',
+    'native_name' => 'Canada',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Northern America',
+    'currencies' => 
+    array (
+      0 => 'CAD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1',
+    ),
+    'tld' => '.ca',
+    'latitude' => 62.832908630371094,
+    'longitude' => -95.91332244873047,
+    'bounds' => 
+    array (
+      0 => -141.666667,
+      1 => 40.0,
+      2 => -52.666667,
+      3 => 83.116667,
+    ),
+  ),
+  'CC' => 
+  array (
+    'iso2' => 'CC',
+    'iso3' => 'CCK',
+    'numeric' => '166',
+    'name' => 'Cocos (Keeling) Islands',
+    'official_name' => 'Territory of the Cocos (Keeling) Islands',
+    'native_name' => 'Cocos (Keeling) Islands',
+    'continent' => 'AS',
+    'region' => 'Oceania',
+    'subregion' => 'Australia and New Zealand',
+    'currencies' => 
+    array (
+      0 => 'AUD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '61',
+    ),
+    'tld' => '.cc',
+    'latitude' => -12.200602531433105,
+    'longitude' => 96.85894012451172,
+    'bounds' => 
+    array (
+      0 => 96.816667,
+      1 => -12.204167,
+      2 => 96.918056,
+      3 => -11.833333,
+    ),
+  ),
+  'CD' => 
+  array (
+    'iso2' => 'CD',
+    'iso3' => 'COD',
+    'numeric' => '180',
+    'name' => 'DR Congo',
+    'official_name' => 'Democratic Republic of the Congo',
+    'native_name' => 'RD Congo',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Middle Africa',
+    'currencies' => 
+    array (
+      0 => 'CDF',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+      1 => 'kon',
+      2 => 'lin',
+      3 => 'lua',
+      4 => 'swa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '243',
+    ),
+    'tld' => '.cd',
+    'latitude' => -2.879866123199463,
+    'longitude' => 23.6563777923584,
+    'bounds' => 
+    array (
+      0 => 12.266667,
+      1 => -13.466667,
+      2 => 31.233333,
+      3 => 5.133333,
+    ),
+  ),
+  'CF' => 
+  array (
+    'iso2' => 'CF',
+    'iso3' => 'CAF',
+    'numeric' => '140',
+    'name' => 'Central African Republic',
+    'official_name' => 'Central African Republic',
+    'native_name' => 'République centrafricaine',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Middle Africa',
+    'currencies' => 
+    array (
+      0 => 'XAF',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+      1 => 'sag',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '236',
+    ),
+    'tld' => '.cf',
+    'latitude' => 6.574123382568359,
+    'longitude' => 20.486923217773438,
+    'bounds' => 
+    array (
+      0 => 14.533333,
+      1 => 2.433333,
+      2 => 27.216667,
+      3 => 10.7,
+    ),
+  ),
+  'CG' => 
+  array (
+    'iso2' => 'CG',
+    'iso3' => 'COG',
+    'numeric' => '178',
+    'name' => 'Republic of the Congo',
+    'official_name' => 'Republic of the Congo',
+    'native_name' => 'République du Congo',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Middle Africa',
+    'currencies' => 
+    array (
+      0 => 'XAF',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+      1 => 'kon',
+      2 => 'lin',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '242',
+    ),
+    'tld' => '.cg',
+    'latitude' => -2.879866123199463,
+    'longitude' => 23.6563777923584,
+    'bounds' => 
+    array (
+      0 => 11.166667,
+      1 => -4.995556,
+      2 => 20.0,
+      3 => 3.866667,
+    ),
+  ),
+  'CH' => 
+  array (
+    'iso2' => 'CH',
+    'iso3' => 'CHE',
+    'numeric' => '756',
+    'name' => 'Switzerland',
+    'official_name' => 'Swiss Confederation',
+    'native_name' => 'Suisse',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Western Europe',
+    'currencies' => 
+    array (
+      0 => 'CHF',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+      1 => 'gsw',
+      2 => 'ita',
+      3 => 'roh',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '41',
+    ),
+    'tld' => '.ch',
+    'latitude' => 46.80379867553711,
+    'longitude' => 8.222854614257812,
+    'bounds' => 
+    array (
+      0 => 6.0,
+      1 => 45.366667,
+      2 => 10.5,
+      3 => 47.8085,
+    ),
+  ),
+  'CI' => 
+  array (
+    'iso2' => 'CI',
+    'iso3' => 'CIV',
+    'numeric' => '384',
+    'name' => 'Ivory Coast',
+    'official_name' => 'Republic of Côte d\'Ivoire',
+    'native_name' => 'Côte d\'Ivoire',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Western Africa',
+    'currencies' => 
+    array (
+      0 => 'XOF',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '225',
+    ),
+    'tld' => '.ci',
+    'latitude' => 7.598755359649658,
+    'longitude' => -5.552574634552002,
+    'bounds' => 
+    array (
+      0 => -8.538889,
+      1 => 4.35,
+      2 => -2.566667,
+      3 => 10.652222,
+    ),
+  ),
+  'CK' => 
+  array (
+    'iso2' => 'CK',
+    'iso3' => 'COK',
+    'numeric' => '184',
+    'name' => 'Cook Islands',
+    'official_name' => 'Cook Islands',
+    'native_name' => 'Cook Islands',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Polynesia',
+    'currencies' => 
+    array (
+      0 => 'NZD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'rar',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '682',
+    ),
+    'tld' => '.ck',
+    'latitude' => -21.22330665588379,
+    'longitude' => -159.7405548095703,
+    'bounds' => 
+    array (
+      0 => -171.783333,
+      1 => -21.953056,
+      2 => -157.3375,
+      3 => -8.918611,
+    ),
+  ),
+  'CL' => 
+  array (
+    'iso2' => 'CL',
+    'iso3' => 'CHL',
+    'numeric' => '152',
+    'name' => 'Chile',
+    'official_name' => 'Republic of Chile',
+    'native_name' => 'Chile',
+    'continent' => 'SA',
+    'region' => 'Americas',
+    'subregion' => 'South America',
+    'currencies' => 
+    array (
+      0 => 'CLP',
+    ),
+    'languages' => 
+    array (
+      0 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '56',
+    ),
+    'tld' => '.cl',
+    'latitude' => -35.78622817993164,
+    'longitude' => -71.67467498779297,
+    'bounds' => 
+    array (
+      0 => -109.466667,
+      1 => -56.533333,
+      2 => -66.433333,
+      3 => -17.53,
+    ),
+  ),
+  'CM' => 
+  array (
+    'iso2' => 'CM',
+    'iso3' => 'CMR',
+    'numeric' => '120',
+    'name' => 'Cameroon',
+    'official_name' => 'Republic of Cameroon',
+    'native_name' => 'Cameroon',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Middle Africa',
+    'currencies' => 
+    array (
+      0 => 'XAF',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '237',
+    ),
+    'tld' => '.cm',
+    'latitude' => 5.685476779937744,
+    'longitude' => 12.722877502441406,
+    'bounds' => 
+    array (
+      0 => 8.483333,
+      1 => 2.016667,
+      2 => 16.0,
+      3 => 16.0,
+    ),
+  ),
+  'CN' => 
+  array (
+    'iso2' => 'CN',
+    'iso3' => 'CHN',
+    'numeric' => '156',
+    'name' => 'China',
+    'official_name' => 'People\'s Republic of China',
+    'native_name' => '中国',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Eastern Asia',
+    'currencies' => 
+    array (
+      0 => 'CNY',
+    ),
+    'languages' => 
+    array (
+      0 => 'cmn',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '86',
+    ),
+    'tld' => '.cn',
+    'latitude' => 36.55308532714844,
+    'longitude' => 103.97543334960938,
+    'bounds' => 
+    array (
+      0 => 106.7,
+      1 => 6.183333,
+      2 => 117.816667,
+      3 => 20.7,
+    ),
+  ),
+  'CO' => 
+  array (
+    'iso2' => 'CO',
+    'iso3' => 'COL',
+    'numeric' => '170',
+    'name' => 'Colombia',
+    'official_name' => 'Republic of Colombia',
+    'native_name' => 'Colombia',
+    'continent' => 'SA',
+    'region' => 'Americas',
+    'subregion' => 'South America',
+    'currencies' => 
+    array (
+      0 => 'COP',
+    ),
+    'languages' => 
+    array (
+      0 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '57',
+    ),
+    'tld' => '.co',
+    'latitude' => 3.9976072311401367,
+    'longitude' => -73.27796936035156,
+    'bounds' => 
+    array (
+      0 => -81.85,
+      1 => -4.214722,
+      2 => -66.854722,
+      3 => 13.383333,
+    ),
+  ),
+  'CR' => 
+  array (
+    'iso2' => 'CR',
+    'iso3' => 'CRI',
+    'numeric' => '188',
+    'name' => 'Costa Rica',
+    'official_name' => 'Republic of Costa Rica',
+    'native_name' => 'Costa Rica',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Central America',
+    'currencies' => 
+    array (
+      0 => 'CRC',
+    ),
+    'languages' => 
+    array (
+      0 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '506',
+    ),
+    'tld' => '.cr',
+    'latitude' => 9.884991645812988,
+    'longitude' => -84.22723388671875,
+    'bounds' => 
+    array (
+      0 => -87.1,
+      1 => 5.5,
+      2 => -82.05,
+      3 => 11.216667,
+    ),
+  ),
+  'CU' => 
+  array (
+    'iso2' => 'CU',
+    'iso3' => 'CUB',
+    'numeric' => '192',
+    'name' => 'Cuba',
+    'official_name' => 'Republic of Cuba',
+    'native_name' => 'Cuba',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'CUP',
+    ),
+    'languages' => 
+    array (
+      0 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '53',
+    ),
+    'tld' => '.cu',
+    'latitude' => 22.066335678100586,
+    'longitude' => -79.4531478881836,
+    'bounds' => 
+    array (
+      0 => -84.950833,
+      1 => 19.828056,
+      2 => -74.135,
+      3 => 23.265833,
+    ),
+  ),
+  'CV' => 
+  array (
+    'iso2' => 'CV',
+    'iso3' => 'CPV',
+    'numeric' => '132',
+    'name' => 'Cape Verde',
+    'official_name' => 'Republic of Cabo Verde',
+    'native_name' => 'Cabo Verde',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Western Africa',
+    'currencies' => 
+    array (
+      0 => 'CVE',
+    ),
+    'languages' => 
+    array (
+      0 => 'por',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '238',
+    ),
+    'tld' => '.cv',
+    'latitude' => 15.183002471923828,
+    'longitude' => -23.70345115661621,
+    'bounds' => 
+    array (
+      0 => -25.366667,
+      1 => 14.8,
+      2 => -22.666667,
+      3 => 17.2,
+    ),
+  ),
+  'CW' => 
+  array (
+    'iso2' => 'CW',
+    'iso3' => 'CUW',
+    'numeric' => '531',
+    'name' => 'Curaçao',
+    'official_name' => 'Country of Curaçao',
+    'native_name' => 'Curaçao',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'ANG',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'nld',
+      2 => 'pap',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '599',
+    ),
+    'tld' => '.cw',
+    'latitude' => 12.163220405578613,
+    'longitude' => -68.94505310058594,
+    'bounds' => 
+    array (
+      0 => -69.157204,
+      1 => 11.97319,
+      2 => -68.639328,
+      3 => 12.38567,
+    ),
+  ),
+  'CX' => 
+  array (
+    'iso2' => 'CX',
+    'iso3' => 'CXR',
+    'numeric' => '162',
+    'name' => 'Christmas Island',
+    'official_name' => 'Territory of Christmas Island',
+    'native_name' => 'Christmas Island',
+    'continent' => 'AS',
+    'region' => 'Oceania',
+    'subregion' => 'Australia and New Zealand',
+    'currencies' => 
+    array (
+      0 => 'AUD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '61',
+    ),
+    'tld' => '.cx',
+    'latitude' => -10.490290641784668,
+    'longitude' => 105.63275146484375,
+    'bounds' => 
+    array (
+      0 => 105.566667,
+      1 => -10.566667,
+      2 => 105.75,
+      3 => -10.4,
+    ),
+  ),
+  'CY' => 
+  array (
+    'iso2' => 'CY',
+    'iso3' => 'CYP',
+    'numeric' => '196',
+    'name' => 'Cyprus',
+    'official_name' => 'Republic of Cyprus',
+    'native_name' => 'Κύπρος',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Eastern Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'ell',
+      1 => 'tur',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '357',
+    ),
+    'tld' => '.cy',
+    'latitude' => 35.11473846435547,
+    'longitude' => 33.486717224121094,
+    'bounds' => 
+    array (
+      0 => 32.270833,
+      1 => 34.566667,
+      2 => 34.6,
+      3 => 35.7,
+    ),
+  ),
+  'CZ' => 
+  array (
+    'iso2' => 'CZ',
+    'iso3' => 'CZE',
+    'numeric' => '203',
+    'name' => 'Czech Republic',
+    'official_name' => 'Czech Republic',
+    'native_name' => 'Česká republika',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Eastern Europe',
+    'currencies' => 
+    array (
+      0 => 'CZK',
+    ),
+    'languages' => 
+    array (
+      0 => 'ces',
+      1 => 'slk',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '420',
+    ),
+    'tld' => '.cz',
+    'latitude' => 49.739105224609375,
+    'longitude' => 15.331501007080078,
+    'bounds' => 
+    array (
+      0 => 12.116667,
+      1 => 40.65,
+      2 => 25.5,
+      3 => 59.65,
+    ),
+  ),
+  'DE' => 
+  array (
+    'iso2' => 'DE',
+    'iso3' => 'DEU',
+    'numeric' => '276',
+    'name' => 'Germany',
+    'official_name' => 'Federal Republic of Germany',
+    'native_name' => 'Deutschland',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Western Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'deu',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '49',
+    ),
+    'tld' => '.de',
+    'latitude' => 51.20246505737305,
+    'longitude' => 10.382203102111816,
+    'bounds' => 
+    array (
+      0 => 5.9,
+      1 => 47.266667,
+      2 => 15.033333,
+      3 => 55.05,
+    ),
+  ),
+  'DJ' => 
+  array (
+    'iso2' => 'DJ',
+    'iso3' => 'DJI',
+    'numeric' => '262',
+    'name' => 'Djibouti',
+    'official_name' => 'Republic of Djibouti',
+    'native_name' => 'جيبوتي‎',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Eastern Africa',
+    'currencies' => 
+    array (
+      0 => 'DJF',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+      1 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '253',
+    ),
+    'tld' => '.dj',
+    'latitude' => 11.742591857910156,
+    'longitude' => 42.63182830810547,
+    'bounds' => 
+    array (
+      0 => 41.0,
+      1 => 10.9825,
+      2 => 43.451944,
+      3 => 13.0,
+    ),
+  ),
+  'DK' => 
+  array (
+    'iso2' => 'DK',
+    'iso3' => 'DNK',
+    'numeric' => '208',
+    'name' => 'Denmark',
+    'official_name' => 'Kingdom of Denmark',
+    'native_name' => 'Danmark',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Northern Europe',
+    'currencies' => 
+    array (
+      0 => 'DKK',
+    ),
+    'languages' => 
+    array (
+      0 => 'dan',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '45',
+    ),
+    'tld' => '.dk',
+    'latitude' => 56.10176086425781,
+    'longitude' => 9.555907249450684,
+    'bounds' => 
+    array (
+      0 => 4.516667,
+      1 => 53.583333,
+      2 => 18.0,
+      3 => 64.0,
+    ),
+  ),
+  'DM' => 
+  array (
+    'iso2' => 'DM',
+    'iso3' => 'DMA',
+    'numeric' => '212',
+    'name' => 'Dominica',
+    'official_name' => 'Commonwealth of Dominica',
+    'native_name' => 'Dominica',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'XCD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1767',
+    ),
+    'tld' => '.dm',
+    'latitude' => 15.3991060256958,
+    'longitude' => -61.33945846557617,
+    'bounds' => 
+    array (
+      0 => -61.483333,
+      1 => 15.2,
+      2 => -61.25,
+      3 => 15.633333,
+    ),
+  ),
+  'DO' => 
+  array (
+    'iso2' => 'DO',
+    'iso3' => 'DOM',
+    'numeric' => '214',
+    'name' => 'Dominican Republic',
+    'official_name' => 'Dominican Republic',
+    'native_name' => 'República Dominicana',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'DOP',
+    ),
+    'languages' => 
+    array (
+      0 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1809',
+      1 => '1829',
+      2 => '1849',
+    ),
+    'tld' => '.do',
+    'latitude' => 19.019824981689453,
+    'longitude' => -70.79285430908203,
+    'bounds' => 
+    array (
+      0 => -71.966667,
+      1 => 17.473056,
+      2 => -68.316667,
+      3 => 19.933333,
+    ),
+  ),
+  'DZ' => 
+  array (
+    'iso2' => 'DZ',
+    'iso3' => 'DZA',
+    'numeric' => '012',
+    'name' => 'Algeria',
+    'official_name' => 'People\'s Democratic Republic of Algeria',
+    'native_name' => 'الجزائر',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Northern Africa',
+    'currencies' => 
+    array (
+      0 => 'DZD',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '213',
+    ),
+    'tld' => '.dz',
+    'latitude' => 28.213645935058594,
+    'longitude' => 2.6547281742095947,
+    'bounds' => 
+    array (
+      0 => -8.666667,
+      1 => 19.0,
+      2 => 13.0,
+      3 => 37.116667,
+    ),
+  ),
+  'EC' => 
+  array (
+    'iso2' => 'EC',
+    'iso3' => 'ECU',
+    'numeric' => '218',
+    'name' => 'Ecuador',
+    'official_name' => 'Republic of Ecuador',
+    'native_name' => 'Ecuador',
+    'continent' => 'SA',
+    'region' => 'Americas',
+    'subregion' => 'South America',
+    'currencies' => 
+    array (
+      0 => 'USD',
+    ),
+    'languages' => 
+    array (
+      0 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '593',
+    ),
+    'tld' => '.ec',
+    'latitude' => -1.421528935432434,
+    'longitude' => -78.87104034423828,
+    'bounds' => 
+    array (
+      0 => -92.0,
+      1 => -4.95,
+      2 => -75.216667,
+      3 => 1.65,
+    ),
+  ),
+  'EE' => 
+  array (
+    'iso2' => 'EE',
+    'iso3' => 'EST',
+    'numeric' => '233',
+    'name' => 'Estonia',
+    'official_name' => 'Republic of Estonia',
+    'native_name' => 'Eesti',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Northern Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'est',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '372',
+    ),
+    'tld' => '.ee',
+    'latitude' => 58.69374465942383,
+    'longitude' => 25.24162483215332,
+    'bounds' => 
+    array (
+      0 => 21.795833,
+      1 => 57.521389,
+      2 => 28.883333,
+      3 => 59.983333,
+    ),
+  ),
+  'EG' => 
+  array (
+    'iso2' => 'EG',
+    'iso3' => 'EGY',
+    'numeric' => '818',
+    'name' => 'Egypt',
+    'official_name' => 'Arab Republic of Egypt',
+    'native_name' => 'مصر',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Northern Africa',
+    'currencies' => 
+    array (
+      0 => 'EGP',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '20',
+    ),
+    'tld' => '.eg',
+    'latitude' => 26.756103515625,
+    'longitude' => 29.86229705810547,
+    'bounds' => 
+    array (
+      0 => 24.7,
+      1 => 20.383333,
+      2 => 36.333333,
+      3 => 31.916667,
+    ),
+  ),
+  'EH' => 
+  array (
+    'iso2' => 'EH',
+    'iso3' => 'ESH',
+    'numeric' => '732',
+    'name' => 'Western Sahara',
+    'official_name' => 'Sahrawi Arab Democratic Republic',
+    'native_name' => 'Western Sahara',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Northern Africa',
+    'currencies' => 
+    array (
+      0 => 'MAD',
+    ),
+    'languages' => 
+    array (
+      0 => 'ber',
+      1 => 'mey',
+      2 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '212',
+    ),
+    'tld' => '.eh',
+    'latitude' => 25.0,
+    'longitude' => -13.0,
+    'bounds' => 
+    array (
+      0 => -17.110556,
+      1 => 20.8,
+      2 => -8.666667,
+      3 => 27.666667,
+    ),
+  ),
+  'ER' => 
+  array (
+    'iso2' => 'ER',
+    'iso3' => 'ERI',
+    'numeric' => '232',
+    'name' => 'Eritrea',
+    'official_name' => 'State of Eritrea',
+    'native_name' => 'إرتريا‎',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Eastern Africa',
+    'currencies' => 
+    array (
+      0 => 'ERN',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+      1 => 'eng',
+      2 => 'tir',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '291',
+    ),
+    'tld' => '.er',
+    'latitude' => 15.397199630737305,
+    'longitude' => 39.087188720703125,
+    'bounds' => 
+    array (
+      0 => 36.483333,
+      1 => 12.383333,
+      2 => 43.114722,
+      3 => 18.033333,
+    ),
+  ),
+  'ES' => 
+  array (
+    'iso2' => 'ES',
+    'iso3' => 'ESP',
+    'numeric' => '724',
+    'name' => 'Spain',
+    'official_name' => 'Kingdom of Spain',
+    'native_name' => 'Espanya',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Southern Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'cat',
+      1 => 'eus',
+      2 => 'glg',
+      3 => 'oci',
+      4 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '34',
+    ),
+    'tld' => '.es',
+    'latitude' => 40.396026611328125,
+    'longitude' => -3.550692558288574,
+    'bounds' => 
+    array (
+      0 => -18.166667,
+      1 => 27.633333,
+      2 => 4.333333,
+      3 => 43.916667,
+    ),
+  ),
+  'ET' => 
+  array (
+    'iso2' => 'ET',
+    'iso3' => 'ETH',
+    'numeric' => '231',
+    'name' => 'Ethiopia',
+    'official_name' => 'Federal Democratic Republic of Ethiopia',
+    'native_name' => 'ኢትዮጵያ',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Eastern Africa',
+    'currencies' => 
+    array (
+      0 => 'ETB',
+    ),
+    'languages' => 
+    array (
+      0 => 'amh',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '251',
+    ),
+    'tld' => '.et',
+    'latitude' => 8.626703262329102,
+    'longitude' => 39.63755416870117,
+    'bounds' => 
+    array (
+      0 => 33.033333,
+      1 => 3.433333,
+      2 => 47.45,
+      3 => 14.698889,
+    ),
+  ),
+  'FI' => 
+  array (
+    'iso2' => 'FI',
+    'iso3' => 'FIN',
+    'numeric' => '246',
+    'name' => 'Finland',
+    'official_name' => 'Republic of Finland',
+    'native_name' => 'Suomi',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Northern Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'fin',
+      1 => 'swe',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '358',
+    ),
+    'tld' => '.fi',
+    'latitude' => 64.28858184814453,
+    'longitude' => 25.989402770996094,
+    'bounds' => 
+    array (
+      0 => 18.0,
+      1 => 58.83,
+      2 => 32.0,
+      3 => 70.083333,
+    ),
+  ),
+  'FJ' => 
+  array (
+    'iso2' => 'FJ',
+    'iso3' => 'FJI',
+    'numeric' => '242',
+    'name' => 'Fiji',
+    'official_name' => 'Republic of Fiji',
+    'native_name' => 'Fiji',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Melanesia',
+    'currencies' => 
+    array (
+      0 => 'FJD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'fij',
+      2 => 'hif',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '679',
+    ),
+    'tld' => '.fj',
+    'latitude' => -17.658161163330078,
+    'longitude' => 178.1472625732422,
+    'bounds' => 
+    array (
+      0 => 180.0,
+      1 => -21.016667,
+      2 => -179.983333,
+      3 => -12.466667,
+    ),
+  ),
+  'FK' => 
+  array (
+    'iso2' => 'FK',
+    'iso3' => 'FLK',
+    'numeric' => '238',
+    'name' => 'Falkland Islands',
+    'official_name' => 'Falkland Islands',
+    'native_name' => 'Falkland Islands',
+    'continent' => 'SA',
+    'region' => 'Americas',
+    'subregion' => 'South America',
+    'currencies' => 
+    array (
+      0 => 'FKP',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '500',
+    ),
+    'tld' => '.fk',
+    'latitude' => -51.77312469482422,
+    'longitude' => -59.727909088134766,
+    'bounds' => 
+    array (
+      0 => -61.433333,
+      1 => -52.966667,
+      2 => -57.666667,
+      3 => -50.966667,
+    ),
+  ),
+  'FM' => 
+  array (
+    'iso2' => 'FM',
+    'iso3' => 'FSM',
+    'numeric' => '583',
+    'name' => 'Micronesia',
+    'official_name' => 'Federated States of Micronesia',
+    'native_name' => 'Micronesia',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Micronesia',
+    'currencies' => 
+    array (
+      0 => 'USD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '691',
+    ),
+    'tld' => '.fm',
+    'latitude' => 6.869349002838135,
+    'longitude' => 158.187255859375,
+    'bounds' => 
+    array (
+      0 => 137.425,
+      1 => 1.026389,
+      2 => 163.034444,
+      3 => 10.093611,
+    ),
+  ),
+  'FO' => 
+  array (
+    'iso2' => 'FO',
+    'iso3' => 'FRO',
+    'numeric' => '234',
+    'name' => 'Faroe Islands',
+    'official_name' => 'Faroe Islands',
+    'native_name' => 'Færøerne',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Northern Europe',
+    'currencies' => 
+    array (
+      0 => 'DKK',
+    ),
+    'languages' => 
+    array (
+      0 => 'dan',
+      1 => 'fao',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '298',
+    ),
+    'tld' => '.fo',
+    'latitude' => 62.009559631347656,
+    'longitude' => -6.818255424499512,
+    'bounds' => 
+    array (
+      0 => -7.8,
+      1 => 61.333333,
+      2 => -6.25,
+      3 => 62.4,
+    ),
+  ),
+  'FR' => 
+  array (
+    'iso2' => 'FR',
+    'iso3' => 'FRA',
+    'numeric' => '250',
+    'name' => 'France',
+    'official_name' => 'French Republic',
+    'native_name' => 'France',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Western Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '33',
+    ),
+    'tld' => '.fr',
+    'latitude' => 46.63727951049805,
+    'longitude' => 2.3382623195648193,
+    'bounds' => 
+    array (
+      0 => -5.14,
+      1 => 41.34,
+      2 => 9.56,
+      3 => 51.09,
+    ),
+  ),
+  'GA' => 
+  array (
+    'iso2' => 'GA',
+    'iso3' => 'GAB',
+    'numeric' => '266',
+    'name' => 'Gabon',
+    'official_name' => 'Gabonese Republic',
+    'native_name' => 'Gabon',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Middle Africa',
+    'currencies' => 
+    array (
+      0 => 'XAF',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '241',
+    ),
+    'tld' => '.ga',
+    'latitude' => -0.6345400810241699,
+    'longitude' => 11.738608360290527,
+    'bounds' => 
+    array (
+      0 => 8.7,
+      1 => -3.9,
+      2 => 14.483333,
+      3 => 2.283333,
+    ),
+  ),
+  'GB' => 
+  array (
+    'iso2' => 'GB',
+    'iso3' => 'GBR',
+    'numeric' => '826',
+    'name' => 'United Kingdom',
+    'official_name' => 'United Kingdom of Great Britain and Northern Ireland',
+    'native_name' => 'United Kingdom',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Northern Europe',
+    'currencies' => 
+    array (
+      0 => 'GBP',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '44',
+    ),
+    'tld' => '.uk',
+    'latitude' => 54.56088638305664,
+    'longitude' => -2.2125117778778076,
+    'bounds' => 
+    array (
+      0 => -13.65,
+      1 => 49.866667,
+      2 => 2.866667,
+      3 => 61.5,
+    ),
+  ),
+  'GD' => 
+  array (
+    'iso2' => 'GD',
+    'iso3' => 'GRD',
+    'numeric' => '308',
+    'name' => 'Grenada',
+    'official_name' => 'Grenada',
+    'native_name' => 'Grenada',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'XCD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1473',
+    ),
+    'tld' => '.gd',
+    'latitude' => 12.178866386413574,
+    'longitude' => -61.64693069458008,
+    'bounds' => 
+    array (
+      0 => -61.8,
+      1 => 11.983333,
+      2 => -61.25,
+      3 => 12.666667,
+    ),
+  ),
+  'GE' => 
+  array (
+    'iso2' => 'GE',
+    'iso3' => 'GEO',
+    'numeric' => '268',
+    'name' => 'Georgia',
+    'official_name' => 'Georgia',
+    'native_name' => 'საქართველო',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Western Asia',
+    'currencies' => 
+    array (
+      0 => 'GEL',
+    ),
+    'languages' => 
+    array (
+      0 => 'kat',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '995',
+    ),
+    'tld' => '.ge',
+    'latitude' => 42.3207845,
+    'longitude' => 43.3713615,
+    'bounds' => 
+    array (
+      0 => 40.013056,
+      1 => 41.15,
+      2 => 46.635556,
+      3 => 43.570556,
+    ),
+  ),
+  'GF' => 
+  array (
+    'iso2' => 'GF',
+    'iso3' => 'GUF',
+    'numeric' => '254',
+    'name' => 'French Guiana',
+    'official_name' => 'Guiana',
+    'native_name' => 'Guyane française',
+    'continent' => 'SA',
+    'region' => 'Americas',
+    'subregion' => 'South America',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '594',
+    ),
+    'tld' => '.gf',
+    'latitude' => 4.069991111755371,
+    'longitude' => -53.16830825805664,
+    'bounds' => 
+    array (
+      0 => -60.0,
+      1 => 2.166667,
+      2 => -51.65,
+      3 => 5.75,
+    ),
+  ),
+  'GG' => 
+  array (
+    'iso2' => 'GG',
+    'iso3' => 'GGY',
+    'numeric' => '831',
+    'name' => 'Guernsey',
+    'official_name' => 'Bailiwick of Guernsey',
+    'native_name' => 'Guernsey',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Northern Europe',
+    'currencies' => 
+    array (
+      0 => 'GBP',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'fra',
+      2 => 'nfr',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '44',
+    ),
+    'tld' => '.gg',
+    'latitude' => 49.72008514404297,
+    'longitude' => -2.1999685764312744,
+    'bounds' => 
+    array (
+      0 => -2.7,
+      1 => 49.401111,
+      2 => -2.158056,
+      3 => 49.733333,
+    ),
+  ),
+  'GH' => 
+  array (
+    'iso2' => 'GH',
+    'iso3' => 'GHA',
+    'numeric' => '288',
+    'name' => 'Ghana',
+    'official_name' => 'Republic of Ghana',
+    'native_name' => 'Ghana',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Western Africa',
+    'currencies' => 
+    array (
+      0 => 'GHS',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '233',
+    ),
+    'tld' => '.gh',
+    'latitude' => 7.921330451965332,
+    'longitude' => -1.2043862342834473,
+    'bounds' => 
+    array (
+      0 => -4.0,
+      1 => 4.733333,
+      2 => 1.192778,
+      3 => 11.15,
+    ),
+  ),
+  'GI' => 
+  array (
+    'iso2' => 'GI',
+    'iso3' => 'GIB',
+    'numeric' => '292',
+    'name' => 'Gibraltar',
+    'official_name' => 'Gibraltar',
+    'native_name' => 'Gibraltar',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Southern Europe',
+    'currencies' => 
+    array (
+      0 => 'GIP',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '350',
+    ),
+    'tld' => '.gi',
+    'latitude' => 36.135841369628906,
+    'longitude' => -5.349248886108398,
+    'bounds' => 
+    array (
+      0 => -5.35,
+      1 => 36.1,
+      2 => -5.333333,
+      3 => 36.15,
+    ),
+  ),
+  'GL' => 
+  array (
+    'iso2' => 'GL',
+    'iso3' => 'GRL',
+    'numeric' => '304',
+    'name' => 'Greenland',
+    'official_name' => 'Greenland',
+    'native_name' => 'Kalaallit Nunaat',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Northern America',
+    'currencies' => 
+    array (
+      0 => 'DKK',
+    ),
+    'languages' => 
+    array (
+      0 => 'kal',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '299',
+    ),
+    'tld' => '.gl',
+    'latitude' => 74.34954833984375,
+    'longitude' => -41.08988952636719,
+    'bounds' => 
+    array (
+      0 => -73.05,
+      1 => 51.7,
+      2 => -12.133333,
+      3 => 83.666667,
+    ),
+  ),
+  'GM' => 
+  array (
+    'iso2' => 'GM',
+    'iso3' => 'GMB',
+    'numeric' => '270',
+    'name' => 'Gambia',
+    'official_name' => 'Republic of the Gambia',
+    'native_name' => 'Gambia',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Western Africa',
+    'currencies' => 
+    array (
+      0 => 'GMD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '220',
+    ),
+    'tld' => '.gm',
+    'latitude' => 13.440265655517578,
+    'longitude' => -15.490884780883789,
+    'bounds' => 
+    array (
+      0 => -16.816944,
+      1 => 7.0,
+      2 => -4.0,
+      3 => 13.816667,
+    ),
+  ),
+  'GN' => 
+  array (
+    'iso2' => 'GN',
+    'iso3' => 'GIN',
+    'numeric' => '324',
+    'name' => 'Guinea',
+    'official_name' => 'Republic of Guinea',
+    'native_name' => 'Guinée',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Western Africa',
+    'currencies' => 
+    array (
+      0 => 'GNF',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '224',
+    ),
+    'tld' => '.gn',
+    'latitude' => 10.429302215576172,
+    'longitude' => -10.98954963684082,
+    'bounds' => 
+    array (
+      0 => -15.366667,
+      1 => 7.0,
+      2 => -4.0,
+      3 => 12.633333,
+    ),
+  ),
+  'GP' => 
+  array (
+    'iso2' => 'GP',
+    'iso3' => 'GLP',
+    'numeric' => '312',
+    'name' => 'Guadeloupe',
+    'official_name' => 'Guadeloupe',
+    'native_name' => 'Guadeloupe',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '590',
+    ),
+    'tld' => '.gp',
+    'latitude' => 16.256731033325195,
+    'longitude' => -61.56741714477539,
+    'bounds' => 
+    array (
+      0 => -63.15,
+      1 => 15.0,
+      2 => -61.0,
+      3 => 18.116667,
+    ),
+  ),
+  'GQ' => 
+  array (
+    'iso2' => 'GQ',
+    'iso3' => 'GNQ',
+    'numeric' => '226',
+    'name' => 'Equatorial Guinea',
+    'official_name' => 'Republic of Equatorial Guinea',
+    'native_name' => 'Guinée équatoriale',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Middle Africa',
+    'currencies' => 
+    array (
+      0 => 'XAF',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+      1 => 'por',
+      2 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '240',
+    ),
+    'tld' => '.gq',
+    'latitude' => 1.5331259965896606,
+    'longitude' => 10.372581481933594,
+    'bounds' => 
+    array (
+      0 => 5.05,
+      1 => -1.483333,
+      2 => 11.4,
+      3 => 3.783333,
+    ),
+  ),
+  'GR' => 
+  array (
+    'iso2' => 'GR',
+    'iso3' => 'GRC',
+    'numeric' => '300',
+    'name' => 'Greece',
+    'official_name' => 'Hellenic Republic',
+    'native_name' => 'Ελλάδα',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Southern Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'ell',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '30',
+    ),
+    'tld' => '.gr',
+    'latitude' => 39.68437194824219,
+    'longitude' => 21.897409439086914,
+    'bounds' => 
+    array (
+      0 => 19.381667,
+      1 => 34.8,
+      2 => 29.648056,
+      3 => 44.0,
+    ),
+  ),
+  'GS' => 
+  array (
+    'iso2' => 'GS',
+    'iso3' => 'SGS',
+    'numeric' => '239',
+    'name' => 'South Georgia',
+    'official_name' => 'South Georgia and the South Sandwich Islands',
+    'native_name' => 'South Georgia',
+    'continent' => 'AN',
+    'region' => 'Americas',
+    'subregion' => 'South America',
+    'currencies' => 
+    array (
+      0 => 'GBP',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '500',
+    ),
+    'tld' => '.gs',
+    'latitude' => -54.459922790527344,
+    'longitude' => -36.354618072509766,
+    'bounds' => 
+    array (
+      0 => -38.305,
+      1 => -59.466667,
+      2 => -26.333333,
+      3 => -53.970278,
+    ),
+  ),
+  'GT' => 
+  array (
+    'iso2' => 'GT',
+    'iso3' => 'GTM',
+    'numeric' => '320',
+    'name' => 'Guatemala',
+    'official_name' => 'Republic of Guatemala',
+    'native_name' => 'Guatemala',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Central America',
+    'currencies' => 
+    array (
+      0 => 'GTQ',
+    ),
+    'languages' => 
+    array (
+      0 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '502',
+    ),
+    'tld' => '.gt',
+    'latitude' => 15.670565605163574,
+    'longitude' => -90.3486557006836,
+    'bounds' => 
+    array (
+      0 => -92.583333,
+      1 => 13.751111,
+      2 => -87.05,
+      3 => 17.816667,
+    ),
+  ),
+  'GU' => 
+  array (
+    'iso2' => 'GU',
+    'iso3' => 'GUM',
+    'numeric' => '316',
+    'name' => 'Guam',
+    'official_name' => 'Guam',
+    'native_name' => 'Guåhån',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Micronesia',
+    'currencies' => 
+    array (
+      0 => 'USD',
+    ),
+    'languages' => 
+    array (
+      0 => 'cha',
+      1 => 'eng',
+      2 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1671',
+    ),
+    'tld' => '.gu',
+    'latitude' => 13.42112922668457,
+    'longitude' => 144.73971557617188,
+    'bounds' => 
+    array (
+      0 => 144.619263,
+      1 => 13.24059,
+      2 => 144.953995,
+      3 => 13.65232,
+    ),
+  ),
+  'GW' => 
+  array (
+    'iso2' => 'GW',
+    'iso3' => 'GNB',
+    'numeric' => '624',
+    'name' => 'Guinea-Bissau',
+    'official_name' => 'Republic of Guinea-Bissau',
+    'native_name' => 'Guiné-Bissau',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Western Africa',
+    'currencies' => 
+    array (
+      0 => 'XOF',
+    ),
+    'languages' => 
+    array (
+      0 => 'por',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '245',
+    ),
+    'tld' => '.gw',
+    'latitude' => 12.115862846374512,
+    'longitude' => -14.748136520385742,
+    'bounds' => 
+    array (
+      0 => -16.651944,
+      1 => 5.0,
+      2 => -4.0,
+      3 => 12.683333,
+    ),
+  ),
+  'GY' => 
+  array (
+    'iso2' => 'GY',
+    'iso3' => 'GUY',
+    'numeric' => '328',
+    'name' => 'Guyana',
+    'official_name' => 'Co-operative Republic of Guyana',
+    'native_name' => 'Guyana',
+    'continent' => 'SA',
+    'region' => 'Americas',
+    'subregion' => 'South America',
+    'currencies' => 
+    array (
+      0 => 'GYD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '592',
+    ),
+    'tld' => '.gy',
+    'latitude' => 4.917311191558838,
+    'longitude' => -58.94346237182617,
+    'bounds' => 
+    array (
+      0 => -61.233333,
+      1 => 1.316667,
+      2 => -56.0,
+      3 => 8.433333,
+    ),
+  ),
+  'HK' => 
+  array (
+    'iso2' => 'HK',
+    'iso3' => 'HKG',
+    'numeric' => '344',
+    'name' => 'Hong Kong',
+    'official_name' => 'Hong Kong Special Administrative Region of the People\'s Republic of China',
+    'native_name' => 'Hong Kong',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Eastern Asia',
+    'currencies' => 
+    array (
+      0 => 'HKD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'zho',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '852',
+    ),
+    'tld' => '.hk',
+    'latitude' => 22.336156845092773,
+    'longitude' => 114.18696594238281,
+    'bounds' => 
+    array (
+      0 => 113.833333,
+      1 => 22.15,
+      2 => 114.433333,
+      3 => 22.566667,
+    ),
+  ),
+  'HM' => 
+  array (
+    'iso2' => 'HM',
+    'iso3' => 'HMD',
+    'numeric' => '334',
+    'name' => 'Heard Island and McDonald Islands',
+    'official_name' => 'Heard Island and McDonald Islands',
+    'native_name' => 'Heard Island and McDonald Islands',
+    'continent' => 'AN',
+    'region' => NULL,
+    'subregion' => NULL,
+    'currencies' => 
+    array (
+      0 => 'AUD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+    ),
+    'tld' => '.hm',
+    'latitude' => -53.080108642578125,
+    'longitude' => 73.56218719482422,
+    'bounds' => 
+    array (
+      0 => 72.566667,
+      1 => -53.2,
+      2 => 73.85,
+      3 => -52.9,
+    ),
+  ),
+  'HN' => 
+  array (
+    'iso2' => 'HN',
+    'iso3' => 'HND',
+    'numeric' => '340',
+    'name' => 'Honduras',
+    'official_name' => 'Republic of Honduras',
+    'native_name' => 'Honduras',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Central America',
+    'currencies' => 
+    array (
+      0 => 'HNL',
+    ),
+    'languages' => 
+    array (
+      0 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '504',
+    ),
+    'tld' => '.hn',
+    'latitude' => 14.975032806396484,
+    'longitude' => -86.2647705078125,
+    'bounds' => 
+    array (
+      0 => -89.333333,
+      1 => 13.016667,
+      2 => -82.5,
+      3 => 17.45,
+    ),
+  ),
+  'HR' => 
+  array (
+    'iso2' => 'HR',
+    'iso3' => 'HRV',
+    'numeric' => '191',
+    'name' => 'Croatia',
+    'official_name' => 'Republic of Croatia',
+    'native_name' => 'Hrvatska',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Southern Europe',
+    'currencies' => 
+    array (
+      0 => 'HRK',
+    ),
+    'languages' => 
+    array (
+      0 => 'hrv',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '385',
+    ),
+    'tld' => '.hr',
+    'latitude' => 45.444305419921875,
+    'longitude' => 15.734503746032715,
+    'bounds' => 
+    array (
+      0 => 13.493333,
+      1 => 42.380278,
+      2 => 19.383056,
+      3 => 46.526944,
+    ),
+  ),
+  'HT' => 
+  array (
+    'iso2' => 'HT',
+    'iso3' => 'HTI',
+    'numeric' => '332',
+    'name' => 'Haiti',
+    'official_name' => 'Republic of Haiti',
+    'native_name' => 'Haïti',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'HTG',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+      1 => 'hat',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '509',
+    ),
+    'tld' => '.ht',
+    'latitude' => 19.0732421875,
+    'longitude' => -72.24127960205078,
+    'bounds' => 
+    array (
+      0 => -74.483333,
+      1 => 18.016667,
+      2 => -71.633333,
+      3 => 20.083333,
+    ),
+  ),
+  'HU' => 
+  array (
+    'iso2' => 'HU',
+    'iso3' => 'HUN',
+    'numeric' => '348',
+    'name' => 'Hungary',
+    'official_name' => 'Hungary',
+    'native_name' => 'Magyarország',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Eastern Europe',
+    'currencies' => 
+    array (
+      0 => 'HUF',
+    ),
+    'languages' => 
+    array (
+      0 => 'hun',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '36',
+    ),
+    'tld' => '.hu',
+    'latitude' => 47.165733337402344,
+    'longitude' => 19.416574478149414,
+    'bounds' => 
+    array (
+      0 => 16.183333,
+      1 => 45.75,
+      2 => 22.866667,
+      3 => 48.983333,
+    ),
+  ),
+  'ID' => 
+  array (
+    'iso2' => 'ID',
+    'iso3' => 'IDN',
+    'numeric' => '360',
+    'name' => 'Indonesia',
+    'official_name' => 'Republic of Indonesia',
+    'native_name' => 'Indonesia',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'South-Eastern Asia',
+    'currencies' => 
+    array (
+      0 => 'IDR',
+    ),
+    'languages' => 
+    array (
+      0 => 'ind',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '62',
+    ),
+    'tld' => '.id',
+    'latitude' => -1.248089075088501,
+    'longitude' => 115.41899871826172,
+    'bounds' => 
+    array (
+      0 => 94.970278,
+      1 => -11.0,
+      2 => 141.016667,
+      3 => 10.616667,
+    ),
+  ),
+  'IE' => 
+  array (
+    'iso2' => 'IE',
+    'iso3' => 'IRL',
+    'numeric' => '372',
+    'name' => 'Ireland',
+    'official_name' => 'Republic of Ireland',
+    'native_name' => 'Ireland',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Northern Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'gle',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '353',
+    ),
+    'tld' => '.ie',
+    'latitude' => 53.1827278137207,
+    'longitude' => -8.196102142333984,
+    'bounds' => 
+    array (
+      0 => -10.680833,
+      1 => 51.425556,
+      2 => -6.0025,
+      3 => 55.433333,
+    ),
+  ),
+  'IL' => 
+  array (
+    'iso2' => 'IL',
+    'iso3' => 'ISR',
+    'numeric' => '376',
+    'name' => 'Israel',
+    'official_name' => 'State of Israel',
+    'native_name' => 'إسرائيل',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Western Asia',
+    'currencies' => 
+    array (
+      0 => 'ILS',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+      1 => 'heb',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '972',
+    ),
+    'tld' => '.il',
+    'latitude' => 31.814193725585938,
+    'longitude' => 34.75337219238281,
+    'bounds' => 
+    array (
+      0 => 34.283333,
+      1 => 29.516667,
+      2 => 35.666667,
+      3 => 33.286111,
+    ),
+  ),
+  'IM' => 
+  array (
+    'iso2' => 'IM',
+    'iso3' => 'IMN',
+    'numeric' => '833',
+    'name' => 'Isle of Man',
+    'official_name' => 'Isle of Man',
+    'native_name' => 'Isle of Man',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Northern Europe',
+    'currencies' => 
+    array (
+      0 => 'GBP',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'glv',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '44',
+    ),
+    'tld' => '.im',
+    'latitude' => 54.22451400756836,
+    'longitude' => -4.562133312225342,
+    'bounds' => 
+    array (
+      0 => -4.833333,
+      1 => 54.033333,
+      2 => -4.316667,
+      3 => 54.4,
+    ),
+  ),
+  'IN' => 
+  array (
+    'iso2' => 'IN',
+    'iso3' => 'IND',
+    'numeric' => '356',
+    'name' => 'India',
+    'official_name' => 'Republic of India',
+    'native_name' => 'India',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Southern Asia',
+    'currencies' => 
+    array (
+      0 => 'INR',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'hin',
+      2 => 'tam',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '91',
+    ),
+    'tld' => '.in',
+    'latitude' => 23.4060115814209,
+    'longitude' => 79.45809173583984,
+    'bounds' => 
+    array (
+      0 => 67.016667,
+      1 => 6.755556,
+      2 => 97.35,
+      3 => 35.9558333333,
+    ),
+  ),
+  'IO' => 
+  array (
+    'iso2' => 'IO',
+    'iso3' => 'IOT',
+    'numeric' => '086',
+    'name' => 'British Indian Ocean Territory',
+    'official_name' => 'British Indian Ocean Territory',
+    'native_name' => 'British Indian Ocean Territory',
+    'continent' => 'AS',
+    'region' => 'Africa',
+    'subregion' => 'Eastern Africa',
+    'currencies' => 
+    array (
+      0 => 'USD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '246',
+    ),
+    'tld' => '.io',
+    'latitude' => -6.196269989013672,
+    'longitude' => 71.34793090820312,
+    'bounds' => 
+    array (
+      0 => 71.265278,
+      1 => -7.35,
+      2 => 72.483333,
+      3 => -5.233333,
+    ),
+  ),
+  'IQ' => 
+  array (
+    'iso2' => 'IQ',
+    'iso3' => 'IRQ',
+    'numeric' => '368',
+    'name' => 'Iraq',
+    'official_name' => 'Republic of Iraq',
+    'native_name' => 'العراق',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Western Asia',
+    'currencies' => 
+    array (
+      0 => 'IQD',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+      1 => 'arc',
+      2 => 'ckb',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '964',
+    ),
+    'tld' => '.iq',
+    'latitude' => 33.044586181640625,
+    'longitude' => 43.77495574951172,
+    'bounds' => 
+    array (
+      0 => 38.800871,
+      1 => 28.866667,
+      2 => 48.833333,
+      3 => 37.352778,
+    ),
+  ),
+  'IR' => 
+  array (
+    'iso2' => 'IR',
+    'iso3' => 'IRN',
+    'numeric' => '364',
+    'name' => 'Iran',
+    'official_name' => 'Islamic Republic of Iran',
+    'native_name' => 'ایران',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Southern Asia',
+    'currencies' => 
+    array (
+      0 => 'IRR',
+    ),
+    'languages' => 
+    array (
+      0 => 'fas',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '98',
+    ),
+    'tld' => '.ir',
+    'latitude' => 32.50077819824219,
+    'longitude' => 54.2942008972168,
+    'bounds' => 
+    array (
+      0 => 27.4455,
+      1 => 25.05,
+      2 => 62.0,
+      3 => 39.7754,
+    ),
+  ),
+  'IS' => 
+  array (
+    'iso2' => 'IS',
+    'iso3' => 'ISL',
+    'numeric' => '352',
+    'name' => 'Iceland',
+    'official_name' => 'Iceland',
+    'native_name' => 'Ísland',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Northern Europe',
+    'currencies' => 
+    array (
+      0 => 'ISK',
+    ),
+    'languages' => 
+    array (
+      0 => 'isl',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '354',
+    ),
+    'tld' => '.is',
+    'latitude' => 64.9285659790039,
+    'longitude' => -18.961700439453125,
+    'bounds' => 
+    array (
+      0 => -24.533333,
+      1 => 63.3,
+      2 => -13.2,
+      3 => 66.566667,
+    ),
+  ),
+  'IT' => 
+  array (
+    'iso2' => 'IT',
+    'iso3' => 'ITA',
+    'numeric' => '380',
+    'name' => 'Italy',
+    'official_name' => 'Italian Republic',
+    'native_name' => 'Italien',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Southern Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'bar',
+      1 => 'ita',
+      2 => 'srd',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '39',
+    ),
+    'tld' => '.it',
+    'latitude' => 42.7669792175293,
+    'longitude' => 12.493823051452637,
+    'bounds' => 
+    array (
+      0 => 1.35,
+      1 => 35.483333,
+      2 => 20.433333,
+      3 => 48.533333,
+    ),
+  ),
+  'JE' => 
+  array (
+    'iso2' => 'JE',
+    'iso3' => 'JEY',
+    'numeric' => '832',
+    'name' => 'Jersey',
+    'official_name' => 'Bailiwick of Jersey',
+    'native_name' => 'Jersey',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Northern Europe',
+    'currencies' => 
+    array (
+      0 => 'GBP',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'fra',
+      2 => 'nrf',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '44',
+    ),
+    'tld' => '.je',
+    'latitude' => 49.2285041809082,
+    'longitude' => -2.1228928565979004,
+    'bounds' => 
+    array (
+      0 => -2.253889,
+      1 => 49.112778,
+      2 => -1.927778,
+      3 => 49.305833,
+    ),
+  ),
+  'JM' => 
+  array (
+    'iso2' => 'JM',
+    'iso3' => 'JAM',
+    'numeric' => '388',
+    'name' => 'Jamaica',
+    'official_name' => 'Jamaica',
+    'native_name' => 'Jamaica',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'JMD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'jam',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1876',
+    ),
+    'tld' => '.jm',
+    'latitude' => 18.143444061279297,
+    'longitude' => -77.34654998779297,
+    'bounds' => 
+    array (
+      0 => -78.366667,
+      1 => 17.0,
+      2 => -70.0,
+      3 => 18.533333,
+    ),
+  ),
+  'JO' => 
+  array (
+    'iso2' => 'JO',
+    'iso3' => 'JOR',
+    'numeric' => '400',
+    'name' => 'Jordan',
+    'official_name' => 'Hashemite Kingdom of Jordan',
+    'native_name' => 'الأردن',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Western Asia',
+    'currencies' => 
+    array (
+      0 => 'JOD',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '962',
+    ),
+    'tld' => '.jo',
+    'latitude' => 31.2757625579834,
+    'longitude' => 36.82838821411133,
+    'bounds' => 
+    array (
+      0 => 34.9875,
+      1 => 29.0,
+      2 => 38.883333,
+      3 => 33.002222,
+    ),
+  ),
+  'JP' => 
+  array (
+    'iso2' => 'JP',
+    'iso3' => 'JPN',
+    'numeric' => '392',
+    'name' => 'Japan',
+    'official_name' => 'Japan',
+    'native_name' => '日本',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Eastern Asia',
+    'currencies' => 
+    array (
+      0 => 'JPY',
+    ),
+    'languages' => 
+    array (
+      0 => 'jpn',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '81',
+    ),
+    'tld' => '.jp',
+    'latitude' => 36.281646728515625,
+    'longitude' => 139.0772705078125,
+    'bounds' => 
+    array (
+      0 => 122.933333,
+      1 => 20.416667,
+      2 => 154.0,
+      3 => 45.520833,
+    ),
+  ),
+  'KE' => 
+  array (
+    'iso2' => 'KE',
+    'iso3' => 'KEN',
+    'numeric' => '404',
+    'name' => 'Kenya',
+    'official_name' => 'Republic of Kenya',
+    'native_name' => 'Kenya',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Eastern Africa',
+    'currencies' => 
+    array (
+      0 => 'KES',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'swa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '254',
+    ),
+    'tld' => '.ke',
+    'latitude' => 0.5765031576156616,
+    'longitude' => 37.83988952636719,
+    'bounds' => 
+    array (
+      0 => 27.433333,
+      1 => -4.716667,
+      2 => 41.8583834826,
+      3 => 4.883333,
+    ),
+  ),
+  'KG' => 
+  array (
+    'iso2' => 'KG',
+    'iso3' => 'KGZ',
+    'numeric' => '417',
+    'name' => 'Kyrgyzstan',
+    'official_name' => 'Kyrgyz Republic',
+    'native_name' => 'Кыргызстан',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Central Asia',
+    'currencies' => 
+    array (
+      0 => 'KGS',
+    ),
+    'languages' => 
+    array (
+      0 => 'kir',
+      1 => 'rus',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '996',
+    ),
+    'tld' => '.kg',
+    'latitude' => 41.46435546875,
+    'longitude' => 74.55522155761719,
+    'bounds' => 
+    array (
+      0 => 69.333333,
+      1 => 39.25,
+      2 => 80.115833,
+      3 => 43.016667,
+    ),
+  ),
+  'KH' => 
+  array (
+    'iso2' => 'KH',
+    'iso3' => 'KHM',
+    'numeric' => '116',
+    'name' => 'Cambodia',
+    'official_name' => 'Kingdom of Cambodia',
+    'native_name' => 'Kâmpŭchéa',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'South-Eastern Asia',
+    'currencies' => 
+    array (
+      0 => 'KHR',
+    ),
+    'languages' => 
+    array (
+      0 => 'khm',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '855',
+    ),
+    'tld' => '.kh',
+    'latitude' => 12.570423126220703,
+    'longitude' => 104.81391143798828,
+    'bounds' => 
+    array (
+      0 => 102.358333,
+      1 => 9.916667,
+      2 => 107.566667,
+      3 => 17.483333,
+    ),
+  ),
+  'KI' => 
+  array (
+    'iso2' => 'KI',
+    'iso3' => 'KIR',
+    'numeric' => '296',
+    'name' => 'Kiribati',
+    'official_name' => 'Independent and Sovereign Republic of Kiribati',
+    'native_name' => 'Kiribati',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Micronesia',
+    'currencies' => 
+    array (
+      0 => 'AUD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'gil',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '686',
+    ),
+    'tld' => '.ki',
+    'latitude' => 1.842833161354065,
+    'longitude' => -157.6758270263672,
+    'bounds' => 
+    array (
+      0 => 179.716667,
+      1 => -10.3,
+      2 => -174.533333,
+      3 => 4.716667,
+    ),
+  ),
+  'KM' => 
+  array (
+    'iso2' => 'KM',
+    'iso3' => 'COM',
+    'numeric' => '174',
+    'name' => 'Comoros',
+    'official_name' => 'Union of the Comoros',
+    'native_name' => 'القمر‎',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Eastern Africa',
+    'currencies' => 
+    array (
+      0 => 'KMF',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+      1 => 'fra',
+      2 => 'zdj',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '269',
+    ),
+    'tld' => '.km',
+    'latitude' => -11.86610221862793,
+    'longitude' => 43.432640075683594,
+    'bounds' => 
+    array (
+      0 => 43.226111,
+      1 => -13.0,
+      2 => 45.316667,
+      3 => -11.35,
+    ),
+  ),
+  'KN' => 
+  array (
+    'iso2' => 'KN',
+    'iso3' => 'KNA',
+    'numeric' => '659',
+    'name' => 'Saint Kitts and Nevis',
+    'official_name' => 'Federation of Saint Christopher and Nevisa',
+    'native_name' => 'Saint Kitts and Nevis',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'XCD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1869',
+    ),
+    'tld' => '.kn',
+    'latitude' => 17.24447250366211,
+    'longitude' => -62.643184661865234,
+    'bounds' => 
+    array (
+      0 => -62.85,
+      1 => 17.1,
+      2 => -62.516667,
+      3 => 17.416667,
+    ),
+  ),
+  'KP' => 
+  array (
+    'iso2' => 'KP',
+    'iso3' => 'PRK',
+    'numeric' => '408',
+    'name' => 'North Korea',
+    'official_name' => 'Democratic People\'s Republic of Korea',
+    'native_name' => '북한',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Eastern Asia',
+    'currencies' => 
+    array (
+      0 => 'KPW',
+    ),
+    'languages' => 
+    array (
+      0 => 'kor',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '850',
+    ),
+    'tld' => '.kp',
+    'latitude' => 40.077640533447266,
+    'longitude' => 127.13385009765625,
+    'bounds' => 
+    array (
+      0 => 124.1875,
+      1 => 37.6775,
+      2 => 130.672222,
+      3 => 43.003889,
+    ),
+  ),
+  'KR' => 
+  array (
+    'iso2' => 'KR',
+    'iso3' => 'KOR',
+    'numeric' => '410',
+    'name' => 'South Korea',
+    'official_name' => 'Republic of Korea',
+    'native_name' => '대한민국',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Eastern Asia',
+    'currencies' => 
+    array (
+      0 => 'KRW',
+    ),
+    'languages' => 
+    array (
+      0 => 'kor',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '82',
+    ),
+    'tld' => '.kr',
+    'latitude' => 40.077640533447266,
+    'longitude' => 127.13385009765625,
+    'bounds' => 
+    array (
+      0 => 124.612222,
+      1 => 33.1175,
+      2 => 131.866667,
+      3 => 38.586667,
+    ),
+  ),
+  'KW' => 
+  array (
+    'iso2' => 'KW',
+    'iso3' => 'KWT',
+    'numeric' => '414',
+    'name' => 'Kuwait',
+    'official_name' => 'State of Kuwait',
+    'native_name' => 'الكويت',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Western Asia',
+    'currencies' => 
+    array (
+      0 => 'KWD',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '965',
+    ),
+    'tld' => '.kw',
+    'latitude' => 29.321941375732422,
+    'longitude' => 47.60246658325195,
+    'bounds' => 
+    array (
+      0 => 45.0,
+      1 => 25.0,
+      2 => 49.410556,
+      3 => 30.069444,
+    ),
+  ),
+  'KY' => 
+  array (
+    'iso2' => 'KY',
+    'iso3' => 'CYM',
+    'numeric' => '136',
+    'name' => 'Cayman Islands',
+    'official_name' => 'Cayman Islands',
+    'native_name' => 'Cayman Islands',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'KYD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1345',
+    ),
+    'tld' => '.ky',
+    'latitude' => 19.308862686157227,
+    'longitude' => -81.25680541992188,
+    'bounds' => 
+    array (
+      0 => -81.416667,
+      1 => 19.25,
+      2 => -79.716667,
+      3 => 19.75,
+    ),
+  ),
+  'KZ' => 
+  array (
+    'iso2' => 'KZ',
+    'iso3' => 'KAZ',
+    'numeric' => '398',
+    'name' => 'Kazakhstan',
+    'official_name' => 'Republic of Kazakhstan',
+    'native_name' => 'Қазақстан',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Central Asia',
+    'currencies' => 
+    array (
+      0 => 'KZT',
+    ),
+    'languages' => 
+    array (
+      0 => 'kaz',
+      1 => 'rus',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '76',
+      1 => '77',
+    ),
+    'tld' => '.kz',
+    'latitude' => 48.14600372314453,
+    'longitude' => 67.17916870117188,
+    'bounds' => 
+    array (
+      0 => 46.589722,
+      1 => 40.416667,
+      2 => 90.0,
+      3 => 55.330556,
+    ),
+  ),
+  'LA' => 
+  array (
+    'iso2' => 'LA',
+    'iso3' => 'LAO',
+    'numeric' => '418',
+    'name' => 'Laos',
+    'official_name' => 'Lao People\'s Democratic Republic',
+    'native_name' => 'ສປປລາວ',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'South-Eastern Asia',
+    'currencies' => 
+    array (
+      0 => 'LAK',
+    ),
+    'languages' => 
+    array (
+      0 => 'lao',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '856',
+    ),
+    'tld' => '.la',
+    'latitude' => 18.65074920654297,
+    'longitude' => 104.15293884277344,
+    'bounds' => 
+    array (
+      0 => 100.095833,
+      1 => 13.933333,
+      2 => 107.633333,
+      3 => 22.5,
+    ),
+  ),
+  'LB' => 
+  array (
+    'iso2' => 'LB',
+    'iso3' => 'LBN',
+    'numeric' => '422',
+    'name' => 'Lebanon',
+    'official_name' => 'Lebanese Republic',
+    'native_name' => 'لبنان',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Western Asia',
+    'currencies' => 
+    array (
+      0 => 'LBP',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+      1 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '961',
+    ),
+    'tld' => '.lb',
+    'latitude' => 33.925411224365234,
+    'longitude' => 35.89972686767578,
+    'bounds' => 
+    array (
+      0 => 35.103611,
+      1 => 33.078333,
+      2 => 36.592778,
+      3 => 34.69,
+    ),
+  ),
+  'LC' => 
+  array (
+    'iso2' => 'LC',
+    'iso3' => 'LCA',
+    'numeric' => '662',
+    'name' => 'Saint Lucia',
+    'official_name' => 'Saint Lucia',
+    'native_name' => 'Saint Lucia',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'XCD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1758',
+    ),
+    'tld' => '.lc',
+    'latitude' => 13.86330509185791,
+    'longitude' => -60.9665641784668,
+    'bounds' => 
+    array (
+      0 => -61.066667,
+      1 => 13.7,
+      2 => -60.866667,
+      3 => 14.1,
+    ),
+  ),
+  'LI' => 
+  array (
+    'iso2' => 'LI',
+    'iso3' => 'LIE',
+    'numeric' => '438',
+    'name' => 'Liechtenstein',
+    'official_name' => 'Principality of Liechtenstein',
+    'native_name' => 'Liechtenstein',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Western Europe',
+    'currencies' => 
+    array (
+      0 => 'CHF',
+    ),
+    'languages' => 
+    array (
+      0 => 'deu',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '423',
+    ),
+    'tld' => '.li',
+    'latitude' => 47.14126968383789,
+    'longitude' => 9.552783012390137,
+    'bounds' => 
+    array (
+      0 => 9.5,
+      1 => 47.05,
+      2 => 9.75,
+      3 => 47.233333,
+    ),
+  ),
+  'LK' => 
+  array (
+    'iso2' => 'LK',
+    'iso3' => 'LKA',
+    'numeric' => '144',
+    'name' => 'Sri Lanka',
+    'official_name' => 'Democratic Socialist Republic of Sri Lanka',
+    'native_name' => 'ශ්‍රී ලංකාව',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Southern Asia',
+    'currencies' => 
+    array (
+      0 => 'LKR',
+    ),
+    'languages' => 
+    array (
+      0 => 'sin',
+      1 => 'tam',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '94',
+    ),
+    'tld' => '.lk',
+    'latitude' => 7.789133548736572,
+    'longitude' => 80.68072509765625,
+    'bounds' => 
+    array (
+      0 => 79.516667,
+      1 => 5.916667,
+      2 => 81.866667,
+      3 => 9.833333,
+    ),
+  ),
+  'LR' => 
+  array (
+    'iso2' => 'LR',
+    'iso3' => 'LBR',
+    'numeric' => '430',
+    'name' => 'Liberia',
+    'official_name' => 'Republic of Liberia',
+    'native_name' => 'Liberia',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Western Africa',
+    'currencies' => 
+    array (
+      0 => 'LRD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '231',
+    ),
+    'tld' => '.lr',
+    'latitude' => 6.411512851715088,
+    'longitude' => -9.323492050170898,
+    'bounds' => 
+    array (
+      0 => -11.472222,
+      1 => 4.328333,
+      2 => -4.0,
+      3 => 9.5,
+    ),
+  ),
+  'LS' => 
+  array (
+    'iso2' => 'LS',
+    'iso3' => 'LSO',
+    'numeric' => '426',
+    'name' => 'Lesotho',
+    'official_name' => 'Kingdom of Lesotho',
+    'native_name' => 'Lesotho',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Southern Africa',
+    'currencies' => 
+    array (
+      0 => 'LSL',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'sot',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '266',
+    ),
+    'tld' => '.ls',
+    'latitude' => -29.58175277709961,
+    'longitude' => 28.246612548828125,
+    'bounds' => 
+    array (
+      0 => 24.0,
+      1 => -30.666667,
+      2 => 29.316667,
+      3 => -28.616667,
+    ),
+  ),
+  'LT' => 
+  array (
+    'iso2' => 'LT',
+    'iso3' => 'LTU',
+    'numeric' => '440',
+    'name' => 'Lithuania',
+    'official_name' => 'Republic of Lithuania',
+    'native_name' => 'Lietuva',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Northern Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'lit',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '370',
+    ),
+    'tld' => '.lt',
+    'latitude' => 55.33871841430664,
+    'longitude' => 23.87092399597168,
+    'bounds' => 
+    array (
+      0 => 21.0,
+      1 => 53.0,
+      2 => 27.0,
+      3 => 56.441667,
+    ),
+  ),
+  'LU' => 
+  array (
+    'iso2' => 'LU',
+    'iso3' => 'LUX',
+    'numeric' => '442',
+    'name' => 'Luxembourg',
+    'official_name' => 'Grand Duchy of Luxembourg',
+    'native_name' => 'Luxemburg',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Western Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'deu',
+      1 => 'fra',
+      2 => 'ltz',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '352',
+    ),
+    'tld' => '.lu',
+    'latitude' => 49.77788162231445,
+    'longitude' => 6.094746112823486,
+    'bounds' => 
+    array (
+      0 => 5.742778,
+      1 => 49.460833,
+      2 => 6.505833,
+      3 => 50.181667,
+    ),
+  ),
+  'LV' => 
+  array (
+    'iso2' => 'LV',
+    'iso3' => 'LVA',
+    'numeric' => '428',
+    'name' => 'Latvia',
+    'official_name' => 'Republic of Latvia',
+    'native_name' => 'Latvija',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Northern Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'lav',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '371',
+    ),
+    'tld' => '.lv',
+    'latitude' => 56.86873245239258,
+    'longitude' => 24.84024429321289,
+    'bounds' => 
+    array (
+      0 => 20.966667,
+      1 => 55.7,
+      2 => 28.2,
+      3 => 58.066667,
+    ),
+  ),
+  'LY' => 
+  array (
+    'iso2' => 'LY',
+    'iso3' => 'LBY',
+    'numeric' => '434',
+    'name' => 'Libya',
+    'official_name' => 'State of Libya',
+    'native_name' => '‏ليبيا',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Northern Africa',
+    'currencies' => 
+    array (
+      0 => 'LYD',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '218',
+    ),
+    'tld' => '.ly',
+    'latitude' => 27.23609733581543,
+    'longitude' => 18.043556213378906,
+    'bounds' => 
+    array (
+      0 => 5.0,
+      1 => 20.8,
+      2 => 25.5,
+      3 => 33.15,
+    ),
+  ),
+  'MA' => 
+  array (
+    'iso2' => 'MA',
+    'iso3' => 'MAR',
+    'numeric' => '504',
+    'name' => 'Morocco',
+    'official_name' => 'Kingdom of Morocco',
+    'native_name' => 'المغرب',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Northern Africa',
+    'currencies' => 
+    array (
+      0 => 'MAD',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+      1 => 'ber',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '212',
+    ),
+    'tld' => '.ma',
+    'latitude' => 29.14059066772461,
+    'longitude' => -8.953388214111328,
+    'bounds' => 
+    array (
+      0 => -13.1,
+      1 => 5.51,
+      2 => 2.0,
+      3 => 36.21,
+    ),
+  ),
+  'MC' => 
+  array (
+    'iso2' => 'MC',
+    'iso3' => 'MCO',
+    'numeric' => '492',
+    'name' => 'Monaco',
+    'official_name' => 'Principality of Monaco',
+    'native_name' => 'Monaco',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Western Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '377',
+    ),
+    'tld' => '.mc',
+    'latitude' => 43.738929748535156,
+    'longitude' => 7.425483226776123,
+    'bounds' => 
+    array (
+      0 => 7.4,
+      1 => 43.716667,
+      2 => 7.439444,
+      3 => 43.745833,
+    ),
+  ),
+  'MD' => 
+  array (
+    'iso2' => 'MD',
+    'iso3' => 'MDA',
+    'numeric' => '498',
+    'name' => 'Moldova',
+    'official_name' => 'Republic of Moldova',
+    'native_name' => 'Moldova',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Eastern Europe',
+    'currencies' => 
+    array (
+      0 => 'MDL',
+    ),
+    'languages' => 
+    array (
+      0 => 'ron',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '373',
+    ),
+    'tld' => '.md',
+    'latitude' => 47.203704833984375,
+    'longitude' => 28.46834373474121,
+    'bounds' => 
+    array (
+      0 => 26.672222,
+      1 => 45.481667,
+      2 => 30.096111,
+      3 => 48.467222,
+    ),
+  ),
+  'ME' => 
+  array (
+    'iso2' => 'ME',
+    'iso3' => 'MNE',
+    'numeric' => '499',
+    'name' => 'Montenegro',
+    'official_name' => 'Montenegro',
+    'native_name' => 'Црна Гора',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Southern Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'srp',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '382',
+    ),
+    'tld' => '.me',
+    'latitude' => 42.752803802490234,
+    'longitude' => 19.237918853759766,
+    'bounds' => 
+    array (
+      0 => 18.438056,
+      1 => 41.864167,
+      2 => 20.3425,
+      3 => 43.547778,
+    ),
+  ),
+  'MF' => 
+  array (
+    'iso2' => 'MF',
+    'iso3' => 'MAF',
+    'numeric' => '663',
+    'name' => 'Saint Martin',
+    'official_name' => 'Saint Martin',
+    'native_name' => 'Saint-Martin',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '590',
+    ),
+    'tld' => '.fr',
+    'latitude' => 18.042224884033203,
+    'longitude' => -63.06623458862305,
+    'bounds' => 
+    array (
+      0 => -63.153326,
+      1 => 18.0465757,
+      2 => -62.9703926,
+      3 => 18.1251338,
+    ),
+  ),
+  'MG' => 
+  array (
+    'iso2' => 'MG',
+    'iso3' => 'MDG',
+    'numeric' => '450',
+    'name' => 'Madagascar',
+    'official_name' => 'Republic of Madagascar',
+    'native_name' => 'Madagascar',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Eastern Africa',
+    'currencies' => 
+    array (
+      0 => 'MGA',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+      1 => 'mlg',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '261',
+    ),
+    'tld' => '.mg',
+    'latitude' => -19.27239418029785,
+    'longitude' => 46.69843292236328,
+    'bounds' => 
+    array (
+      0 => 43.183333,
+      1 => -25.6,
+      2 => 50.483333,
+      3 => -11.95,
+    ),
+  ),
+  'MH' => 
+  array (
+    'iso2' => 'MH',
+    'iso3' => 'MHL',
+    'numeric' => '584',
+    'name' => 'Marshall Islands',
+    'official_name' => 'Republic of the Marshall Islands',
+    'native_name' => 'Marshall Islands',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Micronesia',
+    'currencies' => 
+    array (
+      0 => 'USD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'mah',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '692',
+    ),
+    'tld' => '.mh',
+    'latitude' => 7.286207675933838,
+    'longitude' => 168.75140380859375,
+    'bounds' => 
+    array (
+      0 => 160.8,
+      1 => 4.566667,
+      2 => 172.8,
+      3 => 19.316667,
+    ),
+  ),
+  'MK' => 
+  array (
+    'iso2' => 'MK',
+    'iso3' => 'MKD',
+    'numeric' => '807',
+    'name' => 'Macedonia',
+    'official_name' => 'Republic of Macedonia',
+    'native_name' => 'Македонија',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Southern Europe',
+    'currencies' => 
+    array (
+      0 => 'MKD',
+    ),
+    'languages' => 
+    array (
+      0 => 'mkd',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '389',
+    ),
+    'tld' => '.mk',
+    'latitude' => 41.60045623779297,
+    'longitude' => 21.700895309448242,
+    'bounds' => 
+    array (
+      0 => 20.459167,
+      1 => 40.866667,
+      2 => 23.033333,
+      3 => 42.373056,
+    ),
+  ),
+  'ML' => 
+  array (
+    'iso2' => 'ML',
+    'iso3' => 'MLI',
+    'numeric' => '466',
+    'name' => 'Mali',
+    'official_name' => 'Republic of Mali',
+    'native_name' => 'Mali',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Western Africa',
+    'currencies' => 
+    array (
+      0 => 'XOF',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '223',
+    ),
+    'tld' => '.ml',
+    'latitude' => 17.35776710510254,
+    'longitude' => -3.5273818969726562,
+    'bounds' => 
+    array (
+      0 => -12.55,
+      1 => 10.15,
+      2 => 13.0,
+      3 => 26.0,
+    ),
+  ),
+  'MM' => 
+  array (
+    'iso2' => 'MM',
+    'iso3' => 'MMR',
+    'numeric' => '104',
+    'name' => 'Myanmar',
+    'official_name' => 'Republic of the Union of Myanmar',
+    'native_name' => 'မြန်မာ',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'South-Eastern Asia',
+    'currencies' => 
+    array (
+      0 => 'MMK',
+    ),
+    'languages' => 
+    array (
+      0 => 'mya',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '95',
+    ),
+    'tld' => '.mm',
+    'latitude' => 20.330142974853516,
+    'longitude' => 96.52182006835938,
+    'bounds' => 
+    array (
+      0 => 92.190833,
+      1 => 6.0,
+      2 => 102.0,
+      3 => 28.35,
+    ),
+  ),
+  'MN' => 
+  array (
+    'iso2' => 'MN',
+    'iso3' => 'MNG',
+    'numeric' => '496',
+    'name' => 'Mongolia',
+    'official_name' => 'Mongolia',
+    'native_name' => 'Монгол улс',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Eastern Asia',
+    'currencies' => 
+    array (
+      0 => 'MNT',
+    ),
+    'languages' => 
+    array (
+      0 => 'mon',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '976',
+    ),
+    'tld' => '.mn',
+    'latitude' => 46.83647918701172,
+    'longitude' => 103.06689453125,
+    'bounds' => 
+    array (
+      0 => 87.783333,
+      1 => 41.55,
+      2 => 119.916667,
+      3 => 52.1,
+    ),
+  ),
+  'MO' => 
+  array (
+    'iso2' => 'MO',
+    'iso3' => 'MAC',
+    'numeric' => '446',
+    'name' => 'Macau',
+    'official_name' => 'Macao Special Administrative Region of the People\'s Republic of China',
+    'native_name' => 'Macau',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Eastern Asia',
+    'currencies' => 
+    array (
+      0 => 'MOP',
+    ),
+    'languages' => 
+    array (
+      0 => 'por',
+      1 => 'zho',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '853',
+    ),
+    'tld' => '.mo',
+    'latitude' => 22.140748977661133,
+    'longitude' => 113.56034088134766,
+    'bounds' => 
+    array (
+      0 => 113.531389,
+      1 => 22.1125,
+      2 => 113.592222,
+      3 => 22.216389,
+    ),
+  ),
+  'MP' => 
+  array (
+    'iso2' => 'MP',
+    'iso3' => 'MNP',
+    'numeric' => '580',
+    'name' => 'Northern Mariana Islands',
+    'official_name' => 'Commonwealth of the Northern Mariana Islands',
+    'native_name' => 'Northern Mariana Islands',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Micronesia',
+    'currencies' => 
+    array (
+      0 => 'USD',
+    ),
+    'languages' => 
+    array (
+      0 => 'cal',
+      1 => 'cha',
+      2 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1670',
+    ),
+    'tld' => '.mp',
+    'latitude' => 15.262779235839844,
+    'longitude' => 145.8045654296875,
+    'bounds' => 
+    array (
+      0 => 144.886365,
+      1 => 4.1103823,
+      2 => 146.0646485,
+      3 => 20.5534826,
+    ),
+  ),
+  'MQ' => 
+  array (
+    'iso2' => 'MQ',
+    'iso3' => 'MTQ',
+    'numeric' => '474',
+    'name' => 'Martinique',
+    'official_name' => 'Martinique',
+    'native_name' => 'Martinique',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '596',
+    ),
+    'tld' => '.mq',
+    'latitude' => 14.642807960510254,
+    'longitude' => -60.97755432128906,
+    'bounds' => 
+    array (
+      0 => -61.966667,
+      1 => 14.383333,
+      2 => -60.816667,
+      3 => 14.866667,
+    ),
+  ),
+  'MR' => 
+  array (
+    'iso2' => 'MR',
+    'iso3' => 'MRT',
+    'numeric' => '478',
+    'name' => 'Mauritania',
+    'official_name' => 'Islamic Republic of Mauritania',
+    'native_name' => 'موريتانيا',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Western Africa',
+    'currencies' => 
+    array (
+      0 => 'MRO',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '222',
+    ),
+    'tld' => '.mr',
+    'latitude' => 20.258995056152344,
+    'longitude' => -10.364437103271484,
+    'bounds' => 
+    array (
+      0 => -17.079444,
+      1 => 14.7382733887,
+      2 => 13.0,
+      3 => 26.9,
+    ),
+  ),
+  'MS' => 
+  array (
+    'iso2' => 'MS',
+    'iso3' => 'MSR',
+    'numeric' => '500',
+    'name' => 'Montserrat',
+    'official_name' => 'Montserrat',
+    'native_name' => 'Montserrat',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'XCD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1664',
+    ),
+    'tld' => '.ms',
+    'latitude' => 16.735998153686523,
+    'longitude' => -62.188819885253906,
+    'bounds' => 
+    array (
+      0 => -62.233333,
+      1 => 16.666667,
+      2 => -62.15,
+      3 => 16.816667,
+    ),
+  ),
+  'MT' => 
+  array (
+    'iso2' => 'MT',
+    'iso3' => 'MLT',
+    'numeric' => '470',
+    'name' => 'Malta',
+    'official_name' => 'Republic of Malta',
+    'native_name' => 'Malta',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Southern Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'mlt',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '356',
+    ),
+    'tld' => '.mt',
+    'latitude' => 35.93336486816406,
+    'longitude' => 14.381033897399902,
+    'bounds' => 
+    array (
+      0 => 14.185556,
+      1 => 35.783889,
+      2 => 14.575,
+      3 => 36.081944,
+    ),
+  ),
+  'MU' => 
+  array (
+    'iso2' => 'MU',
+    'iso3' => 'MUS',
+    'numeric' => '480',
+    'name' => 'Mauritius',
+    'official_name' => 'Republic of Mauritius',
+    'native_name' => 'Mauritius',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Eastern Africa',
+    'currencies' => 
+    array (
+      0 => 'MUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'fra',
+      2 => 'mfe',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '230',
+    ),
+    'tld' => '.mu',
+    'latitude' => -20.220409393310547,
+    'longitude' => 57.589378356933594,
+    'bounds' => 
+    array (
+      0 => 56.6,
+      1 => -20.516667,
+      2 => 72.466667,
+      3 => -5.25,
+    ),
+  ),
+  'MV' => 
+  array (
+    'iso2' => 'MV',
+    'iso3' => 'MDV',
+    'numeric' => '462',
+    'name' => 'Maldives',
+    'official_name' => 'Republic of the Maldives',
+    'native_name' => 'ދިވެހިރާއްޖޭގެ',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Southern Asia',
+    'currencies' => 
+    array (
+      0 => 'MVR',
+    ),
+    'languages' => 
+    array (
+      0 => 'div',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '960',
+    ),
+    'tld' => '.mv',
+    'latitude' => 4.185884952545166,
+    'longitude' => 73.53071594238281,
+    'bounds' => 
+    array (
+      0 => 72.583333,
+      1 => -0.7,
+      2 => 73.7,
+      3 => 7.1,
+    ),
+  ),
+  'MW' => 
+  array (
+    'iso2' => 'MW',
+    'iso3' => 'MWI',
+    'numeric' => '454',
+    'name' => 'Malawi',
+    'official_name' => 'Republic of Malawi',
+    'native_name' => 'Malawi',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Eastern Africa',
+    'currencies' => 
+    array (
+      0 => 'MWK',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'nya',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '265',
+    ),
+    'tld' => '.mw',
+    'latitude' => -13.523577690124512,
+    'longitude' => 33.83546447753906,
+    'bounds' => 
+    array (
+      0 => 32.716667,
+      1 => -17.15,
+      2 => 37.0,
+      3 => -5.0,
+    ),
+  ),
+  'MX' => 
+  array (
+    'iso2' => 'MX',
+    'iso3' => 'MEX',
+    'numeric' => '484',
+    'name' => 'Mexico',
+    'official_name' => 'United Mexican States',
+    'native_name' => 'México',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'North America',
+    'currencies' => 
+    array (
+      0 => 'MXN',
+    ),
+    'languages' => 
+    array (
+      0 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '52',
+    ),
+    'tld' => '.mx',
+    'latitude' => 23.909093856811523,
+    'longitude' => -102.6333999633789,
+    'bounds' => 
+    array (
+      0 => -119.921667,
+      1 => 14.55,
+      2 => -86.716667,
+      3 => 32.983333,
+    ),
+  ),
+  'MY' => 
+  array (
+    'iso2' => 'MY',
+    'iso3' => 'MYS',
+    'numeric' => '458',
+    'name' => 'Malaysia',
+    'official_name' => 'Malaysia',
+    'native_name' => 'Malaysia',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'South-Eastern Asia',
+    'currencies' => 
+    array (
+      0 => 'MYR',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'msa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '60',
+    ),
+    'tld' => '.my',
+    'latitude' => 2.5490005016326904,
+    'longitude' => 102.96261596679688,
+    'bounds' => 
+    array (
+      0 => 99.641277,
+      1 => 0.85,
+      2 => 120.0,
+      3 => 7.383333,
+    ),
+  ),
+  'MZ' => 
+  array (
+    'iso2' => 'MZ',
+    'iso3' => 'MOZ',
+    'numeric' => '508',
+    'name' => 'Mozambique',
+    'official_name' => 'Republic of Mozambique',
+    'native_name' => 'Moçambique',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Eastern Africa',
+    'currencies' => 
+    array (
+      0 => 'MZN',
+    ),
+    'languages' => 
+    array (
+      0 => 'por',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '258',
+    ),
+    'tld' => '.mz',
+    'latitude' => -17.555864334106445,
+    'longitude' => 35.955692291259766,
+    'bounds' => 
+    array (
+      0 => 30.231389,
+      1 => -26.857222,
+      2 => 40.845278,
+      3 => 15.033333,
+    ),
+  ),
+  'NA' => 
+  array (
+    'iso2' => 'NA',
+    'iso3' => 'NAM',
+    'numeric' => '516',
+    'name' => 'Namibia',
+    'official_name' => 'Republic of Namibia',
+    'native_name' => 'Namibië',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Southern Africa',
+    'currencies' => 
+    array (
+      0 => 'NAD',
+    ),
+    'languages' => 
+    array (
+      0 => 'afr',
+      1 => 'deu',
+      2 => 'eng',
+      3 => 'her',
+      4 => 'hgm',
+      5 => 'kwn',
+      6 => 'loz',
+      7 => 'ndo',
+      8 => 'tsn',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '264',
+    ),
+    'tld' => '.na',
+    'latitude' => -22.150699615478516,
+    'longitude' => 17.177526473999023,
+    'bounds' => 
+    array (
+      0 => 12.016667,
+      1 => -28.933333,
+      2 => 25.25,
+      3 => -16.983333,
+    ),
+  ),
+  'NC' => 
+  array (
+    'iso2' => 'NC',
+    'iso3' => 'NCL',
+    'numeric' => '540',
+    'name' => 'New Caledonia',
+    'official_name' => 'New Caledonia',
+    'native_name' => 'Nouvelle-Calédonie',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Melanesia',
+    'currencies' => 
+    array (
+      0 => 'XPF',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '687',
+    ),
+    'tld' => '.nc',
+    'latitude' => -21.31782341003418,
+    'longitude' => 165.298583984375,
+    'bounds' => 
+    array (
+      0 => 158.246667,
+      1 => -22.783333,
+      2 => 172.05,
+      3 => -18.016667,
+    ),
+  ),
+  'NE' => 
+  array (
+    'iso2' => 'NE',
+    'iso3' => 'NER',
+    'numeric' => '562',
+    'name' => 'Niger',
+    'official_name' => 'Republic of Niger',
+    'native_name' => 'Niger',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Western Africa',
+    'currencies' => 
+    array (
+      0 => 'XOF',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '227',
+    ),
+    'tld' => '.ne',
+    'latitude' => 17.424074172973633,
+    'longitude' => 9.400633811950684,
+    'bounds' => 
+    array (
+      0 => 0.233333,
+      1 => 11.716667,
+      2 => 16.0,
+      3 => 26.0,
+    ),
+  ),
+  'NF' => 
+  array (
+    'iso2' => 'NF',
+    'iso3' => 'NFK',
+    'numeric' => '574',
+    'name' => 'Norfolk Island',
+    'official_name' => 'Territory of Norfolk Island',
+    'native_name' => 'Norfolk Island',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Australia and New Zealand',
+    'currencies' => 
+    array (
+      0 => 'AUD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'pih',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '672',
+    ),
+    'tld' => '.nf',
+    'latitude' => -29.036962509155273,
+    'longitude' => 167.95523071289062,
+    'bounds' => 
+    array (
+      0 => 167.916219,
+      1 => -29.136588,
+      2 => 167.996927,
+      3 => -28.995388,
+    ),
+  ),
+  'NG' => 
+  array (
+    'iso2' => 'NG',
+    'iso3' => 'NGA',
+    'numeric' => '566',
+    'name' => 'Nigeria',
+    'official_name' => 'Federal Republic of Nigeria',
+    'native_name' => 'Nigeria',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Western Africa',
+    'currencies' => 
+    array (
+      0 => 'NGN',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '234',
+    ),
+    'tld' => '.ng',
+    'latitude' => 9.559505462646484,
+    'longitude' => 8.077880859375,
+    'bounds' => 
+    array (
+      0 => 2.716667,
+      1 => 4.266667,
+      2 => 14.65,
+      3 => 13.866667,
+    ),
+  ),
+  'NI' => 
+  array (
+    'iso2' => 'NI',
+    'iso3' => 'NIC',
+    'numeric' => '558',
+    'name' => 'Nicaragua',
+    'official_name' => 'Republic of Nicaragua',
+    'native_name' => 'Nicaragua',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Central America',
+    'currencies' => 
+    array (
+      0 => 'NIO',
+    ),
+    'languages' => 
+    array (
+      0 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '505',
+    ),
+    'tld' => '.ni',
+    'latitude' => 12.903773307800293,
+    'longitude' => -84.92182159423828,
+    'bounds' => 
+    array (
+      0 => -87.684167,
+      1 => 10.716667,
+      2 => -82.566667,
+      3 => 15.0,
+    ),
+  ),
+  'NL' => 
+  array (
+    'iso2' => 'NL',
+    'iso3' => 'NLD',
+    'numeric' => '528',
+    'name' => 'Netherlands',
+    'official_name' => 'Netherlands',
+    'native_name' => 'Nederland',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Western Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'nld',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '31',
+    ),
+    'tld' => '.nl',
+    'latitude' => 52.34225845336914,
+    'longitude' => 5.5281572341918945,
+    'bounds' => 
+    array (
+      0 => 3.133333,
+      1 => 50.75,
+      2 => 7.2,
+      3 => 53.583333,
+    ),
+  ),
+  'NO' => 
+  array (
+    'iso2' => 'NO',
+    'iso3' => 'NOR',
+    'numeric' => '578',
+    'name' => 'Norway',
+    'official_name' => 'Kingdom of Norway',
+    'native_name' => 'Noreg',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Northern Europe',
+    'currencies' => 
+    array (
+      0 => 'NOK',
+    ),
+    'languages' => 
+    array (
+      0 => 'nno',
+      1 => 'nob',
+      2 => 'smi',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '47',
+    ),
+    'tld' => '.no',
+    'latitude' => 66.76667022705078,
+    'longitude' => 14.899925231933594,
+    'bounds' => 
+    array (
+      0 => 3.033333,
+      1 => 56.15,
+      2 => 31.166667,
+      3 => 71.181944,
+    ),
+  ),
+  'NP' => 
+  array (
+    'iso2' => 'NP',
+    'iso3' => 'NPL',
+    'numeric' => '524',
+    'name' => 'Nepal',
+    'official_name' => 'Federal Democratic Republic of Nepal',
+    'native_name' => 'नपल',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Southern Asia',
+    'currencies' => 
+    array (
+      0 => 'NPR',
+    ),
+    'languages' => 
+    array (
+      0 => 'nep',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '977',
+    ),
+    'tld' => '.np',
+    'latitude' => 28.259138107299805,
+    'longitude' => 83.94416046142578,
+    'bounds' => 
+    array (
+      0 => 80.0,
+      1 => 26.45,
+      2 => 88.183333,
+      3 => 30.45,
+    ),
+  ),
+  'NR' => 
+  array (
+    'iso2' => 'NR',
+    'iso3' => 'NRU',
+    'numeric' => '520',
+    'name' => 'Nauru',
+    'official_name' => 'Republic of Nauru',
+    'native_name' => 'Nauru',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Micronesia',
+    'currencies' => 
+    array (
+      0 => 'AUD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'nau',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '674',
+    ),
+    'tld' => '.nr',
+    'latitude' => -0.5316064953804016,
+    'longitude' => 166.9364013671875,
+    'bounds' => 
+    array (
+      0 => 166.916667,
+      1 => -0.55,
+      2 => 166.95,
+      3 => -0.5,
+    ),
+  ),
+  'NU' => 
+  array (
+    'iso2' => 'NU',
+    'iso3' => 'NIU',
+    'numeric' => '570',
+    'name' => 'Niue',
+    'official_name' => 'Niue',
+    'native_name' => 'Niue',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Polynesia',
+    'currencies' => 
+    array (
+      0 => 'NZD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'niu',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '683',
+    ),
+    'tld' => '.nu',
+    'latitude' => -19.03806495666504,
+    'longitude' => -169.8302459716797,
+    'bounds' => 
+    array (
+      0 => -169.916667,
+      1 => -19.1,
+      2 => -169.783333,
+      3 => -18.933333,
+    ),
+  ),
+  'NZ' => 
+  array (
+    'iso2' => 'NZ',
+    'iso3' => 'NZL',
+    'numeric' => '554',
+    'name' => 'New Zealand',
+    'official_name' => 'New Zealand',
+    'native_name' => 'New Zealand',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Australia and New Zealand',
+    'currencies' => 
+    array (
+      0 => 'NZD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'mri',
+      2 => 'nzs',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '64',
+    ),
+    'tld' => '.nz',
+    'latitude' => -44.05629348754883,
+    'longitude' => 170.35415649414062,
+    'bounds' => 
+    array (
+      0 => 179.066667,
+      1 => -52.616667,
+      2 => -178.9,
+      3 => -29.216667,
+    ),
+  ),
+  'OM' => 
+  array (
+    'iso2' => 'OM',
+    'iso3' => 'OMN',
+    'numeric' => '512',
+    'name' => 'Oman',
+    'official_name' => 'Sultanate of Oman',
+    'native_name' => 'عمان',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Western Asia',
+    'currencies' => 
+    array (
+      0 => 'OMR',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '968',
+    ),
+    'tld' => '.om',
+    'latitude' => 20.566621780395508,
+    'longitude' => 56.157962799072266,
+    'bounds' => 
+    array (
+      0 => 45.0,
+      1 => 16.633333,
+      2 => 59.838056,
+      3 => 26.505,
+    ),
+  ),
+  'PA' => 
+  array (
+    'iso2' => 'PA',
+    'iso3' => 'PAN',
+    'numeric' => '591',
+    'name' => 'Panama',
+    'official_name' => 'Republic of Panama',
+    'native_name' => 'Panamá',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Central America',
+    'currencies' => 
+    array (
+      0 => 'PAB',
+    ),
+    'languages' => 
+    array (
+      0 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '507',
+    ),
+    'tld' => '.pa',
+    'latitude' => 8.646247863769531,
+    'longitude' => -80.50607299804688,
+    'bounds' => 
+    array (
+      0 => -82.95,
+      1 => 7.213333,
+      2 => -77.283333,
+      3 => 9.65,
+    ),
+  ),
+  'PE' => 
+  array (
+    'iso2' => 'PE',
+    'iso3' => 'PER',
+    'numeric' => '604',
+    'name' => 'Peru',
+    'official_name' => 'Republic of Peru',
+    'native_name' => 'Piruw',
+    'continent' => 'SA',
+    'region' => 'Americas',
+    'subregion' => 'South America',
+    'currencies' => 
+    array (
+      0 => 'PEN',
+    ),
+    'languages' => 
+    array (
+      0 => 'aym',
+      1 => 'que',
+      2 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '51',
+    ),
+    'tld' => '.pe',
+    'latitude' => -9.212532997131348,
+    'longitude' => -74.422119140625,
+    'bounds' => 
+    array (
+      0 => -81.358333,
+      1 => -18.333333,
+      2 => -68.833333,
+      3 => 4.626667,
+    ),
+  ),
+  'PF' => 
+  array (
+    'iso2' => 'PF',
+    'iso3' => 'PYF',
+    'numeric' => '258',
+    'name' => 'French Polynesia',
+    'official_name' => 'French Polynesia',
+    'native_name' => 'Polynésie française',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Polynesia',
+    'currencies' => 
+    array (
+      0 => 'XPF',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '689',
+    ),
+    'tld' => '.pf',
+    'latitude' => -17.648122787475586,
+    'longitude' => -149.4647216796875,
+    'bounds' => 
+    array (
+      0 => 180.0,
+      1 => -27.916667,
+      2 => -179.8,
+      3 => 16.633333,
+    ),
+  ),
+  'PG' => 
+  array (
+    'iso2' => 'PG',
+    'iso3' => 'PNG',
+    'numeric' => '598',
+    'name' => 'Papua New Guinea',
+    'official_name' => 'Independent State of Papua New Guinea',
+    'native_name' => 'Papua New Guinea',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Melanesia',
+    'currencies' => 
+    array (
+      0 => 'PGK',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'hmo',
+      2 => 'tpi',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '675',
+    ),
+    'tld' => '.pg',
+    'latitude' => -6.889159679412842,
+    'longitude' => 146.21444702148438,
+    'bounds' => 
+    array (
+      0 => 120.0,
+      1 => -11.65,
+      2 => 159.483333,
+      3 => -0.733333,
+    ),
+  ),
+  'PH' => 
+  array (
+    'iso2' => 'PH',
+    'iso3' => 'PHL',
+    'numeric' => '608',
+    'name' => 'Philippines',
+    'official_name' => 'Republic of the Philippines',
+    'native_name' => 'Philippines',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'South-Eastern Asia',
+    'currencies' => 
+    array (
+      0 => 'PHP',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'fil',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '63',
+    ),
+    'tld' => '.ph',
+    'latitude' => 11.112666130065918,
+    'longitude' => 122.50947570800781,
+    'bounds' => 
+    array (
+      0 => 116.65,
+      1 => 4.588889,
+      2 => 126.604444,
+      3 => 21.113056,
+    ),
+  ),
+  'PK' => 
+  array (
+    'iso2' => 'PK',
+    'iso3' => 'PAK',
+    'numeric' => '586',
+    'name' => 'Pakistan',
+    'official_name' => 'Islamic Republic of Pakistan',
+    'native_name' => 'Pakistan',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Southern Asia',
+    'currencies' => 
+    array (
+      0 => 'PKR',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'urd',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '92',
+    ),
+    'tld' => '.pk',
+    'latitude' => 29.923219680786133,
+    'longitude' => 69.35774230957031,
+    'bounds' => 
+    array (
+      0 => 60.866667,
+      1 => 23.966667,
+      2 => 77.800014,
+      3 => 37.083710704,
+    ),
+  ),
+  'PL' => 
+  array (
+    'iso2' => 'PL',
+    'iso3' => 'POL',
+    'numeric' => '616',
+    'name' => 'Poland',
+    'official_name' => 'Republic of Poland',
+    'native_name' => 'Polska',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Eastern Europe',
+    'currencies' => 
+    array (
+      0 => 'PLN',
+    ),
+    'languages' => 
+    array (
+      0 => 'pol',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '48',
+    ),
+    'tld' => '.pl',
+    'latitude' => 52.147850036621094,
+    'longitude' => 19.37775993347168,
+    'bounds' => 
+    array (
+      0 => 14.0,
+      1 => 45.5,
+      2 => 26.5,
+      3 => 54.833333,
+    ),
+  ),
+  'PM' => 
+  array (
+    'iso2' => 'PM',
+    'iso3' => 'SPM',
+    'numeric' => '666',
+    'name' => 'Saint Pierre and Miquelon',
+    'official_name' => 'Saint Pierre and Miquelon',
+    'native_name' => 'Saint-Pierre-et-Miquelon',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Northern America',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '508',
+    ),
+    'tld' => '.pm',
+    'latitude' => 46.90594482421875,
+    'longitude' => -56.336585998535156,
+    'bounds' => 
+    array (
+      0 => -56.405278,
+      1 => 46.748333,
+      2 => -56.120556,
+      3 => 47.139722,
+    ),
+  ),
+  'PN' => 
+  array (
+    'iso2' => 'PN',
+    'iso3' => 'PCN',
+    'numeric' => '612',
+    'name' => 'Pitcairn Islands',
+    'official_name' => 'Pitcairn Group of Islands',
+    'native_name' => 'Pitcairn Islands',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Polynesia',
+    'currencies' => 
+    array (
+      0 => 'NZD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '64',
+    ),
+    'tld' => '.pn',
+    'latitude' => -24.372114181518555,
+    'longitude' => -128.31124877929688,
+    'bounds' => 
+    array (
+      0 => -130.733333,
+      1 => -25.066667,
+      2 => -124.783333,
+      3 => -23.916667,
+    ),
+  ),
+  'PR' => 
+  array (
+    'iso2' => 'PR',
+    'iso3' => 'PRI',
+    'numeric' => '630',
+    'name' => 'Puerto Rico',
+    'official_name' => 'Commonwealth of Puerto Rico',
+    'native_name' => 'Puerto Rico',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'USD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1787',
+      1 => '1939',
+    ),
+    'tld' => '.pr',
+    'latitude' => 18.2491397857666,
+    'longitude' => -66.62803649902344,
+    'bounds' => 
+    array (
+      0 => -67.9427,
+      1 => 17.883,
+      2 => -65.22,
+      3 => 18.5202,
+    ),
+  ),
+  'PS' => 
+  array (
+    'iso2' => 'PS',
+    'iso3' => 'PSE',
+    'numeric' => '275',
+    'name' => 'Palestine',
+    'official_name' => 'State of Palestine',
+    'native_name' => 'فلسطين',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Western Asia',
+    'currencies' => 
+    array (
+      0 => 'ILS',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '970',
+    ),
+    'tld' => '.ps',
+    'latitude' => 31.946392059326172,
+    'longitude' => 35.259735107421875,
+    'bounds' => 
+    array (
+      0 => 34.2187639,
+      1 => 31.219691,
+      2 => 35.574052,
+      3 => 32.5521,
+    ),
+  ),
+  'PT' => 
+  array (
+    'iso2' => 'PT',
+    'iso3' => 'PRT',
+    'numeric' => '620',
+    'name' => 'Portugal',
+    'official_name' => 'Portuguese Republic',
+    'native_name' => 'Portugal',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Southern Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'por',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '351',
+    ),
+    'tld' => '.pt',
+    'latitude' => 39.64200973510742,
+    'longitude' => -8.009422302246094,
+    'bounds' => 
+    array (
+      0 => -31.266667,
+      1 => 30.033333,
+      2 => -5.0,
+      3 => 42.15,
+    ),
+  ),
+  'PW' => 
+  array (
+    'iso2' => 'PW',
+    'iso3' => 'PLW',
+    'numeric' => '585',
+    'name' => 'Palau',
+    'official_name' => 'Republic of Palau',
+    'native_name' => 'Palau',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Micronesia',
+    'currencies' => 
+    array (
+      0 => 'USD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'pau',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '680',
+    ),
+    'tld' => '.pw',
+    'latitude' => 7.441900730133057,
+    'longitude' => 134.54205322265625,
+    'bounds' => 
+    array (
+      0 => 131.175,
+      1 => 2.898333,
+      2 => 134.716389,
+      3 => 8.166667,
+    ),
+  ),
+  'PY' => 
+  array (
+    'iso2' => 'PY',
+    'iso3' => 'PRY',
+    'numeric' => '600',
+    'name' => 'Paraguay',
+    'official_name' => 'Republic of Paraguay',
+    'native_name' => 'Paraguái',
+    'continent' => 'SA',
+    'region' => 'Americas',
+    'subregion' => 'South America',
+    'currencies' => 
+    array (
+      0 => 'PYG',
+    ),
+    'languages' => 
+    array (
+      0 => 'grn',
+      1 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '595',
+    ),
+    'tld' => '.py',
+    'latitude' => -23.24028968811035,
+    'longitude' => -58.395172119140625,
+    'bounds' => 
+    array (
+      0 => -62.633333,
+      1 => -27.533333,
+      2 => -54.35,
+      3 => -19.333333,
+    ),
+  ),
+  'QA' => 
+  array (
+    'iso2' => 'QA',
+    'iso3' => 'QAT',
+    'numeric' => '634',
+    'name' => 'Qatar',
+    'official_name' => 'State of Qatar',
+    'native_name' => 'قطر',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Western Asia',
+    'currencies' => 
+    array (
+      0 => 'QAR',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '974',
+    ),
+    'tld' => '.qa',
+    'latitude' => 25.413625717163086,
+    'longitude' => 51.2602653503418,
+    'bounds' => 
+    array (
+      0 => 50.680556,
+      1 => 24.284722,
+      2 => 52.75,
+      3 => 26.441111,
+    ),
+  ),
+  'RE' => 
+  array (
+    'iso2' => 'RE',
+    'iso3' => 'REU',
+    'numeric' => '638',
+    'name' => 'Réunion',
+    'official_name' => 'Réunion Island',
+    'native_name' => 'La Réunion',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Eastern Africa',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '262',
+    ),
+    'tld' => '.re',
+    'latitude' => -21.146299362182617,
+    'longitude' => 55.631248474121094,
+    'bounds' => 
+    array (
+      0 => 55.216667,
+      1 => -21.366667,
+      2 => 57.0,
+      3 => -20.0,
+    ),
+  ),
+  'RO' => 
+  array (
+    'iso2' => 'RO',
+    'iso3' => 'ROU',
+    'numeric' => '642',
+    'name' => 'Romania',
+    'official_name' => 'Romania',
+    'native_name' => 'România',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Eastern Europe',
+    'currencies' => 
+    array (
+      0 => 'RON',
+    ),
+    'languages' => 
+    array (
+      0 => 'ron',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '40',
+    ),
+    'tld' => '.ro',
+    'latitude' => 45.83774185180664,
+    'longitude' => 25.005935668945312,
+    'bounds' => 
+    array (
+      0 => 19.0,
+      1 => 43.666667,
+      2 => 29.65,
+      3 => 48.25,
+    ),
+  ),
+  'RS' => 
+  array (
+    'iso2' => 'RS',
+    'iso3' => 'SRB',
+    'numeric' => '688',
+    'name' => 'Serbia',
+    'official_name' => 'Republic of Serbia',
+    'native_name' => 'Србија',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Southern Europe',
+    'currencies' => 
+    array (
+      0 => 'RSD',
+    ),
+    'languages' => 
+    array (
+      0 => 'srp',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '381',
+    ),
+    'tld' => '.rs',
+    'latitude' => 44.23297119140625,
+    'longitude' => 20.797958374023438,
+    'bounds' => 
+    array (
+      0 => 18.928889,
+      1 => 41.866667,
+      2 => 22.966667,
+      3 => 46.155556,
+    ),
+  ),
+  'RU' => 
+  array (
+    'iso2' => 'RU',
+    'iso3' => 'RUS',
+    'numeric' => '643',
+    'name' => 'Russia',
+    'official_name' => 'Russian Federation',
+    'native_name' => 'Россия',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Eastern Europe',
+    'currencies' => 
+    array (
+      0 => 'RUB',
+    ),
+    'languages' => 
+    array (
+      0 => 'rus',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '7',
+    ),
+    'tld' => '.ru',
+    'latitude' => 63.125186920166016,
+    'longitude' => 103.75398254394531,
+    'bounds' => 
+    array (
+      0 => 19.655556,
+      1 => 38.7,
+      2 => 147.172222,
+      3 => 86.216667,
+    ),
+  ),
+  'RW' => 
+  array (
+    'iso2' => 'RW',
+    'iso3' => 'RWA',
+    'numeric' => '646',
+    'name' => 'Rwanda',
+    'official_name' => 'Republic of Rwanda',
+    'native_name' => 'Rwanda',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Eastern Africa',
+    'currencies' => 
+    array (
+      0 => 'RWF',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'fra',
+      2 => 'kin',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '250',
+    ),
+    'tld' => '.rw',
+    'latitude' => -1.9999498128890991,
+    'longitude' => 29.926057815551758,
+    'bounds' => 
+    array (
+      0 => 28.866667,
+      1 => -2.8,
+      2 => 37.0,
+      3 => 5.0,
+    ),
+  ),
+  'SA' => 
+  array (
+    'iso2' => 'SA',
+    'iso3' => 'SAU',
+    'numeric' => '682',
+    'name' => 'Saudi Arabia',
+    'official_name' => 'Kingdom of Saudi Arabia',
+    'native_name' => 'العربية السعودية',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Western Asia',
+    'currencies' => 
+    array (
+      0 => 'SAR',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '966',
+    ),
+    'tld' => '.sa',
+    'latitude' => 23.994726181030273,
+    'longitude' => 44.4013557434082,
+    'bounds' => 
+    array (
+      0 => 34.566667,
+      1 => 5.0,
+      2 => 55.166667,
+      3 => 32.2,
+    ),
+  ),
+  'SB' => 
+  array (
+    'iso2' => 'SB',
+    'iso3' => 'SLB',
+    'numeric' => '090',
+    'name' => 'Solomon Islands',
+    'official_name' => 'Solomon Islands',
+    'native_name' => 'Solomon Islands',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Melanesia',
+    'currencies' => 
+    array (
+      0 => 'SBD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '677',
+    ),
+    'tld' => '.sb',
+    'latitude' => -9.548112869262695,
+    'longitude' => 160.01930236816406,
+    'bounds' => 
+    array (
+      0 => 155.516667,
+      1 => -12.883333,
+      2 => 170.2,
+      3 => -5.166667,
+    ),
+  ),
+  'SC' => 
+  array (
+    'iso2' => 'SC',
+    'iso3' => 'SYC',
+    'numeric' => '690',
+    'name' => 'Seychelles',
+    'official_name' => 'Republic of Seychelles',
+    'native_name' => 'Sesel',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Eastern Africa',
+    'currencies' => 
+    array (
+      0 => 'SCR',
+    ),
+    'languages' => 
+    array (
+      0 => 'crs',
+      1 => 'eng',
+      2 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '248',
+    ),
+    'tld' => '.sc',
+    'latitude' => -4.669795036315918,
+    'longitude' => 55.47166061401367,
+    'bounds' => 
+    array (
+      0 => 46.216667,
+      1 => -10.216667,
+      2 => 56.266667,
+      3 => -3.716667,
+    ),
+  ),
+  'SD' => 
+  array (
+    'iso2' => 'SD',
+    'iso3' => 'SDN',
+    'numeric' => '729',
+    'name' => 'Sudan',
+    'official_name' => 'Republic of the Sudan',
+    'native_name' => 'السودان',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Northern Africa',
+    'currencies' => 
+    array (
+      0 => 'SDG',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+      1 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '249',
+    ),
+    'tld' => '.sd',
+    'latitude' => 16.085784912109375,
+    'longitude' => 30.087390899658203,
+    'bounds' => 
+    array (
+      0 => 21.883333,
+      1 => 3.516667,
+      2 => 38.833333,
+      3 => 27.166667,
+    ),
+  ),
+  'SE' => 
+  array (
+    'iso2' => 'SE',
+    'iso3' => 'SWE',
+    'numeric' => '752',
+    'name' => 'Sweden',
+    'official_name' => 'Kingdom of Sweden',
+    'native_name' => 'Sverige',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Northern Europe',
+    'currencies' => 
+    array (
+      0 => 'SEK',
+    ),
+    'languages' => 
+    array (
+      0 => 'swe',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '46',
+    ),
+    'tld' => '.se',
+    'latitude' => 62.67497253417969,
+    'longitude' => 16.798059463500977,
+    'bounds' => 
+    array (
+      0 => 10.958333,
+      1 => 46.758333,
+      2 => 25.0,
+      3 => 69.033333,
+    ),
+  ),
+  'SG' => 
+  array (
+    'iso2' => 'SG',
+    'iso3' => 'SGP',
+    'numeric' => '702',
+    'name' => 'Singapore',
+    'official_name' => 'Republic of Singapore',
+    'native_name' => '新加坡',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'South-Eastern Asia',
+    'currencies' => 
+    array (
+      0 => 'SGD',
+    ),
+    'languages' => 
+    array (
+      0 => 'cmn',
+      1 => 'eng',
+      2 => 'msa',
+      3 => 'tam',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '65',
+    ),
+    'tld' => '.sg',
+    'latitude' => 1.3219958543777466,
+    'longitude' => 103.8205337524414,
+    'bounds' => 
+    array (
+      0 => 102.0,
+      1 => 1.159444,
+      2 => 104.4075,
+      3 => 4.0,
+    ),
+  ),
+  'SH' => 
+  array (
+    'iso2' => 'SH',
+    'iso3' => 'SHN',
+    'numeric' => '654',
+    'name' => 'Saint Helena',
+    'official_name' => 'Saint Helena, Ascension and Tristan da Cunha',
+    'native_name' => 'Saint Helena',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Western Africa',
+    'currencies' => 
+    array (
+      0 => 'SHP',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '290',
+    ),
+    'tld' => NULL,
+    'latitude' => -15.957334518432617,
+    'longitude' => -5.716914176940918,
+    'bounds' => 
+    array (
+      0 => -14.416667,
+      1 => -40.4,
+      2 => -5.633333,
+      3 => -7.9,
+    ),
+  ),
+  'SI' => 
+  array (
+    'iso2' => 'SI',
+    'iso3' => 'SVN',
+    'numeric' => '705',
+    'name' => 'Slovenia',
+    'official_name' => 'Republic of Slovenia',
+    'native_name' => 'Slovenija',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Southern Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'slv',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '386',
+    ),
+    'tld' => '.si',
+    'latitude' => 46.1202392578125,
+    'longitude' => 14.820664405822754,
+    'bounds' => 
+    array (
+      0 => 13.426667,
+      1 => 45.083333,
+      2 => 17.466667,
+      3 => 46.866667,
+    ),
+  ),
+  'SJ' => 
+  array (
+    'iso2' => 'SJ',
+    'iso3' => 'SJM',
+    'numeric' => '744',
+    'name' => 'Svalbard and Jan Mayen',
+    'official_name' => 'Svalbard og Jan Mayen',
+    'native_name' => 'Svalbard og Jan Mayen',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Northern Europe',
+    'currencies' => 
+    array (
+      0 => 'NOK',
+    ),
+    'languages' => 
+    array (
+      0 => 'nor',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '4779',
+    ),
+    'tld' => '.sj',
+    'latitude' => 71.04893493652344,
+    'longitude' => -8.195747375488281,
+    'bounds' => 
+    array (
+      0 => 10.5,
+      1 => 74.35,
+      2 => 32.583333,
+      3 => 80.816667,
+    ),
+  ),
+  'SK' => 
+  array (
+    'iso2' => 'SK',
+    'iso3' => 'SVK',
+    'numeric' => '703',
+    'name' => 'Slovakia',
+    'official_name' => 'Slovak Republic',
+    'native_name' => 'Slovensko',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Eastern Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'slk',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '421',
+    ),
+    'tld' => '.sk',
+    'latitude' => 48.70748519897461,
+    'longitude' => 19.48488998413086,
+    'bounds' => 
+    array (
+      0 => 17.0,
+      1 => 45.5,
+      2 => 26.5,
+      3 => 49.6,
+    ),
+  ),
+  'SL' => 
+  array (
+    'iso2' => 'SL',
+    'iso3' => 'SLE',
+    'numeric' => '694',
+    'name' => 'Sierra Leone',
+    'official_name' => 'Republic of Sierra Leone',
+    'native_name' => 'Sierra Leone',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Western Africa',
+    'currencies' => 
+    array (
+      0 => 'SLL',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '232',
+    ),
+    'tld' => '.sl',
+    'latitude' => 8.521441459655762,
+    'longitude' => -11.843890190124512,
+    'bounds' => 
+    array (
+      0 => -13.316667,
+      1 => 5.0,
+      2 => -4.0,
+      3 => 10.0,
+    ),
+  ),
+  'SM' => 
+  array (
+    'iso2' => 'SM',
+    'iso3' => 'SMR',
+    'numeric' => '674',
+    'name' => 'San Marino',
+    'official_name' => 'Most Serene Republic of San Marino',
+    'native_name' => 'San Marino',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Southern Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'ita',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '378',
+    ),
+    'tld' => '.sm',
+    'latitude' => 43.938133239746094,
+    'longitude' => 12.463393211364746,
+    'bounds' => 
+    array (
+      0 => 12.416667,
+      1 => 43.908333,
+      2 => 12.5,
+      3 => 43.966667,
+    ),
+  ),
+  'SN' => 
+  array (
+    'iso2' => 'SN',
+    'iso3' => 'SEN',
+    'numeric' => '686',
+    'name' => 'Senegal',
+    'official_name' => 'Republic of Senegal',
+    'native_name' => 'Sénégal',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Western Africa',
+    'currencies' => 
+    array (
+      0 => 'XOF',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '221',
+    ),
+    'tld' => '.sn',
+    'latitude' => 14.36251163482666,
+    'longitude' => -14.531643867492676,
+    'bounds' => 
+    array (
+      0 => -17.682778,
+      1 => 12.336667,
+      2 => -11.3780213874,
+      3 => 16.666667,
+    ),
+  ),
+  'SO' => 
+  array (
+    'iso2' => 'SO',
+    'iso3' => 'SOM',
+    'numeric' => '706',
+    'name' => 'Somalia',
+    'official_name' => 'Federal Republic of Somalia',
+    'native_name' => 'الصومال‎‎',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Eastern Africa',
+    'currencies' => 
+    array (
+      0 => 'SOS',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+      1 => 'som',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '252',
+    ),
+    'tld' => '.so',
+    'latitude' => 5.948267459869385,
+    'longitude' => 47.47360610961914,
+    'bounds' => 
+    array (
+      0 => 41.0,
+      1 => -1.6594296959,
+      2 => 51.4,
+      3 => 11.983333,
+    ),
+  ),
+  'SR' => 
+  array (
+    'iso2' => 'SR',
+    'iso3' => 'SUR',
+    'numeric' => '740',
+    'name' => 'Suriname',
+    'official_name' => 'Republic of Suriname',
+    'native_name' => 'Suriname',
+    'continent' => 'SA',
+    'region' => 'Americas',
+    'subregion' => 'South America',
+    'currencies' => 
+    array (
+      0 => 'SRD',
+    ),
+    'languages' => 
+    array (
+      0 => 'nld',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '597',
+    ),
+    'tld' => '.sr',
+    'latitude' => 4.216928958892822,
+    'longitude' => -55.889217376708984,
+    'bounds' => 
+    array (
+      0 => -60.0,
+      1 => 2.1,
+      2 => -53.983333,
+      3 => 6.0,
+    ),
+  ),
+  'SS' => 
+  array (
+    'iso2' => 'SS',
+    'iso3' => 'SSD',
+    'numeric' => '728',
+    'name' => 'South Sudan',
+    'official_name' => 'Republic of South Sudan',
+    'native_name' => 'South Sudan',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Middle Africa',
+    'currencies' => 
+    array (
+      0 => 'SSP',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '211',
+    ),
+    'tld' => '.ss',
+    'latitude' => 7.303858280181885,
+    'longitude' => 30.280752182006836,
+    'bounds' => 
+    array (
+      0 => 23.440849,
+      1 => 3.48898,
+      2 => 35.948997,
+      3 => 12.236389,
+    ),
+  ),
+  'ST' => 
+  array (
+    'iso2' => 'ST',
+    'iso3' => 'STP',
+    'numeric' => '678',
+    'name' => 'São Tomé and Príncipe',
+    'official_name' => 'Democratic Republic of São Tomé and Príncipe',
+    'native_name' => 'São Tomé e Príncipe',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Middle Africa',
+    'currencies' => 
+    array (
+      0 => 'STD',
+    ),
+    'languages' => 
+    array (
+      0 => 'por',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '239',
+    ),
+    'tld' => '.st',
+    'latitude' => 0.275555282831192,
+    'longitude' => 6.631628036499023,
+    'bounds' => 
+    array (
+      0 => 6.466667,
+      1 => -0.016667,
+      2 => 7.483333,
+      3 => 1.733333,
+    ),
+  ),
+  'SV' => 
+  array (
+    'iso2' => 'SV',
+    'iso3' => 'SLV',
+    'numeric' => '222',
+    'name' => 'El Salvador',
+    'official_name' => 'Republic of El Salvador',
+    'native_name' => 'El Salvador',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Central America',
+    'currencies' => 
+    array (
+      0 => 'SVC',
+    ),
+    'languages' => 
+    array (
+      0 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '503',
+    ),
+    'tld' => '.sv',
+    'latitude' => 13.671636581420898,
+    'longitude' => -88.86363220214844,
+    'bounds' => 
+    array (
+      0 => -90.116389,
+      1 => 13.158611,
+      2 => -87.657222,
+      3 => 14.433333,
+    ),
+  ),
+  'SX' => 
+  array (
+    'iso2' => 'SX',
+    'iso3' => 'SXM',
+    'numeric' => '534',
+    'name' => 'Sint Maarten',
+    'official_name' => 'Sint Maarten',
+    'native_name' => 'Sint Maarten',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'ANG',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'fra',
+      2 => 'nld',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1721',
+    ),
+    'tld' => '.sx',
+    'latitude' => 18.042224884033203,
+    'longitude' => -63.06623458862305,
+    'bounds' => 
+    array (
+      0 => -63.1379781,
+      1 => 18.005267,
+      2 => -62.9982448,
+      3 => 18.0641707,
+    ),
+  ),
+  'SY' => 
+  array (
+    'iso2' => 'SY',
+    'iso3' => 'SYR',
+    'numeric' => '760',
+    'name' => 'Syria',
+    'official_name' => 'Syrian Arab Republic',
+    'native_name' => 'سوريا',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Western Asia',
+    'currencies' => 
+    array (
+      0 => 'SYP',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '963',
+    ),
+    'tld' => '.sy',
+    'latitude' => 35.03312683105469,
+    'longitude' => 38.473472595214844,
+    'bounds' => 
+    array (
+      0 => 35.6,
+      1 => 32.0,
+      2 => 42.337778,
+      3 => 37.280278,
+    ),
+  ),
+  'SZ' => 
+  array (
+    'iso2' => 'SZ',
+    'iso3' => 'SWZ',
+    'numeric' => '748',
+    'name' => 'Swaziland',
+    'official_name' => 'Kingdom of Swaziland',
+    'native_name' => 'Swaziland',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Southern Africa',
+    'currencies' => 
+    array (
+      0 => 'SZL',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'ssw',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '268',
+    ),
+    'tld' => '.sz',
+    'latitude' => -26.565134048461914,
+    'longitude' => 31.49811363220215,
+    'bounds' => 
+    array (
+      0 => 30.783333,
+      1 => -27.316667,
+      2 => 32.133333,
+      3 => -25.783333,
+    ),
+  ),
+  'TC' => 
+  array (
+    'iso2' => 'TC',
+    'iso3' => 'TCA',
+    'numeric' => '796',
+    'name' => 'Turks and Caicos Islands',
+    'official_name' => 'Turks and Caicos Islands',
+    'native_name' => 'Turks and Caicos Islands',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'USD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1649',
+    ),
+    'tld' => '.tc',
+    'latitude' => 21.758726119995117,
+    'longitude' => -71.71514892578125,
+    'bounds' => 
+    array (
+      0 => -72.466667,
+      1 => 21.116667,
+      2 => -71.083333,
+      3 => 21.95,
+    ),
+  ),
+  'TD' => 
+  array (
+    'iso2' => 'TD',
+    'iso3' => 'TCD',
+    'numeric' => '148',
+    'name' => 'Chad',
+    'official_name' => 'Republic of Chad',
+    'native_name' => 'تشاد‎',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Middle Africa',
+    'currencies' => 
+    array (
+      0 => 'XAF',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+      1 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '235',
+    ),
+    'tld' => '.td',
+    'latitude' => 15.367652893066406,
+    'longitude' => 18.66758155822754,
+    'bounds' => 
+    array (
+      0 => 2.0,
+      1 => 7.5,
+      2 => 24.0,
+      3 => 26.0,
+    ),
+  ),
+  'TF' => 
+  array (
+    'iso2' => 'TF',
+    'iso3' => 'ATF',
+    'numeric' => '260',
+    'name' => 'French Southern and Antarctic Lands',
+    'official_name' => 'Territory of the French Southern and Antarctic Lands',
+    'native_name' => 'Terres australes et antarctiques françaises',
+    'continent' => 'AN',
+    'region' => NULL,
+    'subregion' => NULL,
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+    ),
+    'tld' => '.tf',
+    'latitude' => -49.563865661621094,
+    'longitude' => 69.54277801513672,
+    'bounds' => 
+    array (
+      0 => 50.233333,
+      1 => -50.016667,
+      2 => 77.6,
+      3 => -37.783333,
+    ),
+  ),
+  'TG' => 
+  array (
+    'iso2' => 'TG',
+    'iso3' => 'TGO',
+    'numeric' => '768',
+    'name' => 'Togo',
+    'official_name' => 'Togolese Republic',
+    'native_name' => 'Togo',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Western Africa',
+    'currencies' => 
+    array (
+      0 => 'XOF',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '228',
+    ),
+    'tld' => '.tg',
+    'latitude' => 8.513226509094238,
+    'longitude' => 0.9800975322723389,
+    'bounds' => 
+    array (
+      0 => -4.0,
+      1 => 6.131944,
+      2 => 1.816667,
+      3 => 11.103889,
+    ),
+  ),
+  'TH' => 
+  array (
+    'iso2' => 'TH',
+    'iso3' => 'THA',
+    'numeric' => '764',
+    'name' => 'Thailand',
+    'official_name' => 'Kingdom of Thailand',
+    'native_name' => 'ประเทศไทย',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'South-Eastern Asia',
+    'currencies' => 
+    array (
+      0 => 'THB',
+    ),
+    'languages' => 
+    array (
+      0 => 'tha',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '66',
+    ),
+    'tld' => '.th',
+    'latitude' => 14.48458194732666,
+    'longitude' => 100.85191345214844,
+    'bounds' => 
+    array (
+      0 => 97.366667,
+      1 => 5.616667,
+      2 => 105.766667,
+      3 => 20.442778,
+    ),
+  ),
+  'TJ' => 
+  array (
+    'iso2' => 'TJ',
+    'iso3' => 'TJK',
+    'numeric' => '762',
+    'name' => 'Tajikistan',
+    'official_name' => 'Republic of Tajikistan',
+    'native_name' => 'Таджикистан',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Central Asia',
+    'currencies' => 
+    array (
+      0 => 'TJS',
+    ),
+    'languages' => 
+    array (
+      0 => 'rus',
+      1 => 'tgk',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '992',
+    ),
+    'tld' => '.tj',
+    'latitude' => 38.879764556884766,
+    'longitude' => 70.89906311035156,
+    'bounds' => 
+    array (
+      0 => 67.416667,
+      1 => 36.716667,
+      2 => 75.0,
+      3 => 40.9,
+    ),
+  ),
+  'TK' => 
+  array (
+    'iso2' => 'TK',
+    'iso3' => 'TKL',
+    'numeric' => '772',
+    'name' => 'Tokelau',
+    'official_name' => 'Tokelau',
+    'native_name' => 'Tokelau',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Polynesia',
+    'currencies' => 
+    array (
+      0 => 'NZD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'smo',
+      2 => 'tkl',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '690',
+    ),
+    'tld' => '.tk',
+    'latitude' => -8.979207992553711,
+    'longitude' => -172.2017059326172,
+    'bounds' => 
+    array (
+      0 => -172.516667,
+      1 => -9.433333,
+      2 => -171.183333,
+      3 => -8.533333,
+    ),
+  ),
+  'TL' => 
+  array (
+    'iso2' => 'TL',
+    'iso3' => 'TLS',
+    'numeric' => '626',
+    'name' => 'Timor-Leste',
+    'official_name' => 'Democratic Republic of Timor-Leste',
+    'native_name' => 'Timor-Leste',
+    'continent' => 'OC',
+    'region' => 'Asia',
+    'subregion' => 'South-Eastern Asia',
+    'currencies' => 
+    array (
+      0 => 'USD',
+    ),
+    'languages' => 
+    array (
+      0 => 'por',
+      1 => 'tet',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '670',
+    ),
+    'tld' => '.tl',
+    'latitude' => -8.804786682128906,
+    'longitude' => 126.07902526855469,
+    'bounds' => 
+    array (
+      0 => 124.085556,
+      1 => -9.469722,
+      2 => 127.336667,
+      3 => -7.597222,
+    ),
+  ),
+  'TM' => 
+  array (
+    'iso2' => 'TM',
+    'iso3' => 'TKM',
+    'numeric' => '795',
+    'name' => 'Turkmenistan',
+    'official_name' => 'Turkmenistan',
+    'native_name' => 'Туркмения',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Central Asia',
+    'currencies' => 
+    array (
+      0 => 'TMT',
+    ),
+    'languages' => 
+    array (
+      0 => 'rus',
+      1 => 'tuk',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '993',
+    ),
+    'tld' => '.tm',
+    'latitude' => 39.2012825012207,
+    'longitude' => 59.082252502441406,
+    'bounds' => 
+    array (
+      0 => 52.5,
+      1 => 35.216667,
+      2 => 66.65,
+      3 => 42.566667,
+    ),
+  ),
+  'TN' => 
+  array (
+    'iso2' => 'TN',
+    'iso3' => 'TUN',
+    'numeric' => '788',
+    'name' => 'Tunisia',
+    'official_name' => 'Tunisian Republic',
+    'native_name' => 'تونس',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Northern Africa',
+    'currencies' => 
+    array (
+      0 => 'TND',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '216',
+    ),
+    'tld' => '.tn',
+    'latitude' => 34.33528518676758,
+    'longitude' => 9.245259284973145,
+    'bounds' => 
+    array (
+      0 => 7.0,
+      1 => 26.0,
+      2 => 13.0,
+      3 => 37.566667,
+    ),
+  ),
+  'TO' => 
+  array (
+    'iso2' => 'TO',
+    'iso3' => 'TON',
+    'numeric' => '776',
+    'name' => 'Tonga',
+    'official_name' => 'Kingdom of Tonga',
+    'native_name' => 'Tonga',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Polynesia',
+    'currencies' => 
+    array (
+      0 => 'TOP',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'ton',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '676',
+    ),
+    'tld' => '.to',
+    'latitude' => -21.147611618041992,
+    'longitude' => -175.25067138671875,
+    'bounds' => 
+    array (
+      0 => -176.2,
+      1 => -22.333333,
+      2 => -150.0,
+      3 => -15.566667,
+    ),
+  ),
+  'TR' => 
+  array (
+    'iso2' => 'TR',
+    'iso3' => 'TUR',
+    'numeric' => '792',
+    'name' => 'Turkey',
+    'official_name' => 'Republic of Turkey',
+    'native_name' => 'Türkiye',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Western Asia',
+    'currencies' => 
+    array (
+      0 => 'TRY',
+    ),
+    'languages' => 
+    array (
+      0 => 'tur',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '90',
+    ),
+    'tld' => '.tr',
+    'latitude' => 39.05101013183594,
+    'longitude' => 34.93033981323242,
+    'bounds' => 
+    array (
+      0 => 25.0,
+      1 => 35.819444,
+      2 => 44.8,
+      3 => 42.1,
+    ),
+  ),
+  'TT' => 
+  array (
+    'iso2' => 'TT',
+    'iso3' => 'TTO',
+    'numeric' => '780',
+    'name' => 'Trinidad and Tobago',
+    'official_name' => 'Republic of Trinidad and Tobago',
+    'native_name' => 'Trinidad and Tobago',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'TTD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1868',
+    ),
+    'tld' => '.tt',
+    'latitude' => 10.68574047088623,
+    'longitude' => -61.1640625,
+    'bounds' => 
+    array (
+      0 => -74.0,
+      1 => 10.033333,
+      2 => -60.5,
+      3 => 20.0,
+    ),
+  ),
+  'TV' => 
+  array (
+    'iso2' => 'TV',
+    'iso3' => 'TUV',
+    'numeric' => '798',
+    'name' => 'Tuvalu',
+    'official_name' => 'Tuvalu',
+    'native_name' => 'Tuvalu',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Polynesia',
+    'currencies' => 
+    array (
+      0 => 'AUD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'tvl',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '688',
+    ),
+    'tld' => '.tv',
+    'latitude' => -7.471305847167969,
+    'longitude' => 178.6740264892578,
+    'bounds' => 
+    array (
+      0 => 176.116667,
+      1 => -10.75,
+      2 => 179.883333,
+      3 => -5.65,
+    ),
+  ),
+  'TW' => 
+  array (
+    'iso2' => 'TW',
+    'iso3' => 'TWN',
+    'numeric' => '158',
+    'name' => 'Taiwan',
+    'official_name' => 'Republic of China (Taiwan)',
+    'native_name' => '臺灣',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Eastern Asia',
+    'currencies' => 
+    array (
+      0 => 'TWD',
+    ),
+    'languages' => 
+    array (
+      0 => 'cmn',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '886',
+    ),
+    'tld' => '.tw',
+    'latitude' => 23.685789108276367,
+    'longitude' => 120.89749145507812,
+    'bounds' => 
+    array (
+      0 => 118.1152555661,
+      1 => 21.733333,
+      2 => 122.107778,
+      3 => 26.389444,
+    ),
+  ),
+  'TZ' => 
+  array (
+    'iso2' => 'TZ',
+    'iso3' => 'TZA',
+    'numeric' => '834',
+    'name' => 'Tanzania',
+    'official_name' => 'United Republic of Tanzania',
+    'native_name' => 'Tanzania',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Eastern Africa',
+    'currencies' => 
+    array (
+      0 => 'TZS',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'swa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '255',
+    ),
+    'tld' => '.tz',
+    'latitude' => -6.306897163391113,
+    'longitude' => 34.85392761230469,
+    'bounds' => 
+    array (
+      0 => 29.583333,
+      1 => -11.7,
+      2 => 40.433333,
+      3 => 0.833333,
+    ),
+  ),
+  'UA' => 
+  array (
+    'iso2' => 'UA',
+    'iso3' => 'UKR',
+    'numeric' => '804',
+    'name' => 'Ukraine',
+    'official_name' => 'Ukraine',
+    'native_name' => 'Україна',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Eastern Europe',
+    'currencies' => 
+    array (
+      0 => 'UAH',
+    ),
+    'languages' => 
+    array (
+      0 => 'ukr',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '380',
+    ),
+    'tld' => '.ua',
+    'latitude' => 48.92656326293945,
+    'longitude' => 31.47578239440918,
+    'bounds' => 
+    array (
+      0 => 20.933333,
+      1 => 37.8,
+      2 => 68.85,
+      3 => 63.4,
+    ),
+  ),
+  'UG' => 
+  array (
+    'iso2' => 'UG',
+    'iso3' => 'UGA',
+    'numeric' => '800',
+    'name' => 'Uganda',
+    'official_name' => 'Republic of Uganda',
+    'native_name' => 'Uganda',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Eastern Africa',
+    'currencies' => 
+    array (
+      0 => 'UGX',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'swa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '256',
+    ),
+    'tld' => '.ug',
+    'latitude' => 1.2773280143737793,
+    'longitude' => 32.389984130859375,
+    'bounds' => 
+    array (
+      0 => 29.583333,
+      1 => -1.433333,
+      2 => 34.95,
+      3 => 4.166667,
+    ),
+  ),
+  'UM' => 
+  array (
+    'iso2' => 'UM',
+    'iso3' => 'UMI',
+    'numeric' => '581',
+    'name' => 'United States Minor Outlying Islands',
+    'official_name' => 'United States Minor Outlying Islands',
+    'native_name' => 'United States Minor Outlying Islands',
+    'continent' => 'OC',
+    'region' => 'Americas',
+    'subregion' => 'Northern America',
+    'currencies' => 
+    array (
+      0 => 'USD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+    ),
+    'tld' => '.us',
+    'latitude' => 19.282319,
+    'longitude' => 166.647047,
+    'bounds' => 
+    array (
+      0 => 166.5989221,
+      1 => -0.3824678,
+      2 => -159.9849071,
+      3 => 28.3977184,
+    ),
+  ),
+  'US' => 
+  array (
+    'iso2' => 'US',
+    'iso3' => 'USA',
+    'numeric' => '840',
+    'name' => 'United States',
+    'official_name' => 'United States of America',
+    'native_name' => 'United States',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Northern America',
+    'currencies' => 
+    array (
+      0 => 'USD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1',
+    ),
+    'tld' => '.us',
+    'latitude' => 39.44325637817383,
+    'longitude' => -98.95733642578125,
+    'bounds' => 
+    array (
+      0 => -179.231086,
+      1 => 17.831509,
+      2 => -66.885417,
+      3 => 71.441059,
+    ),
+  ),
+  'UY' => 
+  array (
+    'iso2' => 'UY',
+    'iso3' => 'URY',
+    'numeric' => '858',
+    'name' => 'Uruguay',
+    'official_name' => 'Oriental Republic of Uruguay',
+    'native_name' => 'Uruguay',
+    'continent' => 'SA',
+    'region' => 'Americas',
+    'subregion' => 'South America',
+    'currencies' => 
+    array (
+      0 => 'UYU',
+    ),
+    'languages' => 
+    array (
+      0 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '598',
+    ),
+    'tld' => '.uy',
+    'latitude' => -32.96965408325195,
+    'longitude' => -56.055908203125,
+    'bounds' => 
+    array (
+      0 => -58.5,
+      1 => -35.033333,
+      2 => -53.266667,
+      3 => -30.183333,
+    ),
+  ),
+  'UZ' => 
+  array (
+    'iso2' => 'UZ',
+    'iso3' => 'UZB',
+    'numeric' => '860',
+    'name' => 'Uzbekistan',
+    'official_name' => 'Republic of Uzbekistan',
+    'native_name' => 'Узбекистан',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Central Asia',
+    'currencies' => 
+    array (
+      0 => 'UZS',
+    ),
+    'languages' => 
+    array (
+      0 => 'rus',
+      1 => 'uzb',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '998',
+    ),
+    'tld' => '.uz',
+    'latitude' => 41.77239227294922,
+    'longitude' => 63.14588928222656,
+    'bounds' => 
+    array (
+      0 => 56.083333,
+      1 => 35.266667,
+      2 => 80.383333,
+      3 => 48.583333,
+    ),
+  ),
+  'VA' => 
+  array (
+    'iso2' => 'VA',
+    'iso3' => 'VAT',
+    'numeric' => '336',
+    'name' => 'Vatican City',
+    'official_name' => 'Vatican City State',
+    'native_name' => 'Vaticano',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Southern Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'ita',
+      1 => 'lat',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '3906698',
+      1 => '379',
+    ),
+    'tld' => '.va',
+    'latitude' => 41.90308380126953,
+    'longitude' => 12.452852249145508,
+    'bounds' => 
+    array (
+      0 => 12.45,
+      1 => 41.9,
+      2 => 12.45,
+      3 => 41.9,
+    ),
+  ),
+  'VC' => 
+  array (
+    'iso2' => 'VC',
+    'iso3' => 'VCT',
+    'numeric' => '670',
+    'name' => 'Saint Vincent and the Grenadines',
+    'official_name' => 'Saint Vincent and the Grenadines',
+    'native_name' => 'Saint Vincent and the Grenadines',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'XCD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1784',
+    ),
+    'tld' => '.vc',
+    'latitude' => 13.217251777648926,
+    'longitude' => -61.19344711303711,
+    'bounds' => 
+    array (
+      0 => -61.433333,
+      1 => 12.533333,
+      2 => -61.116667,
+      3 => 13.366667,
+    ),
+  ),
+  'VE' => 
+  array (
+    'iso2' => 'VE',
+    'iso3' => 'VEN',
+    'numeric' => '862',
+    'name' => 'Venezuela',
+    'official_name' => 'Bolivarian Republic of Venezuela',
+    'native_name' => 'Venezuela',
+    'continent' => 'SA',
+    'region' => 'Americas',
+    'subregion' => 'South America',
+    'currencies' => 
+    array (
+      0 => 'VES',
+    ),
+    'languages' => 
+    array (
+      0 => 'spa',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '58',
+    ),
+    'tld' => '.ve',
+    'latitude' => 7.665388584136963,
+    'longitude' => -66.14541625976562,
+    'bounds' => 
+    array (
+      0 => -73.16,
+      1 => 0.766667,
+      2 => -59.966667,
+      3 => 15.7,
+    ),
+  ),
+  'VG' => 
+  array (
+    'iso2' => 'VG',
+    'iso3' => 'VGB',
+    'numeric' => '092',
+    'name' => 'British Virgin Islands',
+    'official_name' => 'Virgin Islands',
+    'native_name' => 'British Virgin Islands',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'USD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1284',
+    ),
+    'tld' => '.vg',
+    'latitude' => 18.443071365356445,
+    'longitude' => -64.57130432128906,
+    'bounds' => 
+    array (
+      0 => -64.85,
+      1 => 18.3,
+      2 => -64.266667,
+      3 => 18.766667,
+    ),
+  ),
+  'VI' => 
+  array (
+    'iso2' => 'VI',
+    'iso3' => 'VIR',
+    'numeric' => '850',
+    'name' => 'United States Virgin Islands',
+    'official_name' => 'Virgin Islands of the United States',
+    'native_name' => 'United States Virgin Islands',
+    'continent' => 'NA',
+    'region' => 'Americas',
+    'subregion' => 'Caribbean',
+    'currencies' => 
+    array (
+      0 => 'USD',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '1340',
+    ),
+    'tld' => '.vi',
+    'latitude' => 17.75262451171875,
+    'longitude' => -64.73542022705078,
+    'bounds' => 
+    array (
+      0 => -65.086281,
+      1 => 17.681721,
+      2 => -64.56517,
+      3 => 18.458139,
+    ),
+  ),
+  'VN' => 
+  array (
+    'iso2' => 'VN',
+    'iso3' => 'VNM',
+    'numeric' => '704',
+    'name' => 'Vietnam',
+    'official_name' => 'Socialist Republic of Vietnam',
+    'native_name' => 'Việt Nam',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'South-Eastern Asia',
+    'currencies' => 
+    array (
+      0 => 'VND',
+    ),
+    'languages' => 
+    array (
+      0 => 'vie',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '84',
+    ),
+    'tld' => '.vn',
+    'latitude' => 16.9404296875,
+    'longitude' => 106.8164291381836,
+    'bounds' => 
+    array (
+      0 => 102.216667,
+      1 => 8.383333,
+      2 => 109.466667,
+      3 => 23.666667,
+    ),
+  ),
+  'VU' => 
+  array (
+    'iso2' => 'VU',
+    'iso3' => 'VUT',
+    'numeric' => '548',
+    'name' => 'Vanuatu',
+    'official_name' => 'Republic of Vanuatu',
+    'native_name' => 'Vanuatu',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Melanesia',
+    'currencies' => 
+    array (
+      0 => 'VUV',
+    ),
+    'languages' => 
+    array (
+      0 => 'bis',
+      1 => 'eng',
+      2 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '678',
+    ),
+    'tld' => '.vu',
+    'latitude' => -16.376684188842773,
+    'longitude' => 167.5625,
+    'bounds' => 
+    array (
+      0 => 166.016667,
+      1 => -20.25,
+      2 => 170.216667,
+      3 => -13.066667,
+    ),
+  ),
+  'WF' => 
+  array (
+    'iso2' => 'WF',
+    'iso3' => 'WLF',
+    'numeric' => '876',
+    'name' => 'Wallis and Futuna',
+    'official_name' => 'Territory of the Wallis and Futuna Islands',
+    'native_name' => 'Wallis et Futuna',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Polynesia',
+    'currencies' => 
+    array (
+      0 => 'XPF',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '681',
+    ),
+    'tld' => '.wf',
+    'latitude' => -13.299612045288086,
+    'longitude' => -176.1701202392578,
+    'bounds' => 
+    array (
+      0 => -178.183333,
+      1 => -14.35,
+      2 => -176.083333,
+      3 => -13.183333,
+    ),
+  ),
+  'WS' => 
+  array (
+    'iso2' => 'WS',
+    'iso3' => 'WSM',
+    'numeric' => '882',
+    'name' => 'Samoa',
+    'official_name' => 'Independent State of Samoa',
+    'native_name' => 'Samoa',
+    'continent' => 'OC',
+    'region' => 'Oceania',
+    'subregion' => 'Polynesia',
+    'currencies' => 
+    array (
+      0 => 'WST',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+      1 => 'smo',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '685',
+    ),
+    'tld' => '.ws',
+    'latitude' => -13.668972969055176,
+    'longitude' => -172.322021484375,
+    'bounds' => 
+    array (
+      0 => -172.816667,
+      1 => -14.05,
+      2 => -171.0,
+      3 => -13.433333,
+    ),
+  ),
+  'XK' => 
+  array (
+    'iso2' => 'XK',
+    'iso3' => 'UNK',
+    'numeric' => '',
+    'name' => 'Kosovo',
+    'official_name' => 'Republic of Kosovo',
+    'native_name' => 'Kosova',
+    'continent' => 'EU',
+    'region' => 'Europe',
+    'subregion' => 'Eastern Europe',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'sqi',
+      1 => 'srp',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '383',
+    ),
+    'tld' => NULL,
+    'latitude' => NULL,
+    'longitude' => NULL,
+    'bounds' => 
+    array (
+    ),
+  ),
+  'YE' => 
+  array (
+    'iso2' => 'YE',
+    'iso3' => 'YEM',
+    'numeric' => '887',
+    'name' => 'Yemen',
+    'official_name' => 'Republic of Yemen',
+    'native_name' => 'اليَمَن',
+    'continent' => 'AS',
+    'region' => 'Asia',
+    'subregion' => 'Western Asia',
+    'currencies' => 
+    array (
+      0 => 'YER',
+    ),
+    'languages' => 
+    array (
+      0 => 'ara',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '967',
+    ),
+    'tld' => '.ye',
+    'latitude' => 15.888387680053711,
+    'longitude' => 47.48988723754883,
+    'bounds' => 
+    array (
+      0 => 41.833333,
+      1 => 12.1,
+      2 => 54.533333,
+      3 => 27.695278,
+    ),
+  ),
+  'YT' => 
+  array (
+    'iso2' => 'YT',
+    'iso3' => 'MYT',
+    'numeric' => '175',
+    'name' => 'Mayotte',
+    'official_name' => 'Department of Mayotte',
+    'native_name' => 'Mayotte',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Eastern Africa',
+    'currencies' => 
+    array (
+      0 => 'EUR',
+    ),
+    'languages' => 
+    array (
+      0 => 'fra',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '262',
+    ),
+    'tld' => '.yt',
+    'latitude' => -12.79636001586914,
+    'longitude' => 45.14227294921875,
+    'bounds' => 
+    array (
+      0 => 45.024444,
+      1 => -12.993889,
+      2 => 45.288611,
+      3 => -12.641389,
+    ),
+  ),
+  'ZA' => 
+  array (
+    'iso2' => 'ZA',
+    'iso3' => 'ZAF',
+    'numeric' => '710',
+    'name' => 'South Africa',
+    'official_name' => 'Republic of South Africa',
+    'native_name' => 'South Africa',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Southern Africa',
+    'currencies' => 
+    array (
+      0 => 'ZAR',
+    ),
+    'languages' => 
+    array (
+      0 => 'afr',
+      1 => 'eng',
+      2 => 'nbl',
+      3 => 'nso',
+      4 => 'sot',
+      5 => 'ssw',
+      6 => 'tsn',
+      7 => 'tso',
+      8 => 'ven',
+      9 => 'xho',
+      10 => 'zul',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '27',
+    ),
+    'tld' => '.za',
+    'latitude' => -29.046184539794922,
+    'longitude' => 25.06287956237793,
+    'bounds' => 
+    array (
+      0 => 16.466667,
+      1 => -34.833333,
+      2 => 32.883333,
+      3 => -22.133333,
+    ),
+  ),
+  'ZM' => 
+  array (
+    'iso2' => 'ZM',
+    'iso3' => 'ZMB',
+    'numeric' => '894',
+    'name' => 'Zambia',
+    'official_name' => 'Republic of Zambia',
+    'native_name' => 'Zambia',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Eastern Africa',
+    'currencies' => 
+    array (
+      0 => 'ZMW',
+    ),
+    'languages' => 
+    array (
+      0 => 'eng',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '260',
+    ),
+    'tld' => '.zm',
+    'latitude' => -13.458845138549805,
+    'longitude' => 27.788097381591797,
+    'bounds' => 
+    array (
+      0 => 22.0,
+      1 => -18.05,
+      2 => 39.283333,
+      3 => 5.0,
+    ),
+  ),
+  'ZW' => 
+  array (
+    'iso2' => 'ZW',
+    'iso3' => 'ZWE',
+    'numeric' => '716',
+    'name' => 'Zimbabwe',
+    'official_name' => 'Republic of Zimbabwe',
+    'native_name' => 'Zimbabwe',
+    'continent' => 'AF',
+    'region' => 'Africa',
+    'subregion' => 'Eastern Africa',
+    'currencies' => 
+    array (
+      0 => 'ZWL',
+    ),
+    'languages' => 
+    array (
+      0 => 'bwg',
+      1 => 'eng',
+      2 => 'kck',
+      3 => 'khi',
+      4 => 'ndc',
+      5 => 'nde',
+      6 => 'nya',
+      7 => 'sna',
+      8 => 'sot',
+      9 => 'toi',
+      10 => 'tsn',
+      11 => 'tso',
+      12 => 'ven',
+      13 => 'xho',
+      14 => 'zib',
+    ),
+    'calling_codes' => 
+    array (
+      0 => '263',
+    ),
+    'tld' => '.zw',
+    'latitude' => -19.000280380249023,
+    'longitude' => 29.86876106262207,
+    'bounds' => 
+    array (
+      0 => 25.333333,
+      1 => -22.316667,
+      2 => 33.05,
+      3 => -15.6,
+    ),
+  ),
+);
