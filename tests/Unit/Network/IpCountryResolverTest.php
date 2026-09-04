@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedIpCountryResolver;
 use Simtabi\Laranail\Atlas\Core\Network\IpAddress;
+use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedIpCountryResolver;
 
 /**
  * The resolver against a table written for the test, because the real one is
@@ -12,23 +12,23 @@ use Simtabi\Laranail\Atlas\Core\Network\IpAddress;
  */
 function atlasIpSandbox(array $v4 = [], array $v6 = []): string
 {
-    $dir = sys_get_temp_dir().'/atlas-ip-'.bin2hex(random_bytes(6));
+    $dir = sys_get_temp_dir() . '/atlas-ip-' . bin2hex(random_bytes(6));
     mkdir($dir, 0o777, true);
 
     if ($v4 !== []) {
-        file_put_contents($dir.'/ip-ipv4.php', '<?php return '.var_export($v4, true).';');
+        file_put_contents($dir . '/ip-ipv4.php', '<?php return ' . var_export($v4, true) . ';');
     }
 
     if ($v6 !== []) {
-        file_put_contents($dir.'/ip-ipv6.php', '<?php return '.var_export($v6, true).';');
+        file_put_contents($dir . '/ip-ipv6.php', '<?php return ' . var_export($v6, true) . ';');
     }
 
     return $dir;
 }
 
 afterEach(function (): void {
-    foreach (glob(sys_get_temp_dir().'/atlas-ip-*') ?: [] as $dir) {
-        exec('rm -rf '.escapeshellarg($dir));
+    foreach (glob(sys_get_temp_dir() . '/atlas-ip-*') ?: [] as $dir) {
+        exec('rm -rf ' . escapeshellarg($dir));
     }
 });
 

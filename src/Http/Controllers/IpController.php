@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace Simtabi\Laranail\Atlas\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
-use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
-use Simtabi\Laranail\Atlas\Core\Network\IpAddress;
-use Simtabi\Laranail\Atlas\Http\Resources\CountryResource;
 use Simtabi\Laranail\Atlas\Services\AtlasService;
+use Simtabi\Laranail\Atlas\Core\Network\IpAddress;
+use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
+use Simtabi\Laranail\Atlas\Http\Resources\CountryResource;
 
 /**
  * `GET /ip/{ip}` — the country an address was allocated to.
@@ -33,7 +33,7 @@ final readonly class IpController
             // endpoint does not exist, and 422 is what a malformed argument is.
             return new JsonResponse([
                 'message' => 'That is not an IP address.',
-                'errors' => ['ip' => ['That is not an IP address.']],
+                'errors'  => ['ip' => ['That is not an IP address.']],
             ], 422);
         }
 
@@ -46,11 +46,11 @@ final readonly class IpController
             // two, because one is fixable here and the others are just how the
             // internet is.
             return new JsonResponse([
-                'data' => null,
+                'data'   => null,
                 'reason' => match (true) {
-                    $address->isReserved() => 'reserved',
+                    $address->isReserved()                         => 'reserved',
                     $this->atlas->describe()['ip_ready'] === false => 'table_not_installed',
-                    default => 'not_allocated',
+                    default                                        => 'not_allocated',
                 },
             ]);
         }

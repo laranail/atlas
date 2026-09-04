@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-use Simtabi\Laranail\Atlas\Core\Exception\InvalidCoordinates;
 use Simtabi\Laranail\Atlas\Core\Geo\BoundingBox;
 use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
+use Simtabi\Laranail\Atlas\Core\Exception\InvalidCoordinates;
 
 it('contains a point inside it', function (): void {
     $kenya = BoundingBox::fromBbox(west: 33.9, south: -4.7, east: 41.9, north: 5.0);

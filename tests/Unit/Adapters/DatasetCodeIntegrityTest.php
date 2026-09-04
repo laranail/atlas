@@ -10,7 +10,7 @@ use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
  */
 function codeTable(): array
 {
-    return new GeneratedPlaceRepository(dirname(__DIR__, 3).'/resources/data')->all();
+    return new GeneratedPlaceRepository(dirname(__DIR__, 3) . '/resources/data')->all();
 }
 
 it('has no alpha-2 code ICU does not recognise', function (): void {
@@ -22,7 +22,7 @@ it('has no alpha-2 code ICU does not recognise', function (): void {
     $unrecognised = [];
 
     foreach (array_keys(codeTable()) as $iso2) {
-        $display = Locale::getDisplayRegion('-'.$iso2, 'en');
+        $display = Locale::getDisplayRegion('-' . $iso2, 'en');
 
         if ($display === $iso2 || $display === '') {
             $unrecognised[] = $iso2;

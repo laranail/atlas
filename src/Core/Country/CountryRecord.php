@@ -25,21 +25,21 @@ use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
 final readonly class CountryRecord implements JsonSerializable
 {
     /**
-     * @param  string  $iso2  ISO 3166-1 alpha-2, upper case (KE)
-     * @param  string  $iso3  ISO 3166-1 alpha-3, upper case (KEN)
-     * @param  string  $numeric  ISO 3166-1 numeric, zero-padded to three (404)
-     * @param  string  $name  common English name
-     * @param  string  $officialName  full official English name
-     * @param  string  $nativeName  name in a national language
-     * @param  string  $continent  continent code (AF)
-     * @param  string|null  $region  UN geoscheme region
-     * @param  string|null  $subregion  UN geoscheme subregion
-     * @param  list<string>  $currencies  ISO 4217 codes; several countries share one
-     * @param  list<string>  $languages  ISO 639-1 codes
-     * @param  list<string>  $callingCodes  E.164 prefixes without the leading +
-     * @param  string|null  $tld  primary ccTLD including the dot
-     * @param  Coordinates|null  $coordinates  approximate centroid
-     * @param  BoundingBox|null  $bounds  extent, where the source carries one
+     * @param string $iso2 ISO 3166-1 alpha-2, upper case (KE)
+     * @param string $iso3 ISO 3166-1 alpha-3, upper case (KEN)
+     * @param string $numeric ISO 3166-1 numeric, zero-padded to three (404)
+     * @param string $name common English name
+     * @param string $officialName full official English name
+     * @param string $nativeName name in a national language
+     * @param string $continent continent code (AF)
+     * @param string|null $region UN geoscheme region
+     * @param string|null $subregion UN geoscheme subregion
+     * @param list<string> $currencies ISO 4217 codes; several countries share one
+     * @param list<string> $languages ISO 639-1 codes
+     * @param list<string> $callingCodes E.164 prefixes without the leading +
+     * @param string|null $tld primary ccTLD including the dot
+     * @param Coordinates|null $coordinates approximate centroid
+     * @param BoundingBox|null $bounds extent, where the source carries one
      */
     public function __construct(
         public string $iso2,
@@ -76,7 +76,7 @@ final readonly class CountryRecord implements JsonSerializable
         $offset = 0x1F1E6 - ord('A');
 
         return mb_chr(ord($this->iso2[0]) + $offset, 'UTF-8')
-            .mb_chr(ord($this->iso2[1]) + $offset, 'UTF-8');
+            . mb_chr(ord($this->iso2[1]) + $offset, 'UTF-8');
     }
 
     /**
@@ -124,22 +124,22 @@ final readonly class CountryRecord implements JsonSerializable
     public function toArray(): array
     {
         return [
-            'iso2' => $this->iso2,
-            'iso3' => $this->iso3,
-            'numeric' => $this->numeric,
-            'name' => $this->name,
+            'iso2'          => $this->iso2,
+            'iso3'          => $this->iso3,
+            'numeric'       => $this->numeric,
+            'name'          => $this->name,
             'official_name' => $this->officialName,
-            'native_name' => $this->nativeName,
-            'flag' => $this->flag(),
-            'continent' => $this->continent,
-            'region' => $this->region,
-            'subregion' => $this->subregion,
-            'currencies' => $this->currencies,
-            'languages' => $this->languages,
+            'native_name'   => $this->nativeName,
+            'flag'          => $this->flag(),
+            'continent'     => $this->continent,
+            'region'        => $this->region,
+            'subregion'     => $this->subregion,
+            'currencies'    => $this->currencies,
+            'languages'     => $this->languages,
             'calling_codes' => $this->callingCodes,
-            'tld' => $this->tld,
-            'coordinates' => $this->coordinates?->toArray(),
-            'bounds' => $this->bounds?->toBbox(),
+            'tld'           => $this->tld,
+            'coordinates'   => $this->coordinates?->toArray(),
+            'bounds'        => $this->bounds?->toBbox(),
         ];
     }
 
