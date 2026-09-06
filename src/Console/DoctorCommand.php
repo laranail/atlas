@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Simtabi\Laranail\Atlas\Console;
 
 use DateTimeImmutable;
-use Simtabi\Laranail\Atlas\Core\Support\DatasetVersion;
 use Simtabi\Laranail\Atlas\Services\AtlasService;
 use Simtabi\Laranail\Console\Tools\Commands\Command;
+use Simtabi\Laranail\Atlas\Core\Support\DatasetVersion;
 use Simtabi\Laranail\Console\Tools\Commands\Concerns\SupportsNamespacedNames;
 
 /**
@@ -81,7 +81,7 @@ final class DoctorCommand extends Command
                 // custom source. Unknown is not current.
                 $this->components->warn(
                     'The dataset stamp carries no date, so its age cannot be checked. '
-                    .'Regenerate it with tools/build-dataset.php to add one.',
+                    . 'Regenerate it with tools/build-dataset.php to add one.',
                 );
                 $warned = true;
             } else {
@@ -90,7 +90,7 @@ final class DoctorCommand extends Command
                 if ($dataset->isOlderThan($this->staleBefore())) {
                     $this->components->warn(sprintf(
                         'The source data was released on %s, over a year ago. Update rinvex/countries and '
-                        .'regenerate with tools/build-dataset.php.',
+                        . 'regenerate with tools/build-dataset.php.',
                         $dataset->date,
                     ));
                     $warned = true;
@@ -108,7 +108,7 @@ final class DoctorCommand extends Command
             // built from five registry downloads.
             $this->components->warn(
                 'No range table, so countryForIp() answers null for every address. '
-                .'Build one with tools/build-ip-table.php if you need it.',
+                . 'Build one with tools/build-ip-table.php if you need it.',
             );
             $warned = true;
         }

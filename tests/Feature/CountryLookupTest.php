@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Simtabi\Laranail\Atlas\Core\Country\PhoneRules;
 use Simtabi\Laranail\Atlas\Facades\Atlas;
+use Simtabi\Laranail\Atlas\Core\Country\PhoneRules;
 
 describe('lookups', function (): void {
     it('finds a country by its exact name', function (): void {

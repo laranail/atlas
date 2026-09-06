@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Simtabi\Laranail\Atlas\Adapters\Rinvex;
 
+use Throwable;
 use Rinvex\Country\CountryLoader;
-use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
-use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
 use Simtabi\Laranail\Atlas\Core\Geo\BoundingBox;
 use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
-use Throwable;
+use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
+use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 
 /**
  * Reads `rinvex/countries` live, for applications already carrying it.
@@ -126,7 +126,7 @@ final class RinvexPlaceRepository implements PlaceRepository
     }
 
     /**
-     * @param  array<string, mixed>  $long
+     * @param array<string, mixed> $long
      */
     private function hydrate(string $iso2, array $long): CountryRecord
     {
@@ -167,7 +167,7 @@ final class RinvexPlaceRepository implements PlaceRepository
     }
 
     /**
-     * @param  array<string, mixed>  $name
+     * @param array<string, mixed> $name
      */
     private function nativeName(array $name): ?string
     {
@@ -183,7 +183,7 @@ final class RinvexPlaceRepository implements PlaceRepository
     }
 
     /**
-     * @param  array<string, mixed>  $geo
+     * @param array<string, mixed> $geo
      */
     private function bounds(array $geo): ?BoundingBox
     {
@@ -214,7 +214,8 @@ final class RinvexPlaceRepository implements PlaceRepository
     }
 
     /**
-     * @param  array<string, mixed>  $source
+     * @param array<string, mixed> $source
+     *
      * @return array<string, mixed>
      */
     private function arr(array $source, string $key): array
@@ -225,7 +226,7 @@ final class RinvexPlaceRepository implements PlaceRepository
     }
 
     /**
-     * @param  array<string, mixed>  $source
+     * @param array<string, mixed> $source
      */
     private function str(array $source, string $key): string
     {
@@ -235,7 +236,7 @@ final class RinvexPlaceRepository implements PlaceRepository
     }
 
     /**
-     * @param  array<string, mixed>  $source
+     * @param array<string, mixed> $source
      */
     private function nullableStr(array $source, string $key): ?string
     {

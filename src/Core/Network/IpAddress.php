@@ -207,7 +207,7 @@ final readonly class IpAddress implements Stringable
     }
 
     /**
-     * @param  list<array{string, int}>  $ranges
+     * @param list<array{string, int}> $ranges
      */
     private function matchesAny(array $ranges): bool
     {

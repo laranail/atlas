@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace Simtabi\Laranail\Atlas\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
-use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
 use Simtabi\Laranail\Atlas\Core\Geo\Distance;
+use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
 use Simtabi\Laranail\Atlas\Core\Geo\DistanceUnit;
-use Simtabi\Laranail\Atlas\Http\Requests\DistanceRequest;
 use Simtabi\Laranail\Atlas\Services\AtlasService;
+use Simtabi\Laranail\Atlas\Http\Requests\DistanceRequest;
 
 /**
  * `GET /distance?from=&to=&unit=` — between two points, two countries, or one
@@ -43,8 +43,8 @@ final readonly class DistanceController
 
         return new JsonResponse([
             'data' => $distance->toArray() + [
-                'unit' => $unit->value,
-                'value' => $distance->in($unit),
+                'unit'      => $unit->value,
+                'value'     => $distance->in($unit),
                 'formatted' => $distance->format($unit),
             ],
         ]);

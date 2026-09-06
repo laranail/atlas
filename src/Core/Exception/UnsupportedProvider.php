@@ -17,7 +17,7 @@ use Simtabi\Laranail\Atlas\Core\Contracts\AtlasException;
 final class UnsupportedProvider extends RuntimeException implements AtlasException
 {
     /**
-     * @param  list<string>  $known
+     * @param list<string> $known
      */
     public static function unknown(string $name, array $known): self
     {
@@ -32,7 +32,7 @@ final class UnsupportedProvider extends RuntimeException implements AtlasExcepti
     {
         return new self(sprintf(
             'The [%s] atlas provider needs %s, which is not installed. Run `composer require %s`, or set '
-            .'ATLAS_PROVIDER=generated to use the dataset shipped with this package.',
+            . 'ATLAS_PROVIDER=generated to use the dataset shipped with this package.',
             $name,
             $package,
             $package,
@@ -43,7 +43,7 @@ final class UnsupportedProvider extends RuntimeException implements AtlasExcepti
     {
         return new self(sprintf(
             'The [%s] atlas provider is declared but not implemented yet. It does not fall back to another '
-            .'source, because that would answer with data you did not choose.',
+            . 'source, because that would answer with data you did not choose.',
             $name,
         ));
     }

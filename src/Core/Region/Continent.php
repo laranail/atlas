@@ -86,12 +86,12 @@ enum Continent: string
     public function label(): string
     {
         return match ($this) {
-            self::Africa => 'Africa',
-            self::Antarctica => 'Antarctica',
-            self::Asia => 'Asia',
-            self::Europe => 'Europe',
+            self::Africa       => 'Africa',
+            self::Antarctica   => 'Antarctica',
+            self::Asia         => 'Asia',
+            self::Europe       => 'Europe',
             self::NorthAmerica => 'North America',
-            self::Oceania => 'Oceania',
+            self::Oceania      => 'Oceania',
             self::SouthAmerica => 'South America',
         };
     }

@@ -29,7 +29,7 @@ use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 final readonly class LocaleRegistry
 {
     /**
-     * @param  list<string>  $searchPaths  absolute paths, in priority order
+     * @param list<string> $searchPaths absolute paths, in priority order
      */
     public function __construct(
         private array $searchPaths,
@@ -82,11 +82,11 @@ final readonly class LocaleRegistry
             $country = $region === null ? null : $this->repository->find($region);
 
             $described[$locale] = [
-                'locale' => $locale,
+                'locale'   => $locale,
                 'language' => $language,
-                'region' => $region,
-                'country' => $country?->name,
-                'flag' => $country?->flag(),
+                'region'   => $region,
+                'country'  => $country?->name,
+                'flag'     => $country?->flag(),
             ];
         }
 
@@ -138,7 +138,7 @@ final readonly class LocaleRegistry
                 continue;
             }
 
-            if (is_dir($path.DIRECTORY_SEPARATOR.$name)) {
+            if (is_dir($path . DIRECTORY_SEPARATOR . $name)) {
                 $locales[] = $name;
             }
         }

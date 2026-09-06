@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
-use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
 use Simtabi\Laranail\Atlas\Core\Support\DatasetVersion;
+use Simtabi\Laranail\Atlas\Core\Contracts\PlaceRepository;
+use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
 
 function atlasRepository(): GeneratedPlaceRepository
 {
-    return new GeneratedPlaceRepository(dirname(__DIR__, 3).'/resources/data');
+    return new GeneratedPlaceRepository(dirname(__DIR__, 3) . '/resources/data');
 }
 
 it('satisfies the repository seam', function (): void {
@@ -34,11 +34,11 @@ it('stamps the source release so staleness is answerable', function (): void {
 it('finds a country by any of the three ISO forms', function (string $code): void {
     expect(atlasRepository()->find($code)?->name)->toBe('Kenya');
 })->with([
-    'alpha-2' => 'KE',
-    'alpha-3' => 'KEN',
-    'numeric' => '404',
+    'alpha-2'    => 'KE',
+    'alpha-3'    => 'KEN',
+    'numeric'    => '404',
     'lower case' => 'ke',
-    'padded' => ' KE ',
+    'padded'     => ' KE ',
 ]);
 
 it('separates alpha-3 from numeric without being told which was meant', function (): void {

@@ -3,10 +3,10 @@
 declare(strict_types=1);
 
 use Rinvex\Country\CountryLoader;
-use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
-use Simtabi\Laranail\Atlas\Adapters\Rinvex\RinvexPlaceRepository;
 use Simtabi\Laranail\Atlas\Core\Country\CountryRecord;
 use Simtabi\Laranail\Atlas\Core\Support\DatasetVersion;
+use Simtabi\Laranail\Atlas\Adapters\Rinvex\RinvexPlaceRepository;
+use Simtabi\Laranail\Atlas\Adapters\Generated\GeneratedPlaceRepository;
 
 /**
  * The claim `PlaceRepository` rests on: which source is configured must not be
@@ -28,7 +28,7 @@ beforeEach(function (): void {
 
 function atlasGenerated(): GeneratedPlaceRepository
 {
-    return new GeneratedPlaceRepository(dirname(__DIR__, 3).'/resources/data');
+    return new GeneratedPlaceRepository(dirname(__DIR__, 3) . '/resources/data');
 }
 
 it('carries the same countries in both sources', function (): void {

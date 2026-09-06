@@ -19,12 +19,12 @@ use Simtabi\Laranail\Atlas\Core\Support\Text;
 it('strips diacritics from a latin name', function (string $accented, string $expected): void {
     expect(Text::fold($accented))->toBe($expected);
 })->with([
-    "Côte d'Ivoire" => ["Côte d'Ivoire", "cote d'ivoire"],
-    'Türkiye' => ['Türkiye', 'turkiye'],
-    'Åland Islands' => ['Åland Islands', 'aland islands'],
-    'São Tomé' => ['São Tomé', 'sao tome'],
-    'Curaçao' => ['Curaçao', 'curacao'],
-    'Réunion' => ['Réunion', 'reunion'],
+    "Côte d'Ivoire"    => ["Côte d'Ivoire", "cote d'ivoire"],
+    'Türkiye'          => ['Türkiye', 'turkiye'],
+    'Åland Islands'    => ['Åland Islands', 'aland islands'],
+    'São Tomé'         => ['São Tomé', 'sao tome'],
+    'Curaçao'          => ['Curaçao', 'curacao'],
+    'Réunion'          => ['Réunion', 'reunion'],
     'Saint Barthélemy' => ['Saint Barthélemy', 'saint barthelemy'],
 ]);
 

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Support\Facades\Lang;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Contracts\Console\Kernel;
 
 /**
  * Every name this package registers into a framework-owned registry.

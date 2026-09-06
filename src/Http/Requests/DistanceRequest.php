@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Simtabi\Laranail\Atlas\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\Validator as ValidatorFacade;
 use Illuminate\Validation\Validator;
-use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
+use Illuminate\Foundation\Http\FormRequest;
 use Simtabi\Laranail\Atlas\Rules\Coordinate;
 use Simtabi\Laranail\Atlas\Rules\CountryCode;
+use Simtabi\Laranail\Atlas\Core\Geo\Coordinates;
+use Illuminate\Support\Facades\Validator as ValidatorFacade;
 
 /**
  * `GET /distance?from=&to=` — between two points, or between two countries.
@@ -34,7 +34,7 @@ final class DistanceRequest extends FormRequest
     {
         return [
             'from' => ['required', 'string', 'max:64'],
-            'to' => ['required', 'string', 'max:64'],
+            'to'   => ['required', 'string', 'max:64'],
             'unit' => ['sometimes', 'string', 'in:km,mi,m,nmi'],
         ];
     }
