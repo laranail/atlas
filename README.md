@@ -4,7 +4,7 @@
 [![Static analysis](https://img.shields.io/github/actions/workflow/status/laranail/atlas/static-analysis.yml?branch=main&label=static%20analysis&style=flat-square)](https://github.com/laranail/atlas/actions/workflows/static-analysis.yml)
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 
-`laranail/atlas` is not published to Packagist, so there is no registry-version badge to show — see [Install](#install).
+`laranail/atlas` is not published to Packagist, so there is no registry-version badge to show: see [Install](#install).
 
 > Countries, currencies, languages and coordinates for Laravel — a generated ISO catalogue with a
 > swappable data source, distance and bounding-box maths, and offline IP-to-country lookup.
