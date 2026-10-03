@@ -1,5 +1,7 @@
 # Security policy
 
+Where this file is silent, the [laranail security policy](https://github.com/laranail/.github/blob/HEAD/SECURITY.md) applies.
+
 ## Reporting a vulnerability
 
 Please do not open a public issue for a security report. Two channels, in order of preference:
