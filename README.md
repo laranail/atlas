@@ -22,7 +22,22 @@ composer require laranail/atlas
 No data package required — 250 countries ship with the package as a flat PHP array that OPcache
 holds as compiled opcodes.
 
-## Quick start
+## Quick start guide and usage
+
+### Getting started
+
+Nothing has to be published: the service provider and the `Atlas` facade are discovered
+automatically. Two optional steps:
+
+```bash
+# Build the IP range table; until then countryForIp() returns null for every address
+php vendor/laranail/atlas/tools/build-ip-table.php
+
+# Report the data source, country count, dataset age and whether the IP table is installed
+php artisan laranail::atlas.doctor
+```
+
+### Usage
 
 ```php
 use Simtabi\Laranail\Atlas\Facades\Atlas;
