@@ -5,6 +5,8 @@ All notable changes to `laranail/atlas` are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
 ## [0.1.0] - 2026-08-15
 
 ### Added
@@ -256,3 +258,5 @@ package was load-bearing in every call site, not just in the loader.
 - **`callingCode()` returns a bare `254`**, with no leading `+`.
 - **`at()` and `containing()` are bounding-box tests, not polygon tests.** A point in Nairobi returns
   KE, MZ, RW, TZ and ZM. Right for narrowing a candidate list, wrong for deciding jurisdiction.
+
+[Unreleased]: https://github.com/laranail/atlas/compare/v0.1.0...HEAD
