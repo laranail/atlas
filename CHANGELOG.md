@@ -22,98 +22,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   heading. `dialCodes()` is keyed by ISO code rather than by dial code: `+1` is the whole North
   American Numbering Plan, so keying by the code would keep one country of twenty-five.
 
-### Changed
-
-The rule behind all of it: **everything behind `form()` returns a `value => label` map; everything
-on the facade returns records or plain lists.** Before, `options()` and `continents()` returned maps
-while `regions()` beside them returned a list — three methods on one class, phrased identically,
-with no way to tell which shape you had without running it. Note that the lists did not move, they
-*forked*: `Atlas::regions()` still returns `list<string>` and `Atlas::form()->regions()` returns a
-map, so no caller is worse off. See `docs/architecture.md`.
-
-Breaking, and pre-1.0 is when this costs least:
-
-| Was | Now |
-|---|---|
-| `Atlas::options()` | `Atlas::form()->options()` |
-| `Atlas::continents()` | `Atlas::form()->continents()` |
-| `CountryQuery::options()` | `CountryQuery::form()->options()` |
-| `Atlas::groupedByContinent()` | `Atlas::countriesGroupedByContinent()` |
-| `Atlas::at()` | `Atlas::countriesAt()` |
-| `Atlas::distanceBetween()` | `Atlas::distanceBetweenCountries()` |
-| `CountryRecord::phone()` | `CountryRecord::phoneRules()` |
-| `CountryRecord::acceptsPhoneNumber()` | `CountryRecord::acceptsInternationalNumber()` |
-| `PhoneRules::accepts()` | `PhoneRules::acceptsNationalNumber()` |
-| `PhoneRules::matches()` | `PhoneRules::acceptsInternationalNumber()` |
-| `PhoneRules::pattern()` | `PhoneRules::internationalPattern()` |
-| `AtlasManager::available()` | `AtlasManager::availableProviders()` |
-| `LocaleRegistry::described()` | `LocaleRegistry::detailed()` |
-
-The phone pair earns its own note. `accepts()` took the national number and `matches()` took the
-full one, a distinction no call site could see — and passing a full `+254712345678` to the first
-counts the country digits towards the length and rejects a valid number. The names now say which
-half of the number they take.
-
-`describe()` is deliberately unchanged: it is the shared vocabulary of `doctor`, the `/describe`
-endpoint and the docs, and renaming the method alone would leave the HTTP surface saying something
-else.
-
-No HTTP response shape changed. `/continents` still returns a code → name map; it is sourced from
-`form()->continents()` now.
-
-- **`tests/Feature/NamingConventionTest`** — a guard on every name this package registers into a
-  framework-owned registry: the translation namespace, the publish tags, the Artisan command name,
-  the config key, and the absence of a view namespace.
-
-  It asserts against the **live maps** — `Lang::getLoader()->namespaces()`,
-  `ServiceProvider::publishableGroups()`, the console kernel, the view finder — rather than against
-  the provider's source. Here that distinction has teeth: `hasTranslations()` takes no argument and
-  derives `laranail-atlas` from `->name('laranail/atlas')`, so the name under test appears nowhere in
-  the provider at all. A grep for it would fail against correct code; a grep for `atlas` would pass
-  against a bare registration.
-
-  The names were already correct — this commit adds no rename. What it adds is the thing that
-  notices if one stops being correct, which these registries otherwise never will: they are flat
-  maps, so a second package claiming the same key silently replaces the first and the damage
-  surfaces far away as a missing translation or a command that runs someone else's code.
-
-### Fixed
-
-- **`doctor`'s staleness check never ran.** It asked `strtotime()` to age the whole version stamp,
-  and the stamp was `rinvex/countries v9.1.0` — provenance, not a date. `strtotime()` returns
-  `false` for that, so the guard short-circuited and the answer was "not stale" for every dataset
-  the package has ever shipped. Not a wrong warning: no warning, ever, from one of the three
-  questions the command exists to answer. A health check that cannot fail reads as one that passed.
-
-  `dataset-version.txt` now carries both halves, date first — `2025-07-14 rinvex/countries v9.1.0`.
-  The date is the **source's** release date, read from composer's `installed.json`, not the build
-  date: rebuilding from an unchanged source produces byte-identical data, and a build date would
-  reset the catalogue's age without any of its content getting newer.
-
-  Parsing moved to `Core\Support\DatasetVersion`, which takes exactly one leading `YYYY-MM-DD` and
-  nothing looser — `strtotime()` would happily accept `yesterday` — and which reports a stamp it
-  cannot date as **undatable** rather than as current, the same answer a null version already got.
-  It takes the cutoff as an argument, so the rule is unit-testable without a fixed clock.
-
-  Two consequences worth knowing. The shipped catalogue is generated from `rinvex/countries v9.1.0`,
-  released 2025-07-14, so `doctor` warns on it today — truthfully, and for the first time. And under
-  `--strict` that warning is a failure, so a CI job pinned to an ageing source will now say so.
-
-- **`vendor/bin/testbench laranail::atlas.doctor` could not find the command.** There was no
-  `testbench.yaml`, so the skeleton auto-discovered every *installed* laranail package and not the
-  one under development — leaving `laranail::atlas.doctor` as the single command missing from a list
-  full of its siblings, which reads as a naming bug rather than a missing registration. The Pest
-  suite never caught it because `tests/TestCase.php` registers the provider itself.
-
-- `Atlas::extend()` never existed — the facade proxies `AtlasService`, and `extend()` is on
-  `AtlasManager`. It was documented in `docs/configuration.md`, `docs/tools/data-sources.md`, the
-  published config file and the "unknown provider" exception message, all of which now say
-  `app(AtlasManager::class)->extend(...)`.
-- The chrono note in the config file demonstrated `Country::KE->timezones()`. The enum carries no
-  methods by design and the case is `Country::Kenya`; the example is now the bridge call it meant.
-
-### Added
-
 Initial release. Extracted from `laranail/toolkit`'s `Modules\Atlas`, which was a façade over
 `rinvex/countries` returning bare arrays shaped by whatever that package exposed — so the data
 package was load-bearing in every call site, not just in the loader.
@@ -247,6 +155,96 @@ package was load-bearing in every call site, not just in the loader.
 
 - **English validation messages**, published to `lang/vendor/laranail-atlas/`. Each says what *would*
   have been accepted, not only that the value was rejected.
+
+### Changed
+
+The rule behind all of it: **everything behind `form()` returns a `value => label` map; everything
+on the facade returns records or plain lists.** Before, `options()` and `continents()` returned maps
+while `regions()` beside them returned a list — three methods on one class, phrased identically,
+with no way to tell which shape you had without running it. Note that the lists did not move, they
+*forked*: `Atlas::regions()` still returns `list<string>` and `Atlas::form()->regions()` returns a
+map, so no caller is worse off. See `docs/architecture.md`.
+
+Breaking, and pre-1.0 is when this costs least:
+
+| Was | Now |
+|---|---|
+| `Atlas::options()` | `Atlas::form()->options()` |
+| `Atlas::continents()` | `Atlas::form()->continents()` |
+| `CountryQuery::options()` | `CountryQuery::form()->options()` |
+| `Atlas::groupedByContinent()` | `Atlas::countriesGroupedByContinent()` |
+| `Atlas::at()` | `Atlas::countriesAt()` |
+| `Atlas::distanceBetween()` | `Atlas::distanceBetweenCountries()` |
+| `CountryRecord::phone()` | `CountryRecord::phoneRules()` |
+| `CountryRecord::acceptsPhoneNumber()` | `CountryRecord::acceptsInternationalNumber()` |
+| `PhoneRules::accepts()` | `PhoneRules::acceptsNationalNumber()` |
+| `PhoneRules::matches()` | `PhoneRules::acceptsInternationalNumber()` |
+| `PhoneRules::pattern()` | `PhoneRules::internationalPattern()` |
+| `AtlasManager::available()` | `AtlasManager::availableProviders()` |
+| `LocaleRegistry::described()` | `LocaleRegistry::detailed()` |
+
+The phone pair earns its own note. `accepts()` took the national number and `matches()` took the
+full one, a distinction no call site could see — and passing a full `+254712345678` to the first
+counts the country digits towards the length and rejects a valid number. The names now say which
+half of the number they take.
+
+`describe()` is deliberately unchanged: it is the shared vocabulary of `doctor`, the `/describe`
+endpoint and the docs, and renaming the method alone would leave the HTTP surface saying something
+else.
+
+No HTTP response shape changed. `/continents` still returns a code → name map; it is sourced from
+`form()->continents()` now.
+
+- **`tests/Feature/NamingConventionTest`** — a guard on every name this package registers into a
+  framework-owned registry: the translation namespace, the publish tags, the Artisan command name,
+  the config key, and the absence of a view namespace.
+
+  It asserts against the **live maps** — `Lang::getLoader()->namespaces()`,
+  `ServiceProvider::publishableGroups()`, the console kernel, the view finder — rather than against
+  the provider's source. Here that distinction has teeth: `hasTranslations()` takes no argument and
+  derives `laranail-atlas` from `->name('laranail/atlas')`, so the name under test appears nowhere in
+  the provider at all. A grep for it would fail against correct code; a grep for `atlas` would pass
+  against a bare registration.
+
+  The names were already correct — this commit adds no rename. What it adds is the thing that
+  notices if one stops being correct, which these registries otherwise never will: they are flat
+  maps, so a second package claiming the same key silently replaces the first and the damage
+  surfaces far away as a missing translation or a command that runs someone else's code.
+
+### Fixed
+
+- **`doctor`'s staleness check never ran.** It asked `strtotime()` to age the whole version stamp,
+  and the stamp was `rinvex/countries v9.1.0` — provenance, not a date. `strtotime()` returns
+  `false` for that, so the guard short-circuited and the answer was "not stale" for every dataset
+  the package has ever shipped. Not a wrong warning: no warning, ever, from one of the three
+  questions the command exists to answer. A health check that cannot fail reads as one that passed.
+
+  `dataset-version.txt` now carries both halves, date first — `2025-07-14 rinvex/countries v9.1.0`.
+  The date is the **source's** release date, read from composer's `installed.json`, not the build
+  date: rebuilding from an unchanged source produces byte-identical data, and a build date would
+  reset the catalogue's age without any of its content getting newer.
+
+  Parsing moved to `Core\Support\DatasetVersion`, which takes exactly one leading `YYYY-MM-DD` and
+  nothing looser — `strtotime()` would happily accept `yesterday` — and which reports a stamp it
+  cannot date as **undatable** rather than as current, the same answer a null version already got.
+  It takes the cutoff as an argument, so the rule is unit-testable without a fixed clock.
+
+  Two consequences worth knowing. The shipped catalogue is generated from `rinvex/countries v9.1.0`,
+  released 2025-07-14, so `doctor` warns on it today — truthfully, and for the first time. And under
+  `--strict` that warning is a failure, so a CI job pinned to an ageing source will now say so.
+
+- **`vendor/bin/testbench laranail::atlas.doctor` could not find the command.** There was no
+  `testbench.yaml`, so the skeleton auto-discovered every *installed* laranail package and not the
+  one under development — leaving `laranail::atlas.doctor` as the single command missing from a list
+  full of its siblings, which reads as a naming bug rather than a missing registration. The Pest
+  suite never caught it because `tests/TestCase.php` registers the provider itself.
+
+- `Atlas::extend()` never existed — the facade proxies `AtlasService`, and `extend()` is on
+  `AtlasManager`. It was documented in `docs/configuration.md`, `docs/tools/data-sources.md`, the
+  published config file and the "unknown provider" exception message, all of which now say
+  `app(AtlasManager::class)->extend(...)`.
+- The chrono note in the config file demonstrated `Country::KE->timezones()`. The enum carries no
+  methods by design and the case is `Country::Kenya`; the example is now the bridge call it meant.
 
 ### Notes for consumers
 
