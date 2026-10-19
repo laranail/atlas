@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- A guard now keeps literal credentials out of the tests, and every credential generated with
+  `TestCredentials` named with a single word, so secret scanning has nothing to report.
+  `laranail/package-tools` is raised to `^0.1.10`, which ships the purpose check.
+
 - `laravel/framework ^13.0` is now declared in `require`. `src/` uses `FormRequest` from `Illuminate\Foundation`, which no `illuminate/*` component ships, so the dependency only arrived through the host application.
 
 ## [0.1.0] - 2026-08-15
