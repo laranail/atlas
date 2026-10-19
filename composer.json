@@ -46,7 +46,7 @@
         "laravel/framework": "^13.0",
         "laranail/console": "^0.1",
         "laranail/enumerator": "^0.1",
-        "laranail/package-tools": "^0.1"
+        "laranail/package-tools": "^0.1.10"
     },
     "require-dev": {
         "deptrac/deptrac": "^4.7",
